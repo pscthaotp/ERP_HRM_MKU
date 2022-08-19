@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="ChiTietKeHoachTuyenSinh_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietKeHoachTuyenSinh">
+              <LayoutGroup Id="Item1">
+                <LayoutItem Id="SoLuong" ViewItem="SoLuong" />
+                <LayoutItem Id="DoTuoiDen" ViewItem="DoTuoiDen" />
+                <LayoutItem Id="DoTuoiTu" ViewItem="DoTuoiTu" />
+                <LayoutItem Id="Khoi" ViewItem="Khoi" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietToChucSuKien_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietToChucSuKien">
+              <LayoutItem Id="ThongTinKhachHang" RelativeSize="8.4432717678100264" />
+              <LayoutItem Id="DaGuiLoiMoi" RelativeSize="5.54089709762533" />
+              <LayoutItem Id="HinhThuc" RelativeSize="6.3324538258575194" />
+              <LayoutItem Id="DaThamGia" RelativeSize="5.54089709762533" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="LogonParameters_Custom_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="LogonParameters_Custom_col1">
+              <LayoutItem Id="btnLayXacThuc" ViewItem="btnLayXacThuc" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ThongBaoNhapHoc_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ThongBaoNhapHoc">
+              <LayoutGroup Id="Auto8a2b6f0d-8bfd-43d5-8c97-92df7deed851">
+                <LayoutItem Id="SecuritySystemUser" ViewItem="SecuritySystemUser" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

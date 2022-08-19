@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="TinhTrang_CapNhatTinhTrang_DetailView">
+      <Items Id="Items">
+        <ControlDetailItem Id="btnSearch" Caption="Tìm kiếm" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="TinhTrang_CapNhatTinhTrang">
+              <LayoutGroup Id="TinhTrang_CapNhatTinhTrang_col1" Caption="TinhTrang_CapNhatTinhTrang_col1">
+                <LayoutGroup Id="Item3" Caption="Loại tìm kiếm" />
+              </LayoutGroup>
+              <LayoutGroup Id="TinhTrang_CapNhatTinhTrang_col2" Caption="TinhTrang_CapNhatTinhTrang_col2">
+                <LayoutGroup Id="Auto9311c290-cfe7-414b-aaa1-0f0e2d2aaee7" Caption="Auto9311c290-cfe7-414b-aaa1-0f0e2d2aaee7(11)" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="Lý do" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

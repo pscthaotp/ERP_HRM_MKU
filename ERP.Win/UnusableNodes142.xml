@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="KhoBep_DeNghiXuatNhapKho_KhoBep_DeNghiMuaHangChiTietList_ListView" AllowEdit="True" />
+    <DetailView Id="ChiTietBienLai_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietBienLai">
+              <LayoutGroup Id="ChiTietBienLai_col1">
+                <LayoutItem Id="SoTienThucTe" ViewItem="SoTienThucTe" />
+                <LayoutItem Id="KhauTruTheoChinhSach" ViewItem="KhauTruTheoChinhSach" />
+                <LayoutItem Id="KhauTruNgayNghi" ViewItem="KhauTruNgayNghi" />
+                <LayoutItem Id="KhauTruDoiTuong" ViewItem="KhauTruDoiTuong" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietCongNo_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietCongNo">
+              <LayoutGroup Id="ChiTietCongNo_col1">
+                <LayoutItem Id="PhatSinhCo" ViewItem="PhatSinhCo" />
+                <LayoutItem Id="PhatSinhNo" ViewItem="PhatSinhNo" />
+                <LayoutItem Id="NoiDung" ViewItem="NoiDung" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietPhieuXuat_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietPhieuXuat_col1">
+              <LayoutItem Id="ViTriPhongBan" ViewItem="ViTriPhongBan" />
+              <LayoutItem Id="BoPhan" ViewItem="BoPhan" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietTimKiemHocSinh_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietTimKiemHocSinh_col2">
+              <LayoutItem Id="TinhTrang" ViewItem="TinhTrang" />
+              <LayoutItem Id="Email" ViewItem="Email" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="DinhPhiHocPhi_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="DinhPhiHocPhi">
+              <LayoutGroup Id="DinhPhiHocPhi_col1">
+                <LayoutItem Id="DenNgay" ViewItem="DenNgay" />
+                <LayoutItem Id="ThangTruoc" ViewItem="ThangTruoc" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="KhoBep_DeNghiXuatNhapKho_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="KhoBep_DeNghiMuaHangChiTietList_Group" TextAlignMode="AlignWithChildren" Direction="Vertical" RelativeSize="70.125786163522008" Index="2">
+            <LayoutItem Id="KhoBep_DeNghiMuaHangChiTietList" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="NguoiDuaDon_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="NguoiDuaDon_col2">
+              <LayoutGroup Id="Autof463c6c5-38aa-4d4f-8988-8af9bacf0a35">
+                <LayoutGroup Id="Autodcdf0987-0474-42a8-a223-ab9b48c203cf">
+                  <LayoutItem Id="DuaDonChinh" ViewItem="DuaDonChinh" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="SuatAn_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Autobb1621f6-2974-4063-a3be-2a07a7b29c71">
+              <LayoutGroup Id="Autoe30f91c1-9586-4c02-861c-c1e309e497d2">
+                <LayoutGroup Id="SuatAn">
+                  <LayoutGroup Id="SuatAn_col1">
+                    <LayoutItem Id="TenSuatAn" ViewItem="TenSuatAn" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="SuatAn_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="TenSuatAn" Index="1" />
+      </Columns>
+    </ListView>
+    <ListView Id="SuatAn_LookupListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="TenSuatAn" Index="1" />
+      </Columns>
+    </ListView>
+    <DetailView Id="ThucDonNgay_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ThucDonNgay">
+              <LayoutItem Id="MaQuanLy" Index="1" RelativeSize="6.8376068376068373" Removed="True" />
+              <LayoutItem Id="TenThucDon" Index="1" RelativeSize="22.727272727272727" Removed="True" />
+              <LayoutItem Id="TPNangLuong" Index="2" RelativeSize="12.371134020618557" Removed="True" />
+              <LayoutItem Id="ChiPhi" Index="3" RelativeSize="12.371134020618557" Removed="True" />
+              <LayoutGroup Id="Autode6f4471-3e9b-4e11-bdf5-9ab920c54de1">
+                <LayoutGroup Id="Item1">
+                  <LayoutItem Id="TenThucDon" ViewItem="TenThucDon" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="ThucDonNgay_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="TenThucDon" Index="1" />
+      </Columns>
+    </ListView>
+    <ListView Id="ThucDonNgay_LookupListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="TenThucDon" PropertyName="TenThucDon" Index="1" />
+      </Columns>
+    </ListView>
+    <DetailView Id="ThuPhi_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ThuPhi">
+              <LayoutGroup Id="ThuPhi_col2">
+                <LayoutItem Id="SoBienLai" ViewItem="SoBienLai" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

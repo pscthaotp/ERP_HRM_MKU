@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="DonHangMua_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="SoDonHang" Index="0" />
+        <ColumnInfo Id="Ngay" Index="1" />
+        <ColumnInfo Id="TongTien" Index="2" />
+        <ColumnInfo Id="NhaCungUng" Index="3" />
+      </Columns>
+    </ListView>
+    <DetailView Id="QuanLyDonHangBan_DetailView">
+      <Items Id="Items">
+        <ControlDetailItem Id="btnSearch" ControlTypeName="DevExpress.XtraEditors.SimpleButton" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="11.420982735723772">
+            <LayoutGroup Id="QuanLyDonHangBan" RelativeSize="100" Caption="QuanLyDonHangBan" Direction="Horizontal">
+              <LayoutGroup Id="Auto70dcc105-b636-4726-bbf5-59ac220a240d" ShowCaption="False" Caption="" Index="0" RelativeSize="49.878934624697337">
+                <LayoutItem Id="TuNgay" ViewItem="TuNgay" Index="0" RelativeSize="37.2093023255814" />
+                <LayoutItem Id="DenNgay" ViewItem="DenNgay" Index="1" RelativeSize="27.906976744186046" />
+                <LayoutItem Id="btnSearch" TextAlignMode="CustomSize" ViewItem="btnSearch" Index="2" RelativeSize="34.883720930232556" />
+              </LayoutGroup>
+              <LayoutItem Id="DenNgay" RelativeSize="48.387096774193552" Index="1" Removed="True" />
+              <LayoutItem Id="Item1" Index="1" RelativeSize="50.121065375302663" />
+              <LayoutItem Id="TuNgay" RelativeSize="44.444444444444443" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="DonHangList_Group" Caption="Đơn hàng mua" TextAlignMode="AlignWithChildren" Direction="Vertical" RelativeSize="88.579017264276231">
+            <LayoutItem Id="DonHangList" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="QuanLyDonHangMua_DetailView">
+      <Items Id="Items">
+        <ControlDetailItem Id="btnSearch" ControlTypeName="DevExpress.XtraEditors.SimpleButton" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" RelativeSize="100" TextAlignMode="UseParentOptions">
+          <LayoutGroup Id="Auto1c03340b-3dd8-4315-b6a8-aefd9d811aa9" ShowCaption="False" Caption="Auto1c03340b-3dd8-4315-b6a8-aefd9d811aa9(2)" Direction="Horizontal" Index="0" RelativeSize="11.466666666666667">
+            <LayoutGroup Id="Auto88121866-398a-4098-8d48-e741b04dc72d" ShowCaption="False" Caption="Auto88121866-398a-4098-8d48-e741b04dc72d(3)" Index="0" RelativeSize="49.866666666666667">
+              <LayoutItem Id="TuNgay" ViewItem="TuNgay" Index="0" RelativeSize="37.2093023255814" />
+              <LayoutItem Id="DenNgay" ViewItem="DenNgay" Index="1" RelativeSize="27.906976744186046" />
+              <LayoutItem Id="btnSearch" ViewItem="btnSearch" Index="2" RelativeSize="34.883720930232556" TextAlignMode="CustomSize" />
+            </LayoutGroup>
+            <LayoutItem Id="Item1" Index="1" RelativeSize="50.133333333333333" />
+          </LayoutGroup>
+          <LayoutGroup Id="DonHangList_Group" Caption="Đơn hàng bán" TextAlignMode="AlignWithChildren" Direction="Vertical" RelativeSize="88.533333333333331" Index="1">
+            <LayoutItem Id="DonHangList" RelativeSize="100" />
+          </LayoutGroup>
+          <LayoutGroup Id="SimpleEditors" RelativeSize="5.046480743691899" Direction="Horizontal" Removed="True">
+            <LayoutGroup Id="QuanLyDonHangMua" RelativeSize="100" Direction="Horizontal" Caption="QuanLyDonHangMua" Removed="True">
+              <LayoutItem Id="DenNgay" RelativeSize="50.121065375302663" Removed="True" />
+              <LayoutItem Id="TuNgay" RelativeSize="100" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietTimKiemHocSinh_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietTimKiemHocSinh_col2">
+              <LayoutItem Id="TinhTrang" ViewItem="TinhTrang" />
+              <LayoutItem Id="Email" ViewItem="Email" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

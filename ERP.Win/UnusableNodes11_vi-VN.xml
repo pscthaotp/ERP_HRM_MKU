@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="KeHoachTuan_TimParentDoParentAsk_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="KeHoachTuan_TimParentDoParentAsk">
+              <LayoutGroup Id="KeHoachTuan_TimParentDoParentAsk_col1" Caption="KeHoachTuan_TimParentDoParentAsk_col1" />
+              <LayoutGroup Id="KeHoachTuan_TimParentDoParentAsk_col2" Caption="KeHoachTuan_TimParentDoParentAsk_col2">
+                <LayoutGroup Id="Autoc099bcb0-3f0c-43e7-b2a3-f0db0b2df365" Caption="" />
+                <LayoutGroup Id="Auto487cc783-cb59-4c74-bad3-af13546c450e" Caption="" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="KeHoachTuan_TimParentDoParentAsk_col2">
+              <LayoutGroup Id="Auto43960a06-d60b-46cc-aef7-a55fcb3515c2" Caption="Auto43960a06-d60b-46cc-aef7-a55fcb3515c2(7)" />
+              <LayoutGroup Id="Auto9b61187f-975f-4ff9-bf94-34ff055a97b2" Caption="Auto9b61187f-975f-4ff9-bf94-34ff055a97b2(10)" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

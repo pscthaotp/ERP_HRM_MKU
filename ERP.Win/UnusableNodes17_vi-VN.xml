@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="QuanLyDonHangBan_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="QuanLyDonHangBan" Caption="QuanLyDonHangBan">
+              <LayoutGroup Id="Autoa425f9ff-2165-4dcd-9e43-9ade765768b2" Caption="Autoa425f9ff-2165-4dcd-9e43-9ade765768b2(4)" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="DonHangList_Group" Caption="Đơn hàng bán" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

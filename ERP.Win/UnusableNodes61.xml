@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="Lop_XepLopTuDongHangLoat_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Lop_XepLopTuDongHangLoat">
+              <LayoutGroup Id="Auto96373df8-2b62-454f-a57b-6e12eafbfd7b">
+                <LayoutGroup Id="Auto93910759-e223-4fae-ab43-adaf34c13458">
+                  <LayoutItem Id="btnSearch" ViewItem="btnSearch" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Lop_XepLopTuDong_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Lop_XepLopTuDong">
+              <LayoutGroup Id="Auto414eae4f-674c-42c4-880a-931c8053798b">
+                <LayoutGroup Id="Auto7b86953c-287d-43ff-a271-af35ca4ee3f4">
+                  <LayoutItem Id="btnSearch" ViewItem="btnSearch" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietTimKiemHocSinh_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietTimKiemHocSinh_col2">
+              <LayoutItem Id="TinhTrang" ViewItem="TinhTrang" />
+              <LayoutItem Id="Email" ViewItem="Email" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="NguoiDuaDon_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="NguoiDuaDon_col2">
+              <LayoutGroup Id="Autof463c6c5-38aa-4d4f-8988-8af9bacf0a35">
+                <LayoutGroup Id="Autodcdf0987-0474-42a8-a223-ab9b48c203cf">
+                  <LayoutItem Id="DuaDonChinh" ViewItem="DuaDonChinh" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

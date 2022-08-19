@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="BangLuongNhanVien_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="BangLuongNhanVien">
+              <LayoutGroup Id="Item1">
+                <LayoutGroup Id="Auto8fd3d7a3-9b18-41e4-a886-211549c61863">
+                  <LayoutItem Id="DotTinhLuong" ViewItem="DotTinhLuong" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Bep_DeNghiMuaHang_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Bep_DeNghiMuaHang">
+              <LayoutGroup Id="Item1">
+                <LayoutGroup Id="Auto8a21bfd1-95fc-4fcd-a2b0-0e7649447c1c">
+                  <LayoutItem Id="NhaCungUng" ViewItem="NhaCungUng" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Bep_DeNghiMuaHangChiTiet_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Bep_DeNghiMuaHangChiTiet">
+              <LayoutGroup Id="Bep_DeNghiMuaHangChiTiet_col1">
+                <LayoutItem Id="TiLe" ViewItem="TiLe" />
+                <LayoutItem Id="SLDonViTinhGoc" ViewItem="SLDonViTinhGoc" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Bep_DeNghiXuatKhoChiTiet_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Bep_DeNghiXuatKhoChiTiet">
+              <LayoutGroup Id="Bep_DeNghiXuatKhoChiTiet_col1">
+                <LayoutItem Id="TiLe" ViewItem="TiLe" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Bep_DonDatHangDuTruChiTiet_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Bep_DonDatHangDuTruChiTiet">
+              <LayoutGroup Id="Bep_DonDatHangDuTruChiTiet_col1">
+                <LayoutItem Id="TiLe" ViewItem="TiLe" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="BoPhan_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="BoPhan">
+              <LayoutGroup Id="BoPhan_col1">
+                <LayoutGroup Id="Autoba9cdb99-f1ac-4574-84ac-833ef9c9b1c6">
+                  <LayoutItem Id="BoPhanCha" ViewItem="BoPhanCha" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="CauHinhChung_DetailView">
+      <Layout Id="Layout">
+        <TabbedGroup Id="Item1">
+          <LayoutGroup Id="Main">
+            <TabbedGroup Id="Item10">
+              <LayoutGroup Id="Item24">
+                <LayoutGroup Id="Autoad7e6022-3048-4f0b-8154-f868ae81d2d6">
+                  <LayoutGroup Id="Item54">
+                    <LayoutItem Id="CauHinhTaiSan.MauSoToTrinhThanhLy" ViewItem="CauHinhTaiSan.MauSoToTrinhThanhLy" />
+                    <LayoutItem Id="CauHinhTaiSan.SoBatDauToTrinhThanhLy" ViewItem="CauHinhTaiSan.SoBatDauToTrinhThanhLy" />
+                    <LayoutItem Id="CauHinhTaiSan.TuDongTaoSoToTrinhThanhLy" ViewItem="CauHinhTaiSan.TuDongTaoSoToTrinhThanhLy" />
+                  </LayoutGroup>
+                  <LayoutGroup Id="Item52">
+                    <LayoutItem Id="CauHinhTaiSan.MauSoDieuChuyen" ViewItem="CauHinhTaiSan.MauSoDieuChuyen" />
+                    <LayoutItem Id="CauHinhTaiSan.SoBatDauDieuChuyen" ViewItem="CauHinhTaiSan.SoBatDauDieuChuyen" />
+                    <LayoutItem Id="CauHinhTaiSan.TuDongTaoSoDieuChuyen" ViewItem="CauHinhTaiSan.TuDongTaoSoDieuChuyen" />
+                  </LayoutGroup>
+                  <LayoutGroup Id="Item51">
+                    <LayoutItem Id="CauHinhTaiSan.MauSoDeNghiThue" ViewItem="CauHinhTaiSan.MauSoDeNghiThue" />
+                    <LayoutItem Id="CauHinhTaiSan.SoBatDauDeNghiThue" ViewItem="CauHinhTaiSan.SoBatDauDeNghiThue" />
+                    <LayoutItem Id="CauHinhTaiSan.TuDongTaoSoDeNghiThue" ViewItem="CauHinhTaiSan.TuDongTaoSoDeNghiThue" />
+                  </LayoutGroup>
+                  <LayoutGroup Id="Item47">
+                    <LayoutItem Id="CauHinhTaiSan.MauSoDenBu" ViewItem="CauHinhTaiSan.MauSoDenBu" />
+                    <LayoutItem Id="CauHinhTaiSan.SoBatDauDenBu" ViewItem="CauHinhTaiSan.SoBatDauDenBu" />
+                    <LayoutItem Id="CauHinhTaiSan.TuDongTaoSoDenBu" ViewItem="CauHinhTaiSan.TuDongTaoSoDenBu" />
+                  </LayoutGroup>
+                  <LayoutGroup Id="Item48">
+                    <LayoutItem Id="CauHinhTaiSan.MauSoDeNghiChoThue" ViewItem="CauHinhTaiSan.MauSoDeNghiChoThue" />
+                    <LayoutItem Id="CauHinhTaiSan.SoBatDauDeNghiChoThue" ViewItem="CauHinhTaiSan.SoBatDauDeNghiChoThue" />
+                    <LayoutItem Id="CauHinhTaiSan.TuDongTaoSoDeNghiChoThue" ViewItem="CauHinhTaiSan.TuDongTaoSoDeNghiChoThue" />
+                  </LayoutGroup>
+                  <LayoutGroup Id="Item45">
+                    <LayoutItem Id="CauHinhTaiSan.MauSoDeNghiCC" ViewItem="CauHinhTaiSan.MauSoDeNghiCC" />
+                    <LayoutItem Id="CauHinhTaiSan.SoBatDauDeNghiCC" ViewItem="CauHinhTaiSan.SoBatDauDeNghiCC" />
+                    <LayoutItem Id="CauHinhTaiSan.TuDongTaoSoDeNghiCC" ViewItem="CauHinhTaiSan.TuDongTaoSoDeNghiCC" />
+                  </LayoutGroup>
+                </LayoutGroup>
+                <LayoutGroup Id="Auto2d3602ef-b7c2-4682-9880-0f8d400201cc">
+                  <LayoutGroup Id="Item56">
+                    <LayoutItem Id="CauHinhTaiSan.MauSoYeuCauSC" ViewItem="CauHinhTaiSan.MauSoYeuCauSC" />
+                    <LayoutItem Id="CauHinhTaiSan.SoBatDauYeuCauSC" ViewItem="CauHinhTaiSan.SoBatDauYeuCauSC" />
+                    <LayoutItem Id="CauHinhTaiSan.TuDongTaoSoYeuCauSC" ViewItem="CauHinhTaiSan.TuDongTaoSoYeuCauSC" />
+                  </LayoutGroup>
+                  <LayoutGroup Id="Item55">
+                    <LayoutItem Id="CauHinhTaiSan.MauSoTraTS" ViewItem="CauHinhTaiSan.MauSoTraTS" />
+                    <LayoutItem Id="CauHinhTaiSan.SoBatDauTraTS" ViewItem="CauHinhTaiSan.SoBatDauTraTS" />
+                    <LayoutItem Id="CauHinhTaiSan.TuDongTaoSoTraTS" ViewItem="CauHinhTaiSan.TuDongTaoSoTraTS" />
+                  </LayoutGroup>
+                  <LayoutGroup Id="Item53">
+                    <LayoutItem Id="CauHinhTaiSan.MauSoNghiemThuTS" ViewItem="CauHinhTaiSan.MauSoNghiemThuTS" />
+                    <LayoutItem Id="CauHinhTaiSan.SoBatDauNghiemThuTS" ViewItem="CauHinhTaiSan.SoBatDauNghiemThuTS" />
+                    <LayoutItem Id="CauHinhTaiSan.TuDongTaoSoNghiemThuTS" ViewItem="CauHinhTaiSan.TuDongTaoSoNghiemThuTS" />
+                  </LayoutGroup>
+                  <LayoutGroup Id="Item49">
+                    <LayoutItem Id="CauHinhTaiSan.MauSoDeNghiThanhLy" ViewItem="CauHinhTaiSan.MauSoDeNghiThanhLy" />
+                    <LayoutItem Id="CauHinhTaiSan.SoBatDauDeNghiThanhLy" ViewItem="CauHinhTaiSan.SoBatDauDeNghiThanhLy" />
+                    <LayoutItem Id="CauHinhTaiSan.TuDongTaoSoDeNghiThanhLy" ViewItem="CauHinhTaiSan.TuDongTaoSoDeNghiThanhLy" />
+                  </LayoutGroup>
+                  <LayoutGroup Id="Item27">
+                    <LayoutItem Id="CauHinhTaiSan.MauSoChungTuGhiTang" ViewItem="CauHinhTaiSan.MauSoChungTuGhiTang" />
+                    <LayoutItem Id="CauHinhTaiSan.SoBatDauChungTuGhiTang" ViewItem="CauHinhTaiSan.SoBatDauChungTuGhiTang" />
+                    <LayoutItem Id="CauHinhTaiSan.TuDongTaoSoChungTuGhiTang" ViewItem="CauHinhTaiSan.TuDongTaoSoChungTuGhiTang" />
+                  </LayoutGroup>
+                  <LayoutGroup Id="Item44">
+                    <LayoutItem Id="CauHinhTaiSan.MauSoBBThanhLy" ViewItem="CauHinhTaiSan.MauSoBBThanhLy" />
+                    <LayoutItem Id="CauHinhTaiSan.SoBatDauBBThanhLy" ViewItem="CauHinhTaiSan.SoBatDauBBThanhLy" />
+                    <LayoutItem Id="CauHinhTaiSan.TuDongTaoSoBBThanhLy" ViewItem="CauHinhTaiSan.TuDongTaoSoBBThanhLy" />
+                  </LayoutGroup>
+                  <LayoutGroup Id="Item33">
+                    <LayoutItem Id="CauHinhTaiSan.MauSoBBSuaChua" ViewItem="CauHinhTaiSan.MauSoBBSuaChua" />
+                    <LayoutItem Id="CauHinhTaiSan.SoBatDauBBSuaChua" ViewItem="CauHinhTaiSan.SoBatDauBBSuaChua" />
+                    <LayoutItem Id="CauHinhTaiSan.TuDongTaoSoBBSuaChua" ViewItem="CauHinhTaiSan.TuDongTaoSoBBSuaChua" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </TabbedGroup>
+          </LayoutGroup>
+        </TabbedGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietChotSuatAn_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietChotSuatAn">
+              <LayoutGroup Id="ChiTietChotSuatAn_col2">
+                <LayoutGroup Id="Item1">
+                  <LayoutItem Id="DaXuatKho" ViewItem="DaXuatKho" />
+                  <LayoutItem Id="DaDatHang" ViewItem="DaDatHang" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietChuongTrinhGD_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietChuongTrinhGD_col1">
+              <LayoutGroup Id="Auto74c04ee7-f27e-4cd9-a1a5-36d2719b1e63">
+                <LayoutGroup Id="Auto6942d1e9-7f9a-4e82-93d3-fb4abf37129c">
+                  <LayoutItem Id="Tuan" ViewItem="Tuan" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietTimKiemHocSinh_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietTimKiemHocSinh_col2">
+              <LayoutItem Id="TinhTrang" ViewItem="TinhTrang" />
+              <LayoutItem Id="Email" ViewItem="Email" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="DinhPhiHocPhi_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="DinhPhiHocPhi">
+              <LayoutGroup Id="DinhPhiHocPhi_col1">
+                <LayoutItem Id="DenNgay" ViewItem="DenNgay" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="HinhThucDong_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Autod7b7d2fd-a8d3-4aca-a8b2-9e6d91b5d0a0">
+          <LayoutItem Id="LoTrinhDen" ViewItem="LoTrinhDen" />
+          <LayoutItem Id="LoTrinhTu" ViewItem="LoTrinhTu" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="KhoBep_DeNghiXuatNhapKho_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="Auto55888234-db3d-45a3-9a62-f21d1dc94090">
+            <LayoutGroup Id="KhoBep_DeNghiXuatNhapKho_col2">
+              <LayoutGroup Id="Item3">
+                <LayoutItem Id="NgayApDung" ViewItem="NgayApDung" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="KhungGioTKB_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="KhungGioTKB">
+              <LayoutGroup Id="KhungGioTKB_col2">
+                <LayoutItem Id="TuGio" ViewItem="TuGio" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="NguyenPhuLieu_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutItem Id="DonGia" ViewItem="DonGia" />
+            <LayoutItem Id="SoLuong" ViewItem="SoLuong" />
+            <LayoutItem Id="DonViTinh" ViewItem="DonViTinh" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ParentDoParentAsk_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ParentDoParentAsk">
+              <LayoutGroup Id="Autoef5d80d2-770b-4c57-9791-abddaee6e80f">
+                <LayoutGroup Id="Item9">
+                  <LayoutGroup Id="Auto96c37d0e-436c-4e6b-9d18-3f7ba0a7b717">
+                    <LayoutGroup Id="Item12">
+                      <LayoutGroup Id="Item13">
+                        <LayoutItem Id="DaDuyet" ViewItem="DaDuyet" />
+                        <LayoutItem Id="DaDuyet1" ViewItem="DaDuyet1" />
+                      </LayoutGroup>
+                    </LayoutGroup>
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="QuaTrinhBoNhiem_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="QuaTrinhBoNhiem">
+              <LayoutGroup Id="QuaTrinhBoNhiem_col1">
+                <LayoutItem Id="QuyetDinh" ViewItem="QuyetDinh" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="QuaTrinhBoNhiemKiemNhiem_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="QuaTrinhBoNhiemKiemNhiem">
+              <LayoutGroup Id="QuaTrinhBoNhiemKiemNhiem_col1">
+                <LayoutItem Id="QuyetDinh" ViewItem="QuyetDinh" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="QuyetDinhDaoTao_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="QuyetDinhDaoTao">
+              <LayoutGroup Id="QuyetDinhDaoTao_col1">
+                <LayoutItem Id="TrinhDoChuyenMon" ViewItem="TrinhDoChuyenMon" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="QuyetDinhMienNhiem_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="QuyetDinh">
+              <LayoutGroup Id="QuyetDinh_col1">
+                <LayoutGroup Id="Autofede3e5b-5102-43c2-b11f-94182dd4dafa">
+                  <LayoutItem Id="NgayMienNhiem" ViewItem="NgayMienNhiem" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Report_BienLai_InBienLai_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Report_BienLai_InBienLai">
+              <LayoutGroup Id="Report_BienLai_InBienLai_col1">
+                <LayoutItem Id="So" Index="1" RelativeSize="27.272727272727273" Removed="True" />
+                <LayoutItem Id="BienLai" ViewItem="BienLai" />
+              </LayoutGroup>
+              <LayoutGroup Id="Report_BienLai_InBienLai_col2">
+                <LayoutItem Id="BienLai" RelativeSize="37.647058823529413" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ThoiKhoaBieu_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="Auto13ec78c2-99f7-418d-9697-78f7298ed190">
+            <LayoutGroup Id="Autoa175a2fe-f504-41aa-b8b7-caaa9d8e8e72">
+              <LayoutGroup Id="Autod365dfc4-91ab-40b1-96b6-7c62143c40f1">
+                <LayoutGroup Id="Autof28d6bda-5ca5-421c-a64b-b75029fae613">
+                  <LayoutGroup Id="Auto44b5759f-aef7-4835-8540-08c45e23cfae">
+                    <LayoutItem Id="ShowCTGD" ViewItem="ShowCTGD" />
+                    <LayoutItem Id="TatCa" ViewItem="TatCa" />
+                  </LayoutGroup>
+                  <LayoutItem Id="LoaiKhoa" ViewItem="LoaiKhoa" />
+                  <LayoutItem Id="LoaiTKB" ViewItem="LoaiTKB" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Autoac18fef9-273a-4c1d-97db-3772d867fd89">
+              <LayoutGroup Id="ChuongTrinhGDList">
+                <LayoutItem Id="ChuongTrinhGDList" ViewItem="ChuongTrinhGDList" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="UngVien_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <TabbedGroup Id="Item1">
+              <LayoutGroup Id="HoSo">
+                <LayoutGroup Id="HoSo_col2">
+                  <LayoutGroup Id="Item6">
+                    <LayoutItem Id="UuTienBanThan" ViewItem="UuTienBanThan" />
+                    <LayoutItem Id="UuTienGiaDinh" ViewItem="UuTienGiaDinh" />
+                    <LayoutItem Id="ThanhPhanXuatThan" ViewItem="ThanhPhanXuatThan" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </TabbedGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="ChinhSachKhuyenMai_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChinhSachKhuyenMai">
+              <LayoutGroup Id="ChinhSachKhuyenMai_col1">
+                <LayoutItem Id="TenChinhSach" RelativeSize="17.647058823529413" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietKeHoachTuyenSinh_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietKeHoachTuyenSinh">
+              <LayoutGroup Id="Item1">
+                <LayoutItem Id="SoLuong" ViewItem="SoLuong" />
+                <LayoutItem Id="DoTuoiDen" ViewItem="DoTuoiDen" />
+                <LayoutItem Id="DoTuoiTu" ViewItem="DoTuoiTu" />
+                <LayoutItem Id="Khoi" ViewItem="Khoi" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietThongBaoNhapHoc_TrucTiep_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietThongBaoNhapHoc_TrucTiep">
+              <LayoutGroup Id="ChiTietThongBaoNhapHoc_TrucTiep_col1" RelativeSize="100">
+                <LayoutItem Id="MaHocSinh" RelativeSize="9.9378881987577632" />
+                <LayoutItem Id="HoTen" RelativeSize="7.4534161490683228" />
+                <LayoutItem Id="NgaySinh" RelativeSize="7.4534161490683228" />
+                <LayoutItem Id="GioiTinh" ViewItem="GioiTinh" Index="3" RelativeSize="7.4534161490683228" />
+                <LayoutItem Id="GhiChu" ViewItem="GhiChu" Index="4" RelativeSize="67.701863354037272" />
+              </LayoutGroup>
+              <LayoutGroup Id="ChiTietThongBaoNhapHoc_TrucTiep_col2" RelativeSize="50.115473441108549" Direction="Horizontal" Removed="True">
+                <LayoutItem Id="GhiChu" RelativeSize="100" Index="0" Removed="True" />
+                <LayoutItem Id="GioiTinh" RelativeSize="4.5197740112994351" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="LogonParameters_Custom_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="LogonParameters_Custom_col1">
+              <LayoutItem Id="btnLayXacThuc" ViewItem="btnLayXacThuc" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ThongBaoNhapHoc_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ThongBaoNhapHoc">
+              <LayoutGroup Id="Auto8a2b6f0d-8bfd-43d5-8c97-92df7deed851">
+                <LayoutItem Id="SecuritySystemUser" ViewItem="SecuritySystemUser" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ThongBaoTuyenSinh_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ThongBaoTuyenSinh">
+              <LayoutGroup Id="ThongBaoTuyenSinh_col1">
+                <LayoutItem Id="NgayKetThuc" RelativeSize="12.631578947368421" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ThongBaoTuyenSinh_HocPhi_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ThongBaoTuyenSinh_HocPhi">
+              <LayoutGroup Id="ThongBaoTuyenSinh_HocPhi_col1">
+                <LayoutItem Id="HocPhi" RelativeSize="9.7165991902834" />
+                <LayoutItem Id="BatBuoc" RelativeSize="8.4" Index="6" Removed="True" />
+                <LayoutGroup Id="Autobd2671e2-38a3-4146-9ac2-884869b22589">
+                  <LayoutGroup Id="Autob886de18-7f60-4311-b953-1e843978eae1">
+                    <LayoutItem Id="TuyChinhSoLuong" ViewItem="TuyChinhSoLuong" />
+                    <LayoutItem Id="BatBuoc" ViewItem="BatBuoc" />
+                  </LayoutGroup>
+                  <LayoutGroup Id="Autoca0db964-413a-4780-aaee-d4aeb5b5787a">
+                    <LayoutItem Id="GiamTheoDoiTuong" ViewItem="GiamTheoDoiTuong" />
+                    <LayoutItem Id="HoanLaiBuoiNghi" ViewItem="HoanLaiBuoiNghi" />
+                  </LayoutGroup>
+                </LayoutGroup>
+                <LayoutItem Id="ThoiDiemThu" ViewItem="ThoiDiemThu" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="ThongBaoTuyenSinh_HocPhi_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="BatBuoc" Removed="True" />
+        <ColumnInfo Id="GiamTheoDoiTuong" Removed="True" />
+        <ColumnInfo Id="HoanLaiBuoiNghi" Removed="True" />
+        <ColumnInfo Id="ThoiDiemThu" Removed="True" />
+        <ColumnInfo Id="TuyChinhSoLuong" Removed="True" />
+      </Columns>
+    </ListView>
+    <ListView Id="ThongBaoTuyenSinh_ListHocPhi_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="BatBuoc" Width="62" Removed="True" />
+        <ColumnInfo Id="GiamTheoDoiTuong" Width="117" Removed="True" />
+        <ColumnInfo Id="HoanLaiBuoiNghi" Width="181" Removed="True" />
+        <ColumnInfo Id="ThoiDiemThu" Width="84" Removed="True" />
+        <ColumnInfo Id="TuyChinhSoLuong" Width="110" Removed="True" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

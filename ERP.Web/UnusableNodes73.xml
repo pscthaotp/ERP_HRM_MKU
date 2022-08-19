@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="HoSoXetTuyen_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="NgayVaoHoc" Index="-1" />
+      </Columns>
+    </ListView>
+    <DetailView Id="HoSoXetTuyen_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="HoSoXetTuyen">
+              <LayoutGroup Id="HoSoXetTuyen_col2">
+                <LayoutItem Id="NgayVaoHoc" RelativeSize="5.6603773584905657" Index="8" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="LogonParameters_Custom_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="LogonParameters_Custom_col1">
+              <LayoutItem Id="btnLayXacThuc" ViewItem="btnLayXacThuc" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ThongBaoNhapHoc_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ThongBaoNhapHoc">
+              <LayoutGroup Id="Auto8a2b6f0d-8bfd-43d5-8c97-92df7deed851">
+                <LayoutItem Id="SecuritySystemUser" ViewItem="SecuritySystemUser" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ThongBaoNhapHoc_Mau_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ThongBaoNhapHoc_Mau">
+              <LayoutGroup Id="ThongBaoNhapHoc_Mau_col1">
+                <LayoutItem Id="Html" ViewItem="Html" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

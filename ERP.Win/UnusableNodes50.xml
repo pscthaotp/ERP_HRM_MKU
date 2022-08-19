@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="PhieuNhap_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Phieu">
+              <LayoutItem Id="SoPhieu" RelativeSize="37.2093023255814" />
+              <LayoutItem Id="Ngay" RelativeSize="27.906976744186046" />
+              <LayoutItem Id="Kho" RelativeSize="34.883720930232556" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="CauHinhChung_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="NoiLuuTruGiayTo" Removed="True" />
+        <ColumnInfo Id="Password" Removed="True" />
+        <ColumnInfo Id="Username" Removed="True" />
+      </Columns>
+    </ListView>
+    <DetailView Id="ChiTietTimKiemHocSinh_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietTimKiemHocSinh_col2">
+              <LayoutItem Id="TinhTrang" ViewItem="TinhTrang" />
+              <LayoutItem Id="Email" ViewItem="Email" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ThucDonNgay_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ThucDonNgay">
+              <LayoutItem Id="MaQuanLy" RelativeSize="16.494845360824741" Removed="True" />
+              <LayoutGroup Id="Autode6f4471-3e9b-4e11-bdf5-9ab920c54de1">
+                <LayoutGroup Id="Item1">
+                  <LayoutItem Id="MaQuanLy" ViewItem="MaQuanLy" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

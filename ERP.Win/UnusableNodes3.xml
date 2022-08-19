@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="CC_QuanLyChamCong_ChiTietChamCongWebList_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="ThongTinNhanVien" Index="2" />
+        <ColumnInfo Id="TongCong" Index="12" />
+      </Columns>
+    </ListView>
+    <DetailView Id="CC_QuanLyChamCong_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Tabs" RelativeSize="74.573378839590447">
+            <LayoutGroup Id="ChiTietChamCongWinList" TextAlignMode="AlignWithChildren" RelativeSize="100">
+              <LayoutItem Id="ChiTietChamCongWinList" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="ChiTietChamCongWebList" TextAlignMode="AlignWithChildren" RelativeSize="100">
+              <LayoutItem Id="ChiTietChamCongWebList" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="CC_ChiTietChamCong_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="CC_ChiTietChamCong">
+              <LayoutGroup Id="CC_ChiTietChamCong_col1">
+                <LayoutItem Id="TongCong" RelativeSize="12.631578947368421" />
+              </LayoutGroup>
+              <LayoutGroup Id="CC_ChiTietChamCong_col2">
+                <LayoutItem Id="NgayCongTac" RelativeSize="16.842105263157894" />
+                <LayoutItem Id="NgayDiHoc" RelativeSize="12.631578947368421" />
+                <LayoutItem Id="NgayThaiSan" RelativeSize="12.631578947368421" />
+                <LayoutItem Id="NgayNghiOm" RelativeSize="12.631578947368421" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="GiangDay_PhanCongTuDong_chiTietList_ListView" AllowEdit="True" />
+    <DetailView Id="GiangDay_PhanCongTuDong_DetailView">
+      <Items Id="Items">
+        <ControlDetailItem Id="btnSave" ControlTypeName="DevExpress.XtraEditors.SimpleButton" />
+        <ControlDetailItem Id="btnSearch" ControlTypeName="DevExpress.XtraEditors.SimpleButton" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" TextAlignMode="AlignWithChildren" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="6.3439065108514194">
+            <LayoutGroup Id="GiangDay_PhanCongTuDong" RelativeSize="100">
+              <LayoutItem Id="NamHoc" RelativeSize="100" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="Auto6f513a9c-851f-4910-bbd5-4d758131582b" ShowCaption="False" Caption="Auto6f513a9c-851f-4910-bbd5-4d758131582b(5)" Direction="Horizontal" Index="1" RelativeSize="10.016694490818031" TextAlignMode="AlignWithChildren">
+            <LayoutGroup Id="Auto1308a118-3b39-4017-bd41-001b7f06a6d4" ShowCaption="False" Caption="Auto1308a118-3b39-4017-bd41-001b7f06a6d4(6)" Index="0" RelativeSize="31.380753138075313" TextAlignMode="AlignWithChildren">
+              <LayoutItem Id="btnSearch" TextAlignMode="CustomSize" ViewItem="btnSearch" Index="0" RelativeSize="50" ShowCaption="False" />
+              <LayoutItem Id="btnSave" TextAlignMode="CustomSize" ViewItem="btnSave" Index="1" RelativeSize="50" ShowCaption="False" />
+            </LayoutGroup>
+            <LayoutItem Id="Item1" Index="1" RelativeSize="68.61924686192468" />
+          </LayoutGroup>
+          <LayoutGroup Id="chiTietList_Group" TextAlignMode="AlignWithChildren" Direction="Vertical" Index="2" RelativeSize="83.639398998330549">
+            <LayoutItem Id="chiTietList" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietTimKiemHocSinh_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietTimKiemHocSinh_col2">
+              <LayoutItem Id="TinhTrang" ViewItem="TinhTrang" />
+              <LayoutItem Id="Email" ViewItem="Email" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="NguoiDuaDon_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="NguoiDuaDon_col2">
+              <LayoutGroup Id="Autof463c6c5-38aa-4d4f-8988-8af9bacf0a35">
+                <LayoutGroup Id="Autodcdf0987-0474-42a8-a223-ab9b48c203cf">
+                  <LayoutItem Id="DuaDonChinh" ViewItem="DuaDonChinh" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="QuanLyKhauHao_DetailView">
+      <Items Id="Items">
+        <ControlDetailItem Id="btn_ChayKhauHao" ControlTypeName="DevExpress.XtraEditors.SimpleButton" Caption="Tính khấu hao" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" TextAlignMode="AlignWithChildren" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="5.046480743691899">
+            <LayoutGroup Id="QuanLyKhauHao" RelativeSize="100">
+              <LayoutItem Id="KyKeToan" RelativeSize="100" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutItem Id="btn_ChayKhauHao" ViewItem="btn_ChayKhauHao" Index="1" RelativeSize="3.1872509960159361" ShowCaption="False" />
+          <LayoutGroup Id="BangKhauHaoList_Group" TextAlignMode="AlignWithChildren" Direction="Vertical" Index="2" RelativeSize="91.766268260292165">
+            <LayoutItem Id="BangKhauHaoList" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="TyLeKhauHaoTheoLoaiTaiSan_ChiTietTyLeKhauHaoTheoLoaiTaiSanList_ListView" AllowEdit="True" AllowDelete="False" AllowNew="False">
+      <Columns Id="Columns">
+        <ColumnInfo Id="LoaiTaiSan" AllowEdit="False" />
+      </Columns>
+    </ListView>
+    <DetailView Id="ChiTietBienLai_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietBienLai">
+              <LayoutGroup Id="ChiTietBienLai_col1">
+                <LayoutItem Id="KhauTruTheoChinhSach" ViewItem="KhauTruTheoChinhSach" />
+                <LayoutItem Id="KhauTruDoiTuong" ViewItem="KhauTruDoiTuong" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietCongNo_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietCongNo">
+              <LayoutGroup Id="ChiTietCongNo_col1">
+                <LayoutItem Id="PhatSinhCo" ViewItem="PhatSinhCo" />
+                <LayoutItem Id="PhatSinhNo" ViewItem="PhatSinhNo" />
+                <LayoutItem Id="NoiDung" ViewItem="NoiDung" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietPhieuXuat_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietPhieuXuat_col1">
+              <LayoutItem Id="ViTriPhongBan" ViewItem="ViTriPhongBan" />
+              <LayoutItem Id="BoPhan" ViewItem="BoPhan" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietThucHienHoanPhi_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietThucHienHoanPhi">
+              <LayoutGroup Id="ChiTietThucHienHoanPhi_col1">
+                <LayoutItem Id="KhauTruTheoChinhSach" ViewItem="KhauTruTheoChinhSach" />
+                <LayoutItem Id="KhauTruDoiTuong" ViewItem="KhauTruDoiTuong" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietTimKiemHocSinh_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietTimKiemHocSinh_col2">
+              <LayoutItem Id="TinhTrang" ViewItem="TinhTrang" />
+              <LayoutItem Id="Email" ViewItem="Email" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="DinhPhiHocPhi_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="DinhPhiHocPhi">
+              <LayoutGroup Id="DinhPhiHocPhi_col1">
+                <LayoutItem Id="DenNgay" ViewItem="DenNgay" />
+                <LayoutItem Id="ThangTruoc" ViewItem="ThangTruoc" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="MonAn_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Auto2ff41116-fccd-48c7-a85e-262704dc22f4">
+              <LayoutGroup Id="MonAn">
+                <LayoutGroup Id="MonAn_col1">
+                  <LayoutGroup Id="Item2">
+                    <LayoutItem Id="NhomThucDon" ViewItem="NhomThucDon" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="NguoiDuaDon_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="NguoiDuaDon_col2">
+              <LayoutGroup Id="Autof463c6c5-38aa-4d4f-8988-8af9bacf0a35">
+                <LayoutGroup Id="Autodcdf0987-0474-42a8-a223-ab9b48c203cf">
+                  <LayoutItem Id="DuaDonChinh" ViewItem="DuaDonChinh" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

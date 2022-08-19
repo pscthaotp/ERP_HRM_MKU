@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="CauHinhChung_DetailView">
+      <Layout Id="Layout">
+        <TabbedGroup Id="Item1">
+          <LayoutGroup Id="Item2">
+            <LayoutGroup Id="Auto28b74874-179b-44b3-bfda-ed111594450d">
+              <LayoutGroup Id="Auto4a1e9fe9-402c-40e8-bd55-ee7f433aea04">
+                <LayoutGroup Id="Item3">
+                  <LayoutItem Id="CauHinhSoHoa.NoiLuuTruGiayTo" ViewItem="CauHinhSoHoa.NoiLuuTruGiayTo" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </TabbedGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietKeHoach_Khoi_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietKeHoach_Khoi">
+              <LayoutGroup Id="ChiTietKeHoach_Khoi_col1" RelativeSize="50">
+                <LayoutItem Id="Khoi" RelativeSize="4.3835616438356162" />
+                <LayoutItem Id="DenTuoi" ViewItem="DenTuoi" Index="1" RelativeSize="3.2876712328767121" />
+                <LayoutItem Id="TuTuoi" ViewItem="TuTuoi" Index="2" RelativeSize="3.2876712328767121" />
+                <LayoutItem Id="DoTuoiTu" RelativeSize="3.2876712328767121" Index="3" />
+                <LayoutItem Id="DoTuoiDen" RelativeSize="3.2876712328767121" Index="4" />
+                <LayoutItem Id="SoLuong" ViewItem="SoLuong" Index="5" RelativeSize="82.465753424657535" />
+              </LayoutGroup>
+              <LayoutGroup Id="ChiTietKeHoach_Khoi_col2" RelativeSize="50" Caption="ChiTietKeHoach_Khoi_col2" Direction="Horizontal">
+                <LayoutItem Id="DenTuoi" RelativeSize="4.3835616438356162" Index="0" Removed="True" />
+                <LayoutItem Id="SoLuong" RelativeSize="100" Index="0" Removed="True" />
+                <LayoutItem Id="TuTuoi" RelativeSize="4.5197740112994351" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="LogonParameters_Custom_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="LogonParameters_Custom_col1">
+              <LayoutItem Id="btnLayXacThuc" ViewItem="btnLayXacThuc" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ThongBaoNhapHoc_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ThongBaoNhapHoc">
+              <LayoutGroup Id="Auto8a2b6f0d-8bfd-43d5-8c97-92df7deed851">
+                <LayoutItem Id="SecuritySystemUser" ViewItem="SecuritySystemUser" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ThongBaoNhapHoc_Mau_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ThongBaoNhapHoc_Mau">
+              <LayoutGroup Id="ThongBaoNhapHoc_Mau_col1">
+                <LayoutItem Id="Html" ViewItem="Html" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="KiemTraIQ_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="KiemTraIQ">
+              <LayoutGroup Id="KiemTraIQ_col1">
+                <LayoutItem Id="HoTen" Index="1" RelativeSize="36.416184971098268" Removed="True" />
+                <LayoutGroup Id="Autobf5903c5-b0ef-4cb2-968c-d116172302f3">
+                  <LayoutGroup Id="Autof7e49794-d6b4-4bc7-8c13-026c3da3fed9">
+                    <LayoutGroup Id="Autoba03b910-209f-4267-914f-3091a99679e4">
+                      <LayoutGroup Id="Autob83da363-6fce-45b3-931d-f4f7a763b6b3">
+                        <LayoutItem Id="HoTen" ViewItem="HoTen" />
+                      </LayoutGroup>
+                    </LayoutGroup>
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="HoSoNhapHoc_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="HoSoNhapHoc">
+              <LayoutGroup Id="HoSoNhapHoc_col1">
+                <LayoutItem Id="DiaChiThuongTru" RelativeSize="15" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="KiemTraIQ_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="HoTen" Removed="True" />
+      </Columns>
+    </ListView>
+  </Views>
+  <NavigationItems Id="NavigationItems">
+    <Items Id="Items">
+      <Item Id="Reminder">
+        <Items Id="Items">
+          <Item Id="Workmind_DashboardView" ViewId="Workmind_DashboardView" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+</Application>

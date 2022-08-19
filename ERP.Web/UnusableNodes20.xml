@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="ToChucSuKien_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ToChucSuKien">
+              <LayoutItem Id="SecuritySystemUser" Index="1" RelativeSize="13.888888888888889" Removed="True" />
+              <LayoutItem Id="NamHoc" Removed="True" />
+              <LayoutItem Id="NgayThucHien" RelativeSize="18.75" Removed="True" />
+              <LayoutItem Id="TenSuKien" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChamSocKhachHang_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChamSocKhachHang">
+              <LayoutItem Id="SecuritySystemUser" Index="0" RelativeSize="8.791208791208792" Removed="True" />
+              <LayoutItem Id="HinhThucChamSoc" ViewItem="HinhThucChamSoc" Index="1" RelativeSize="6.5934065934065931" Removed="True" />
+              <LayoutItem Id="NgayThucHien" ViewItem="NgayThucHien" Index="1" RelativeSize="6.5934065934065931" Removed="True" />
+              <LayoutItem Id="ThongTinKhachHang" RelativeSize="6.5934065934065931" Index="1" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

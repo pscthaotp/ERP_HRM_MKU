@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="ChiTietDanhGiaChung_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietDanhGiaChung_col2">
+              <LayoutGroup Id="Item4">
+                <LayoutItem Id="TieuChay" ViewItem="TieuChay" />
+                <LayoutItem Id="DauBung" ViewItem="DauBung" />
+                <LayoutItem Id="DiI" ViewItem="DiI" />
+                <LayoutItem Id="DiTieu" ViewItem="DiTieu" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="ChiTietDanhGiaChung_col1">
+              <LayoutGroup Id="Item3">
+                <LayoutItem Id="LauMinh" ViewItem="LauMinh" />
+                <LayoutItem Id="Tam" ViewItem="Tam" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item2">
+                <LayoutItem Id="DaySom" ViewItem="DaySom" />
+                <LayoutItem Id="KhongNgu" ViewItem="KhongNgu" />
+                <LayoutItem Id="NguDuGiac" ViewItem="NguDuGiac" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietTimKiemHocSinh_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietTimKiemHocSinh_col2">
+              <LayoutItem Id="TinhTrang" ViewItem="TinhTrang" />
+              <LayoutItem Id="Email" ViewItem="Email" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="DanhGiaKhauVi_CongTy_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="DanhGiaKhauVi_CongTy">
+              <LayoutGroup Id="Item2">
+                <LayoutGroup Id="Item6">
+                  <LayoutItem Id="Ngay" ViewItem="Ngay" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="HoSoBaoHiem_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="ListQuaTrinhThamGiaBHXH_Group" TextAlignMode="AlignWithChildren" Direction="Vertical" RelativeSize="65.377855887521974">
+            <LayoutItem Id="ListQuaTrinhThamGiaBHXH" RelativeSize="100" />
+          </LayoutGroup>
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="HoSoBaoHiem">
+              <LayoutGroup Id="HoSoBaoHiem_col1">
+                <LayoutItem Id="BoPhan" RelativeSize="20.38216560509554" />
+                <LayoutItem Id="ThongTinNhanVien" RelativeSize="15.286624203821656" />
+              </LayoutGroup>
+              <LayoutGroup Id="HoSoBaoHiem_col2">
+                <LayoutItem Id="DenNgay" RelativeSize="15.286624203821656" Index="1" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="NguoiDuaDon_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="NguoiDuaDon_col2">
+              <LayoutGroup Id="Autof463c6c5-38aa-4d4f-8988-8af9bacf0a35">
+                <LayoutGroup Id="Autodcdf0987-0474-42a8-a223-ab9b48c203cf">
+                  <LayoutItem Id="DuaDonChinh" ViewItem="DuaDonChinh" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ThucDonTuan_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ThucDonTuan">
+              <LayoutGroup Id="ThucDonTuan_col1">
+                <LayoutItem Id="GhiChu" ViewItem="GhiChu" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

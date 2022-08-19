@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="TuVanTuyenSinh_Email_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="27.710843373493976">
+            <LayoutGroup Id="TuVanTuyenSinh_Email" RelativeSize="100" Caption="Nội dung">
+              <LayoutItem Id="NoiDung" RelativeSize="34.782608695652172" />
+              <LayoutGroup Id="Auto4716c2d3-1090-4cbc-b685-2b7103deccf3" ShowCaption="False" Caption="" Direction="Horizontal" Index="1" RelativeSize="65.217391304347828">
+                <LayoutItem Id="DieuKienTimKiem" ViewItem="DieuKienTimKiem" Index="0" RelativeSize="67.6829268292683" />
+                <LayoutItem Id="btnSearch" ViewItem="btnSearch" Index="1" RelativeSize="32.31707317073171" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

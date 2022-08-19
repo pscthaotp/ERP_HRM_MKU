@@ -1,0 +1,994 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0C729AAD-7626-4668-A7F1-35F7D240489D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ERP.Module.Web</RootNamespace>
+    <AssemblyName>ERP.Module.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'EasyTest|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\EasyTest\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;EASYTEST</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.ExpressApp.Chart.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Chart.Web.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.FileAttachment.Web.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Reports.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.ReportsV2.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.ReportsV2.Web.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Security.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.TreeListEditors.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.TreeListEditors.Web.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Validation.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Validation.Web.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v16.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Xpo.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Images.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Web.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.Base.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.BaseImpl.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxHtmlEditor.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxTreeList.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v16.2.Web, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v16.2.Extensions, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v16.2.Web, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\0.ExcuteImport\ImportClass\Imp_KeHoachTuyenSinh.cs" />
+    <Compile Include="Controllers\0.ExcuteImport\ImportClass\Imp_HoSoXetTuyen.cs" />
+    <Compile Include="Controllers\0.ExcuteImport\ImportClass\Imp_ThongTinKhachHang.cs" />
+    <Compile Include="Controllers\0.ExcuteImport\ImportClass\Imp_TuVanTuyenSinh.cs" />
+    <Compile Include="Controllers\0.ExcuteImport\ImportControl\0.Common\Common_XemLoiNhapDuLieuController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\0.ExcuteImport\ImportControl\0.Common\Common_XemLoiNhapDuLieuController.designer.cs">
+      <DependentUpon>Common_XemLoiNhapDuLieuController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\0.ExcuteImport\ImportControl\10.TuyenSinh\TuyenSinh_ImportHoSoXetTuyenController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\0.ExcuteImport\ImportControl\10.TuyenSinh\TuyenSinh_ImportHoSoXetTuyenController.designer.cs">
+      <DependentUpon>TuyenSinh_ImportHoSoXetTuyenController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\1.Custom\ChangeCaptionModelController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\1.Custom\ChangeCaptionModelController.designer.cs">
+      <DependentUpon>ChangeCaptionModelController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\1.Custom\ConfirmFormatMessageController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\1.Custom\ConfirmFormatMessageController.Designer.cs">
+      <DependentUpon>ConfirmFormatMessageController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\1.Custom\SetupDetailViewController .cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\1.Custom\SetupDetailViewController .designer.cs">
+      <DependentUpon>SetupDetailViewController .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_CreateNavigationMenuItemController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_CreateNavigationMenuItemController.designer.cs">
+      <DependentUpon>HeThong_CreateNavigationMenuItemController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_SetupDetailViewNonpersistentController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_SetupDetailViewNonpersistentController.designer.cs">
+      <DependentUpon>HeThong_SetupDetailViewNonpersistentController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeTHong_EditReportRoleTreeListController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeTHong_EditReportRoleTreeListController.designer.cs">
+      <DependentUpon>HeTHong_EditReportRoleTreeListController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_EditDepartmentRoleTreeListController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_EditDepartmentRoleTreeListController.designer.cs">
+      <DependentUpon>HeThong_EditDepartmentRoleTreeListController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_LogonController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_LogonController.designer.cs">
+      <DependentUpon>HeThong_LogonController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_ChangePassController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_ChangePassController.designer.cs">
+      <DependentUpon>HeThong_ChangePassController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\0.ExcuteImport\ImportControl\10.TuyenSinh\TuyenSinh_ImportThongTinKhachHangController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\0.ExcuteImport\ImportControl\10.TuyenSinh\TuyenSinh_ImportThongTinKhachHangController.designer.cs">
+      <DependentUpon>TuyenSinh_ImportThongTinKhachHangController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\0.ExcuteImport\ImportControl\10.TuyenSinh\TuyenSinh_ImportTuVanTuyenSinhController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\0.ExcuteImport\ImportControl\10.TuyenSinh\TuyenSinh_ImportTuVanTuyenSinhController.designer.cs">
+      <DependentUpon>TuyenSinh_ImportTuVanTuyenSinhController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\1.Custom\SetupGridViewAndTreeViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\1.Custom\SetupGridViewAndTreeViewController.designer.cs">
+      <DependentUpon>SetupGridViewAndTreeViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\1.Custom\SetupWindowController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\1.Custom\SetupWindowController.designer.cs">
+      <DependentUpon>SetupWindowController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\4.BaoCao\Rpt_ShowReportController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\4.BaoCao\Rpt_ShowReportController.designer.cs">
+      <DependentUpon>Rpt_ShowReportController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\ChuyenDoiFollowUp\TuyenSinh_ChuyenDoiFollowUpController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\ChuyenDoiFollowUp\TuyenSinh_ChuyenDoiFollowUpController.designer.cs">
+      <DependentUpon>TuyenSinh_ChuyenDoiFollowUpController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\DangKyNgoaiKhoa\DangKyNgoaiKhoa_ChuyenLopNgoaiKhoa.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\DangKyNgoaiKhoa\DangKyNgoaiKhoa_ChuyenLopNgoaiKhoa.designer.cs">
+      <DependentUpon>DangKyNgoaiKhoa_ChuyenLopNgoaiKhoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\DangKyNgoaiKhoa\DangKyNgoaiKhoa_DangKyController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\DangKyNgoaiKhoa\DangKyNgoaiKhoa_DangKyController.designer.cs">
+      <DependentUpon>DangKyNgoaiKhoa_DangKyController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\DangKyNgoaiKhoa\DangKyNgoaiKhoa_GiaHanNgoaiKhoaController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\DangKyNgoaiKhoa\DangKyNgoaiKhoa_GiaHanNgoaiKhoaController.designer.cs">
+      <DependentUpon>DangKyNgoaiKhoa_GiaHanNgoaiKhoaController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\DangKyNgoaiKhoa\DangKyNgoaiKhoa_TimKiemConTroller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\DangKyNgoaiKhoa\DangKyNgoaiKhoa_TimKiemConTroller.Designer.cs">
+      <DependentUpon>DangKyNgoaiKhoa_TimKiemConTroller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\DangKyNgoaiKhoa\DangKyNgoaiKhoa_TimKiem_Open_DetailView_Controller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\DangKyNgoaiKhoa\DangKyNgoaiKhoa_TimKiem_Open_DetailView_Controller.Designer.cs">
+      <DependentUpon>DangKyNgoaiKhoa_TimKiem_Open_DetailView_Controller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_ChinhSuaChiTietTuVanTuyenSinh_ThongTinKhachHang_Controller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_ChinhSuaChiTietTuVanTuyenSinh_ThongTinKhachHang_Controller.Designer.cs">
+      <DependentUpon>TuyenSinh_ChinhSuaChiTietTuVanTuyenSinh_ThongTinKhachHang_Controller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_ChonTreHoSoXetTuyenController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_ChonTreHoSoXetTuyenController.designer.cs">
+      <DependentUpon>TuyenSinh_ChonTreHoSoXetTuyenController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_ChonTreHoSoXetTuyen_WithDrowController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_ChonTreHoSoXetTuyen_WithDrowController.designer.cs">
+      <DependentUpon>TuyenSinh_ChonTreHoSoXetTuyen_WithDrowController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_ChonTreToChucThiController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_ChonTreToChucThiController.designer.cs">
+      <DependentUpon>TuyenSinh_ChonTreToChucThiController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_ChonTreToChucThi_WithDrowController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_ChonTreToChucThi_WithDrowController.designer.cs">
+      <DependentUpon>TuyenSinh_ChonTreToChucThi_WithDrowController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_DauOrRotToChucThiController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_DauOrRotToChucThiController.designer.cs">
+      <DependentUpon>TuyenSinh_DauOrRotToChucThiController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_ThemChiTietTuVanTuyenSinhController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_ThemChiTietTuVanTuyenSinhController.Designer.cs">
+      <DependentUpon>TuyenSinh_ThemChiTietTuVanTuyenSinhController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_ThiOrBoThiToChucThiController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_ThiOrBoThiToChucThiController.designer.cs">
+      <DependentUpon>TuyenSinh_ThiOrBoThiToChucThiController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_XoaChiTietTuVanTuyenSinh_ThongTinKhachHang_Controller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_XoaChiTietTuVanTuyenSinh_ThongTinKhachHang_Controller.Designer.cs">
+      <DependentUpon>TuyenSinh_XoaChiTietTuVanTuyenSinh_ThongTinKhachHang_Controller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\11. TuyenSinh_TP\Rpt_ShowReport_PhieuDongHocPhiController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\11. TuyenSinh_TP\Rpt_ShowReport_PhieuDongHocPhiController.designer.cs">
+      <DependentUpon>Rpt_ShowReport_PhieuDongHocPhiController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_CapNhatTinhTrangBaoLuuController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_CapNhatTinhTrangBaoLuuController.designer.cs">
+      <DependentUpon>TuyenSinh_CapNhatTinhTrangBaoLuuController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_ChamSocKhachHangController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_ChamSocKhachHangController.designer.cs">
+      <DependentUpon>TuyenSinh_ChamSocKhachHangController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_ChamSocKhachHang_TongHopController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_ChamSocKhachHang_TongHopController.designer.cs">
+      <DependentUpon>TuyenSinh_ChamSocKhachHang_TongHopController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_ChonHocSinhController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_ChonHocSinhController.designer.cs">
+      <DependentUpon>TuyenSinh_ChonHocSinhController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_ChonHocSinhToChucSuKienController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_ChonHocSinhToChucSuKienController.designer.cs">
+      <DependentUpon>TuyenSinh_ChonHocSinhToChucSuKienController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_ChonKhachHangToChucSuKienController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_ChonKhachHangToChucSuKienController.designer.cs">
+      <DependentUpon>TuyenSinh_ChonKhachHangToChucSuKienController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_ChonTreController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_ChonTreController.designer.cs">
+      <DependentUpon>TuyenSinh_ChonTreController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_DienThoaiTuVanTuyenSinhController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_DienThoaiTuVanTuyenSinhController.designer.cs">
+      <DependentUpon>TuyenSinh_DienThoaiTuVanTuyenSinhController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_DongYOrHuyCauTraLoiIQController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_DongYOrHuyCauTraLoiIQController.designer.cs">
+      <DependentUpon>TuyenSinh_DongYOrHuyCauTraLoiIQController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_DuyetOrHuyDuyetKeHoachTuyenSinhController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_DuyetOrHuyDuyetKeHoachTuyenSinhController.designer.cs">
+      <DependentUpon>TuyenSinh_DuyetOrHuyDuyetKeHoachTuyenSinhController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_DuyetThongBaoTuyenSinhController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_DuyetThongBaoTuyenSinhController.designer.cs">
+      <DependentUpon>TuyenSinh_DuyetThongBaoTuyenSinhController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_DuyetToChucSuKienController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_DuyetToChucSuKienController.designer.cs">
+      <DependentUpon>TuyenSinh_DuyetToChucSuKienController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_GuiMailThongBaoNhapHocController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_GuiMailThongBaoNhapHocController.designer.cs">
+      <DependentUpon>TuyenSinh_GuiMailThongBaoNhapHocController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_GuiMailTuVanTuyenSinhController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_GuiMailTuVanTuyenSinhController.designer.cs">
+      <DependentUpon>TuyenSinh_GuiMailTuVanTuyenSinhController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_GuiMauThongBaoNhapHocController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_GuiMauThongBaoNhapHocController.designer.cs">
+      <DependentUpon>TuyenSinh_GuiMauThongBaoNhapHocController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_GuiOrKhongGuiToChucSuKienController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_GuiOrKhongGuiToChucSuKienController.designer.cs">
+      <DependentUpon>TuyenSinh_GuiOrKhongGuiToChucSuKienController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_GuiSMSThongBaoNhapHocController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_GuiSMSThongBaoNhapHocController.designer.cs">
+      <DependentUpon>TuyenSinh_GuiSMSThongBaoNhapHocController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_GuiSMSTuVanTuyenSinhController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_GuiSMSTuVanTuyenSinhController.designer.cs">
+      <DependentUpon>TuyenSinh_GuiSMSTuVanTuyenSinhController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_GuiThongBaoNhapHocController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_GuiThongBaoNhapHocController.designer.cs">
+      <DependentUpon>TuyenSinh_GuiThongBaoNhapHocController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_GuiThuMoiToChucSuKienController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_GuiThuMoiToChucSuKienController.designer.cs">
+      <DependentUpon>TuyenSinh_GuiThuMoiToChucSuKienController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_GuiTuVanTuyenSinhController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_GuiTuVanTuyenSinhController.designer.cs">
+      <DependentUpon>TuyenSinh_GuiTuVanTuyenSinhController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_HuyDuyetThongBaoTuyenSinhController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_HuyDuyetThongBaoTuyenSinhController.designer.cs">
+      <DependentUpon>TuyenSinh_HuyDuyetThongBaoTuyenSinhController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_HuyDuyetToChucSuKienController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_HuyDuyetToChucSuKienController.designer.cs">
+      <DependentUpon>TuyenSinh_HuyDuyetToChucSuKienController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_CapNhatNgayThoiHocController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_CapNhatNgayThoiHocController.designer.cs">
+      <DependentUpon>TuyenSinh_CapNhatNgayThoiHocController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_NgungGiaHanDangKyNgoaiKhoaController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_NgungGiaHanDangKyNgoaiKhoaController.designer.cs">
+      <DependentUpon>TuyenSinh_NgungGiaHanDangKyNgoaiKhoaController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_HuyHoSoBaoLuuController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_HuyHoSoBaoLuuController.designer.cs">
+      <DependentUpon>TuyenSinh_HuyHoSoBaoLuuController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_LayDuLienLienKetController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_LayDuLienLienKetController.designer.cs">
+      <DependentUpon>TuyenSinh_LayDuLienLienKetController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_LayEmailCuaKhachHangController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_LayEmailCuaKhachHangController.designer.cs">
+      <DependentUpon>TuyenSinh_LayEmailCuaKhachHangController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_MoTapTinController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_MoTapTinController.designer.cs">
+      <DependentUpon>TuyenSinh_MoTapTinController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_NguoiDaiDienHoSoNhapHocController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_NguoiDaiDienHoSoNhapHocController.designer.cs">
+      <DependentUpon>TuyenSinh_NguoiDaiDienHoSoNhapHocController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_OpenDuLieuTuyenSinhController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_OpenDuLieuTuyenSinhController.designer.cs">
+      <DependentUpon>TuyenSinh_OpenDuLieuTuyenSinhController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_TaiTapTinController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_TaiTapTinController.designer.cs">
+      <DependentUpon>TuyenSinh_TaiTapTinController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_ThamGiaOrKhongToChucSuKienController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_ThamGiaOrKhongToChucSuKienController.designer.cs">
+      <DependentUpon>TuyenSinh_ThamGiaOrKhongToChucSuKienController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_TimThongBaoNhapHocTongHopController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_TimThongBaoNhapHocTongHopController.designer.cs">
+      <DependentUpon>TuyenSinh_TimThongBaoNhapHocTongHopController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_TimThongBaoTuyenSinhController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_TimThongBaoTuyenSinhController.designer.cs">
+      <DependentUpon>TuyenSinh_TimThongBaoTuyenSinhController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_TimToChucSuKienController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_TimToChucSuKienController.designer.cs">
+      <DependentUpon>TuyenSinh_TimToChucSuKienController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_TimChamSocKhachHangTongHopController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_TimChamSocKhachHangTongHopController.designer.cs">
+      <DependentUpon>TuyenSinh_TimChamSocKhachHangTongHopController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_TimTuVanTuyenSinhTongHopController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_TimTuVanTuyenSinhTongHopController.designer.cs">
+      <DependentUpon>TuyenSinh_TimTuVanTuyenSinhTongHopController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_TimYKienKhachHangController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_TimYKienKhachHangController.designer.cs">
+      <DependentUpon>TuyenSinh_TimYKienKhachHangController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_TrucTiepThongBaoNhapHocController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_TrucTiepThongBaoNhapHocController.designer.cs">
+      <DependentUpon>TuyenSinh_TrucTiepThongBaoNhapHocController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_TrucTiepTuVanTuyenSinhController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_TrucTiepTuVanTuyenSinhController.designer.cs">
+      <DependentUpon>TuyenSinh_TrucTiepTuVanTuyenSinhController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\11. TuyenSinh_TP\TuyenSinh_ChonHocSinh_TP_Controller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\11. TuyenSinh_TP\TuyenSinh_ChonHocSinh_TP_Controller.designer.cs">
+      <DependentUpon>TuyenSinh_ChonHocSinh_TP_Controller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\14.XetTuyen\XetTuyen_XetTuyenHoSoController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\14.XetTuyen\XetTuyen_XetTuyenHoSoController.Designer.cs">
+      <DependentUpon>XetTuyen_XetTuyenHoSoController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\3.HocSinh\TinhTrang_CapNhatTinhTrangController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\3.HocSinh\TinhTrang_CapNhatTinhTrangController.designer.cs">
+      <DependentUpon>TinhTrang_CapNhatTinhTrangController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\3.HocSinh\TinhTrang_TimKiemHocSinhController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\3.HocSinh\TinhTrang_TimKiemHocSinhController.designer.cs">
+      <DependentUpon>TinhTrang_TimKiemHocSinhController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\4.HocPhi\HocPhi_TaoHoSoHocSinhController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\4.HocPhi\HocPhi_TaoHoSoHocSinhController.designer.cs">
+      <DependentUpon>HocPhi_TaoHoSoHocSinhController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\6.Roles\VisibleEditButtonListViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\6.Roles\VisibleEditButtonListViewController.designer.cs">
+      <DependentUpon>VisibleEditButtonListViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\6.Roles\VisibleDeleteButtonListViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\6.Roles\VisibleDeleteButtonListViewController.designer.cs">
+      <DependentUpon>VisibleDeleteButtonListViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_CreateAppmenuController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_CreateAppmenuController.designer.cs">
+      <DependentUpon>HeThong_CreateAppmenuController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\3.AuditLog\Audit_PreviewAuditLogController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\3.AuditLog\Audit_PreviewAuditLogController.designer.cs">
+      <DependentUpon>Audit_PreviewAuditLogController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\ASPxButton\Button_LayXacThuc.cs" />
+    <Compile Include="Editors\ASPxComboBox\ComboBox_DanhMucPhi.cs" />
+    <Compile Include="Editors\ASPxComboBox\ComboBox_ChinhSachMienGiam.cs" />
+    <Compile Include="Editors\ASPxComboBox\ComboBox_HeThiLai.cs" />
+    <Compile Include="Editors\ASPxComboBox\ComboBox_HocSinhSIS.cs" />
+    <Compile Include="Editors\ASPxComboBox\ComboBox_KhoiThiLai.cs" />
+    <Compile Include="Editors\ASPxComboBox\ComboBox_KhoiKey.cs" />
+    <Compile Include="Editors\ASPxComboBox\ComboBox_Truong.cs" />
+    <Compile Include="Editors\ASPxComboBox\ComboBox_Khoi.cs" />
+    <Compile Include="Editors\ASPxComboBox\ComboBox_HeDaoTao.cs" />
+    <Compile Include="Editors\ASPxHtmlEditor\Html_NoiDungGuiMail.cs" />
+    <Compile Include="Editors\ASPxTextbox\TextBox_Font.cs" />
+    <Compile Include="Editors\Other\CustomUserControlViewItem.cs" />
+    <Compile Include="WebModule.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebModule.Designer.cs">
+      <DependentUpon>WebModule.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controllers\0.ExcuteImport\ImportControl\0.Common\Common_XemLoiNhapDuLieuController.resx">
+      <DependentUpon>Common_XemLoiNhapDuLieuController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\0.ExcuteImport\ImportControl\10.TuyenSinh\TuyenSinh_ImportHoSoXetTuyenController.resx">
+      <DependentUpon>TuyenSinh_ImportHoSoXetTuyenController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\1.Custom\ChangeCaptionModelController.resx">
+      <DependentUpon>ChangeCaptionModelController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\1.Custom\ConfirmFormatMessageController.resx">
+      <DependentUpon>ConfirmFormatMessageController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\1.Custom\SetupDetailViewController .resx">
+      <DependentUpon>SetupDetailViewController .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\2.HeThong\HeThong_SetupDetailViewNonpersistentController.resx">
+      <DependentUpon>HeThong_SetupDetailViewNonpersistentController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\2.HeThong\HeTHong_EditReportRoleTreeListController.resx">
+      <DependentUpon>HeTHong_EditReportRoleTreeListController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\2.HeThong\HeThong_EditDepartmentRoleTreeListController.resx">
+      <DependentUpon>HeThong_EditDepartmentRoleTreeListController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\2.HeThong\HeThong_ChangePassController.resx">
+      <DependentUpon>HeThong_ChangePassController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\0.ExcuteImport\ImportControl\10.TuyenSinh\TuyenSinh_ImportThongTinKhachHangController.resx">
+      <DependentUpon>TuyenSinh_ImportThongTinKhachHangController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\0.ExcuteImport\ImportControl\10.TuyenSinh\TuyenSinh_ImportTuVanTuyenSinhController.resx">
+      <DependentUpon>TuyenSinh_ImportTuVanTuyenSinhController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\1.Custom\SetupGridViewAndTreeViewController.resx">
+      <DependentUpon>SetupGridViewAndTreeViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\1.Custom\SetupWindowController.resx">
+      <DependentUpon>SetupWindowController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\4.BaoCao\Rpt_ShowReportController.resx">
+      <DependentUpon>Rpt_ShowReportController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\ChuyenDoiFollowUp\TuyenSinh_ChuyenDoiFollowUpController.resx">
+      <DependentUpon>TuyenSinh_ChuyenDoiFollowUpController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\DangKyNgoaiKhoa\DangKyNgoaiKhoa_ChuyenLopNgoaiKhoa.resx">
+      <DependentUpon>DangKyNgoaiKhoa_ChuyenLopNgoaiKhoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\DangKyNgoaiKhoa\DangKyNgoaiKhoa_DangKyController.resx">
+      <DependentUpon>DangKyNgoaiKhoa_DangKyController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\DangKyNgoaiKhoa\DangKyNgoaiKhoa_GiaHanNgoaiKhoaController.resx">
+      <DependentUpon>DangKyNgoaiKhoa_GiaHanNgoaiKhoaController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\DangKyNgoaiKhoa\DangKyNgoaiKhoa_TimKiemConTroller.resx">
+      <DependentUpon>DangKyNgoaiKhoa_TimKiemConTroller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_ChinhSuaChiTietTuVanTuyenSinh_ThongTinKhachHang_Controller.resx">
+      <DependentUpon>TuyenSinh_ChinhSuaChiTietTuVanTuyenSinh_ThongTinKhachHang_Controller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_ChonTreHoSoXetTuyenController.resx">
+      <DependentUpon>TuyenSinh_ChonTreHoSoXetTuyenController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_ChonTreHoSoXetTuyen_WithDrowController.resx">
+      <DependentUpon>TuyenSinh_ChonTreHoSoXetTuyen_WithDrowController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_ChonTreToChucThiController.resx">
+      <DependentUpon>TuyenSinh_ChonTreToChucThiController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_ChonTreToChucThi_WithDrowController.resx">
+      <DependentUpon>TuyenSinh_ChonTreToChucThi_WithDrowController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_DauOrRotToChucThiController.resx">
+      <DependentUpon>TuyenSinh_DauOrRotToChucThiController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_ThemChiTietTuVanTuyenSinhController.resx">
+      <DependentUpon>TuyenSinh_ThemChiTietTuVanTuyenSinhController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_ThiOrBoThiToChucThiController.resx">
+      <DependentUpon>TuyenSinh_ThiOrBoThiToChucThiController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_XoaChiTietTuVanTuyenSinh_ThongTinKhachHang_Controller.resx">
+      <DependentUpon>TuyenSinh_XoaChiTietTuVanTuyenSinh_ThongTinKhachHang_Controller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\11. TuyenSinh_TP\Rpt_ShowReport_PhieuDongHocPhiController.resx">
+      <DependentUpon>Rpt_ShowReport_PhieuDongHocPhiController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_CapNhatTinhTrangBaoLuuController.resx">
+      <DependentUpon>TuyenSinh_CapNhatTinhTrangBaoLuuController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_ChamSocKhachHangController.resx">
+      <DependentUpon>TuyenSinh_ChamSocKhachHangController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_ChamSocKhachHang_TongHopController.resx">
+      <DependentUpon>TuyenSinh_ChamSocKhachHang_TongHopController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_ChonHocSinhController.resx">
+      <DependentUpon>TuyenSinh_ChonHocSinhController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_ChonHocSinhToChucSuKienController.resx">
+      <DependentUpon>TuyenSinh_ChonHocSinhToChucSuKienController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_ChonKhachHangToChucSuKienController.resx">
+      <DependentUpon>TuyenSinh_ChonKhachHangToChucSuKienController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_ChonTreController.resx">
+      <DependentUpon>TuyenSinh_ChonTreController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_DienThoaiTuVanTuyenSinhController.resx">
+      <DependentUpon>TuyenSinh_DienThoaiTuVanTuyenSinhController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_DongYOrHuyCauTraLoiIQController.resx">
+      <DependentUpon>TuyenSinh_DongYOrHuyCauTraLoiIQController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_DuyetOrHuyDuyetKeHoachTuyenSinhController.resx">
+      <DependentUpon>TuyenSinh_DuyetOrHuyDuyetKeHoachTuyenSinhController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_DuyetThongBaoTuyenSinhController.resx">
+      <DependentUpon>TuyenSinh_DuyetThongBaoTuyenSinhController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_DuyetToChucSuKienController.resx">
+      <DependentUpon>TuyenSinh_DuyetToChucSuKienController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_GuiMailThongBaoNhapHocController.resx">
+      <DependentUpon>TuyenSinh_GuiMailThongBaoNhapHocController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_GuiMailTuVanTuyenSinhController.resx">
+      <DependentUpon>TuyenSinh_GuiMailTuVanTuyenSinhController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_GuiMauThongBaoNhapHocController.resx">
+      <DependentUpon>TuyenSinh_GuiMauThongBaoNhapHocController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_GuiOrKhongGuiToChucSuKienController.resx">
+      <DependentUpon>TuyenSinh_GuiOrKhongGuiToChucSuKienController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_GuiSMSThongBaoNhapHocController.resx">
+      <DependentUpon>TuyenSinh_GuiSMSThongBaoNhapHocController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_GuiSMSTuVanTuyenSinhController.resx">
+      <DependentUpon>TuyenSinh_GuiSMSTuVanTuyenSinhController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_GuiThongBaoNhapHocController.resx">
+      <DependentUpon>TuyenSinh_GuiThongBaoNhapHocController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_GuiThuMoiToChucSuKienController.resx">
+      <DependentUpon>TuyenSinh_GuiThuMoiToChucSuKienController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_GuiTuVanTuyenSinhController.resx">
+      <DependentUpon>TuyenSinh_GuiTuVanTuyenSinhController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_HuyDuyetThongBaoTuyenSinhController.resx">
+      <DependentUpon>TuyenSinh_HuyDuyetThongBaoTuyenSinhController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_HuyDuyetToChucSuKienController.resx">
+      <DependentUpon>TuyenSinh_HuyDuyetToChucSuKienController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_CapNhatNgayThoiHocController.resx">
+      <DependentUpon>TuyenSinh_CapNhatNgayThoiHocController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_NgungGiaHanDangKyNgoaiKhoaController.resx">
+      <DependentUpon>TuyenSinh_NgungGiaHanDangKyNgoaiKhoaController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_HuyHoSoBaoLuuController.resx">
+      <DependentUpon>TuyenSinh_HuyHoSoBaoLuuController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_LayDuLienLienKetController.resx">
+      <DependentUpon>TuyenSinh_LayDuLienLienKetController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_LayEmailCuaKhachHangController.resx">
+      <DependentUpon>TuyenSinh_LayEmailCuaKhachHangController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_MoTapTinController.resx">
+      <DependentUpon>TuyenSinh_MoTapTinController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_NguoiDaiDienHoSoNhapHocController.resx">
+      <DependentUpon>TuyenSinh_NguoiDaiDienHoSoNhapHocController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_OpenDuLieuTuyenSinhController.resx">
+      <DependentUpon>TuyenSinh_OpenDuLieuTuyenSinhController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_TaiTapTinController.resx">
+      <DependentUpon>TuyenSinh_TaiTapTinController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_ThamGiaOrKhongToChucSuKienController.resx">
+      <DependentUpon>TuyenSinh_ThamGiaOrKhongToChucSuKienController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_TimThongBaoNhapHocTongHopController.resx">
+      <DependentUpon>TuyenSinh_TimThongBaoNhapHocTongHopController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_TimThongBaoTuyenSinhController.resx">
+      <DependentUpon>TuyenSinh_TimThongBaoTuyenSinhController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_TimToChucSuKienController.resx">
+      <DependentUpon>TuyenSinh_TimToChucSuKienController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_TimChamSocKhachHangTongHopController.resx">
+      <DependentUpon>TuyenSinh_TimChamSocKhachHangTongHopController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_TimTuVanTuyenSinhTongHopController.resx">
+      <DependentUpon>TuyenSinh_TimTuVanTuyenSinhTongHopController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_TimYKienKhachHangController.resx">
+      <DependentUpon>TuyenSinh_TimYKienKhachHangController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_TrucTiepThongBaoNhapHocController.resx">
+      <DependentUpon>TuyenSinh_TrucTiepThongBaoNhapHocController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\10.TuyenSinh\TuyenSinh_TrucTiepTuVanTuyenSinhController.resx">
+      <DependentUpon>TuyenSinh_TrucTiepTuVanTuyenSinhController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\11. TuyenSinh_TP\TuyenSinh_ChonHocSinh_TP_Controller.resx">
+      <DependentUpon>TuyenSinh_ChonHocSinh_TP_Controller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\14.XetTuyen\XetTuyen_XetTuyenHoSoController.resx">
+      <DependentUpon>XetTuyen_XetTuyenHoSoController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\3.HocSinh\TinhTrang_CapNhatTinhTrangController.resx">
+      <DependentUpon>TinhTrang_CapNhatTinhTrangController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\3.HocSinh\TinhTrang_TimKiemHocSinhController.resx">
+      <DependentUpon>TinhTrang_TimKiemHocSinhController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\4.HocPhi\HocPhi_TaoHoSoHocSinhController.resx">
+      <DependentUpon>HocPhi_TaoHoSoHocSinhController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\6.Roles\VisibleEditButtonListViewController.resx">
+      <DependentUpon>VisibleEditButtonListViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\6.Roles\VisibleDeleteButtonListViewController.resx">
+      <DependentUpon>VisibleDeleteButtonListViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\2.HeThong\HeThong_CreateAppmenuController.resx">
+      <DependentUpon>HeThong_CreateAppmenuController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\3.AuditLog\Audit_PreviewAuditLogController.resx">
+      <DependentUpon>Audit_PreviewAuditLogController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model.DesignedDiffs.xafml" />
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="WebModule.resx">
+      <DependentUpon>WebModule.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ERP.Module\ERP.Module.csproj">
+      <Project>{5F15837D-D1E5-44DC-92F0-4F2EBE9C3F8D}</Project>
+      <Name>ERP.Module</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\5.NghiepVu\1.NhanSu\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

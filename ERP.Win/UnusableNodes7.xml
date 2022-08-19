@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="ChiTietTimKiemHocSinh_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietTimKiemHocSinh_col2">
+              <LayoutItem Id="TinhTrang" ViewItem="TinhTrang" />
+              <LayoutItem Id="Email" ViewItem="Email" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="HocSinh_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Tabs">
+            <LayoutGroup Id="HoSoNhapHoc.CauHoiDinhDuongList" TextAlignMode="AlignWithChildren" Index="2" RelativeSize="100" Removed="True">
+              <LayoutItem Id="HoSoNhapHoc.CauHoiDinhDuongList" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="HoSoNhapHoc.CauHoiSucKhoeList" TextAlignMode="AlignWithChildren" Index="2" RelativeSize="100" Removed="True">
+              <LayoutItem Id="HoSoNhapHoc.CauHoiSucKhoeList" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="HoSoNhapHoc.CauHoiKhacList" TextAlignMode="AlignWithChildren" Index="3" RelativeSize="100" Removed="True">
+              <LayoutItem Id="HoSoNhapHoc.CauHoiKhacList" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="HoSoNhapHoc.DanhSachBenhLyList" TextAlignMode="AlignWithChildren" RelativeSize="100" Removed="True">
+              <LayoutItem Id="HoSoNhapHoc.DanhSachBenhLyList" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="Item7">
+              <LayoutItem Id="HoSoNhapHoc.SucKhoe" ViewItem="HoSoNhapHoc.SucKhoe" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="CTKhung_ChinhSua_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="CTKhung_ChinhSua">
+              <LayoutGroup Id="Auto59fb0370-0fe3-43ea-8896-091ca3a55cac" Caption="Auto59fb0370-0fe3-43ea-8896-091ca3a55cac(4)">
+                <TabbedGroup Id="Item2">
+                  <LayoutGroup Id="TuanList" Caption="Tuần" />
+                  <LayoutGroup Id="Item4" Caption="Loại khung giờ" />
+                  <LayoutGroup Id="HoatDongList" Caption="Hoạt động" />
+                </TabbedGroup>
+                <LayoutGroup Id="Item1" Caption="Cập nhật">
+                  <LayoutGroup Id="Auto41800d43-4a39-4d1d-90ea-62edf7e966b9" Caption="Auto41800d43-4a39-4d1d-90ea-62edf7e966b9(10)">
+                    <LayoutGroup Id="Autoe4c8c332-a5ce-471a-8b35-41e4d850d918" Caption="Autoe4c8c332-a5ce-471a-8b35-41e4d850d918(11)" />
+                    <LayoutGroup Id="Autobd0ad6b2-378c-43e1-a170-4b9b521034a4" Caption="Autobd0ad6b2-378c-43e1-a170-4b9b521034a4(14)" />
+                  </LayoutGroup>
+                </LayoutGroup>
+                <LayoutGroup Id="Item3" Caption="Nội dung - Chỉ số" />
+              </LayoutGroup>
+              <LayoutGroup Id="CTKhungList" Caption="Danh sách hoạt động" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

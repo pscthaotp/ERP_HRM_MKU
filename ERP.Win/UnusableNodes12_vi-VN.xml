@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="KeHoachTuan_TimParentDoParentAskDuyet_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="KeHoachTuan_TimParentDoParentAskDuyet">
+              <LayoutGroup Id="KeHoachTuan_TimParentDoParentAskDuyet_col1" Caption="KeHoachTuan_TimParentDoParentAskDuyet_col1">
+                <LayoutGroup Id="Autof6200453-17e4-4f86-8cd4-0aa47b3039fc" Caption="Autof6200453-17e4-4f86-8cd4-0aa47b3039fc(5)" />
+                <LayoutGroup Id="Auto42194fcc-6e63-4458-a228-a40f644dce17" Caption="Auto42194fcc-6e63-4458-a228-a40f644dce17(8)" />
+              </LayoutGroup>
+              <LayoutGroup Id="KeHoachTuan_TimParentDoParentAskDuyet_col2">
+                <LayoutGroup Id="Autod5a80007-bb3c-43cc-babd-1db29737a631" Caption="Autod5a80007-bb3c-43cc-babd-1db29737a631(12)" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="KeHoachTuan_TimParentDoParentAskDuyet1_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="KeHoachTuan_TimParentDoParentAskDuyet1">
+              <LayoutGroup Id="KeHoachTuan_TimParentDoParentAskDuyet1_col1" Caption="KeHoachTuan_TimParentDoParentAskDuyet1_col1">
+                <LayoutGroup Id="Auto469f00e3-3977-4b47-a8a8-381823d485d6" Caption="Auto469f00e3-3977-4b47-a8a8-381823d485d6(5)" />
+                <LayoutGroup Id="Autof33f6ee5-3958-4948-bc59-14362d8fb660" Caption="Autof33f6ee5-3958-4948-bc59-14362d8fb660(8)" />
+              </LayoutGroup>
+              <LayoutGroup Id="KeHoachTuan_TimParentDoParentAskDuyet1_col2">
+                <LayoutGroup Id="Auto5d7bb09b-92ab-495c-9014-5d4be310fd85" Caption="Auto5d7bb09b-92ab-495c-9014-5d4be310fd85(12)" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

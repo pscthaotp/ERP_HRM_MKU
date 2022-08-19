@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="BangLuongNgoaiGio_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="BangLuongNgoaiGio" Caption="BangLuongNgoaiGio">
+              <LayoutGroup Id="Auto5d11c42b-8464-420b-976f-5c68629f673d" Caption="" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietLuongNgoaiGio_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietLuongNgoaiGio" Caption="Chi tiết lương ngoài giờ">
+              <LayoutGroup Id="ChiTietLuongNgoaiGio_col2" Caption="ChiTietLuongNgoaiGio_col2" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="Ghi chú" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="LoaiNgayNgoaiGio_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="LoaiNgayNgoaiGio" Caption="Loại ngày ngoài giờ">
+              <LayoutGroup Id="LoaiNgayNgoaiGio_col1">
+                <LayoutGroup Id="Autof51ef3f1-fa9b-473c-b90f-5834bb00d754" Caption="" />
+                <LayoutGroup Id="Auto6aa481ac-1634-46d5-a38f-c183d60cde85" Caption="" />
+              </LayoutGroup>
+              <LayoutGroup Id="LoaiNgayNgoaiGio_col2" Caption="LoaiNgayNgoaiGio_col2" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="CC_ChiTietCongNgoaiGio_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SizeableEditors" Caption="Diễn giải" />
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="CC_ChiTietCongNgoaiGio">
+              <LayoutGroup Id="CC_ChiTietCongNgoaiGio_col2" Caption="CC_ChiTietCongNgoaiGio_col2" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

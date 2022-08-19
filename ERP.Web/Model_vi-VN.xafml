@@ -1,0 +1,568 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="Tuyển sinh - Chăm sóc khách hàng">
+  <ActionDesign>
+    <Actions>
+      <Action Id="New" Caption="Thêm" />
+      <Action Id="Edit" Caption="Chỉnh" />
+      <Action Id="Delete" Caption="Xóa" />
+      <Action Id="ChooseTheme" ToolTip="Chọn giao diện" Caption="Chọn giao diện" />
+      <Action Id="Deny_TypePermissionMatrixItem">
+        <ChoiceActionItems>
+          <ChoiceActionItem Id="Create" Caption="Tạo" />
+          <ChoiceActionItem Id="Delete" Caption="Xóa" />
+        </ChoiceActionItems>
+      </Action>
+      <Action Id="DialogCancel" Caption="Hủy" />
+      <Action Id="DialogClose" Caption="Đóng" />
+      <Action Id="Download" Caption="Tải" ToolTip="Tải tập tin" />
+      <Action Id="Export" ToolTip="Xuất" Caption="Xuất" />
+      <Action Id="Grant_TypePermissionMatrixItem">
+        <ChoiceActionItems>
+          <ChoiceActionItem Id="Create" Caption="Tạo" />
+          <ChoiceActionItem Id="Delete" Caption="Xóa" />
+        </ChoiceActionItems>
+      </Action>
+      <Action Id="Logoff" Caption="Đăng xuất" />
+      <Action Id="Logon" Caption="Đăng nhập" />
+      <Action Id="NavigateBack" Caption="Trở lại" />
+      <Action Id="NextObject" Caption="Tiếp tục" />
+      <Action Id="PreviewReportV2" Caption="Xem" />
+      <Action Id="PreviousObject" Caption="Quay lại" />
+      <Action Id="Refresh" Caption="Làm mới" />
+      <Action Id="ReportViewerDialogController_Close" Caption="Đóng" />
+      <Action Id="ReportViewerDialogController_Preview" Caption="Xem" />
+      <Action Id="ReportViewerDialogControllerV2_Close" Caption="Đóng" />
+      <Action Id="ReportWizard_Close" Caption="Đóng" />
+      <Action Id="ReportWizard_Create" ToolTip="Tạo" Caption="Tạo" />
+      <Action Id="ResetViewSettings" Caption="Cài đặt tìm kiếm" />
+      <Action Id="Save" Caption="Lưu" />
+      <Action Id="SaveAndClose" Caption="Lưu và đóng" />
+      <Action Id="SaveAndNew" Caption="Lưu và thêm" />
+      <Action Id="ShowInReport" Caption="Xem báo cáo" />
+      <Action Id="ShowInReportV2" Caption="Xem báo cáo" />
+      <Action Id="ShowReportInPreviewWindow" Caption="Xem" />
+      <Action Id="ShowReportInPreviewWindowV2" Caption="Xem" />
+      <Action Id="SwitchToEditMode" Caption="Chỉnh" />
+    </Actions>
+  </ActionDesign>
+  <BOModel>
+    <Class Name="DevExpress.ExpressApp.Security.AuthenticationStandardLogonParameters">
+      <OwnMembers>
+        <Member Name="Password" Caption="Mật khẩu" />
+        <Member Name="UserName" Caption="Tài khoản" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Security.ChangePasswordOnLogonParameters" Caption="Đổi mật khẩu">
+      <OwnMembers>
+        <Member Name="ConfirmPassword" Caption="Xác nhận mật khẩu" />
+        <Member Name="NewPassword" Caption="Mật khẩu mới" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Security.Strategy.PermissionMatrix.TypePermissionMatrixItem">
+      <OwnMembers>
+        <Member Name="AllowCreate" Caption="Tạo" />
+        <Member Name="AllowDelete" Caption="Xóa" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Security.Strategy.SecuritySystemObjectPermissionsObject">
+      <OwnMembers>
+        <Member Name="EffectiveDelete" Caption="Xóa" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Security.Strategy.SecuritySystemTypePermissionsObjectBase">
+      <OwnMembers>
+        <Member Name="AllowCreate" Caption="Tạo" />
+        <Member Name="AllowDelete" Caption="Xóa" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Security.Strategy.SecuritySystemUserBase">
+      <OwnMembers>
+        <Member Name="ChangePasswordOnFirstLogon" Caption="Đổi mật khẩu" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.SystemModule.StaticImageDashboardOrganizationItem">
+      <OwnMembers>
+        <Member Name="Preview" Caption="Xem" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Web.ParameterlessLogonFailedInfo">
+      <OwnMembers>
+        <Member Name="Message" Caption="Tin nhắn" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <Localization>
+    <LocalizationGroup Name="ASPxImagePropertyEditor">
+      <LocalizationItem Name="Edit" Value="Chỉnh" />
+    </LocalizationGroup>
+    <LocalizationGroup Name="ChartModule">
+      <LocalizationItem Name="ClearSettings" Value="Xóa cài đặt" />
+    </LocalizationGroup>
+    <LocalizationGroup Name="Confirmations">
+      <LocalizationItem Name="Cancel" Value="Chưa lưu dữ liệu. Tiếp tục?" />
+    </LocalizationGroup>
+    <LocalizationGroup Name="DialogButtons">
+      <LocalizationItem Name="Close" Value="Đóng" />
+      <LocalizationItem Name="Delete" Value="Xóa" />
+    </LocalizationGroup>
+    <LocalizationGroup Name="Enums">
+      <LocalizationGroup Name="DevExpress.ExpressApp.Security.ObjectAccess">
+        <LocalizationItem Name="Create" Value="Tạo" />
+        <LocalizationItem Name="Delete" Value="Xóa" />
+      </LocalizationGroup>
+    </LocalizationGroup>
+    <LocalizationGroup Name="Exceptions">
+      <LocalizationGroup Name="UserVisibleExceptions">
+        <LocalizationGroup Name="Validation">
+          <LocalizationItem Name="ActionErrorMessageHeaderFormat" Value="" />
+          <LocalizationItem Name="AllContextsErrorMessageHeader" Value="" />
+          <LocalizationItem Name="DeleteErrorMessageHeader" Value="" />
+          <LocalizationItem Name="SaveErrorMessageHeader" Value="" />
+        </LocalizationGroup>
+      </LocalizationGroup>
+    </LocalizationGroup>
+    <LocalizationGroup Name="Messages">
+      <LocalizationItem Name="Create" Value="Tạo" />
+      <LocalizationItem Name="Delete" Value="Xóa" />
+    </LocalizationGroup>
+  </Localization>
+  <NavigationItems>
+    <Items>
+      <Item Id="Nav_System" Caption="Hệ thống" />
+      <Item Id="Nav_Admissions" Caption="Tuyển sinh" />
+      <Item Id="Nav_Report" Caption="Báo cáo" />
+      <Item Id="Nav_Catagory" Caption="Danh mục" />
+      <Item Id="Nav_Reminder" Caption="Nhắc việc">
+        <Items>
+          <Item Id="Reminder_DashboardView" Caption="Chi tiết" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <Validation>
+    <Contexts>
+      <ValidationContext Id="Save" Caption="Lưu" />
+    </Contexts>
+  </Validation>
+  <Views>
+    <DetailView Id="AuthenticationStandardLogonParameters_DetailView" Caption="Đăng nhập" />
+    <DetailView Id="BaoCao_TuyenSinh_DanhSachKhachHang_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="StoreProcedureReport" Caption="Ngày lập báo cáo" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="BaoCao_TuyenSinh_ThongBaoTuyenSinh_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="BaoCao_TuyenSinh_ThongBaoTuyenSinh" Caption="Năm học" />
+            <LayoutGroup Id="StoreProcedureReport" Caption="Ngày lập báo cáo" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="CauHinhChung_DetailView">
+      <Layout>
+        <TabbedGroup Id="Item1">
+          <LayoutGroup Id="Item2">
+            <LayoutGroup Id="Auto28b74874-179b-44b3-bfda-ed111594450d">
+              <LayoutGroup Id="Auto4a1e9fe9-402c-40e8-bd55-ee7f433aea04">
+                <LayoutGroup Id="Item3" Caption="Số hóa" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </TabbedGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChamSocKhachHang_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Item2" Caption="Chăm sóc khách hàng" />
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="Nội dung" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChamSocKhachHang_ThucHien_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChamSocKhachHang_ThucHien" Caption="Chăm sóc khách hàng">
+              <LayoutGroup Id="ChamSocKhachHang_ThucHien_col2" Caption="ChamSocKhachHang_ThucHien_col2" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="Nội dung" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChangePasswordOnLogonParameters_DetailView">
+      <Items>
+        <StaticImage Id="ChangePasswordImage" Caption="ChangePasswordImage(3)" />
+        <StaticText Id="ChangePasswordText" Text="Vui lòng nhập Mật khẩu mới và Xác nhận bên dưới !!!" Caption="ChangePasswordText(4)" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="Static">
+            <LayoutGroup Id="Auto49427e2c-c054-49ee-abd6-1b81ee700189" Caption="" />
+          </LayoutGroup>
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChangePasswordOnLogonParameters" Caption="ChangePasswordOnLogonParameters" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietDuyetThongBaoTuyenSinh_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietDuyetThongBaoTuyenSinh" Caption="Thông báo tuyển sinh">
+              <LayoutGroup Id="ChiTietDuyetThongBaoTuyenSinh_col2" Caption="ChiTietDuyetThongBaoTuyenSinh_col2" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietDuyetToChucSuKien_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietDuyetToChucSuKien">
+              <LayoutGroup Id="Item1" Caption="Tổ chức sự kiện" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietToChucSuKien_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietToChucSuKien">
+              <LayoutGroup Id="ChiTietToChucSuKien_col1">
+                <LayoutGroup Id="Autoa51ff937-b66a-4466-9823-34dcedaac6e5" Caption="" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="Ghi chú" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietXyLyYKien_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietXyLyYKien" Caption="Xử lý sự kiện">
+              <LayoutGroup Id="ChiTietXyLyYKien_col2" Caption="ChiTietXyLyYKien_col2" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="DanhSachTre_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="DanhSachTre" Caption="Hồ sơ trẻ" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="DiaChi_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="DiaChi" Caption="Địa chỉ">
+              <LayoutGroup Id="DiaChi_col2" Caption="DiaChi_col2" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="DuyetThongBaoTuyenSinh_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SizeableEditors" Caption="Điều kiện tìm kiếm" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="DuyetToChucSuKien_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SizeableEditors" Caption="Điều kiện tìm kiếm" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="HoSoBaoLuu_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="HoSoBaoLuu" Caption="Hồ sơ bảo lưu">
+              <LayoutGroup Id="HoSoBaoLuu_col1" Caption="HoSoBaoLuu_col1">
+                <LayoutGroup Id="Auto30859037-2b94-4eb0-baf2-f6f2d197ac13" Caption="Auto30859037-2b94-4eb0-baf2-f6f2d197ac13(5)">
+                  <LayoutGroup Id="Auto19a9df5e-cc6d-4165-b67a-a44d34c3c7a0" Caption="Auto19a9df5e-cc6d-4165-b67a-a44d34c3c7a0(6)" />
+                  <LayoutGroup Id="Auto246a9a4b-311d-4861-bfa3-6f357942ae93" Caption="Auto246a9a4b-311d-4861-bfa3-6f357942ae93(13)" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="HoSoBaoLuu_col2" Caption="HoSoBaoLuu_col2" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="Ghi chú" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="HoSoNhapHoc_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="HoSoNhapHoc_col1">
+              <LayoutGroup Id="Autoea9647bb-872b-47d5-b911-e2c44beb11fc" Caption="Autoea9647bb-872b-47d5-b911-e2c44beb11fc(5)">
+                <LayoutGroup Id="Auto2d98fb4a-5144-4f2c-a075-7da038936536" Caption="Auto2d98fb4a-5144-4f2c-a075-7da038936536(6)">
+                  <LayoutGroup Id="Item1" Caption="Hồ sơ nhập học">
+                    <LayoutGroup Id="Autoe33670c7-4be2-448e-b1ba-795d05b6a5ff" Caption="Autoe33670c7-4be2-448e-b1ba-795d05b6a5ff(7)" />
+                    <LayoutGroup Id="Autoe00bf4b7-e8b0-41ab-8628-be47f2d004ad" Caption="Autoe00bf4b7-e8b0-41ab-8628-be47f2d004ad(17)">
+                      <LayoutGroup Id="Autoe7831bcc-9b76-4231-8be5-159436a709f2" Caption="Autoe7831bcc-9b76-4231-8be5-159436a709f2(18)">
+                        <LayoutGroup Id="Autofee42179-69c2-4ab8-9a8b-61717a82a84d" Caption="Autofee42179-69c2-4ab8-9a8b-61717a82a84d(19)" />
+                      </LayoutGroup>
+                    </LayoutGroup>
+                  </LayoutGroup>
+                  <TabbedGroup Id="Tabs">
+                    <LayoutGroup Id="GiaDinhTreList" Caption="Cha|Mẹ" />
+                    <LayoutGroup Id="LienKet" Caption="Anh|Chị|Em" />
+                    <LayoutGroup Id="CauHoiSucKhoeList" Caption="Câu hỏi sức khỏe" />
+                    <LayoutGroup Id="CauHoiDinhDuongList" Caption="Câu hỏi dinh dưỡng" />
+                    <LayoutGroup Id="CauHoiKhacList" Caption="Câu hỏi khác" />
+                    <LayoutGroup Id="DanhSachBenhLyList" Caption="Bệnh lý" />
+                    <LayoutGroup Id="ThucPhamDiUngList" Caption="Dị ứng" />
+                    <LayoutGroup Id="DichVuList" Caption="Dịch vụ" />
+                    <LayoutGroup Id="ChinhSachKhuyenMai" Caption="Khuyến mãi" />
+                    <LayoutGroup Id="TapTin" Caption="Tập tin" />
+                  </TabbedGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="HoSoThoiHoc_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="HoSoThoiHoc" Caption="Hồ sơ thôi học">
+              <LayoutGroup Id="HoSoThoiHoc_col1" Caption="HoSoThoiHoc_col1">
+                <LayoutGroup Id="Autoaa9257ea-240c-451e-96d1-8c271610c4b9" Caption="">
+                  <LayoutGroup Id="Autodb55489f-9122-44b5-b4bf-7bb46b8ad24e" Caption="" />
+                  <LayoutGroup Id="Auto0cd48b42-d500-402d-9dc1-69ae54585a43" Caption="" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="HoSoThoiHoc_col2" Caption="HoSoThoiHoc_col2" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="KeHoachTuyenSinh_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="KeHoachTuyenSinh" Caption="Kế hoạch tuyển sinh" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="KiemTraIQ_ListView">
+      <Columns>
+        <ColumnInfo Id="GioiTinh" ToolTip="2" />
+      </Columns>
+    </ListView>
+    <DetailView Id="LogonAttemptsAmountedToLimit_DetailView" Caption="Đăng nhập" />
+    <DetailView Id="LogonParameters_Custom_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="LogonParameters_Custom_col1">
+              <LayoutGroup Id="Auto356f7500-736e-4b90-b98c-682efe25deba" Caption="" />
+            </LayoutGroup>
+            <LayoutGroup Id="LogonParameters_Custom">
+              <LayoutGroup Id="LogonParameters_Custom_col2" Caption="LogonParameters_Custom_col2" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ParameterlessLogonFailedInfo_DefaultDetailView" Caption="Đăng nhập" />
+    <DashboardView Id="Reminder_DashboardView" Caption="" />
+    <DetailView Id="RuleSetValidationResult_ByTarget_Error_DetailView">
+      <Items>
+        <StaticText Id="ValidationResultsText" Text="" />
+      </Items>
+    </DetailView>
+    <DetailView Id="SecuritySystemRole_Custom_DetailView">
+      <Items>
+        <PropertyEditor Id="CanEditModel" Caption="Chỉnh gia d" />
+        <PropertyEditor Id="IsAdministrative" Caption="Tất cả chức năng" />
+        <PropertyEditor Id="Name" Caption="Tên" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="SecuritySystemRole_Custom" Caption="Phân hệ" />
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs">
+            <LayoutGroup Id="Users" Caption="Tài khoản" />
+            <LayoutGroup Id="Roles" Caption="Phân quyền" />
+            <LayoutGroup Id="TypePermissions" Caption="Chức năng chính" />
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="SecuritySystemUser_Custom_DetailView">
+      <Items>
+        <PropertyEditor Id="IsActive" Caption="Hoạt động" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Tabs">
+            <LayoutGroup Id="Roles" Caption="Chức năng" />
+            <LayoutGroup Id="ListNguoiKyTenBaoCao" Caption="Người ký tên" />
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ThongBaoNhapHoc_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ThongBaoNhapHoc">
+              <LayoutGroup Id="Auto8a2b6f0d-8bfd-43d5-8c97-92df7deed851" Caption="" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ThongBaoNhapHoc_ThucHien_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ThongBaoNhapHoc_ThucHien" Caption="Thông báo nhập học">
+              <LayoutGroup Id="ThongBaoNhapHoc_ThucHien_col2" Caption="ThongBaoNhapHoc_ThucHien_col2" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="Nội dung" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ThongBaoNhapHoc_TongHop_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SizeableEditors" Caption="SizeableEditors" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ThongBaoTuyenSinh_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ThongBaoTuyenSinh">
+              <LayoutGroup Id="ThongBaoTuyenSinh_col1">
+                <LayoutGroup Id="Autod4998ddb-e149-4fb3-84ca-338d5ff8d0d0" Caption="Autod4998ddb-e149-4fb3-84ca-338d5ff8d0d0(5)">
+                  <LayoutGroup Id="Autobdaa89b1-4f4f-4054-ba72-1014c2063519" Caption="Autobdaa89b1-4f4f-4054-ba72-1014c2063519(6)" />
+                  <LayoutGroup Id="Autoaa2e5c85-f6dd-4925-82aa-c23dd763d650" Caption="Autoaa2e5c85-f6dd-4925-82aa-c23dd763d650(12)" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="ThongTinKhachHang_LookupListView">
+      <Columns>
+        <ColumnInfo Id="DienThoaiDiDong" Caption="Điện thoại" />
+      </Columns>
+    </ListView>
+    <DetailView Id="ToChucSuKien_ChonKhachHang_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SizeableEditors" Caption="Điều kiện tìm kiếm" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ToChucSuKien_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Item1" Caption="Sự kiện">
+              <LayoutGroup Id="Autoe4c65344-b095-42da-8b4d-da7cf58ca41a" Caption="Autoe4c65344-b095-42da-8b4d-da7cf58ca41a(5)" />
+            </LayoutGroup>
+            <LayoutGroup Id="ToChucSuKien">
+              <LayoutGroup Id="Item1" Caption="Sự kiện">
+                <LayoutGroup Id="Autoe4c65344-b095-42da-8b4d-da7cf58ca41a" Caption="" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="Nội dung" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="TuVanTuyenSinh_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="TuVanTuyenSinh">
+              <LayoutGroup Id="ListChiTietTuVanTuyenSinh_Group" Caption="Chi tiết tư vấn tuyển sinh" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="TuVanTuyenSinh_ThucHien_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="TuVanTuyenSinh_ThucHien" Caption="Tư vấn tuyển sinh">
+              <LayoutGroup Id="TuVanTuyenSinh_ThucHien_col2" Caption="TuVanTuyenSinh_ThucHien_col2" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="Nội dung" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="TuVanTuyenSinh_TongHop_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SizeableEditors" Caption="SizeableEditors" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ValidationResults_Error_DetailView">
+      <Items>
+        <StaticText Id="ValidationResultsText" Text="" />
+      </Items>
+    </DetailView>
+    <DetailView Id="XyLyYKien_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SizeableEditors" Caption="Điều kiện tìm kiếm" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="YKienKhachHang_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="YKienKhachHang" Caption="Ý kiến khách hàng">
+              <LayoutGroup Id="YKienKhachHang_col2" Caption="YKienKhachHang_col2" />
+            </LayoutGroup>
+            <LayoutGroup Id="Item1" Caption="Xử lý" />
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="SizeableEditors" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

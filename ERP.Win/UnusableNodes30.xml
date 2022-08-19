@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="KhoBep_TimKiemDeNghiXuatKho_DetailView">
+      <Items Id="Items">
+        <ControlDetailItem Id="btnSearch" ControlTypeName="DevExpress.XtraEditors.SimpleButton" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="16.165413533834588">
+            <LayoutGroup Id="KhoBep_TimKiemDeNghiXuatKho" RelativeSize="100" Direction="Horizontal">
+              <LayoutGroup Id="Item1" ShowCaption="False" CaptionLocation="Top" Index="0" RelativeSize="65.576102418207682" Caption="Item1">
+                <LayoutItem Id="CongTy" ViewItem="CongTy" Index="0" RelativeSize="37.2093023255814" />
+                <LayoutGroup Id="Autof5b31e9a-0533-4967-b1fa-1ecc6f156498" ShowCaption="False" Caption="" Direction="Horizontal" Index="1" RelativeSize="62.7906976744186">
+                  <LayoutGroup Id="Auto123d8321-2ca9-4799-ba1d-ec7464e22f5b" ShowCaption="False" Caption="" Index="0" RelativeSize="49.891540130151846">
+                    <LayoutItem Id="TuNgay" ViewItem="TuNgay" Index="0" RelativeSize="44.444444444444443" />
+                    <LayoutItem Id="btnSearch" ShowCaption="True" ViewItem="btnSearch" Index="1" RelativeSize="55.555555555555557" />
+                  </LayoutGroup>
+                  <LayoutGroup Id="Auto94b8992d-ca69-474e-88fb-40034f6ee3a2" ShowCaption="False" Caption="" Index="1" RelativeSize="50.108459869848154">
+                    <LayoutItem Id="DenNgay" ViewItem="DenNgay" Index="0" RelativeSize="44.444444444444443" />
+                    <LayoutItem Id="Item3" Index="1" RelativeSize="55.555555555555557" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutItem Id="Item2" Index="1" RelativeSize="34.423897581792318" />
+              <LayoutItem Id="CongTy" RelativeSize="29.09090909090909" Removed="True" />
+              <LayoutItem Id="DenNgay" RelativeSize="21.818181818181817" Removed="True" />
+              <LayoutItem Id="TuNgay" RelativeSize="21.818181818181817" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="DeNghiXuatKhoList_Group" TextAlignMode="AlignWithChildren" Direction="Vertical" RelativeSize="83.834586466165419">
+            <LayoutItem Id="DeNghiXuatKhoList" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="KhoBep_TimKiemDonDatHang_DetailView">
+      <Items Id="Items">
+        <ControlDetailItem Id="btnSearch" ControlTypeName="DevExpress.XtraEditors.SimpleButton" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" TextAlignMode="UseParentOptions" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="16.165413533834588">
+            <LayoutGroup Id="KhoBep_TimKiemDonDatHang" RelativeSize="100" Direction="Horizontal">
+              <LayoutGroup Id="Item1" ShowCaption="False" CaptionLocation="Top" Index="0" RelativeSize="58.74822190611664" Caption="Item1">
+                <LayoutItem Id="CongTy" ViewItem="CongTy" Index="0" RelativeSize="37.2093023255814" />
+                <LayoutGroup Id="Auto45d75dce-1578-4b16-9def-cac3967d8124" ShowCaption="False" Caption="" Direction="Horizontal" Index="1" RelativeSize="62.7906976744186">
+                  <LayoutGroup Id="Auto87762b4b-e795-4454-9065-3b238c9f8716" ShowCaption="False" Caption="" Index="0" RelativeSize="49.878934624697337">
+                    <LayoutItem Id="TuNgay" ViewItem="TuNgay" Index="0" RelativeSize="44.444444444444443" />
+                    <LayoutItem Id="btnSearch" ShowCaption="True" ViewItem="btnSearch" Index="1" RelativeSize="55.555555555555557" />
+                  </LayoutGroup>
+                  <LayoutGroup Id="Auto4b1b2677-c9bf-42a0-b170-c338a6949248" ShowCaption="False" Caption="" Index="1" RelativeSize="50.121065375302663">
+                    <LayoutItem Id="DenNgay" ViewItem="DenNgay" Index="0" RelativeSize="44.444444444444443" />
+                    <LayoutItem Id="Item3" Index="1" RelativeSize="55.555555555555557" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutItem Id="Item2" Index="1" RelativeSize="41.25177809388336" />
+              <LayoutItem Id="CongTy" RelativeSize="37.2093023255814" Removed="True" />
+              <LayoutItem Id="DenNgay" RelativeSize="34.883720930232556" Removed="True" />
+              <LayoutItem Id="TuNgay" RelativeSize="27.906976744186046" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="DonDatHangList_Group" TextAlignMode="AlignWithChildren" Direction="Vertical" Index="1" RelativeSize="83.834586466165419">
+            <LayoutItem Id="DonDatHangList" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietDanhGiaChung_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietDanhGiaChung_col2">
+              <LayoutGroup Id="Item4">
+                <LayoutItem Id="TieuChay" ViewItem="TieuChay" />
+                <LayoutItem Id="DauBung" ViewItem="DauBung" />
+                <LayoutItem Id="DiI" ViewItem="DiI" />
+                <LayoutItem Id="DiTieu" ViewItem="DiTieu" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="ChiTietDanhGiaChung_col1">
+              <LayoutGroup Id="Item3">
+                <LayoutItem Id="LauMinh" ViewItem="LauMinh" />
+                <LayoutItem Id="Tam" ViewItem="Tam" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item2">
+                <LayoutItem Id="DaySom" ViewItem="DaySom" />
+                <LayoutItem Id="KhongNgu" ViewItem="KhongNgu" />
+                <LayoutItem Id="NguDuGiac" ViewItem="NguDuGiac" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietTimKiemHocSinh_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietTimKiemHocSinh_col2">
+              <LayoutItem Id="TinhTrang" ViewItem="TinhTrang" />
+              <LayoutItem Id="Email" ViewItem="Email" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="DeNghiXuatKho_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="DeNghiXuatKho_col2">
+              <LayoutItem Id="ViTriPhongBan" ViewItem="ViTriPhongBan" />
+              <LayoutItem Id="BoPhan" ViewItem="BoPhan" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="DonDatHang_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="DonDatHang">
+              <LayoutGroup Id="DonDatHang_col1">
+                <LayoutGroup Id="Auto1799dc61-99b3-439b-a245-30b2d3cd20e0">
+                  <LayoutItem Id="ViTriPhongBan" ViewItem="ViTriPhongBan" />
+                  <LayoutItem Id="BoPhan" ViewItem="BoPhan" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="NguoiDuaDon_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="NguoiDuaDon_col2">
+              <LayoutGroup Id="Autof463c6c5-38aa-4d4f-8988-8af9bacf0a35">
+                <LayoutGroup Id="Autodcdf0987-0474-42a8-a223-ab9b48c203cf">
+                  <LayoutItem Id="DuaDonChinh" ViewItem="DuaDonChinh" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ThucDonTuan_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ThucDonTuan">
+              <LayoutGroup Id="ThucDonTuan_col1">
+                <LayoutItem Id="GhiChu" ViewItem="GhiChu" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

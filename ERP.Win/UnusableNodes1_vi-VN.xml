@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="MonAnThongTin_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="MonAnThongTin">
+              <LayoutGroup Id="Autodae301bf-b471-442f-8ac4-51afb787d3af" Caption="Autodae301bf-b471-442f-8ac4-51afb787d3af(10)">
+                <LayoutGroup Id="Auto017f6f2f-3f22-400a-a769-8535bd6babe6" Caption="Auto017f6f2f-3f22-400a-a769-8535bd6babe6(5)">
+                  <LayoutGroup Id="Auto6432f0f4-59ed-4927-b0e5-94d881028e45" Caption="Auto6432f0f4-59ed-4927-b0e5-94d881028e45(6)">
+                    <LayoutGroup Id="Item2" Caption="Thông tin món ăn" />
+                  </LayoutGroup>
+                  <LayoutGroup Id="Item3" Caption="Cách làm" />
+                </LayoutGroup>
+                <TabbedGroup Id="Tabs">
+                  <LayoutGroup Id="ListMonAnThongTin_ThucPham" Caption="Danh sách thực phẩm" />
+                  <LayoutGroup Id="ListMonAn" Caption="Danh sách định lượng" />
+                </TabbedGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="SizeableEditors" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

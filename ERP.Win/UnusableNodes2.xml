@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="ChiTietLuongDot1_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietLuongDot1">
+              <LayoutGroup Id="ChiTietLuongDot1_col1">
+                <LayoutItem Id="HSPCChucVuDang" RelativeSize="7.6009501187648452" />
+              </LayoutGroup>
+              <LayoutGroup Id="ChiTietLuongDot1_col2">
+                <LayoutItem Id="GhiChu" RelativeSize="5.9405940594059405" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietLuongDot1_Old_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietLuongDot1_Old">
+              <LayoutGroup Id="ChiTietLuongDot1_Old_col1">
+                <LayoutItem Id="HSPCChucVuDang" RelativeSize="9.8461538461538467" />
+              </LayoutGroup>
+              <LayoutGroup Id="ChiTietLuongDot1_Old_col2">
+                <LayoutItem Id="GhiChu" RelativeSize="5.9405940594059405" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietLuongDot2_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietLuongDot2">
+              <LayoutGroup Id="ChiTietLuongDot2_col1">
+                <LayoutItem Id="HSPCChucVuDang" RelativeSize="9.8461538461538467" />
+              </LayoutGroup>
+              <LayoutGroup Id="ChiTietLuongDot2_col2">
+                <LayoutItem Id="GhiChu" RelativeSize="5.9405940594059405" Index="12" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietLuongDot2_Old_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietLuongDot2_Old">
+              <LayoutGroup Id="ChiTietLuongDot2_Old_col1">
+                <LayoutItem Id="HSPCChucVuDang" RelativeSize="6.4343163538873993" />
+              </LayoutGroup>
+              <LayoutGroup Id="ChiTietLuongDot2_Old_col2">
+                <LayoutItem Id="GhiChu" RelativeSize="5.9405940594059405" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

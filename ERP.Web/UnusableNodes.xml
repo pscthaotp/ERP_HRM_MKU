@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="KeHoachTuyenSinh_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="KeHoachTuyenSinh">
+              <LayoutItem Id="NamHoc" RelativeSize="22.857142857142858" />
+              <LayoutItem Id="HinhThucTuyenSinh" RelativeSize="17.142857142857142" />
+              <LayoutItem Id="NgayBatDau" RelativeSize="14.634146341463415" Removed="True" />
+              <LayoutItem Id="NgayKetThuc" RelativeSize="14.634146341463415" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

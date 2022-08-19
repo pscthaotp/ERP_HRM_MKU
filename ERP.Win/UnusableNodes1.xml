@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="HoSoTinhLuong_ListChiTietLuongDot2_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="TinhLuong" Index="0" />
+        <ColumnInfo Id="ThongTinNhanVien" Index="2" />
+        <ColumnInfo Id="TinhTrang" Index="3" />
+        <ColumnInfo Id="GhiChu" PropertyName="GhiChu" Index="9" Removed="True" />
+        <ColumnInfo Id="HSPCChucVu" Removed="True" />
+        <ColumnInfo Id="HSPCChucVuDang" Removed="True" />
+        <ColumnInfo Id="HSPCChucVuDoan" Removed="True" />
+        <ColumnInfo Id="HSPCKhac" Removed="True" />
+        <ColumnInfo Id="HSPCKiemNhiem" Removed="True" />
+        <ColumnInfo Id="HSPCThamNien" Removed="True" />
+        <ColumnInfo Id="HSPCTrachNhiem" Removed="True" />
+        <ColumnInfo Id="HSPCVuotKhung" Removed="True" />
+        <ColumnInfo Id="KhongDongBHTN" Removed="True" />
+        <ColumnInfo Id="KhongDongBHXH" Removed="True" />
+        <ColumnInfo Id="KhongDongBHYT" Removed="True" />
+        <ColumnInfo Id="KhongDongCongDoan" Removed="True" />
+        <ColumnInfo Id="NgayHieuLuc" Removed="True" />
+        <ColumnInfo Id="PhuCapDienThoai" Removed="True" />
+        <ColumnInfo Id="PhuCapTienAn" Removed="True" />
+        <ColumnInfo Id="PhuCapTienXang" Removed="True" />
+        <ColumnInfo Id="QuyetDinhThayDoiLuong" Removed="True" />
+        <ColumnInfo Id="SoNguoiPhuThuoc" Removed="True" />
+        <ColumnInfo Id="SoThangGiamTru" Removed="True" />
+      </Columns>
+    </ListView>
+    <ListView Id="HoSoTinhLuong_ListChiTietLuongDot2_Old_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="TinhLuong" Index="0" />
+        <ColumnInfo Id="ThongTinNhanVien" Index="2" />
+        <ColumnInfo Id="TinhTrang" Index="3" />
+        <ColumnInfo Id="GhiChu" PropertyName="GhiChu" Removed="True" />
+        <ColumnInfo Id="HSPCChucVu" Removed="True" />
+        <ColumnInfo Id="HSPCChucVuDang" Removed="True" />
+        <ColumnInfo Id="HSPCChucVuDoan" Removed="True" />
+        <ColumnInfo Id="HSPCKhac" Removed="True" />
+        <ColumnInfo Id="HSPCKiemNhiem" Removed="True" />
+        <ColumnInfo Id="HSPCThamNien" Removed="True" />
+        <ColumnInfo Id="HSPCTrachNhiem" Removed="True" />
+        <ColumnInfo Id="HSPCVuotKhung" Removed="True" />
+        <ColumnInfo Id="KhongDongBHTN" Removed="True" />
+        <ColumnInfo Id="KhongDongBHXH" Removed="True" />
+        <ColumnInfo Id="KhongDongBHYT" Removed="True" />
+        <ColumnInfo Id="KhongDongCongDoan" Removed="True" />
+        <ColumnInfo Id="NgayHieuLuc" Removed="True" />
+        <ColumnInfo Id="PhuCapDienThoai" Removed="True" />
+        <ColumnInfo Id="PhuCapTienAn" Removed="True" />
+        <ColumnInfo Id="PhuCapTienXang" Removed="True" />
+        <ColumnInfo Id="QuyetDinhThayDoiLuong" Removed="True" />
+        <ColumnInfo Id="SoNguoiPhuThuoc" Removed="True" />
+        <ColumnInfo Id="SoThangGiamTru" Removed="True" />
+      </Columns>
+    </ListView>
+    <DetailView Id="ChiTietLuongDot2_Old_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietLuongDot2_Old">
+              <LayoutGroup Id="ChiTietLuongDot2_Old_col1">
+                <LayoutItem Id="HSPCChucVuDoan" RelativeSize="6.4343163538873993" />
+                <LayoutItem Id="HSPCKiemNhiem" RelativeSize="8.5790884718498663" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietLuongDot1_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietLuongDot1">
+              <LayoutGroup Id="ChiTietLuongDot1_col1">
+                <LayoutItem Id="HSPCChucVuDoan" RelativeSize="9.1690544412607444" Removed="True" />
+                <LayoutItem Id="HSPCKiemNhiem" RelativeSize="8.5790884718498663" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietLuongDot1_Old_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietLuongDot1_Old">
+              <LayoutGroup Id="ChiTietLuongDot1_Old_col1">
+                <LayoutItem Id="HSPCChucVuDoan" RelativeSize="9.1690544412607444" Removed="True" />
+                <LayoutItem Id="HSPCKiemNhiem" RelativeSize="8.5790884718498663" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietLuongDot2_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietLuongDot2">
+              <LayoutGroup Id="ChiTietLuongDot2_col1">
+                <LayoutItem Id="HSPCChucVuDoan" RelativeSize="9.1690544412607444" Removed="True" />
+                <LayoutItem Id="HSPCKiemNhiem" RelativeSize="4.4117647058823533" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="HoSoTinhLuong_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="HoSoTinhLuong">
+              <LayoutItem Id="KhoaSoDot2" Index="3" RelativeSize="25.96153846153846" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs">
+            <LayoutGroup Id="ListChiTietLuongDot2" TextAlignMode="AlignWithChildren" RelativeSize="100">
+              <LayoutItem Id="ListChiTietLuongDot2" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="ListChiTietLuongDot2_Old" TextAlignMode="AlignWithChildren" RelativeSize="100">
+              <LayoutItem Id="ListChiTietLuongDot2_Old" TextAlignMode="AutoSize" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

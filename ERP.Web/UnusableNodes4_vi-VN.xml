@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="ChiTietThongBaoNhapHoc_Email_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietThongBaoNhapHoc_Email" Caption="Thông báo nhập học">
+              <LayoutGroup Id="ChiTietThongBaoNhapHoc_Email_col2" Caption="ChiTietThongBaoNhapHoc_Email_col2" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietThongBaoNhapHoc_SMS_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietThongBaoNhapHoc_SMS" Caption="Thông báo nhập học">
+              <LayoutGroup Id="ChiTietThongBaoNhapHoc_SMS_col2" Caption="ChiTietThongBaoNhapHoc_SMS_col2" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietThongBaoNhapHoc_TrucTiep_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietThongBaoNhapHoc_TrucTiep" Caption="Thông bao nhập học" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

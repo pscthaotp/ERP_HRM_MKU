@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="CC_ChamCongKhac_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="CC_ChamCongKhac">
+              <LayoutGroup Id="CC_ChamCongKhac_col1" Caption="CC_ChamCongKhac_col1">
+                <LayoutGroup Id="Auto929265ad-5662-49be-beb3-6fbf784c5b3b" Caption="" />
+              </LayoutGroup>
+              <LayoutGroup Id="CC_ChamCongKhac_col2" Caption="CC_ChamCongKhac_col2" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="QuyetDinhNangLuong_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="QuyetDinhNangLuong" Caption="QuyetDinhNangLuong" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

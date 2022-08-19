@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Options>
+    <LayoutManagerOptions RequiredFieldMark="*" />
+  </Options>
+  <SchemaModules>
+    <SchemaModule Name="CloneObjectModule" Version="16.2.4.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="16.2.4.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DetailView Id="KhoiLuongGiangDay_ThinhGiang_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="32.8">
+            <LayoutGroup Id="KhoiLuongGiangDay_ThinhGiang" RelativeSize="96.341463414634148">
+              <LayoutItem Id="CongTy" ViewItem="CongTy" Index="0" RelativeSize="20.253164556962027" IsNewNode="True" />
+              <LayoutItem Id="NamHoc" ViewItem="NamHoc" Index="1" RelativeSize="15.189873417721518" IsNewNode="True" />
+              <LayoutItem Id="HocKy" ViewItem="HocKy" Index="2" RelativeSize="15.189873417721518" IsNewNode="True" />
+              <LayoutItem Id="BangChotThuLao" Index="3" RelativeSize="15.189873417721518" />
+              <LayoutItem Id="DotTinh" Index="4" RelativeSize="15.189873417721518" />
+              <LayoutItem Id="Khoa" Index="5" RelativeSize="18.9873417721519" />
+            </LayoutGroup>
+            <LayoutGroup Id="ThongTinChungPMS" RelativeSize="3.6585365853658538" Caption="ThongTinChungPMS" Direction="Horizontal">
+              <LayoutItem Id="HocKy" Index="0" RelativeSize="100" Removed="True" />
+              <LayoutItem Id="NamHoc" Index="0" RelativeSize="47.368421052631582" Removed="True" />
+              <LayoutItem Id="CongTy" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="67.2">
+            <LayoutGroup Id="ListChiTietKhoiLuongGiangDay_ThinhGiang" RelativeSize="100">
+              <LayoutItem Id="ListChiTietKhoiLuongGiangDay_ThinhGiang" RelativeSize="100" />
+            </LayoutGroup>
+            <LayoutGroup Id="ListChiTietKhoaLuan_DoAn_ChuyenDe_ThinhGiang" RelativeSize="100">
+              <LayoutItem Id="ListChiTietKhoaLuan_DoAn_ChuyenDe_ThinhGiang" RelativeSize="100" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

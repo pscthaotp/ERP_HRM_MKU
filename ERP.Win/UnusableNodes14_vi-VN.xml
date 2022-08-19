@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="KhoBep_TimKiemDatHangDuTru_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="KhoBep_TimKiemDatHangDuTru" Caption="KhoBep_TimKiemDatHangDuTru">
+              <LayoutGroup Id="Auto7acc7902-82b1-405f-a4fd-41878df3c7c6" Caption="Auto7acc7902-82b1-405f-a4fd-41878df3c7c6(4)">
+                <LayoutGroup Id="Autoea237078-351e-4ace-92d2-bc6469c08d8f" Caption="Autoea237078-351e-4ace-92d2-bc6469c08d8f(6)" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="Autoea34b46e-0309-4426-9256-71b77349163c" Caption="Autoea34b46e-0309-4426-9256-71b77349163c(10)" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

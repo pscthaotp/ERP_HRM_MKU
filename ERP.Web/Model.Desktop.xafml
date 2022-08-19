@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <SchemaModules>
+    <SchemaModule Name="CloneObjectModule" Version="16.2.4.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerModuleBase" Version="16.2.4.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerWindowsFormsModule" Version="16.2.4.0" IsNewNode="True" />
+    <SchemaModule Name="SystemAspNetModule" Version="16.2.4.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="16.2.4.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DetailView Id="ChiTieuTuyenSinh_DetailView">
+      <Items>
+        <PropertyEditor Id="ListChiTietChiTieuTuyenSinh" PropertyName="ListChiTietChiTieuTuyenSinh" View="ChiTieuTuyenSinh_ListChiTietChiTieuTuyenSinh_ListView" IsNewNode="True" />
+        <PropertyEditor Id="ListChiTietChiTieuTuyenSinh_NK" PropertyName="ListChiTietChiTieuTuyenSinh_NK" View="ChiTieuTuyenSinh_ListChiTietChiTieuTuyenSinh_NK_ListView" IsNewNode="True" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="21.57676348547718">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="ChiTieuTuyenSinh" RelativeSize="100">
+              <LayoutGroup Id="Item3" ShowCaption="True" CaptionLocation="Top" Index="0" RelativeSize="100" Caption="Thông tin" IsNewNode="True">
+                <LayoutItem Id="CongTy" ViewItem="CongTy" Index="0" RelativeSize="50" IsNewNode="True" />
+                <LayoutItem Id="NamHoc" ViewItem="NamHoc" Index="1" RelativeSize="50" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutItem Id="CongTy" RelativeSize="51.612903225806448" Removed="True" />
+              <LayoutItem Id="NamHoc" RelativeSize="48.387096774193552" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+        <LayoutGroup Id="Autof1577b4d-766e-4406-9e6f-66929553844e" ShowCaption="False" Caption="" Direction="Horizontal" Index="1" RelativeSize="78.423236514522827" IsNewNode="True">
+          <LayoutGroup Id="Item1" ShowCaption="True" Caption="Chỉ tiêu tuyển sinh học sinh" CaptionLocation="Top" Index="0" RelativeSize="49.050279329608941" IsNewNode="True">
+            <LayoutItem Id="ListChiTietChiTieuTuyenSinh" ViewItem="ListChiTietChiTieuTuyenSinh" Index="0" RelativeSize="100" IsNewNode="True" />
+          </LayoutGroup>
+          <LayoutGroup Id="Item2" ShowCaption="True" Caption="Chỉ tiêu tuyển sinh ngoại khóa" CaptionLocation="Top" Index="1" RelativeSize="50.949720670391059" IsNewNode="True">
+            <LayoutItem Id="ListChiTietChiTieuTuyenSinh_NK" ViewItem="ListChiTietChiTieuTuyenSinh_NK" Index="0" RelativeSize="100" IsNewNode="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTieuTuyenSinhNamHoc_DetailView">
+      <Items>
+        <PropertyEditor Id="ListChiTiet" PropertyName="ListChiTiet" View="ChiTieuTuyenSinhNamHoc_ListChiTiet_ListView" IsNewNode="True" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="7.6">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="ChiTieuTuyenSinhNamHoc" RelativeSize="100">
+              <LayoutItem Id="NamHoc" RelativeSize="100" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+        <LayoutGroup Id="Item1" ShowCaption="False" CaptionLocation="Top" Index="1" RelativeSize="92.4" Caption="Item1" IsNewNode="True">
+          <LayoutItem Id="ListChiTiet" ViewItem="ListChiTiet" Index="0" RelativeSize="100" IsNewNode="True" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="ChiTieuTuyenSinhNamHoc_ListChiTiet_ListView" AutoExpandAllGroups="True" AllowEdit="True">
+      <Columns>
+        <ColumnInfo Id="CongTy.LoaiTruong" PropertyName="CongTy.LoaiTruong" Index="0" IsNewNode="True" />
+        <ColumnInfo Id="CongTy" Index="1" />
+        <ColumnInfo Id="Thang" Index="2" />
+        <ColumnInfo Id="SoLuong" Index="3" />
+      </Columns>
+    </ListView>
+    <DetailView Id="ThongTinKhachHang_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="85.336538461538467">
+            <LayoutItem Id="Message" RelativeSize="4.507042253521127" />
+            <LayoutGroup Id="ThongTinChung" RelativeSize="19.43661971830986" />
+            <LayoutGroup Id="ThongTinKhachHang" RelativeSize="55.774647887323944">
+              <LayoutGroup Id="ThongTinKhachHang_col1">
+                <LayoutGroup Id="Auto7af19827-9654-4658-bb48-53274535483b" RelativeSize="49.189189189189186">
+                  <LayoutGroup Id="Autob8cfc4c4-d5ef-474c-bdbb-10e83650f916" RelativeSize="49.907407407407405">
+                    <LayoutItem Id="MaKhachHang" RelativeSize="17.582417582417584" />
+                    <LayoutItem Id="HoTen" RelativeSize="13.186813186813186" />
+                    <LayoutItem Id="NgaySinh" RelativeSize="13.186813186813186" />
+                    <LayoutItem Id="GioiTinh" RelativeSize="13.186813186813186" />
+                    <LayoutItem Id="LoaiKhachHangTuVan" RelativeSize="13.186813186813186" />
+                    <LayoutItem Id="NguonThuThap" RelativeSize="13.186813186813186" />
+                    <LayoutItem Id="HinhThucTiepCan" ViewItem="HinhThucTiepCan" Index="6" RelativeSize="16.483516483516482" IsNewNode="True" />
+                  </LayoutGroup>
+                  <LayoutGroup Id="Auto6aae03e4-0059-42d9-8430-f7aa137ad4c0" RelativeSize="50.092592592592595">
+                    <LayoutItem Id="CMND" RelativeSize="17.582417582417584" />
+                    <LayoutItem Id="Email" RelativeSize="13.186813186813186" />
+                    <LayoutItem Id="DienThoaiDiDong" RelativeSize="13.186813186813186" />
+                    <LayoutItem Id="QuocTich" RelativeSize="13.186813186813186" />
+                    <LayoutItem Id="DiaChiThuongTru" ViewItem="DiaChiThuongTru" Index="4" RelativeSize="13.186813186813186" IsNewNode="True" Removed="True" />
+                    <LayoutItem Id="DiaChiTamTru" ViewItem="DiaChiTamTru" Index="5" RelativeSize="13.186813186813186" IsNewNode="True" />
+                    <LayoutItem Id="QuanHe" Index="6" RelativeSize="16.483516483516482" />
+                    <LayoutItem Id="HinhThucTiepCan" Index="7" RelativeSize="14.563106796116506" Removed="True" />
+                  </LayoutGroup>
+                </LayoutGroup>
+                <LayoutItem Id="NoiCongTac" RelativeSize="6.4864864864864868" Index="1" />
+                <LayoutItem Id="NamDuKien" RelativeSize="6.4864864864864868" Index="2" />
+                <LayoutItem Id="NgheNghiep" Index="3" RelativeSize="6.4864864864864868" />
+                <LayoutItem Id="GhiChu" RelativeSize="31.351351351351351" Index="4" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="ThongTinLLK" RelativeSize="20.281690140845072" />
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="14.663461538461538" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

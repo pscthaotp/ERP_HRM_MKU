@@ -1,0 +1,3 @@
+ftp://waws-prod-sg1-037.ftp.azurewebsites.windows.net
+USER: ttceducrm\$ttceducrm
+PASS: fpAd3fMnoyuwaQsdCfpn2SnuTBF5xuvmTwpGZCE1Xkvol2miGyXMSf2P7sSY

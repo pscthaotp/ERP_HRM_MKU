@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="CauHinhChung_DetailView">
+      <Layout Id="Layout">
+        <TabbedGroup Id="Item1">
+          <LayoutGroup Id="Item2">
+            <LayoutItem Id="NgonNgu" ViewItem="NgonNgu" />
+          </LayoutGroup>
+        </TabbedGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="CauHinhChung_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="NgonNgu" Removed="True" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

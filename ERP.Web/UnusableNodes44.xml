@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="ChiTietTuVanTuyenSinh_DienThoai_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="ChiTietTuVanTuyenSinh_DienThoai" Caption="Chi tiết tư vấn điện thoại" RelativeSize="100" Direction="Vertical">
+              <LayoutGroup Id="ChiTietTuVanTuyenSinh_DienThoai_col1" RelativeSize="100">
+                <LayoutItem Id="MaKhachHang" RelativeSize="4.5197740112994351" />
+                <LayoutItem Id="HoTen" RelativeSize="3.3898305084745761" />
+                <LayoutItem Id="GioiTinh" RelativeSize="3.3898305084745761" />
+                <LayoutItem Id="DienThoai" ViewItem="DienThoai" Index="3" RelativeSize="3.3898305084745761" />
+                <LayoutItem Id="GhiChu" ViewItem="GhiChu" Index="4" RelativeSize="3.3898305084745761" />
+                <LayoutItem Id="Item1" Index="5" RelativeSize="81.920903954802256" />
+              </LayoutGroup>
+              <LayoutGroup Id="ChiTietTuVanTuyenSinh_DienThoai_col2" RelativeSize="50" Caption="ChiTietTuVanTuyenSinh_DienThoai_col2" Direction="Horizontal" Removed="True">
+                <LayoutItem Id="DienThoai" RelativeSize="100" Removed="True" />
+                <LayoutItem Id="GhiChu" RelativeSize="95.480225988700568" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="TuVanTuyenSinh_DienThoai_DetailView">
+      <Items Id="Items">
+        <ControlDetailItem Id="btnSearch" ControlTypeName="DevExpress.Web.ASPxButton" />
+        <PropertyEditor Id="ListChiTietTuVanTuyenSinh" AllowEdit="False" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="53.1496062992126">
+            <LayoutGroup Id="TuVanTuyenSinh_DienThoai" RelativeSize="100" Caption="Năm học">
+              <LayoutItem Id="NamHoc" RelativeSize="7.9012345679012341" />
+              <LayoutItem Id="NoiDung" ViewItem="NoiDung" Index="1" RelativeSize="35.802469135802468" />
+              <LayoutItem Id="DieuKienTimKiem" ViewItem="DieuKienTimKiem" Index="2" RelativeSize="48.888888888888886" />
+              <LayoutItem Id="btnSearch" ViewItem="btnSearch" Index="3" RelativeSize="7.4074074074074074" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="ListChiTietTuVanTuyenSinh_Group" Direction="Vertical" RelativeSize="46.8503937007874" Index="1">
+            <LayoutItem Id="ListChiTietTuVanTuyenSinh" RelativeSize="100" />
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="SizeableEditors" RelativeSize="11.635220125786164" Direction="Horizontal" Removed="True">
+            <LayoutItem Id="DieuKienTimKiem" Index="0" RelativeSize="100" Removed="True" />
+            <LayoutItem Id="NoiDung" Removed="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="TuVanTuyenSinh_DienThoai_ListChiTietTuVanTuyenSinh_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="MaKhachHang" Width="92" />
+        <ColumnInfo Id="HoTen" Width="52" />
+        <ColumnInfo Id="GioiTinh" Width="58" />
+        <ColumnInfo Id="DienThoai" Width="69" />
+        <ColumnInfo Id="GhiChu" Width="55" />
+        <ColumnInfo Id="Oid" Removed="True" />
+      </Columns>
+    </ListView>
+    <DetailView Id="ChiTietKeHoachTuyenSinh_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietKeHoachTuyenSinh">
+              <LayoutGroup Id="Item1">
+                <LayoutItem Id="SoLuong" ViewItem="SoLuong" />
+                <LayoutItem Id="DoTuoiDen" ViewItem="DoTuoiDen" />
+                <LayoutItem Id="DoTuoiTu" ViewItem="DoTuoiTu" />
+                <LayoutItem Id="Khoi" ViewItem="Khoi" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="LogonParameters_Custom_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="LogonParameters_Custom_col1">
+              <LayoutItem Id="btnLayXacThuc" ViewItem="btnLayXacThuc" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ThongBaoNhapHoc_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ThongBaoNhapHoc">
+              <LayoutGroup Id="Auto8a2b6f0d-8bfd-43d5-8c97-92df7deed851">
+                <LayoutItem Id="SecuritySystemUser" ViewItem="SecuritySystemUser" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

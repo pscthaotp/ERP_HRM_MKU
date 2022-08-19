@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="ThongTinKhachHang_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Nam" GroupIndex="1" />
+      </Columns>
+    </ListView>
+    <DetailView Id="ThongTinKhachHang_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ThongTinKhachHang">
+              <LayoutGroup Id="ThongTinKhachHang_col1">
+                <LayoutItem Id="CMND" RelativeSize="12.631578947368421" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

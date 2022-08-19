@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="requestOTP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="receiver" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="confirmCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="requestOTPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestOTPResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="checkOTP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tokenKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="otp" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="confirmCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="checkOTPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="checkOTPResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="sendSMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="receivers" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="content" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="confirmCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="sendSMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sendSMSResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="requestOTPSoapIn">
+    <wsdl:part name="parameters" element="tns:requestOTP" />
+  </wsdl:message>
+  <wsdl:message name="requestOTPSoapOut">
+    <wsdl:part name="parameters" element="tns:requestOTPResponse" />
+  </wsdl:message>
+  <wsdl:message name="checkOTPSoapIn">
+    <wsdl:part name="parameters" element="tns:checkOTP" />
+  </wsdl:message>
+  <wsdl:message name="checkOTPSoapOut">
+    <wsdl:part name="parameters" element="tns:checkOTPResponse" />
+  </wsdl:message>
+  <wsdl:message name="sendSMSSoapIn">
+    <wsdl:part name="parameters" element="tns:sendSMS" />
+  </wsdl:message>
+  <wsdl:message name="sendSMSSoapOut">
+    <wsdl:part name="parameters" element="tns:sendSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="requestOTPHttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="appId" type="s:string" />
+    <wsdl:part name="receiver" type="s:string" />
+    <wsdl:part name="confirmCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="requestOTPHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="checkOTPHttpGetIn">
+    <wsdl:part name="tokenKey" type="s:string" />
+    <wsdl:part name="otp" type="s:string" />
+    <wsdl:part name="confirmCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="checkOTPHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="sendSMSHttpGetIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="appId" type="s:string" />
+    <wsdl:part name="receivers" type="s:string" />
+    <wsdl:part name="content" type="s:string" />
+    <wsdl:part name="confirmCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="sendSMSHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="requestOTPHttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="appId" type="s:string" />
+    <wsdl:part name="receiver" type="s:string" />
+    <wsdl:part name="confirmCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="requestOTPHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="checkOTPHttpPostIn">
+    <wsdl:part name="tokenKey" type="s:string" />
+    <wsdl:part name="otp" type="s:string" />
+    <wsdl:part name="confirmCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="checkOTPHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="sendSMSHttpPostIn">
+    <wsdl:part name="accountId" type="s:string" />
+    <wsdl:part name="appId" type="s:string" />
+    <wsdl:part name="receivers" type="s:string" />
+    <wsdl:part name="content" type="s:string" />
+    <wsdl:part name="confirmCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="sendSMSHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="appserviceSoap">
+    <wsdl:operation name="requestOTP">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Dịch vụ OTP</wsdl:documentation>
+      <wsdl:input message="tns:requestOTPSoapIn" />
+      <wsdl:output message="tns:requestOTPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="checkOTP">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Kiểm tra OTP</wsdl:documentation>
+      <wsdl:input message="tns:checkOTPSoapIn" />
+      <wsdl:output message="tns:checkOTPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="sendSMS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Gửi tin nhắn</wsdl:documentation>
+      <wsdl:input message="tns:sendSMSSoapIn" />
+      <wsdl:output message="tns:sendSMSSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="appserviceHttpGet">
+    <wsdl:operation name="requestOTP">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Dịch vụ OTP</wsdl:documentation>
+      <wsdl:input message="tns:requestOTPHttpGetIn" />
+      <wsdl:output message="tns:requestOTPHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="checkOTP">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Kiểm tra OTP</wsdl:documentation>
+      <wsdl:input message="tns:checkOTPHttpGetIn" />
+      <wsdl:output message="tns:checkOTPHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="sendSMS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Gửi tin nhắn</wsdl:documentation>
+      <wsdl:input message="tns:sendSMSHttpGetIn" />
+      <wsdl:output message="tns:sendSMSHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="appserviceHttpPost">
+    <wsdl:operation name="requestOTP">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Dịch vụ OTP</wsdl:documentation>
+      <wsdl:input message="tns:requestOTPHttpPostIn" />
+      <wsdl:output message="tns:requestOTPHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="checkOTP">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Kiểm tra OTP</wsdl:documentation>
+      <wsdl:input message="tns:checkOTPHttpPostIn" />
+      <wsdl:output message="tns:checkOTPHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="sendSMS">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Gửi tin nhắn</wsdl:documentation>
+      <wsdl:input message="tns:sendSMSHttpPostIn" />
+      <wsdl:output message="tns:sendSMSHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="appserviceSoap" type="tns:appserviceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="requestOTP">
+      <soap:operation soapAction="http://tempuri.org/requestOTP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkOTP">
+      <soap:operation soapAction="http://tempuri.org/checkOTP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendSMS">
+      <soap:operation soapAction="http://tempuri.org/sendSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="appserviceSoap12" type="tns:appserviceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="requestOTP">
+      <soap12:operation soapAction="http://tempuri.org/requestOTP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkOTP">
+      <soap12:operation soapAction="http://tempuri.org/checkOTP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendSMS">
+      <soap12:operation soapAction="http://tempuri.org/sendSMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="appserviceHttpGet" type="tns:appserviceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="requestOTP">
+      <http:operation location="/requestOTP" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkOTP">
+      <http:operation location="/checkOTP" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendSMS">
+      <http:operation location="/sendSMS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="appserviceHttpPost" type="tns:appserviceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="requestOTP">
+      <http:operation location="/requestOTP" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkOTP">
+      <http:operation location="/checkOTP" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendSMS">
+      <http:operation location="/sendSMS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="appservice">
+    <wsdl:port name="appserviceSoap" binding="tns:appserviceSoap">
+      <soap:address location="http://sms.psctelecom.com.vn/appservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="appserviceSoap12" binding="tns:appserviceSoap12">
+      <soap12:address location="http://sms.psctelecom.com.vn/appservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="appserviceHttpGet" binding="tns:appserviceHttpGet">
+      <http:address location="http://sms.psctelecom.com.vn/appservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="appserviceHttpPost" binding="tns:appserviceHttpPost">
+      <http:address location="http://sms.psctelecom.com.vn/appservice.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

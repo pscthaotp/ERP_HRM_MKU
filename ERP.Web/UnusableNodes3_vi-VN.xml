@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="ChiTietTuVanTuyenSinh_Email_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietTuVanTuyenSinh_Email" Caption="Tư vấn tuyển sinh" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="TuVanTuyenSinh_Email_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" Caption="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="TuVanTuyenSinh_Email" Caption="TuVanTuyenSinh_Email" />
+          </LayoutGroup>
+        </LayoutGroup>
+        <LayoutGroup Id="Item1" Caption="Khách hàng" />
+      </Layout>
+    </DetailView>
+    <DetailView Id="TuVanTuyenSinh_SMS_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="TuVanTuyenSinh_SMS" Caption="Năm học" />
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="SizeableEditors" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

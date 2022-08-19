@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="ChiTietThongBaoNhapHoc_TrucTiep_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietThongBaoNhapHoc_TrucTiep">
+              <LayoutGroup Id="ChiTietThongBaoNhapHoc_TrucTiep_col2" Caption="ChiTietThongBaoNhapHoc_TrucTiep_col2" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

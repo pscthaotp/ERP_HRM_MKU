@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <ActionDesign Id="ActionDesign">
+    <Actions Id="Actions">
+      <Action Id="ChangePasswordByUser" Caption="Đổi mật khẩu" />
+      <Action Id="Deny_TypePermissionMatrixItem">
+        <ChoiceActionItems Id="ChoiceActionItems">
+          <ChoiceActionItem Id="Create" Caption="Thêm" />
+          <ChoiceActionItem Id="Delete" Caption="Xóa" />
+          <ChoiceActionItem Id="Read" Caption="Xem" />
+          <ChoiceActionItem Id="Write" Caption="Sửa" />
+        </ChoiceActionItems>
+      </Action>
+      <Action Id="Grant_TypePermissionMatrixItem">
+        <ChoiceActionItems Id="ChoiceActionItems">
+          <ChoiceActionItem Id="Create" Caption="Thêm" />
+          <ChoiceActionItem Id="Delete" Caption="Xóa" />
+          <ChoiceActionItem Id="Read" Caption="Xem" />
+          <ChoiceActionItem Id="Write" Caption="Sửa" />
+        </ChoiceActionItems>
+      </Action>
+      <Action Id="ResetPassword" Caption="Tạo mật khẩu" />
+    </Actions>
+  </ActionDesign>
+</Application>

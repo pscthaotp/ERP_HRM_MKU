@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="CauHinhChung_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="NoiLuuTruGiayTo" Removed="True" />
+        <ColumnInfo Id="Password" Removed="True" />
+        <ColumnInfo Id="Username" Removed="True" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

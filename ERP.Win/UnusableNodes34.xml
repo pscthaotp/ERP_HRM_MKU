@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="QuanLyThoiKhoaBieu_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="QuanLyThoiKhoaBieu">
+              <LayoutGroup Id="Autoa128021d-5919-4628-acd3-413bbe6c090a">
+                <LayoutGroup Id="ChuongTrinhGDList">
+                  <LayoutItem Id="ThoiKhoaBieuList" ViewItem="ThoiKhoaBieuList" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="Autoa0dbd3c0-135a-40ef-a187-7f4fb8edd8c9">
+                <LayoutItem Id="HocSinh" ViewItem="HocSinh" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ThoiKhoaBieu_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ThoiKhoaBieu_col1">
+              <LayoutItem Id="Label" ViewItem="Label" />
+              <LayoutItem Id="Ngay" ViewItem="Ngay" />
+              <LayoutItem Id="ChuongTrinhGD" ViewItem="ChuongTrinhGD" />
+              <LayoutItem Id="LoaiTKB" ViewItem="LoaiTKB" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietTimKiemHocSinh_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietTimKiemHocSinh_col2">
+              <LayoutItem Id="TinhTrang" ViewItem="TinhTrang" />
+              <LayoutItem Id="Email" ViewItem="Email" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChuongTrinhGD_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChuongTrinhGD_col2">
+              <LayoutItem Id="KhuVucHoc" ViewItem="KhuVucHoc" />
+              <LayoutItem Id="KhungGioTKB" ViewItem="KhungGioTKB" />
+              <LayoutItem Id="HoatDong" ViewItem="HoatDong" />
+            </LayoutGroup>
+            <LayoutGroup Id="ChuongTrinhGD_col1">
+              <LayoutItem Id="LinhVuc" ViewItem="LinhVuc" />
+              <LayoutItem Id="ChuDe" ViewItem="ChuDe" />
+              <LayoutItem Id="NoiDung" ViewItem="NoiDung" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

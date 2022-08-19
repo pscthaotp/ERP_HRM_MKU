@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4225287F-41EF-4454-A666-F00EFAF3A320}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ERP.Module.PMS</RootNamespace>
+    <AssemblyName>ERP.Module.PMS</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'EasyTest|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\EasyTest\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;EASYTEST</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.ExpressApp.AuditTrail.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.CloneObject.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.ConditionalAppearance.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Notifications.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.PivotGrid.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.ReportsV2.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.TreeListEditors.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Validation.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Xpo.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v16.2.Core, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v16.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Data.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.Base.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.BaseImpl.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Spreadsheet.v16.2.Core, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v16.2.Extensions, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System">
+      <Name>System</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessObjects\BaoCao\Yersin\Report_PMS_DanhSachGVTG_TinhThuLao.cs" />
+    <Compile Include="BusinessObjects\BaoCao\Yersin\Report_PMS_ThongKe_KhoiLuongGiangDay_ThinhGiang_Mau2.cs" />
+    <Compile Include="BusinessObjects\BaoCao\Yersin\Report_PMS_ThongKe_KhoiLuongGiangDay_CoHuu_Mau1.cs" />
+    <Compile Include="BusinessObjects\BaoCao\Yersin\Report_PMS_ThanhToanGioGiangTheoDot.cs" />
+    <Compile Include="BusinessObjects\BaoCao\Yersin\Report_PMS_BangTinhThuLao_ThinhGiang.cs" />
+    <Compile Include="BusinessObjects\BaoCao\Yersin\Report_PMS_TongHopRaDe_CoiThi_ChamThi_CoHuu.cs" />
+    <Compile Include="BusinessObjects\BaoCao\Yersin\Report_PMS_TongHopRaDe_CoiThi_ChamThi_ThinhGiang.cs" />
+    <Compile Include="BusinessObjects\BaoCao\Yersin\Report_PMS_TongHop_VuotTietGiangDay_CoHuu.cs" />
+    <Compile Include="BusinessObjects\CauHinh\ChonGiaTriLapCongThucPMS.cs" />
+    <Compile Include="BusinessObjects\CauHinh\ChiTietCauHinhQuyDoiPMS.cs" />
+    <Compile Include="BusinessObjects\CauHinh\CauHinhQuyDoiPMS.cs" />
+    <Compile Include="BusinessObjects\DanhMuc\BacDaoTao.cs" />
+    <Compile Include="BusinessObjects\DanhMuc\CheDoXaHoi.cs" />
+    <Compile Include="BusinessObjects\DanhMuc\ChiTietPhanQuyen_PMS_WEB.cs" />
+    <Compile Include="BusinessObjects\DanhMuc\DanhSachChiTietHDKhac.cs" />
+    <Compile Include="BusinessObjects\DanhMuc\DonGiaDiLai.cs" />
+    <Compile Include="BusinessObjects\DanhMuc\DonGia\DonGiaRaDe.cs" />
+    <Compile Include="BusinessObjects\DanhMuc\DonGia\DonGiaTieuChuan.cs" />
+    <Compile Include="BusinessObjects\DanhMuc\GioChuan\DinhMucChucVu.cs" />
+    <Compile Include="BusinessObjects\DanhMuc\GioChuan\DinhMucChucVu_NhanVien.cs" />
+    <Compile Include="BusinessObjects\DanhMuc\GioChuan\DinhMuc_NghienCuuKhoaHoc.cs" />
+    <Compile Include="BusinessObjects\DanhMuc\GioChuan\QuanLyGioChuan.cs" />
+    <Compile Include="BusinessObjects\DanhMuc\HeDaoTao_PMS.cs" />
+    <Compile Include="BusinessObjects\DanhMuc\HeSo\HeSoBacDaoTao.cs" />
+    <Compile Include="BusinessObjects\DanhMuc\HeSo\HeSoChucDanh.cs" />
+    <Compile Include="BusinessObjects\DanhMuc\HeSo\HeSoCoSo.cs" />
+    <Compile Include="BusinessObjects\DanhMuc\HeSo\HeSoGiangDayTheoDuAn.cs" />
+    <Compile Include="BusinessObjects\DanhMuc\HeSo\HeSoGiangDay_NgoaiGio.cs" />
+    <Compile Include="BusinessObjects\DanhMuc\HeSo\HeSoCoVanHocTap.cs" />
+    <Compile Include="BusinessObjects\DanhMuc\HeSo\HeSoLopDong.cs" />
+    <Compile Include="BusinessObjects\DanhMuc\HeSo\HeSoNgonNgu.cs" />
+    <Compile Include="BusinessObjects\DanhMuc\HeSo\HeSoNganhHoc.cs" />
+    <Compile Include="BusinessObjects\DanhMuc\HeSo\HeSoTinChi.cs" />
+    <Compile Include="BusinessObjects\DanhMuc\HeSo\HeSo_ChucDanhNhanVien.cs" />
+    <Compile Include="BusinessObjects\DanhMuc\HeSo\QuanLyHeSo.cs" />
+    <Compile Include="BusinessObjects\DanhMuc\KhoiNganh.cs" />
+    <Compile Include="BusinessObjects\DanhMuc\LoaiHoatDong_PhanQuyen_WEB.cs" />
+    <Compile Include="BusinessObjects\DanhMuc\NhomMon.cs" />
+    <Compile Include="BusinessObjects\DanhMuc\NganhHoc.cs" />
+    <Compile Include="BusinessObjects\DanhMuc\NgonNguGiangDay.cs" />
+    <Compile Include="BusinessObjects\DanhMuc\CoSoGiangDay.cs" />
+    <Compile Include="BusinessObjects\DanhMuc\LoaiHocPhan.cs" />
+    <Compile Include="BusinessObjects\DanhMuc\NhomHoatDong.cs" />
+    <Compile Include="BusinessObjects\DanhMuc\PhanQuyen_PMS_WEB.cs" />
+    <Compile Include="BusinessObjects\DanhMuc\PMS\DotTinhPMS.cs" />
+    <Compile Include="BusinessObjects\Enum\ChamHuongDanEnum.cs" />
+    <Compile Include="BusinessObjects\Enum\GioGiangDayEnum.cs" />
+    <Compile Include="BusinessObjects\Enum\LoaiGiangVienEnum.cs" />
+    <Compile Include="BusinessObjects\Enum\LoaiGioThanhToanEnum.cs" />
+    <Compile Include="BusinessObjects\Enum\LoaiHoatDongEnum.cs" />
+    <Compile Include="BusinessObjects\Enum\LoaiNhanVienEnum.cs" />
+    <Compile Include="BusinessObjects\Enum\NguonDuLieuEnum.cs" />
+    <Compile Include="BusinessObjects\NghiepVu\BangChot\BangChotThuLao.cs" />
+    <Compile Include="BusinessObjects\NghiepVu\BangChot\ChiTietBangChotThuLaoGiangDay.cs" />
+    <Compile Include="BusinessObjects\NghiepVu\BangChot\ThongTinBangChot.cs" />
+    <Compile Include="BusinessObjects\NghiepVu\BaoLuu\ChiTietBaoLuu_PMS.cs" />
+    <Compile Include="BusinessObjects\NghiepVu\BaoLuu\QuanLyBaoLuu.cs" />
+    <Compile Include="BusinessObjects\NghiepVu\CongTacPhi\ChiTietCongTacPhi.cs" />
+    <Compile Include="BusinessObjects\NghiepVu\CongTacPhi\QuanLyCongTacPhi.cs" />
+    <Compile Include="BusinessObjects\NghiepVu\CoVanHocTap\DinhMucCoVanHocTap.cs" />
+    <Compile Include="BusinessObjects\NghiepVu\CoVanHocTap\CoVanHocTap.cs" />
+    <Compile Include="BusinessObjects\NghiepVu\CheDoXaHoi\ChiTietCheDoXaHoi.cs" />
+    <Compile Include="BusinessObjects\NghiepVu\CheDoXaHoi\QuanLyCheDoXaHoi.cs" />
+    <Compile Include="BusinessObjects\NghiepVu\CoVanHocTap\QuanLyCoVanHocTap.cs" />
+    <Compile Include="BusinessObjects\NghiepVu\GiangDay\ChiTietKhoaLuan_DoAn_ChuyenDe.cs" />
+    <Compile Include="BusinessObjects\NghiepVu\GiangDay\ChiTietKhoiLuongGiangDay.cs" />
+    <Compile Include="BusinessObjects\NghiepVu\GiangDay\KhoiLuongGiangDay.cs" />
+    <Compile Include="BusinessObjects\NghiepVu\HDGiangDayKhac\ChiTietHoatDongGiangDayKhac.cs" />
+    <Compile Include="BusinessObjects\NghiepVu\HDGiangDayKhac\QuanLyHDGiangDayKhac.cs" />
+    <Compile Include="BusinessObjects\NghiepVu\HDKhac\ChiTietHDKhac.cs" />
+    <Compile Include="BusinessObjects\NghiepVu\HDKhac\QuanLyHDKhac.cs" />
+    <Compile Include="BusinessObjects\NghiepVu\KhaoThi\ChiTietChamBai.cs" />
+    <Compile Include="BusinessObjects\NghiepVu\KhaoThi\ChiTietCoiThi.cs" />
+    <Compile Include="BusinessObjects\NghiepVu\KhaoThi\ChiTietRaDe.cs" />
+    <Compile Include="BusinessObjects\NghiepVu\KhaoThi\QuanLyKhaoThi.cs" />
+    <Compile Include="BusinessObjects\NghiepVu\NCKH\ChiTietNCKH.cs" />
+    <Compile Include="BusinessObjects\NghiepVu\NCKH\QuanLyNCKH.cs" />
+    <Compile Include="BusinessObjects\NghiepVu\NCKH\VaiTroNCKH.cs" />
+    <Compile Include="BusinessObjects\NghiepVu\ThanhTra\ChiTietThanhTra.cs" />
+    <Compile Include="BusinessObjects\NghiepVu\ThanhTra\QuanLyThanhTra.cs" />
+    <Compile Include="BusinessObjects\NghiepVu\ThinhGiang\ChiTietThinhGiang_ThanhToanThuLao.cs" />
+    <Compile Include="BusinessObjects\NghiepVu\ThinhGiang\Report_TinhThuLaoThinhGiang.cs" />
+    <Compile Include="BusinessObjects\NghiepVu\ThinhGiang\BangChotThuLao_ThinhGiang.cs" />
+    <Compile Include="BusinessObjects\NghiepVu\ThinhGiang\ChiTietKhoaLuan_DoAn_ChuyenDe_ThinhGiang.cs" />
+    <Compile Include="BusinessObjects\NghiepVu\ThinhGiang\KhoiLuongGiangDay_ThinhGiang.cs" />
+    <Compile Include="BusinessObjects\NonPersistent\ChonNhanVien.cs" />
+    <Compile Include="BusinessObjects\NonPersistent\DanhSachChiTietThongTinBangChotNhanVien.cs" />
+    <Compile Include="BusinessObjects\NonPersistent\DanhSachChiTietThongTinBangChotTheoNhanVien.cs" />
+    <Compile Include="BusinessObjects\NonPersistent\dsQuanLyNVThinhGiang_ThanhToanThuLao.cs" />
+    <Compile Include="BusinessObjects\NonPersistent\QuanLyNVThinhGiang_ThanhToanThuLao.cs" />
+    <Compile Include="BusinessObjects\NonPersistent\ThongTinClone.cs" />
+    <Compile Include="BusinessObjects\ThongTinChungNhanVien.cs" />
+    <Compile Include="BusinessObjects\ThongTinChungPMS.cs" />
+    <Compile Include="BusinessObjects\ThongTinKhoiLuongGiangDay.cs" />
+    <Compile Include="DatabaseUpdate\Updater.cs" />
+    <Compile Include="Module.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module.Designer.cs">
+      <DependentUpon>Module.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Model.DesignedDiffs.xafml" />
+    <EmbeddedResource Include="Module.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Module.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DatabaseUpdate\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BusinessObjects\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Controllers\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\ReadMe.txt" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ERP.Module\ERP.Module.csproj">
+      <Project>{5f15837d-d1e5-44dc-92f0-4f2ebe9c3f8d}</Project>
+      <Name>ERP.Module</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

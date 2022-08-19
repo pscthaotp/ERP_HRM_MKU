@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <ListView Id="ToTrinhDonMuaHang_ChiTietToTrinhDonHangMua_ListView">
+      <BandsLayout Id="BandsLayout">
+        <Band Id="ThongTinToTrinh" Caption="Thông tin tờ trình" />
+        <Band Id="ThongTinNhaCungCap" Caption="Thông tin nhà cung cấp" />
+      </BandsLayout>
+    </ListView>
+  </Views>
+</Application>

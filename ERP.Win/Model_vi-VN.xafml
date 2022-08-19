@@ -1,0 +1,2089 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <ActionDesign>
+    <Actions>
+      <Action Id="Cancel" Caption="Hủy" ToolTip="Hủy" ShortCaption="Hủy" />
+      <Action Id="CancelAction" Caption="Hủy" />
+      <Action Id="CloneObject" ShortCaption="Nhân bản" Caption="Nhân bản" />
+      <Action Id="Close" Caption="Đóng" />
+      <Action Id="Delete" Caption="Xóa" ConfirmationMessage="Bạn chắc xóa dòng đã chọn?" />
+      <Action Id="Delete Item" ConfirmationMessage="Bạn chắc xóa dòng đã chọn?" />
+      <Action Id="DialogCancel" Caption="Hủy" ToolTip="Hủy" ShortCaption="Hủy" />
+      <Action Id="DialogClose" ToolTip="Đóng" ShortCaption="Đóng" Caption="Đóng" />
+      <Action Id="Exit" Caption="Thoát" />
+      <Action Id="Logoff" Caption="Đăng xuất" />
+      <Action Id="Logon" ToolTip="Đăng nhập" ShortCaption="Đăng nhập" Caption="Đăng nhập" />
+      <Action Id="NavigateBack" ToolTip="Navigate to the previous view" Caption="Trước" />
+      <Action Id="NavigateForward" Caption="Sau" ToolTip="Navigate to the next view" />
+      <Action Id="New" Caption="Thêm mới" />
+      <Action Id="NextObject" Caption="Tiến" />
+      <Action Id="OpenObject" Caption="Mở dữ liệu" />
+      <Action Id="PreviousObject" Caption="Lùi" />
+      <Action Id="Refresh" Caption="Làm mới" />
+      <Action Id="RefreshAction" Caption="Làm mới" />
+      <Action Id="ResetViewSettings" Caption="Xóa tìm kiếm" />
+      <Action Id="Save" Caption="Lưu" />
+      <Action Id="SaveAndClose" Caption="Lưu và đóng" />
+      <Action Id="SaveAndNew" Caption="Lưu và thêm" />
+      <Action Id="ShowAllContexts" Caption="Hợp lệ" />
+    </Actions>
+  </ActionDesign>
+  <BOModel>
+    <Class Name="DevExpress.ExpressApp.Security.AuthenticationStandardLogonParameters">
+      <OwnMembers>
+        <Member Name="UserName" Caption="Tài khoản" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Security.ChangePasswordOnLogonParameters" Caption="Change Password On Logon Parameters">
+      <OwnMembers>
+        <Member Name="ConfirmPassword" Caption="Xác nhận mật khẩu" />
+        <Member Name="NewPassword" Caption="Mật khẩu mới" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Security.ChangePasswordParameters">
+      <OwnMembers>
+        <Member Name="OldPassword" Caption="Mật khẩu cũ" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Security.ResetPasswordParameters">
+      <OwnMembers>
+        <Member Name="Password" Caption="Mật khẩu" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Security.Strategy.PermissionMatrix.TypePermissionMatrixItem">
+      <OwnMembers>
+        <Member Name="AllowCreate" Caption="Thêm" />
+        <Member Name="AllowDelete" Caption="Xóa" />
+        <Member Name="AllowRead" Caption="Xem" />
+        <Member Name="AllowWrite" Caption="Sửa" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Security.Strategy.SecuritySystemMemberPermissionsObject">
+      <OwnMembers>
+        <Member Name="AllowRead" Caption="Allow Read" />
+        <Member Name="AllowWrite" Caption="Allow Write" />
+        <Member Name="EffectiveRead" Caption="Xem" />
+        <Member Name="EffectiveWrite" Caption="Sửa" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Security.Strategy.SecuritySystemObjectPermissionsObject">
+      <OwnMembers>
+        <Member Name="AllowDelete" Caption="Xóa" />
+        <Member Name="AllowNavigate" Caption="Truy cập" />
+        <Member Name="AllowRead" Caption="Allow Read" />
+        <Member Name="AllowWrite" Caption="Allow Write" />
+        <Member Name="EffectiveDelete" Caption="Xóa" />
+        <Member Name="EffectiveNavigate" Caption="Truy cập" />
+        <Member Name="EffectiveRead" Caption="Xem" />
+        <Member Name="EffectiveWrite" Caption="Sửa" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Security.Strategy.SecuritySystemRole">
+      <OwnMembers>
+        <Member Name="Users" Caption="Người sử dụng" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Security.Strategy.SecuritySystemRoleBase">
+      <OwnMembers>
+        <Member Name="IsAdministrative" Caption="Là người quản trị hệ thống" />
+        <Member Name="Name" Caption="Tên" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Security.Strategy.SecuritySystemTypePermissionsObjectBase">
+      <OwnMembers>
+        <Member Name="AllowCreate" Caption="Thêm" />
+        <Member Name="AllowDelete" Caption="Xóa" />
+        <Member Name="AllowNavigate" Caption="Truy cập" />
+        <Member Name="AllowRead" Caption="Xem" />
+        <Member Name="AllowWrite" Caption="Sửa" />
+        <Member Name="Object" Caption="Đối tượng" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Security.Strategy.SecuritySystemTypePermissionsObjectOwner">
+      <OwnMembers>
+        <Member Name="TypePermissions" Caption="Danh sách quyền" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.Security.Strategy.SecuritySystemUserBase">
+      <OwnMembers>
+        <Member Name="ChangePasswordOnFirstLogon" Caption="Change Password On Logon Parameters" />
+        <Member Name="IsActive" Caption="Đang hoạt động" />
+        <Member Name="UserName" Caption="Tài khoản" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.SystemModule.DashboardCreationInfo">
+      <OwnMembers>
+        <Member Name="DashboardName" Caption="Tên" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.ExpressApp.SystemModule.DashboardName">
+      <OwnMembers>
+        <Member Name="Name" Caption="Tên" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.AuditDataItemPersistent">
+      <OwnMembers>
+        <Member Name="UserName" Caption="Tài khoản" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.HCategory">
+      <OwnMembers>
+        <Member Name="Name" Caption="Tên" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.IRuleBaseProperties">
+      <OwnMembers>
+        <Member Name="Name" Caption="Tên" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.Validation.RuleBaseProperties">
+      <OwnMembers>
+        <Member Name="Name" Caption="Tên" />
+      </OwnMembers>
+    </Class>
+    <Class Name="ERP.Module.HeThong.AppDictionaryNormalizationData">
+      <OwnMembers>
+        <Member Name="Name" Caption="Tên" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <Localization>
+    <LocalizationGroup Name="Confirmations">
+      <LocalizationItem Name="Cancel" Value="Bạn có muốn hủy thay đổi?" />
+    </LocalizationGroup>
+    <LocalizationGroup Name="DialogButtons">
+      <LocalizationItem Name="Close" Value="Đóng" />
+      <LocalizationItem Name="Delete" Value="Xóa" />
+    </LocalizationGroup>
+    <LocalizationGroup Name="Enums">
+      <LocalizationGroup Name="DevExpress.ExpressApp.Security.ObjectAccess">
+        <LocalizationItem Name="Create" Value="Thêm" />
+        <LocalizationItem Name="Delete" Value="Xóa" />
+        <LocalizationItem Name="Read" Value="Xem" />
+        <LocalizationItem Name="Write" Value="Sửa" />
+      </LocalizationGroup>
+    </LocalizationGroup>
+    <LocalizationGroup Name="Exceptions">
+      <LocalizationGroup Name="UserVisibleExceptions">
+        <LocalizationItem Name="ObjectToSaveWasChanged" Value="Dữ liệu đã bị thao tác bởi người dùng khác. Xin làm mới dữ liệu." />
+      </LocalizationGroup>
+    </LocalizationGroup>
+    <LocalizationGroup Name="Messages">
+      <LocalizationItem Name="Create" Value="Thêm" />
+      <LocalizationItem Name="Delete" Value="Xóa" />
+      <LocalizationItem Name="Read" Value="Xem" />
+      <LocalizationItem Name="Write" Value="Sửa" />
+    </LocalizationGroup>
+  </Localization>
+  <NavigationItems>
+    <Items>
+      <Item Id="Nav_Admissions" Caption="Tuyển sinh" />
+      <Item Id="Nav_Salary" Caption="Tiền lương" />
+    </Items>
+  </NavigationItems>
+  <Validation>
+    <ErrorMessageTemplates>
+      <RuleRequiredField MessageTemplateMustNotBeEmpty="&quot;{TargetPropertyName}&quot; không được rỗng" />
+    </ErrorMessageTemplates>
+  </Validation>
+  <Views>
+    <DetailView Id="AppDictionaryNormalizationData_DetailView">
+      <Items>
+        <PropertyEditor Id="Name" Caption="Tên" />
+      </Items>
+    </DetailView>
+    <ListView Id="AppDictionaryNormalizationData_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <ListView Id="AppDictionaryNormalizationData_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <DetailView Id="AuditDataItemPersistent_DetailView">
+      <Items>
+        <PropertyEditor Id="Description" Caption="Miêu tả" />
+        <PropertyEditor Id="ModifiedOn" Caption="Ngày thực hiện" DisplayFormat="dd/mm/yyyy hh:mm:ss" EditMask="dd/mm/yyyy hh:mm:ss" />
+        <PropertyEditor Id="NewValue" Caption="Giá trí mới" />
+        <PropertyEditor Id="OldValue" Caption="Giá trị cũ" />
+        <PropertyEditor Id="OperationType" Caption="Loại" />
+        <PropertyEditor Id="PropertyName" Caption="Thuộc tính" />
+        <PropertyEditor Id="UserName" Caption="Tài khoản" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SizeableEditors" Caption="SizeableEditors" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="AuditDataItemPersistent_ListView">
+      <Columns>
+        <ColumnInfo Id="ModifiedOn" DisplayFormat="dd/MM/yyyy hh:mm tt" EditMask="dd/MM/yyyy hh:mm tt" />
+        <ColumnInfo Id="UserName" Caption="Tài khoản" />
+      </Columns>
+    </ListView>
+    <ListView Id="AuditDataItemPersistent_LookupListView">
+      <Columns>
+        <ColumnInfo Id="UserName" Caption="Tài khoản" />
+      </Columns>
+    </ListView>
+    <ListView Id="AuditedObjectWeakReference_AuditDataItems_ListView">
+      <Columns>
+        <ColumnInfo Id="UserName" Caption="Tài khoản" />
+      </Columns>
+    </ListView>
+    <DetailView Id="AuthenticationStandardLogonParameters_DetailView" Caption="Đăng nhập" />
+    <ListView Id="AuthenticationStandardLogonParameters_ListView">
+      <Columns>
+        <ColumnInfo Id="UserName" Caption="Tài khoản" />
+      </Columns>
+    </ListView>
+    <ListView Id="AuthenticationStandardLogonParameters_LookupListView">
+      <Columns>
+        <ColumnInfo Id="UserName" Caption="Tài khoản" />
+      </Columns>
+    </ListView>
+    <DetailView Id="BacLuong_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="BacLuong">
+              <LayoutGroup Id="BacLuong_col2" Caption="BacLuong_col2" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="BangKhauTruLuong_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="BangKhauTruLuong">
+              <LayoutGroup Id="Item1" Caption="Bảng khấu trừ ">
+                <LayoutGroup Id="Auto18f793f1-6718-4823-a9aa-741b29127443" Caption="" />
+                <LayoutGroup Id="Auto48d246f3-799f-44c2-a7b1-0d9995e1ca11" Caption="" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="BangLuongNhanVien_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="BangLuongNhanVien" Caption="BangLuongNhanVien">
+              <LayoutGroup Id="Item1" Caption="Bảng lương nhân viên">
+                <LayoutGroup Id="Autoddf60b31-0191-4c83-b669-dbd1459e7a94" Caption="" />
+                <LayoutGroup Id="Auto8fd3d7a3-9b18-41e4-a886-211549c61863" Caption="" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="BangThuNhapKhac_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="BangThuNhapKhac" Caption="BangThuNhapKhac">
+              <LayoutGroup Id="Item1" Caption="Bảng thu nhập khác">
+                <LayoutGroup Id="Auto06400aac-3f3c-4fe8-9f3a-253b1bd2df3b" Caption="" />
+                <LayoutGroup Id="Auto1e43565e-35fd-45ac-b2c8-41a6847bdff6" Caption="" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="BangTruyLinh_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="BangTruyLinh">
+              <LayoutGroup Id="Item1" Caption="Bảng truy lĩnh">
+                <LayoutGroup Id="Autoa6724546-bc9a-42f7-8919-d62ef989ce17" Caption="Autoa6724546-bc9a-42f7-8919-d62ef989ce17(6)">
+                  <LayoutGroup Id="Auto76217bb6-0477-4f95-8557-4a844c4e308d" Caption="" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="BangTruyThu_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="BangTruyThu">
+              <LayoutGroup Id="Item1" Caption="Bảng truy thu">
+                <LayoutGroup Id="Autod5664918-e678-46f0-8c57-d2c7e5438e24" Caption="Autod5664918-e678-46f0-8c57-d2c7e5438e24(6)">
+                  <LayoutGroup Id="Auto9ebe6864-ee5d-4aff-a82b-2aff3a3d696b" Caption="" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="BoPhan_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="BoPhan">
+              <LayoutGroup Id="BoPhan_col1">
+                <LayoutGroup Id="Auto90c1ab85-3532-4f35-93dd-20c6cb1a4372" Caption="Auto90c1ab85-3532-4f35-93dd-20c6cb1a4372(5)" />
+                <LayoutGroup Id="Autoba9cdb99-f1ac-4574-84ac-833ef9c9b1c6" Caption="Autoba9cdb99-f1ac-4574-84ac-833ef9c9b1c6(9)" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="CauHinhChung_DetailView">
+      <Layout>
+        <TabbedGroup Id="Item1">
+          <LayoutGroup Id="Main">
+            <TabbedGroup Id="Item10">
+              <LayoutGroup Id="Item25" Caption="Học sinh" />
+              <LayoutGroup Id="Item14">
+                <LayoutGroup Id="Auto095664e1-26e4-46c5-9d20-ce5dd418d00e" Caption="Auto095664e1-26e4-46c5-9d20-ce5dd418d00e(28)">
+                  <LayoutGroup Id="Item16" Caption="Đơn đặt hàng" />
+                  <LayoutGroup Id="Item18" Caption="Đơn hàng mua" />
+                </LayoutGroup>
+                <LayoutGroup Id="Auto8bda4880-840f-4d22-a20a-42be2aca3c59" Caption="Auto8bda4880-840f-4d22-a20a-42be2aca3c59(45)">
+                  <LayoutGroup Id="Item17" Caption="Hóa đơn" />
+                  <LayoutGroup Id="Item20" Caption="Phiếu nhập" />
+                  <LayoutGroup Id="Item15" Caption="Đề nghị xuất kho" />
+                  <LayoutGroup Id="Item21" Caption="Phiếu xuất" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </TabbedGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="Item6">
+            <LayoutGroup Id="Item26" Caption="(FTP)" />
+          </LayoutGroup>
+        </TabbedGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="CC_ChamCongKhac_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="CC_ChamCongKhac" Caption="Chấm công khác">
+              <LayoutGroup Id="Autoddd0668d-c695-4911-9f4a-99f5e2d9fc13" Caption="Autoddd0668d-c695-4911-9f4a-99f5e2d9fc13(4)" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="CC_ChiTietChamCongKhac_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="CC_ChiTietChamCongKhac" Caption="Chấm công khác" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="CC_ChiTietCongKhac_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SizeableEditors" Caption="Diễn giải" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="CC_ChiTietCongNgoaiGio_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="CC_ChiTietCongNgoaiGio" Caption="Chi tiết công ngoài giờ" />
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="Diễn giải" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="CC_QuanLyChamCong_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="CC_QuanLyChamCong">
+              <LayoutGroup Id="Item1">
+                <LayoutGroup Id="Auto388a2289-8570-4a8d-85d2-914067a8bbfa" Caption="Auto388a2289-8570-4a8d-85d2-914067a8bbfa(5)">
+                  <LayoutGroup Id="Auto37cb7f38-612a-4f77-9c4a-dc49d4426c38" Caption="Auto37cb7f38-612a-4f77-9c4a-dc49d4426c38(6)" />
+                  <LayoutGroup Id="Autof68aa760-0e12-441d-8f74-c6f5fd7ef7ba" Caption="Autof68aa760-0e12-441d-8f74-c6f5fd7ef7ba(9)" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="CC_QuanLyChamCong_LookupListView">
+      <Columns>
+        <ColumnInfo Id="KyChamCong.TenKy" Caption="Kỳ cogn6 " />
+      </Columns>
+    </ListView>
+    <DetailView Id="CC_QuanLyCongKhac_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="CC_QuanLyCongKhac" Caption="Quản lý công khác">
+              <LayoutGroup Id="CC_QuanLyCongKhac_col2" Caption="CC_QuanLyCongKhac_col2" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="CC_QuanLyCongNgoaiGio_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="CC_QuanLyCongNgoaiGio" Caption="CC_QuanLyCongNgoaiGio">
+              <LayoutGroup Id="Item1" Caption="Quản lý công ngoài giờ">
+                <LayoutGroup Id="Autoa517841e-d8af-4bed-9ef8-a704c79486ce" Caption="" />
+                <LayoutGroup Id="Auto561c3809-9779-4ecf-b526-3ca7d4713be2" Caption="" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChangePasswordOnLogonParameters_DetailView" Caption="Đổi mật khẩu khi đăng nhập lần đầu tiên">
+      <Items>
+        <PropertyEditor Id="ConfirmPassword" Caption="Xác nhận mật khẩu" />
+        <PropertyEditor Id="NewPassword" Caption="Mật khẩu mới" />
+      </Items>
+    </DetailView>
+    <ListView Id="ChangePasswordOnLogonParameters_ListView" Caption="Change Password On Logon Parameters">
+      <Columns>
+        <ColumnInfo Id="NewPassword" Caption="Mật khẩu mới" />
+        <ColumnInfo Id="ConfirmPassword" Caption="Xác nhận mật khẩu" />
+      </Columns>
+    </ListView>
+    <ListView Id="ChangePasswordOnLogonParameters_LookupListView" Caption="Change Password On Logon Parameters">
+      <Columns>
+        <ColumnInfo Id="NewPassword" Caption="Mật khẩu mới" />
+        <ColumnInfo Id="ConfirmPassword" Caption="Xác nhận mật khẩu" />
+      </Columns>
+    </ListView>
+    <DetailView Id="ChangePasswordParameters_DetailView" Caption="Đổi mật khẩu">
+      <Items>
+        <PropertyEditor Id="ConfirmPassword" Caption="Xác nhận mật khẩu" />
+        <PropertyEditor Id="NewPassword" Caption="Mật khẩu mới" />
+        <PropertyEditor Id="OldPassword" Caption="Mật khẩu cũ" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChangePasswordParameters" Caption="Mật khẩu cũ" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="ChangePasswordParameters_ListView">
+      <Columns>
+        <ColumnInfo Id="ConfirmPassword" Caption="Xác nhận mật khẩu" />
+        <ColumnInfo Id="NewPassword" Caption="Mật khẩu mới" />
+        <ColumnInfo Id="OldPassword" Caption="Mật khẩu cũ" />
+      </Columns>
+    </ListView>
+    <ListView Id="ChangePasswordParameters_LookupListView">
+      <Columns>
+        <ColumnInfo Id="ConfirmPassword" Caption="Xác nhận mật khẩu" />
+        <ColumnInfo Id="NewPassword" Caption="Mật khẩu mới" />
+        <ColumnInfo Id="OldPassword" Caption="Mật khẩu cũ" />
+      </Columns>
+    </ListView>
+    <DetailView Id="ChiTietDanhGiaCongViec_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SizeableEditors" Caption="Ghi chú" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietKhauTruLuong_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietKhauTruLuong" Caption="Chi tiết khấu trừ lương">
+              <LayoutGroup Id="ChiTietKhauTruLuong_col2" Caption="ChiTietKhauTruLuong_col2" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="Ghi chú" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietLuong_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietLuong" Caption="Chi tiết lương" />
+            <LayoutGroup Id="Item1" Caption="(** Nếu có)" />
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="Ghi chú" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietLuong_Old_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietLuong_Old" Caption="Chi tiết lương - Cũ" />
+            <LayoutGroup Id="Item1" Caption="(** Nếu có)" />
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="Ghi chú" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietLuongNgoaiGio_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietLuongNgoaiGio" Caption="Chi tiết lương ngoài giờ">
+              <LayoutGroup Id="ChiTietLuongNgoaiGio_col2" Caption="ChiTietLuongNgoaiGio_col2" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="Ghi chú" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietLuongNhanVien_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietLuongNhanVien" Caption="Chi tiết lương nhân viên">
+              <LayoutGroup Id="ChiTietLuongNhanVien_col2" Caption="ChiTietLuongNhanVien_col2" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="Ghi chú" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietQuyetDinhBoNhiemNgach_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietQuyetDinhBoNhiemNgach" Caption="Chi tiết quyết định bổ nhiệm ngạch">
+              <LayoutGroup Id="ChiTietQuyetDinhBoNhiemNgach_col2" Caption="ChiTietQuyetDinhBoNhiemNgach_col2" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietQuyetDinhChuyenNgach_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietQuyetDinhChuyenNgach" Caption="Chi tiết quyết định chuyển ngạch" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietQuyetDinhNangLuong_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietQuyetDinhNangLuong" Caption="Thông tin chi tiết">
+              <LayoutGroup Id="ChiTietQuyetDinhNangLuong_col1" Caption="ChiTietQuyetDinhNangLuong_col1">
+                <LayoutGroup Id="Auto174c8bfc-7032-4aba-b737-b523ed742f2a" Caption="Auto174c8bfc-7032-4aba-b737-b523ed742f2a(5)">
+                  <LayoutGroup Id="Auto6e97e74f-10c4-43c9-ab0b-640f31068e9b" Caption="">
+                    <LayoutGroup Id="Auto7379424b-995b-490d-8fb1-d28751687ce7" Caption="" />
+                    <LayoutGroup Id="Autod1e19458-47b4-4e54-9ab3-76f405b21d2d" Caption="" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="ChiTietQuyetDinhNangLuong_col2" Caption="ChiTietQuyetDinhNangLuong_col2" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietThueThuNhapCaNhan_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietThueThuNhapCaNhan" Caption="Chi tiết thuế TNCN" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietThuNhapKhac_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietThuNhapKhac" Caption="Chi tiết thu nhập khác">
+              <LayoutGroup Id="ChiTietThuNhapKhac_col2" Caption="ChiTietThuNhapKhac_col2" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="Ghi chú" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietTruyLinh_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietTruyLinh">
+              <LayoutGroup Id="Item1" Caption="Chi tiết truy lĩnh" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietTruyThu_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietTruyThu">
+              <LayoutGroup Id="Item1" Caption="Chi tiết truy thu" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChungTu_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChungTu" Caption="Chứng từ">
+              <LayoutGroup Id="ChungTu_col1" Caption="ChungTu_col1">
+                <LayoutGroup Id="Autoe06b0b79-be86-4d3d-b0ff-3b737a5c917b" Caption="" />
+                <LayoutGroup Id="Auto8523477f-a12a-4ae9-bd69-99948bddb78c" Caption="" />
+              </LayoutGroup>
+              <LayoutGroup Id="ChungTu_col2" Caption="ChungTu_col2" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChungTuChuyenKhoan_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChungTuChuyenKhoan" Caption="Chi tiết chứng từ">
+              <LayoutGroup Id="ChungTuChuyenKhoan_col2" Caption="ChungTuChuyenKhoan_col2" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="CongThucTinhLuong_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SizeableEditors">
+            <LayoutGroup Id="Autoa1ed8b6b-3ced-4448-9ad3-265978ec6422" Caption="Autoa1ed8b6b-3ced-4448-9ad3-265978ec6422(4)" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="CongTy_ListNguoiSuDung_ListView">
+      <Columns>
+        <ColumnInfo Id="UserName" Caption="Tài khoản" />
+        <ColumnInfo Id="IsActive" Caption="Đang hoạt động" />
+      </Columns>
+    </ListView>
+    <ListView Id="ContextValidationResult_DisplayableValidationResultItems_ListView">
+      <Columns>
+        <ColumnInfo Id="RuleProperties.Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <DetailView Id="DashboardCreationInfo_DetailView">
+      <Items>
+        <PropertyEditor Id="DashboardName" Caption="Tên" />
+      </Items>
+    </DetailView>
+    <ListView Id="DashboardCreationInfo_ListView">
+      <Columns>
+        <ColumnInfo Id="DashboardName" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <ListView Id="DashboardCreationInfo_LookupListView">
+      <Columns>
+        <ColumnInfo Id="DashboardName" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <DetailView Id="DashboardName_DetailView">
+      <Items>
+        <PropertyEditor Id="Name" Caption="Tên" />
+      </Items>
+    </DetailView>
+    <ListView Id="DashboardName_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <ListView Id="DashboardName_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <ListView Id="DisplayableValidationResultItem_ListView">
+      <Columns>
+        <ColumnInfo Id="RuleProperties.Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <DetailView Id="GiangVienThinhGiang_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <TabbedGroup Id="Item1">
+              <LayoutGroup Id="HoSo" Caption="Sơ yếu lý lịch">
+                <LayoutGroup Id="HoSo_col2">
+                  <LayoutGroup Id="Auto44b0b281-e956-4a2b-ba57-098684425035" Caption="Auto44b0b281-e956-4a2b-ba57-098684425035(34)">
+                    <LayoutGroup Id="Auto087d7132-b7f5-4b86-93a2-414ad68ab921" Caption="Auto087d7132-b7f5-4b86-93a2-414ad68ab921(35)" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="Item3" Caption="Trình độ chuyên môn">
+                <LayoutGroup Id="Auto44759389-890b-4862-a486-cd7227ab22e8" Caption="Auto44759389-890b-4862-a486-cd7227ab22e8(52)">
+                  <LayoutGroup Id="Auto2d66c84e-b53b-4236-bffa-873453506bca" Caption="Auto2d66c84e-b53b-4236-bffa-873453506bca(53)" />
+                  <LayoutGroup Id="Auto874cd412-90cf-4970-a3bd-c6b3987cd789" Caption="Auto874cd412-90cf-4970-a3bd-c6b3987cd789(61)" />
+                </LayoutGroup>
+                <TabbedGroup Id="Item4">
+                  <LayoutGroup Id="ListVanBang" Caption="Danh sách văn bằng" />
+                  <LayoutGroup Id="ListChungChi" Caption="Danh sách chứng chỉ" />
+                  <LayoutGroup Id="ListNgoaiNgu" Caption="Danh sách ngoại ngữ" />
+                </TabbedGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="Item5">
+                <LayoutGroup Id="Item7" Caption="Thuế" />
+              </LayoutGroup>
+              <LayoutGroup Id="ListHopDong" Caption="Hợp đồng lao động" />
+            </TabbedGroup>
+            <LayoutGroup Id="GiangVienThinhGiang" Caption="GiangVienThinhGiang" />
+            <LayoutGroup Id="Item2" Caption="(Nếu có)" />
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="SizeableEditors" />
+          <TabbedGroup Id="Tabs">
+            <LayoutGroup Id="ListChungChi" Caption="Danh sách chứng chỉ" />
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="HCategory_Children_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <DetailView Id="HCategory_DetailView">
+      <Items>
+        <PropertyEditor Id="Name" Caption="Tên" />
+      </Items>
+    </DetailView>
+    <ListView Id="HCategory_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <ListView Id="HCategory_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <DetailView Id="HopDongKhoan_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="HopDong" Caption="Cơ quan đơn vị">
+              <LayoutGroup Id="HopDong_col1" Caption="HopDong_col1">
+                <LayoutGroup Id="Autocc40468d-704b-4182-ba53-9b9811746e34" Caption="">
+                  <LayoutGroup Id="Auto83de1639-5fbf-49aa-9e92-719a434716ef" Caption="" />
+                  <LayoutGroup Id="Autofa1def2c-6397-4273-b05a-8badc74546d2" Caption="" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="HopDong_col2" Caption="HopDong_col2" />
+            </LayoutGroup>
+            <LayoutGroup Id="HopDongKhoan" Caption="Hợp đồng khoán" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="HopDongLamViec_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="HopDong" Caption="Cơ quan đơn vị">
+              <LayoutGroup Id="HopDong_col1" Caption="HopDong_col1">
+                <LayoutGroup Id="Auto177d72aa-5dd5-4c11-911c-0ef5552d27c9" Caption="Auto177d72aa-5dd5-4c11-911c-0ef5552d27c9(5)">
+                  <LayoutGroup Id="Auto6c9740f9-2c59-4edd-9e0b-b70f01dd61a4" Caption="Auto6c9740f9-2c59-4edd-9e0b-b70f01dd61a4(6)" />
+                  <LayoutGroup Id="Auto0b2b9258-213a-432a-9fe0-46047a26f262" Caption="Auto0b2b9258-213a-432a-9fe0-46047a26f262(12)" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="HopDong_col2" Caption="HopDong_col2" />
+            </LayoutGroup>
+            <LayoutGroup Id="HopDongLamViec" Caption="Hợp đồng lao động" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="HoSoTinhLuong_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="HoSoTinhLuong" Caption="HoSoTinhLuong">
+              <LayoutGroup Id="Item1" Caption="Hồ sơ lương">
+                <LayoutGroup Id="Auto65a0e4a0-dc59-43bf-9b8d-1321c6a9fdc5" Caption="" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="IRuleBaseProperties_DetailView">
+      <Items>
+        <PropertyEditor Id="Name" Caption="Tên" />
+      </Items>
+    </DetailView>
+    <ListView Id="IRuleBaseProperties_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <ListView Id="IRuleBaseProperties_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <DetailView Id="IRuleCollectionPropertyProperties_DetailView">
+      <Items>
+        <PropertyEditor Id="Name" Caption="Tên" />
+      </Items>
+    </DetailView>
+    <ListView Id="IRuleCollectionPropertyProperties_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <ListView Id="IRuleCollectionPropertyProperties_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <DetailView Id="IRuleCombinationOfPropertiesIsUniqueProperties_DetailView">
+      <Items>
+        <PropertyEditor Id="Name" Caption="Tên" />
+      </Items>
+    </DetailView>
+    <ListView Id="IRuleCombinationOfPropertiesIsUniqueProperties_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <ListView Id="IRuleCombinationOfPropertiesIsUniqueProperties_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <DetailView Id="IRuleCriteriaProperties_DetailView">
+      <Items>
+        <PropertyEditor Id="Name" Caption="Tên" />
+      </Items>
+    </DetailView>
+    <ListView Id="IRuleCriteriaProperties_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <ListView Id="IRuleCriteriaProperties_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <DetailView Id="IRuleFromBoolPropertyProperties_DetailView">
+      <Items>
+        <PropertyEditor Id="Name" Caption="Tên" />
+      </Items>
+    </DetailView>
+    <ListView Id="IRuleFromBoolPropertyProperties_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <ListView Id="IRuleFromBoolPropertyProperties_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <DetailView Id="IRuleIsReferencedProperties_DetailView">
+      <Items>
+        <PropertyEditor Id="Name" Caption="Tên" />
+      </Items>
+    </DetailView>
+    <ListView Id="IRuleIsReferencedProperties_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <ListView Id="IRuleIsReferencedProperties_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <DetailView Id="IRuleObjectExistsProperties_DetailView">
+      <Items>
+        <PropertyEditor Id="Name" Caption="Tên" />
+      </Items>
+    </DetailView>
+    <ListView Id="IRuleObjectExistsProperties_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <ListView Id="IRuleObjectExistsProperties_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <DetailView Id="IRulePropertyValueProperties_DetailView">
+      <Items>
+        <PropertyEditor Id="Name" Caption="Tên" />
+      </Items>
+    </DetailView>
+    <ListView Id="IRulePropertyValueProperties_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <ListView Id="IRulePropertyValueProperties_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <DetailView Id="IRuleRangeProperties_DetailView">
+      <Items>
+        <PropertyEditor Id="Name" Caption="Tên" />
+      </Items>
+    </DetailView>
+    <ListView Id="IRuleRangeProperties_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <ListView Id="IRuleRangeProperties_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <DetailView Id="IRuleRegularExpressionProperties_DetailView">
+      <Items>
+        <PropertyEditor Id="Name" Caption="Tên" />
+      </Items>
+    </DetailView>
+    <ListView Id="IRuleRegularExpressionProperties_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <ListView Id="IRuleRegularExpressionProperties_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <DetailView Id="IRuleRequiredFieldProperties_DetailView">
+      <Items>
+        <PropertyEditor Id="Name" Caption="Tên" />
+      </Items>
+    </DetailView>
+    <ListView Id="IRuleRequiredFieldProperties_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <ListView Id="IRuleRequiredFieldProperties_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <DetailView Id="IRuleSearchObjectProperties_DetailView">
+      <Items>
+        <PropertyEditor Id="Name" Caption="Tên" />
+      </Items>
+    </DetailView>
+    <ListView Id="IRuleSearchObjectProperties_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <ListView Id="IRuleSearchObjectProperties_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <DetailView Id="IRuleStringComparisonProperties_DetailView">
+      <Items>
+        <PropertyEditor Id="Name" Caption="Tên" />
+      </Items>
+    </DetailView>
+    <ListView Id="IRuleStringComparisonProperties_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <ListView Id="IRuleStringComparisonProperties_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <DetailView Id="IRuleSupportsCollectionAggregatesProperties_DetailView">
+      <Items>
+        <PropertyEditor Id="Name" Caption="Tên" />
+      </Items>
+    </DetailView>
+    <ListView Id="IRuleSupportsCollectionAggregatesProperties_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <ListView Id="IRuleSupportsCollectionAggregatesProperties_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <DetailView Id="IRuleUniqueValueProperties_DetailView">
+      <Items>
+        <PropertyEditor Id="Name" Caption="Tên" />
+      </Items>
+    </DetailView>
+    <ListView Id="IRuleUniqueValueProperties_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <ListView Id="IRuleUniqueValueProperties_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <DetailView Id="IRuleValueComparisonProperties_DetailView">
+      <Items>
+        <PropertyEditor Id="Name" Caption="Tên" />
+      </Items>
+    </DetailView>
+    <ListView Id="IRuleValueComparisonProperties_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <ListView Id="IRuleValueComparisonProperties_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <DetailView Id="KyTinhLuong_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="KyTinhLuong" Caption="Kỳ tính lương" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="LoaiNgayNgoaiGio_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="LoaiNgayNgoaiGio" Caption="Loại ngà ngoài giờ">
+              <LayoutGroup Id="LoaiNgayNgoaiGio_col1">
+                <LayoutGroup Id="Auto5c990d87-57f0-438f-9998-209b3d099ee9" Caption="">
+                  <LayoutGroup Id="Auto906b37e8-ea65-4594-8bee-0e209390aac2" Caption="" />
+                  <LayoutGroup Id="Autoad16a336-c0b3-40c5-a4b2-b869bc441129" Caption="" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="LoaiNgayNgoaiGio_col2" Caption="LoaiNgayNgoaiGio_col2" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="LuongNhanVien_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="LuongNhanVien">
+              <LayoutGroup Id="Item1" Caption="Lương nhân viên" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="NgachLuong_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="NgachLuong" Caption="Thông tin cấp bậc" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="QuanLyThueThuNhapCaNhan_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="QuanLyThueThuNhapCaNhan">
+              <LayoutGroup Id="Item1" Caption="Quản lý thuế TNCN">
+                <LayoutGroup Id="Auto5ff54e80-237a-4e42-99c3-ef1eb82fff45" Caption="Auto5ff54e80-237a-4e42-99c3-ef1eb82fff45(6)">
+                  <LayoutGroup Id="Auto8d8e6153-fcb9-47d7-94f1-38f3f5de3c6c" Caption="" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="QuaTrinhKhenThuong_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="QuaTrinhKhenThuong">
+              <LayoutGroup Id="Item1" Caption="Quá trình khen thưởng" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="Lý Do" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="QuaTrinhKyLuat_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="QuaTrinhKyLuat" Caption="Quá trình kỷ luật">
+              <LayoutGroup Id="QuaTrinhKyLuat_col2" Caption="QuaTrinhKyLuat_col2" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="Lý do" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="QuaTrinhNghienCuuKhoaHoc_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="QuaTrinhNghienCuuKhoaHoc" Caption="Quá trình nghiên cứu khoa học">
+              <LayoutGroup Id="QuaTrinhNghienCuuKhoaHoc_col2" Caption="QuaTrinhNghienCuuKhoaHoc_col2" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="Tên đề tài" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="QuaTrinhThamGiaLucLuongVuTrang_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="QuaTrinhThamGiaLucLuongVuTrang">
+              <LayoutGroup Id="Item1" Caption="Quá trình tham gia lực lượng vũ trang" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="Nội dung" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="QuyetDinh_ChonNguoiKy_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="OfficeBaseObject" Caption="OfficeBaseObject" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="QuyetDinhBoNhiem_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="QuyetDinh" Caption="Cơ quan, đơn vị">
+              <LayoutGroup Id="QuyetDinh_col1" Caption="QuyetDinh_col1">
+                <LayoutGroup Id="Autoc6561994-3c2d-49f2-b183-cf6822ace671" Caption="Autoc6561994-3c2d-49f2-b183-cf6822ace671(5)">
+                  <LayoutGroup Id="Autoa4f98bac-0c45-4c33-8224-3ea2d728f8d3" Caption="Autoa4f98bac-0c45-4c33-8224-3ea2d728f8d3(6)" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="QuyetDinh_col2" Caption="QuyetDinh_col2" />
+            </LayoutGroup>
+            <LayoutGroup Id="QuyetDinhBoNhiem" Caption="Quyết định bổ nhiệm" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="QuyetDinhBoNhiemKiemNhiem_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="QuyetDinhBoNhiemKiemNhiem">
+              <LayoutGroup Id="Item1">
+                <LayoutGroup Id="Auto13abb883-9399-4cb4-aba0-aa8dc0245285" Caption="Auto13abb883-9399-4cb4-aba0-aa8dc0245285(20)">
+                  <LayoutGroup Id="Autoe2c7cdc4-7bbb-4c87-8d3d-360284e49029" Caption="Autoe2c7cdc4-7bbb-4c87-8d3d-360284e49029(21)">
+                    <LayoutGroup Id="Auto116cbb2d-b47c-4591-9e83-444c35c6f349" Caption="Auto116cbb2d-b47c-4591-9e83-444c35c6f349(22)" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="QuyetDinhChuyenCongTac_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="QuyetDinhChuyenCongTac">
+              <LayoutGroup Id="QuyetDinh" Caption="Cơ quan, quyết định">
+                <LayoutGroup Id="QuyetDinh_col1" Caption="QuyetDinh_col1">
+                  <LayoutGroup Id="Auto15af7a43-54aa-4c92-b4ab-8efde71d0f95" Caption="Auto15af7a43-54aa-4c92-b4ab-8efde71d0f95(6)">
+                    <LayoutGroup Id="Auto60ba3701-4232-402f-a3f9-d2d517355e6d" Caption="Auto60ba3701-4232-402f-a3f9-d2d517355e6d(7)" />
+                    <LayoutGroup Id="Autoc496773e-73ab-4ebb-82a5-c415fcc63a83" Caption="Autoc496773e-73ab-4ebb-82a5-c415fcc63a83(13)" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="Item1" Caption="Quyết định chuyển công tác" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="QuyetDinhDieuDong_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="QuyetDinh" Caption="Cơ quan , đơn vị">
+              <LayoutGroup Id="QuyetDinh_col1">
+                <LayoutGroup Id="Auto9f6f625d-d54b-4035-b767-e6b8962263f3" Caption="Auto9f6f625d-d54b-4035-b767-e6b8962263f3(5)">
+                  <LayoutGroup Id="Auto811357f8-cdac-4707-b2ef-7fb96ff28af8" Caption="Auto811357f8-cdac-4707-b2ef-7fb96ff28af8(6)" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="QuyetDinh_col2" Caption="QuyetDinh_col2" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="QuyetDinhNangLuong_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="QuyetDinh" Caption="Quyết định nâng lương">
+              <LayoutGroup Id="QuyetDinh_col1">
+                <LayoutGroup Id="Auto031c4241-6589-4912-bdaa-1f3c9058a1e6" Caption="Auto031c4241-6589-4912-bdaa-1f3c9058a1e6(5)">
+                  <LayoutGroup Id="Auto9f2d5001-d14b-4122-8a76-be0570d9433d" Caption="Auto9f2d5001-d14b-4122-8a76-be0570d9433d(5)" />
+                  <LayoutGroup Id="Auto97fa9ae8-9ce0-4e7e-bde2-f59efb026e81" Caption="Auto97fa9ae8-9ce0-4e7e-bde2-f59efb026e81(12)" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="QuyetDinhNangLuong" Caption="QuyetDinhNangLuong" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="QuyetDinhNghiHuu_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="QuyetDinh" Caption="Cơ quan, đơn vị">
+              <LayoutGroup Id="QuyetDinh_col1">
+                <LayoutGroup Id="Autod8daddbd-3574-420a-9954-c20dd35d3e75" Caption="Autod8daddbd-3574-420a-9954-c20dd35d3e75(5)">
+                  <LayoutGroup Id="Auto44cb6fae-c9f4-4478-a35f-f4d412c4f4b9" Caption="Auto44cb6fae-c9f4-4478-a35f-f4d412c4f4b9(6)" />
+                  <LayoutGroup Id="Auto1a2a0422-7e91-4457-b49b-05cc95d99858" Caption="Auto1a2a0422-7e91-4457-b49b-05cc95d99858(12)" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="QuyetDinh_col2" Caption="QuyetDinh_col2" />
+            </LayoutGroup>
+            <LayoutGroup Id="Item1" Caption="Quyết định nghỉ hưu">
+              <LayoutGroup Id="Auto251735f3-17a7-45b8-87b6-ce60b220e593" Caption="Auto251735f3-17a7-45b8-87b6-ce60b220e593(19)" />
+              <LayoutGroup Id="Auto2824360f-ee59-404a-a8e6-fdf1e5b5baec" Caption="Auto2824360f-ee59-404a-a8e6-fdf1e5b5baec(23)" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="QuyetDinhNghiKhongHuongLuong_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="QuyetDinh" Caption="Cơ quan, đơn vị">
+              <LayoutGroup Id="QuyetDinh_col1" Caption="QuyetDinh_col1">
+                <LayoutGroup Id="Autoe3390cb7-5ded-40c4-aa98-8c3bfd992621" Caption="Autoe3390cb7-5ded-40c4-aa98-8c3bfd992621(5)">
+                  <LayoutGroup Id="Autof0c5751b-5c65-427e-a7bd-931292e11aa3" Caption="Autof0c5751b-5c65-427e-a7bd-931292e11aa3(6)" />
+                  <LayoutGroup Id="Autoddc21cde-290b-4d31-bb0c-eb640b787325" Caption="Autoddc21cde-290b-4d31-bb0c-eb640b787325(12)" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="QuyetDinh_col2" Caption="QuyetDinh_col2" />
+            </LayoutGroup>
+            <LayoutGroup Id="Item2" Caption="Quyết định nghỉ không lương">
+              <LayoutGroup Id="Auto76e387c9-40dc-43af-900b-936d87304b13" Caption="Auto76e387c9-40dc-43af-900b-936d87304b13(19)" />
+              <LayoutGroup Id="Auto224d5913-60f0-4737-96ac-f73c004b8e8a" Caption="Auto224d5913-60f0-4737-96ac-f73c004b8e8a(24)" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="QuyetDinhTaiBoNhiem_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="QuyetDinh" Caption="Cơ quan, đơn vị">
+              <LayoutGroup Id="QuyetDinh_col1" Caption="QuyetDinh_col1">
+                <LayoutGroup Id="Auto1a978f0f-c230-485e-aaf6-08bab4040e03" Caption="">
+                  <LayoutGroup Id="Auto5b7b96e4-2931-422a-924e-dedf74786f42" Caption="" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="QuyetDinh_col2" Caption="QuyetDinh_col2" />
+            </LayoutGroup>
+            <LayoutGroup Id="QuyetDinhTaiBoNhiem" Caption="Quyết định tái bổ nhiệm" />
+            <LayoutGroup Id="QuyetDinhCaNhan" Caption="QuyetDinhCaNhan" />
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="Căn cứ" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="QuyetDinhThoiChuc_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="QuyetDinh" Caption="Cơ quan, đơn vị">
+              <LayoutGroup Id="QuyetDinh_col1">
+                <LayoutGroup Id="Auto37be388f-44e7-4390-9d8e-67104b4554a8" Caption="Auto37be388f-44e7-4390-9d8e-67104b4554a8(5)">
+                  <LayoutGroup Id="Auto863ec931-a6ff-4048-a32a-6ce6ee553950" Caption="Auto863ec931-a6ff-4048-a32a-6ce6ee553950(6)" />
+                  <LayoutGroup Id="Auto754c8f10-ab70-47e2-b45e-c7606e4e2741" Caption="Auto754c8f10-ab70-47e2-b45e-c7606e4e2741(12)" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="QuyetDinh_col2" Caption="QuyetDinh_col2" />
+            </LayoutGroup>
+            <LayoutGroup Id="Item1" Caption="Quyết định miễn nhiệm">
+              <LayoutGroup Id="Autoc25cda2b-367c-45d1-9394-1e7ee29ac006" Caption="Autoc25cda2b-367c-45d1-9394-1e7ee29ac006(20)">
+                <LayoutGroup Id="Auto0bc56201-eee6-478b-bf90-b3e7c43922fa" Caption="Auto0bc56201-eee6-478b-bf90-b3e7c43922fa(21)" />
+                <LayoutGroup Id="Auto4d31262d-f88b-4cea-8e7e-6a4e9f30c7fb" Caption="Auto4d31262d-f88b-4cea-8e7e-6a4e9f30c7fb(26)" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="QuyetDinhThoiChuc">
+              <LayoutGroup Id="QuyetDinhThoiChuc_col1" Caption="QuyetDinhThoiChuc_col1" />
+              <LayoutGroup Id="QuyetDinhThoiChuc_col2" Caption="QuyetDinhThoiChuc_col2" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="QuyetDinhThoiViec_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="QuyetDinhCaNhan">
+              <LayoutGroup Id="QuyetDinh" Caption="Cơ quan, đơn vị">
+                <LayoutGroup Id="QuyetDinh_col1" Caption="QuyetDinh_col1">
+                  <LayoutGroup Id="Auto8b39d7cc-cbcb-4009-84ad-3a1ef2fea146" Caption="Auto8b39d7cc-cbcb-4009-84ad-3a1ef2fea146(6)">
+                    <LayoutGroup Id="Autoe595ec43-e37f-4781-af83-14be05e471a4" Caption="Autoe595ec43-e37f-4781-af83-14be05e471a4(7)" />
+                    <LayoutGroup Id="Autoada69dc2-a421-43d2-b78b-6cc643f4f8b0" Caption="Autoada69dc2-a421-43d2-b78b-6cc643f4f8b0(13)" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="Item1" Caption="Quyết định thôi việc" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="QuyetDinhTiepNhan_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="QuyetDinhTiepNhan">
+              <LayoutGroup Id="QuyetDinh" Caption="Cơ quan, đơn vị">
+                <LayoutGroup Id="QuyetDinh_col1" Caption="QuyetDinh_col1">
+                  <LayoutGroup Id="Auto3448c283-7a0f-4adc-a58e-071dafd8669b" Caption="">
+                    <LayoutGroup Id="Auto743cff92-4a46-45ec-a3f6-1b636d88c411" Caption="" />
+                    <LayoutGroup Id="Auto179a364b-d235-4a71-adf3-3aef884ad854" Caption="" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="Item1" Caption="Quyết định tiếp nhận không lương">
+                <LayoutGroup Id="Auto5846a603-64be-4d4b-8db7-f4b4dc6cc428" Caption="Auto5846a603-64be-4d4b-8db7-f4b4dc6cc428(20)" />
+                <LayoutGroup Id="Auto3c6d7041-cec0-41d5-b809-69028a1d98bd" Caption="Auto3c6d7041-cec0-41d5-b809-69028a1d98bd(24)" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ResetPasswordParameters_DetailView" Caption="Tạo mật khẩu" />
+    <DetailView Id="RuleBaseProperties_DetailView">
+      <Items>
+        <PropertyEditor Id="Name" Caption="Tên" />
+      </Items>
+    </DetailView>
+    <ListView Id="RuleBaseProperties_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <ListView Id="RuleBaseProperties_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <DetailView Id="RuleCombinationOfPropertiesIsUniqueProperties_DetailView">
+      <Items>
+        <PropertyEditor Id="Name" Caption="Tên" />
+      </Items>
+    </DetailView>
+    <ListView Id="RuleCombinationOfPropertiesIsUniqueProperties_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <ListView Id="RuleCombinationOfPropertiesIsUniqueProperties_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <DetailView Id="RuleCriteriaProperties_DetailView">
+      <Items>
+        <PropertyEditor Id="Name" Caption="Tên" />
+      </Items>
+    </DetailView>
+    <ListView Id="RuleCriteriaProperties_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <ListView Id="RuleCriteriaProperties_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <DetailView Id="RuleFromBoolPropertyProperties_DetailView">
+      <Items>
+        <PropertyEditor Id="Name" Caption="Tên" />
+      </Items>
+    </DetailView>
+    <ListView Id="RuleFromBoolPropertyProperties_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <ListView Id="RuleFromBoolPropertyProperties_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <DetailView Id="RuleIsReferencedProperties_DetailView">
+      <Items>
+        <PropertyEditor Id="Name" Caption="Tên" />
+      </Items>
+    </DetailView>
+    <ListView Id="RuleIsReferencedProperties_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <ListView Id="RuleIsReferencedProperties_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <DetailView Id="RuleObjectExistsProperties_DetailView">
+      <Items>
+        <PropertyEditor Id="Name" Caption="Tên" />
+      </Items>
+    </DetailView>
+    <ListView Id="RuleObjectExistsProperties_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <ListView Id="RuleObjectExistsProperties_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <DetailView Id="RulePropertyValueProperties_DetailView">
+      <Items>
+        <PropertyEditor Id="Name" Caption="Tên" />
+      </Items>
+    </DetailView>
+    <ListView Id="RulePropertyValueProperties_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <ListView Id="RulePropertyValueProperties_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <DetailView Id="RuleRangeProperties_DetailView">
+      <Items>
+        <PropertyEditor Id="Name" Caption="Tên" />
+      </Items>
+    </DetailView>
+    <ListView Id="RuleRangeProperties_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <ListView Id="RuleRangeProperties_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <DetailView Id="RuleRegularExpressionProperties_DetailView">
+      <Items>
+        <PropertyEditor Id="Name" Caption="Tên" />
+      </Items>
+    </DetailView>
+    <ListView Id="RuleRegularExpressionProperties_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <ListView Id="RuleRegularExpressionProperties_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <DetailView Id="RuleRequiredFieldProperties_DetailView">
+      <Items>
+        <PropertyEditor Id="Name" Caption="Tên" />
+      </Items>
+    </DetailView>
+    <ListView Id="RuleRequiredFieldProperties_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <ListView Id="RuleRequiredFieldProperties_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <DetailView Id="RuleSearchObjectProperties_DetailView">
+      <Items>
+        <PropertyEditor Id="Name" Caption="Tên" />
+      </Items>
+    </DetailView>
+    <ListView Id="RuleSearchObjectProperties_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <ListView Id="RuleSearchObjectProperties_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <DetailView Id="RuleStringComparisonProperties_DetailView">
+      <Items>
+        <PropertyEditor Id="Name" Caption="Tên" />
+      </Items>
+    </DetailView>
+    <ListView Id="RuleStringComparisonProperties_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <ListView Id="RuleStringComparisonProperties_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <DetailView Id="RuleUniqueValueProperties_DetailView">
+      <Items>
+        <PropertyEditor Id="Name" Caption="Tên" />
+      </Items>
+    </DetailView>
+    <ListView Id="RuleUniqueValueProperties_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <ListView Id="RuleUniqueValueProperties_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <DetailView Id="RuleValueComparisonProperties_DetailView">
+      <Items>
+        <PropertyEditor Id="Name" Caption="Tên" />
+      </Items>
+    </DetailView>
+    <ListView Id="RuleValueComparisonProperties_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <ListView Id="RuleValueComparisonProperties_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <DetailView Id="SecuritySystemMemberPermissionsObject_DetailView">
+      <Items>
+        <PropertyEditor Id="AllowRead" Caption="Allow Read" />
+        <PropertyEditor Id="AllowWrite" Caption="Allow Write" />
+        <PropertyEditor Id="EffectiveRead" Caption="Xem" />
+        <PropertyEditor Id="EffectiveWrite" Caption="Sửa" />
+      </Items>
+    </DetailView>
+    <ListView Id="SecuritySystemMemberPermissionsObject_ListView">
+      <Columns>
+        <ColumnInfo Id="AllowRead" Caption="Allow Read" />
+        <ColumnInfo Id="AllowWrite" Caption="Allow Write" />
+        <ColumnInfo Id="EffectiveRead" Caption="Xem" />
+        <ColumnInfo Id="EffectiveWrite" Caption="Sửa" />
+      </Columns>
+    </ListView>
+    <ListView Id="SecuritySystemMemberPermissionsObject_LookupListView">
+      <Columns>
+        <ColumnInfo Id="AllowRead" Caption="Allow Read" />
+        <ColumnInfo Id="AllowWrite" Caption="Allow Write" />
+        <ColumnInfo Id="EffectiveRead" Caption="Xem" />
+        <ColumnInfo Id="EffectiveWrite" Caption="Sửa" />
+      </Columns>
+    </ListView>
+    <DetailView Id="SecuritySystemObjectPermissionsObject_DetailView">
+      <Items>
+        <PropertyEditor Id="AllowDelete" Caption="Xóa" />
+        <PropertyEditor Id="AllowNavigate" Caption="Truy cập" />
+        <PropertyEditor Id="AllowRead" Caption="Allow Read" />
+        <PropertyEditor Id="AllowWrite" Caption="Allow Write" />
+        <PropertyEditor Id="EffectiveNavigate" Caption="Truy cập" />
+        <PropertyEditor Id="EffectiveRead" Caption="Xem" />
+        <PropertyEditor Id="EffectiveWrite" Caption="Sửa" />
+      </Items>
+    </DetailView>
+    <ListView Id="SecuritySystemObjectPermissionsObject_ListView">
+      <Columns>
+        <ColumnInfo Id="AllowDelete" Caption="Xóa" />
+        <ColumnInfo Id="AllowNavigate" Caption="Truy cập" />
+        <ColumnInfo Id="AllowRead" Caption="Allow Read" />
+        <ColumnInfo Id="AllowWrite" Caption="Allow Write" />
+        <ColumnInfo Id="EffectiveRead" Caption="Xem" />
+        <ColumnInfo Id="EffectiveWrite" Caption="Sửa" />
+        <ColumnInfo Id="EffectiveNavigate" Caption="Truy cập" />
+      </Columns>
+    </ListView>
+    <ListView Id="SecuritySystemObjectPermissionsObject_LookupListView">
+      <Columns>
+        <ColumnInfo Id="AllowRead" Caption="Allow Read" />
+        <ColumnInfo Id="AllowWrite" Caption="Allow Write" />
+        <ColumnInfo Id="AllowDelete" Caption="Xóa" />
+        <ColumnInfo Id="AllowNavigate" Caption="Truy cập" />
+        <ColumnInfo Id="EffectiveRead" Caption="Xem" />
+        <ColumnInfo Id="EffectiveWrite" Caption="Sửa" />
+        <ColumnInfo Id="EffectiveNavigate" Caption="Truy cập" />
+      </Columns>
+    </ListView>
+    <ListView Id="SecuritySystemRole_ChildRoles_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+        <ColumnInfo Id="IsAdministrative" Caption="Là người quản trị hệ thống" />
+      </Columns>
+    </ListView>
+    <DetailView Id="SecuritySystemRole_Class_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="SecuritySystemRole_Class" Caption="Tên" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="SecuritySystemRole_Custom_DetailView">
+      <Items>
+        <PropertyEditor Id="CanEditModel" Caption="Chỉnh sửa phần mền" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="SecuritySystemRoleBase">
+              <LayoutGroup Id="Autof8aa3999-1c64-4e3c-aa43-167ad149a76d" Caption="" />
+            </LayoutGroup>
+            <LayoutGroup Id="SecuritySystemRole_Custom" Caption="Phân hệ" />
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs">
+            <LayoutGroup Id="Roles" Caption="Phân quyền" />
+            <LayoutGroup Id="TypePermissions" Caption="Chức năng chính" />
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="SecuritySystemRole_Custom_ListView">
+      <Columns>
+        <ColumnInfo Id="CanEditModel" Caption="Chỉnh sửa phần mền" />
+        <ColumnInfo Id="IsAdministrative" Caption="Tất cả chức năng" />
+      </Columns>
+    </ListView>
+    <DetailView Id="SecuritySystemRole_DetailView">
+      <Items>
+        <PropertyEditor Id="IsAdministrative" Caption="Là người quản trị hệ thống" />
+        <PropertyEditor Id="Name" Caption="Tên" />
+        <PropertyEditor Id="TypePermissions" Caption="Danh sách quyền" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Tabs1">
+            <LayoutGroup Id="Item1" Caption="Phân quyền" />
+            <LayoutGroup Id="TypePermissions" Caption="Danh sách quyền" />
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="SecuritySystemRole_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+        <ColumnInfo Id="IsAdministrative" Caption="Là người quản trị hệ thống" />
+      </Columns>
+    </ListView>
+    <ListView Id="SecuritySystemRole_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <ListView Id="SecuritySystemRole_ParentRoles_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+        <ColumnInfo Id="IsAdministrative" Caption="Là người quản trị hệ thống" />
+      </Columns>
+    </ListView>
+    <ListView Id="SecuritySystemRole_Users_ListView" Caption="Người sử dụng">
+      <Columns>
+        <ColumnInfo Id="UserName" Caption="Tài khoản" />
+        <ColumnInfo Id="ChangePasswordOnFirstLogon" Caption="Đổi mật khẩu khi đăng nhập lần đầu tiên" />
+        <ColumnInfo Id="IsActive" Caption="Đang hoạt động" />
+      </Columns>
+    </ListView>
+    <DetailView Id="SecuritySystemRoleBase_DetailView">
+      <Items>
+        <PropertyEditor Id="IsAdministrative" Caption="Là người quản trị hệ thống" />
+        <PropertyEditor Id="Name" Caption="Tên" />
+        <PropertyEditor Id="TypePermissions" Caption="Danh sách quyền" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="TypePermissions_Group" Caption="Danh sách quyền" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="SecuritySystemRoleBase_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+        <ColumnInfo Id="IsAdministrative" Caption="Là người quản trị hệ thống" />
+      </Columns>
+    </ListView>
+    <ListView Id="SecuritySystemRoleBase_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <DetailView Id="SecuritySystemTypePermissionObject_DetailView">
+      <Items>
+        <PropertyEditor Id="AllowCreate" Caption="Thêm" />
+        <PropertyEditor Id="AllowRead" Caption="Xem" />
+        <PropertyEditor Id="AllowWrite" Caption="Sửa" />
+      </Items>
+    </DetailView>
+    <ListView Id="SecuritySystemTypePermissionObject_ListView">
+      <Columns>
+        <ColumnInfo Id="AllowRead" Caption="Xem" />
+        <ColumnInfo Id="AllowWrite" Caption="Sửa" />
+        <ColumnInfo Id="AllowCreate" Caption="Thêm" />
+      </Columns>
+    </ListView>
+    <ListView Id="SecuritySystemTypePermissionObject_LookupListView">
+      <Columns>
+        <ColumnInfo Id="AllowCreate" Caption="Thêm" />
+        <ColumnInfo Id="AllowRead" Caption="Xem" />
+        <ColumnInfo Id="AllowWrite" Caption="Sửa" />
+      </Columns>
+    </ListView>
+    <DetailView Id="SecuritySystemTypePermissionsObjectBase_DetailView">
+      <Items>
+        <PropertyEditor Id="AllowCreate" Caption="Thêm" />
+        <PropertyEditor Id="AllowNavigate" Caption="Truy cập" />
+        <PropertyEditor Id="AllowRead" Caption="Xem" />
+        <PropertyEditor Id="AllowWrite" Caption="Sửa" />
+        <PropertyEditor Id="Object" Caption="Đối tượng" />
+      </Items>
+    </DetailView>
+    <ListView Id="SecuritySystemTypePermissionsObjectBase_ListView">
+      <Columns>
+        <ColumnInfo Id="Object" Caption="Đối tượng" />
+        <ColumnInfo Id="AllowRead" Caption="Xem" />
+        <ColumnInfo Id="AllowWrite" Caption="Sửa" />
+        <ColumnInfo Id="AllowCreate" Caption="Thêm" />
+        <ColumnInfo Id="AllowNavigate" Caption="Truy cập" />
+      </Columns>
+    </ListView>
+    <ListView Id="SecuritySystemTypePermissionsObjectBase_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Object" Caption="Đối tượng" />
+        <ColumnInfo Id="AllowRead" Caption="Xem" />
+        <ColumnInfo Id="AllowWrite" Caption="Sửa" />
+        <ColumnInfo Id="AllowCreate" Caption="Thêm" />
+        <ColumnInfo Id="AllowNavigate" Caption="Truy cập" />
+      </Columns>
+    </ListView>
+    <ListView Id="SecuritySystemTypePermissionsObjectBase_MemberPermissions_ListView">
+      <Columns>
+        <ColumnInfo Id="AllowRead" Caption="Allow Read" />
+        <ColumnInfo Id="AllowWrite" Caption="Allow Write" />
+        <ColumnInfo Id="EffectiveRead" Caption="Xem" />
+        <ColumnInfo Id="EffectiveWrite" Caption="Sửa" />
+      </Columns>
+    </ListView>
+    <ListView Id="SecuritySystemTypePermissionsObjectBase_ObjectPermissions_ListView">
+      <Columns>
+        <ColumnInfo Id="AllowDelete" Caption="Xóa" />
+        <ColumnInfo Id="AllowNavigate" Caption="Truy cập" />
+        <ColumnInfo Id="AllowRead" Caption="Allow Read" />
+        <ColumnInfo Id="AllowWrite" Caption="Allow Write" />
+        <ColumnInfo Id="EffectiveRead" Caption="Xem" />
+        <ColumnInfo Id="EffectiveWrite" Caption="Sửa" />
+        <ColumnInfo Id="EffectiveNavigate" Caption="Truy cập" />
+      </Columns>
+    </ListView>
+    <DetailView Id="SecuritySystemTypePermissionsObjectOwner_DetailView">
+      <Items>
+        <PropertyEditor Id="TypePermissions" Caption="Danh sách quyền" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="TypePermissions_Group" Caption="Danh sách quyền" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="SecuritySystemTypePermissionsObjectOwner_TypePermissionMatrix_ListView">
+      <Columns>
+        <ColumnInfo Id="Object" Caption="Đối tượng" />
+        <ColumnInfo Id="AllowRead" Caption="Xem" />
+        <ColumnInfo Id="AllowWrite" Caption="Sửa" />
+        <ColumnInfo Id="AllowCreate" Caption="Thêm" />
+        <ColumnInfo Id="AllowNavigate" Caption="Truy cập" />
+      </Columns>
+    </ListView>
+    <ListView Id="SecuritySystemTypePermissionsObjectOwner_TypePermissions_ListView">
+      <Columns>
+        <ColumnInfo Id="Object" Caption="Đối tượng" />
+        <ColumnInfo Id="AllowRead" Caption="Xem" />
+        <ColumnInfo Id="AllowWrite" Caption="Sửa" />
+        <ColumnInfo Id="AllowCreate" Caption="Thêm" />
+        <ColumnInfo Id="AllowNavigate" Caption="Truy cập" />
+      </Columns>
+    </ListView>
+    <DetailView Id="SecuritySystemUser_Custom_DetailView">
+      <Items>
+        <PropertyEditor Id="ChangePasswordOnFirstLogon" Caption="Đổi mật khẩu" />
+        <PropertyEditor Id="IsActive" Caption="Đang hoạt động" />
+        <PropertyEditor Id="UserName" Caption="Tài khoản" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="SecuritySystemUser_Custom">
+              <LayoutGroup Id="SecuritySystemUser_Custom_col1" Caption="SecuritySystemUser_Custom_col1">
+                <LayoutGroup Id="Autodc758239-5939-417e-8489-9f079b6d84d3" Caption="">
+                  <LayoutGroup Id="Autoed4b15c6-c333-400a-881c-a3ad69bebfb1" Caption="" />
+                  <LayoutGroup Id="Autod10f4590-beab-477d-a655-acba8db258f0" Caption="" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="SecuritySystemUser_Custom_col2" Caption="SecuritySystemUser_Custom_col2" />
+            </LayoutGroup>
+            <TabbedGroup Id="Tabs">
+              <LayoutGroup Id="Roles" Caption="Nhóm chức năng được phân Quyền" />
+            </TabbedGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="SecuritySystemUser_Custom_ListView">
+      <Columns>
+        <ColumnInfo Id="UserName" Caption="Tài khoản" />
+        <ColumnInfo Id="IsActive" Caption="Đang hoạt động" />
+      </Columns>
+    </ListView>
+    <ListView Id="SecuritySystemUser_Custom_LookupListView">
+      <Columns>
+        <ColumnInfo Id="UserName" Caption="Tài khoản" />
+      </Columns>
+    </ListView>
+    <DetailView Id="SecuritySystemUser_DetailView">
+      <Items>
+        <PropertyEditor Id="ChangePasswordOnFirstLogon" Caption="Đổi mật khẩu khi đăng nhập lần đầu tiên" />
+        <PropertyEditor Id="IsActive" Caption="Đang hoạt động" />
+        <PropertyEditor Id="UserName" Caption="Tài khoản" />
+      </Items>
+    </DetailView>
+    <ListView Id="SecuritySystemUser_ListView">
+      <Columns>
+        <ColumnInfo Id="UserName" Caption="Tài khoản" />
+        <ColumnInfo Id="ChangePasswordOnFirstLogon" Caption="Đổi mật khẩu khi đăng nhập lần đầu tiên" />
+        <ColumnInfo Id="IsActive" Caption="Đang hoạt động" />
+      </Columns>
+    </ListView>
+    <ListView Id="SecuritySystemUser_LookupListView">
+      <Columns>
+        <ColumnInfo Id="UserName" Caption="Tài khoản" />
+      </Columns>
+    </ListView>
+    <ListView Id="SecuritySystemUser_Roles_ListView">
+      <Columns>
+        <ColumnInfo Id="Name" Caption="Tên" />
+        <ColumnInfo Id="IsAdministrative" Caption="Là người quản trị hệ thống" />
+      </Columns>
+    </ListView>
+    <DetailView Id="SecuritySystemUserBase_DetailView">
+      <Items>
+        <PropertyEditor Id="ChangePasswordOnFirstLogon" Caption="Đổi mật khẩu khi đăng nhập lần đầu tiên" />
+        <PropertyEditor Id="IsActive" Caption="Đang hoạt động" />
+        <PropertyEditor Id="UserName" Caption="Tài khoản" />
+      </Items>
+    </DetailView>
+    <ListView Id="SecuritySystemUserBase_ListView">
+      <Columns>
+        <ColumnInfo Id="UserName" Caption="Tài khoản" />
+        <ColumnInfo Id="ChangePasswordOnFirstLogon" Caption="Đổi mật khẩu khi đăng nhập lần đầu tiên" />
+        <ColumnInfo Id="IsActive" Caption="Đang hoạt động" />
+      </Columns>
+    </ListView>
+    <ListView Id="SecuritySystemUserBase_LookupListView">
+      <Columns>
+        <ColumnInfo Id="UserName" Caption="Tài khoản" />
+      </Columns>
+    </ListView>
+    <DetailView Id="ThongTinChung_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ThongTinChung" Caption="Thông tin chung">
+              <LayoutGroup Id="ThongTinChung_col1" Caption="ThongTinChung_col1" />
+            </LayoutGroup>
+            <LayoutGroup Id="Item1">
+              <LayoutGroup Id="Auto76911080-478f-4d3c-8e33-2e31b71fc760">
+                <LayoutGroup Id="Auto09582e83-f858-444f-88dc-c99453ed2a70" Caption="Auto09582e83-f858-444f-88dc-c99453ed2a70(12)" />
+                <LayoutGroup Id="Auto09fc53c5-fe3a-471d-9f67-f3f6012c2b21" Caption="Auto09fc53c5-fe3a-471d-9f67-f3f6012c2b21(17)" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ThongTinNhanVien_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <TabbedGroup Id="Item3">
+              <LayoutGroup Id="Item1">
+                <LayoutGroup Id="Auto929cc555-d480-4947-9469-c77ef18fc1a2">
+                  <LayoutGroup Id="Autoae291eb0-9416-4d43-9cb0-23cb0dfa0c76">
+                    <TabbedGroup Id="Item28">
+                      <LayoutGroup Id="HoSo">
+                        <LayoutGroup Id="HoSo_col1">
+                          <LayoutGroup Id="Autofcd6cf8d-dde1-474a-a3c2-0164a0857046">
+                            <LayoutGroup Id="Autof5261c27-cf83-4a5e-8278-2bd990d6fb3e">
+                              <LayoutGroup Id="Item4" Caption="Liên lạc - Địa chỉ" />
+                              <LayoutGroup Id="Item37" Caption="Dữ liệu Tập đoàn" />
+                            </LayoutGroup>
+                          </LayoutGroup>
+                        </LayoutGroup>
+                      </LayoutGroup>
+                    </TabbedGroup>
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="Item12">
+                <TabbedGroup Id="Tabs">
+                  <LayoutGroup Id="ListQuaTrinhBoNhiem" Caption="Bổ nhiệm" />
+                  <LayoutGroup Id="ListQuaTrinhBoNhiemKiemNhiem" Caption="Kiêm nhiệm" />
+                  <LayoutGroup Id="ListQuaTrinhCongTac" Caption="Công tác" />
+                  <LayoutGroup Id="ListQuaTrinhDieuDong" Caption="Điều động" />
+                  <LayoutGroup Id="Item23" Caption="Giảng dạy" />
+                  <LayoutGroup Id="Item27" Caption="Đào tạo" />
+                  <LayoutGroup Id="Item33" Caption="Khen thưởng" />
+                  <LayoutGroup Id="Item34" Caption="Kỷ luật" />
+                  <LayoutGroup Id="Item35" Caption="Nghiên cứu khoa học" />
+                  <LayoutGroup Id="Item36" Caption="Lực lượng vũ trang" />
+                </TabbedGroup>
+              </LayoutGroup>
+            </TabbedGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="TruyLinhNhanVien_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="TruyLinhNhanVien">
+              <LayoutGroup Id="Item1" Caption="Truy lĩnh lương" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="Ghi chú" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="TruyThuNhanVien_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="TruyThuNhanVien" Caption="TruyThuNhanVien">
+              <LayoutGroup Id="Item1" Caption="Truy thu lương" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="Ghi chú" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="TypePermissionMatrixItem_DetailView">
+      <Items>
+        <PropertyEditor Id="AllowCreate" Caption="Thêm" />
+        <PropertyEditor Id="AllowRead" Caption="Xem" />
+        <PropertyEditor Id="AllowWrite" Caption="Sửa" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Permissions" Caption="Danh sách quyền" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="TypePermissionMatrixItem_ListView">
+      <Columns>
+        <ColumnInfo Id="AllowRead" Caption="Xem" />
+        <ColumnInfo Id="AllowWrite" Caption="Sửa" />
+        <ColumnInfo Id="AllowCreate" Caption="Thêm" />
+      </Columns>
+    </ListView>
+    <ListView Id="TypePermissionMatrixItem_LookupListView">
+      <Columns>
+        <ColumnInfo Id="AllowRead" Caption="Xem" />
+        <ColumnInfo Id="AllowWrite" Caption="Sửa" />
+        <ColumnInfo Id="AllowCreate" Caption="Thêm" />
+      </Columns>
+    </ListView>
+    <ListView Id="TypePermissionMatrixItem_MemberPermissions_ListView">
+      <Columns>
+        <ColumnInfo Id="AllowRead" Caption="Allow Read" />
+        <ColumnInfo Id="AllowWrite" Caption="Allow Write" />
+        <ColumnInfo Id="EffectiveRead" Caption="Xem" />
+        <ColumnInfo Id="EffectiveWrite" Caption="Sửa" />
+      </Columns>
+    </ListView>
+    <ListView Id="TypePermissionMatrixItem_ObjectPermissions_ListView">
+      <Columns>
+        <ColumnInfo Id="AllowDelete" Caption="Xóa" />
+        <ColumnInfo Id="AllowNavigate" Caption="Truy cập" />
+        <ColumnInfo Id="AllowRead" Caption="Allow Read" />
+        <ColumnInfo Id="AllowWrite" Caption="Allow Write" />
+        <ColumnInfo Id="EffectiveRead" Caption="Xem" />
+        <ColumnInfo Id="EffectiveWrite" Caption="Sửa" />
+        <ColumnInfo Id="EffectiveNavigate" Caption="Truy cập" />
+      </Columns>
+    </ListView>
+    <ListView Id="ValidationResults_DisplayableValidationResultItems_ListView">
+      <Columns>
+        <ColumnInfo Id="RuleProperties.Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

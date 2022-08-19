@@ -1,0 +1,2439 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7964F87D-BC5D-4C4E-8B2F-71E89739AA97}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ERP.Module.Win</RootNamespace>
+    <AssemblyName>ERP.Module.Win</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'EasyTest|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\EasyTest\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;EASYTEST</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v16.2.Core, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v16.2.UI, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Docs.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.EasyTest.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Chart.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Chart.Win.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.ConditionalAppearance.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.EasyTest.WinAdapter.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.FileAttachment.Win.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.HtmlPropertyEditor.Win.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Notifications.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Notifications.Win.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.PivotChart.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.PivotChart.Win.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.PivotGrid.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.PivotGrid.Win.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.Reports.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Reports.Win.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Scheduler.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Scheduler.Win.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.ScriptRecorder.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.ScriptRecorder.Win.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Security.EF.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.Security.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Security.Xpo.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.TreeListEditors.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.TreeListEditors.Win.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Validation.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Validation.Win.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Web.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v16.2.Core, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v16.2.Core, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v16.2.Core, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Spreadsheet.v16.2.Core, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v16.2.Core">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Xpo.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Win.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.Base.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.BaseImpl.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v16.2.UI, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.PivotGrid.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Scheduler.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v16.2.UI, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v16.2.Wizard, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v16.2">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v16.2.Extensions, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v16.2.Extensions, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v16.2.Core, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v16.2.Extensions, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v16.2.Reporting, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v16.2.Reporting.Extensions, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.ComponentModelHost, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.Composition.Registration" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Design">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Workflow.ComponentModel" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\0.ExecuteImport\ImportClass\1.NhanSu\Imp_QuyetDinhKyLuat.cs" />
+    <Compile Include="Controllers\0.ExecuteImport\ImportClass\1.NhanSu\Imp_DangKyDaoTao.cs" />
+    <Compile Include="Controllers\0.ExecuteImport\ImportClass\1.NhanSu\Imp_QuyetDinhKhenThuong.cs" />
+    <Compile Include="Controllers\0.ExecuteImport\ImportClass\1.NhanSu\Imp_HoSoBaoHiem.cs" />
+    <Compile Include="Controllers\0.ExecuteImport\ImportClass\1.NhanSu\Imp_QuyetDinhMienNhiem.cs" />
+    <Compile Include="Controllers\0.ExecuteImport\ImportClass\1.NhanSu\Imp_QuyetDinhTaiBoNhiem.cs" />
+    <Compile Include="Controllers\0.ExecuteImport\ImportClass\1.NhanSu\Imp_QuyetDinhBoNhiem.cs" />
+    <Compile Include="Controllers\0.ExecuteImport\ImportClass\1.NhanSu\Imp_QuyetDinhNangLuong.cs" />
+    <Compile Include="Controllers\0.ExecuteImport\ImportClass\1.NhanSu\Imp_DinhBienChucDanh.cs" />
+    <Compile Include="Controllers\0.ExecuteImport\ImportClass\2.TienLuong\Imp_KhenThuongPhucLoi.cs" />
+    <Compile Include="Controllers\0.ExecuteImport\ImportClass\2.TienLuong\Imp_ChamCongGiangDayPhoThong.cs" />
+    <Compile Include="Controllers\0.ExecuteImport\ImportClass\2.TienLuong\Imp_ChamCongGiangDay.cs" />
+    <Compile Include="Controllers\0.ExecuteImport\ImportClass\2.TienLuong\Imp_CacKhoanThuNhapKhac.cs" />
+    <Compile Include="Controllers\0.ExecuteImport\ImportClass\2.TienLuong\Imp_NgoaiKhoa.cs" />
+    <Compile Include="Controllers\0.ExecuteImport\ImportClass\2.TienLuong\Imp_TiLeDanhGiaCongViec.cs" />
+    <Compile Include="Controllers\0.ExecuteImport\ImportClass\2.TienLuong\Imp_ChamCongKhac.cs" />
+    <Compile Include="Controllers\0.ExecuteImport\ImportClass\2.TienLuong\Imp_ChamCongNgoaiGio.cs" />
+    <Compile Include="Controllers\0.ExecuteImport\ImportClass\2.TienLuong\Imp_KhauTruLuong.cs" />
+    <Compile Include="Controllers\0.ExecuteImport\ImportClass\2.TienLuong\Imp_ThuNhapKhac.cs" />
+    <Compile Include="Controllers\0.ExecuteImport\ImportClass\2.TienLuong\Imp_TruyLinhLuong.cs" />
+    <Compile Include="Controllers\0.ExecuteImport\ImportClass\3.PMS\Imp_QuanLyGioChuan.cs" />
+    <Compile Include="Controllers\0.ExecuteImport\ImportClass\3.PMS\Imp_CoVanHocTap.cs" />
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\1.NhanSu\BoNhiem_ImportQuyetDinhTaiBoNhiemController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\1.NhanSu\BoNhiem_ImportQuyetDinhTaiBoNhiemController.designer.cs">
+      <DependentUpon>BoNhiem_ImportQuyetDinhTaiBoNhiemController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\1.NhanSu\HopDong_ImportPhuLucHopDongController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\1.NhanSu\HopDong_ImportPhuLucHopDongController.designer.cs">
+      <DependentUpon>HopDong_ImportPhuLucHopDongController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\1.NhanSu\DaoTao_ImportDangKyDaoTaoController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\1.NhanSu\DaoTao_ImportDangKyDaoTaoController.designer.cs">
+      <DependentUpon>DaoTao_ImportDangKyDaoTaoController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\1.NhanSu\MienNhiem_ImportQuyetDinhMienNhiemController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\1.NhanSu\MienNhiem_ImportQuyetDinhMienNhiemController.designer.cs">
+      <DependentUpon>MienNhiem_ImportQuyetDinhMienNhiemController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\1.NhanSu\GiangVien_ImportGiangVienController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\1.NhanSu\GiangVien_ImportGiangVienController.designer.cs">
+      <DependentUpon>GiangVien_ImportGiangVienController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\1.NhanSu\BoNhiem_ImportQuyetDinhBoNhiemController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\1.NhanSu\BoNhiem_ImportQuyetDinhBoNhiemController.designer.cs">
+      <DependentUpon>BoNhiem_ImportQuyetDinhBoNhiemController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\1.NhanSu\NhanVien_ImportHoSoBaoHiemNhanVienController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\1.NhanSu\NhanVien_ImportHoSoBaoHiemNhanVienController.designer.cs">
+      <DependentUpon>NhanVien_ImportHoSoBaoHiemNhanVienController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\1.NhanSu\DinhBien_ImportDinhBienChucDanhController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\1.NhanSu\DinhBien_ImportDinhBienChucDanhController.designer.cs">
+      <DependentUpon>DinhBien_ImportDinhBienChucDanhController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\2.TienLuong\ChamCong_ImportTiLeDanhGiaCongViecController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\2.TienLuong\ChamCong_ImportTiLeDanhGiaCongViecController.designer.cs">
+      <DependentUpon>ChamCong_ImportTiLeDanhGiaCongViecController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\2.TienLuong\ChamCong_ImportCongKhacController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\2.TienLuong\ChamCong_ImportCongKhacController.designer.cs">
+      <DependentUpon>ChamCong_ImportCongKhacController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\2.TienLuong\ChamCong_ImportCongNgoaiGioController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\2.TienLuong\ChamCong_ImportCongNgoaiGioController.designer.cs">
+      <DependentUpon>ChamCong_ImportCongNgoaiGioController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\2.TienLuong\ChamCong_ImportChamCongGiangDayController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\2.TienLuong\ChamCong_ImportChamCongGiangDayController.designer.cs">
+      <DependentUpon>ChamCong_ImportChamCongGiangDayController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\2.TienLuong\KhauTru_ImportKhauTruLuongController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\2.TienLuong\KhauTru_ImportKhauTruLuongController.designer.cs">
+      <DependentUpon>KhauTru_ImportKhauTruLuongController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\2.TienLuong\KhenThuongPhucLoi_ImportCacLoaiKhenThuocPhucLoiController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\2.TienLuong\KhenThuongPhucLoi_ImportCacLoaiKhenThuocPhucLoiController.designer.cs">
+      <DependentUpon>KhenThuongPhucLoi_ImportCacLoaiKhenThuocPhucLoiController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\2.TienLuong\Luong_ImportThuNhapKhacController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\2.TienLuong\Luong_ImportThuNhapKhacController.designer.cs">
+      <DependentUpon>Luong_ImportThuNhapKhacController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\2.TienLuong\Luong_ImportNgoaiKhoaController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\2.TienLuong\Luong_ImportNgoaiKhoaController.designer.cs">
+      <DependentUpon>Luong_ImportNgoaiKhoaController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\PMS\PMS_ImportQuanLyGioChuanController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\PMS\PMS_ImportQuanLyGioChuanController.designer.cs">
+      <DependentUpon>PMS_ImportQuanLyGioChuanController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\PMS\PMS_ImportCoVanHocTapController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\PMS\PMS_ImportCoVanHocTapController.designer.cs">
+      <DependentUpon>PMS_ImportCoVanHocTapController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\1.Custom\CustomNumberColumnController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\1.Custom\CustomNumberColumnController.designer.cs">
+      <DependentUpon>CustomNumberColumnController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\1.Custom\CustomPivotGridController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\1.Custom\CustomPivotGridController.Designer.cs">
+      <DependentUpon>CustomPivotGridController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\1.Custom\FocusGridController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\1.Custom\FocusGridController.designer.cs">
+      <DependentUpon>FocusGridController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\1.Custom\HideProtectedContentRowsController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\1.Custom\HideProtectedContentRowsController.designer.cs">
+      <DependentUpon>HideProtectedContentRowsController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\1.Custom\HideToolbarController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\1.Custom\HideToolbarController.designer.cs">
+      <DependentUpon>HideToolbarController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_AutoCommitMasterController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_AutoCommitMasterController.designer.cs">
+      <DependentUpon>HeThong_AutoCommitMasterController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_CopyRoleUserController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_CopyRoleUserController.designer.cs">
+      <DependentUpon>HeThong_CopyRoleUserController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_CreateNavigationMenuItemController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_CreateNavigationMenuItemController.designer.cs">
+      <DependentUpon>HeThong_CreateNavigationMenuItemController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_FilterNamHocContrller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_FilterNamHocContrller.designer.cs">
+      <DependentUpon>HeThong_FilterNamHocContrller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_FilterSecuritySystemRoleContrller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_FilterSecuritySystemRoleContrller.designer.cs">
+      <DependentUpon>HeThong_FilterSecuritySystemRoleContrller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_LayMatKhauTruocKhiThayDoi.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_LayMatKhauTruocKhiThayDoi.designer.cs">
+      <DependentUpon>HeThong_LayMatKhauTruocKhiThayDoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_CustomThongBaoController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_CustomThongBaoController.Designer.cs">
+      <DependentUpon>HeThong_CustomThongBaoController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_Onload_Controller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_Onload_Controller.Designer.cs">
+      <DependentUpon>HeThong_Onload_Controller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_ScriptRecorderController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_ScriptRecorderController.designer.cs">
+      <DependentUpon>HeThong_ScriptRecorderController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_XemThongTinUserController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_XemThongTinUserController.designer.cs">
+      <DependentUpon>HeThong_XemThongTinUserController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_XemNhatKyDuLieuContrller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_XemNhatKyDuLieuContrller.designer.cs">
+      <DependentUpon>HeThong_XemNhatKyDuLieuContrller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_XuatHinhController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_XuatHinhController.designer.cs">
+      <DependentUpon>HeThong_XuatHinhController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_ChucNangPhuController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_ChucNangPhuController.designer.cs">
+      <DependentUpon>HeThong_ChucNangPhuController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_CopyMailMergeTemlateController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_CopyMailMergeTemlateController.designer.cs">
+      <DependentUpon>HeThong_CopyMailMergeTemlateController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_Onload_SystemUser_CusTom.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_Onload_SystemUser_CusTom.Designer.cs">
+      <DependentUpon>HeThong_Onload_SystemUser_CusTom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\4.BaoCao\BaoCao_ExportToWorkBookBaoCaoTienLuongController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\4.BaoCao\BaoCao_ExportToWorkBookBaoCaoTienLuongController.designer.cs">
+      <DependentUpon>BaoCao_ExportToWorkBookBaoCaoTienLuongController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\4.BaoCao\Custom_CreateReportController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\4.BaoCao\Custom_CreateReportController.designer.cs">
+      <DependentUpon>Custom_CreateReportController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\4.BaoCao\Custom_EditReportController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\4.BaoCao\Custom_EditReportController.designer.cs">
+      <DependentUpon>Custom_EditReportController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\4.BaoCao\Custom_EditReportController_NewVersion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\4.BaoCao\Custom_EditReportController_NewVersion.designer.cs">
+      <DependentUpon>Custom_EditReportController_NewVersion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\4.BaoCao\Custom_ImportAndExportTemplateController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\4.BaoCao\Custom_ImportAndExportTemplateController.designer.cs">
+      <DependentUpon>Custom_ImportAndExportTemplateController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\4.BaoCao\Custom_ShowReportController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\4.BaoCao\Custom_ShowReportController.designer.cs">
+      <DependentUpon>Custom_ShowReportController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\4.BaoCao\Show_Design_Report_Controller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\4.BaoCao\Show_Design_Report_Controller.Designer.cs">
+      <DependentUpon>Show_Design_Report_Controller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\DaoTao\DaoTao_ChonNhanVienDangKyDaoTaoController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\DaoTao\DaoTao_ChonNhanVienDangKyDaoTaoController.designer.cs">
+      <DependentUpon>DaoTao_ChonNhanVienDangKyDaoTaoController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\DaoTao\DaoTao_LapQuyetDinhCongNhanDaoTaoController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\DaoTao\DaoTao_LapQuyetDinhCongNhanDaoTaoController.designer.cs">
+      <DependentUpon>DaoTao_LapQuyetDinhCongNhanDaoTaoController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\DaoTao\DaoTao_ChonNhanVienCongNhanDaoTaoController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\DaoTao\DaoTao_ChonNhanVienCongNhanDaoTaoController.designer.cs">
+      <DependentUpon>DaoTao_ChonNhanVienCongNhanDaoTaoController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\DaoTao\DaoTao_ChonNhanVienDuyetDaoTaoController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\DaoTao\DaoTao_ChonNhanVienDuyetDaoTaoController.designer.cs">
+      <DependentUpon>DaoTao_ChonNhanVienDuyetDaoTaoController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\DaoTao\DaoTao_DuyetDangKyDaoTaoController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\DaoTao\DaoTao_DuyetDangKyDaoTaoController.designer.cs">
+      <DependentUpon>DaoTao_DuyetDangKyDaoTaoController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\DaoTao\DaoTao_LapQuyetDinhDaoTaoController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\DaoTao\DaoTao_LapQuyetDinhDaoTaoController.designer.cs">
+      <DependentUpon>DaoTao_LapQuyetDinhDaoTaoController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\HopDong\HopDong_TaoQuyetDinhChamDutHopDongTuTimKiemController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\HopDong\HopDong_TaoQuyetDinhChamDutHopDongTuTimKiemController.designer.cs">
+      <DependentUpon>HopDong_TaoQuyetDinhChamDutHopDongTuTimKiemController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\HopDong\HopDong_TaoHopDongTuTimKiemController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\HopDong\HopDong_TaoHopDongTuTimKiemController.designer.cs">
+      <DependentUpon>HopDong_TaoHopDongTuTimKiemController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\HoSoLuong\HoSoLuong_LayChiTietLuongNghiViecController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\HoSoLuong\HoSoLuong_LayChiTietLuongNghiViecController.designer.cs">
+      <DependentUpon>HoSoLuong_LayChiTietLuongNghiViecController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\HoSo_CapNhatHinhAnhNhanVienController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\HoSo_CapNhatHinhAnhNhanVienController.designer.cs">
+      <DependentUpon>HoSo_CapNhatHinhAnhNhanVienController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\HoSo_TaoHoSoNhanVienGiangVienCoHuuController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\HoSo_TaoHoSoNhanVienGiangVienCoHuuController.designer.cs">
+      <DependentUpon>HoSo_TaoHoSoNhanVienGiangVienCoHuuController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\HoSo_TaoHoSoGiangVienThinhGiangController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\HoSo_TaoHoSoGiangVienThinhGiangController.designer.cs">
+      <DependentUpon>HoSo_TaoHoSoGiangVienThinhGiangController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\HoSo_CopyHoSoNhanVienController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\HoSo_CopyHoSoNhanVienController.designer.cs">
+      <DependentUpon>HoSo_CopyHoSoNhanVienController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\GiangVien_ThemGiangVienController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\GiangVien_ThemGiangVienController.designer.cs">
+      <DependentUpon>GiangVien_ThemGiangVienController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\NhanVien_ThemNhanVienController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\NhanVien_ThemNhanVienController.designer.cs">
+      <DependentUpon>NhanVien_ThemNhanVienController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\NhanVien_TimKiemThinhGiangController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\NhanVien_TimKiemThinhGiangController.designer.cs">
+      <DependentUpon>NhanVien_TimKiemThinhGiangController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\NhanVien_TrichDanhSachThinhGiangController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\NhanVien_TrichDanhSachThinhGiangController.designer.cs">
+      <DependentUpon>NhanVien_TrichDanhSachThinhGiangController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\Onload_NhanVien_ThongTinNhanVien_Controller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\Onload_NhanVien_ThongTinNhanVien_Controller.Designer.cs">
+      <DependentUpon>Onload_NhanVien_ThongTinNhanVien_Controller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\ThinhGiang_ChonCotXuatDuLieuController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\ThinhGiang_ChonCotXuatDuLieuController.designer.cs">
+      <DependentUpon>ThinhGiang_ChonCotXuatDuLieuController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\QuyetDinh\QuyetDinh_ImportKyLuatController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\QuyetDinh\QuyetDinh_ImportKyLuatController.designer.cs">
+      <DependentUpon>QuyetDinh_ImportKyLuatController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\QuyetDinh\QuyetDinh_ImportKhenThuongController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\QuyetDinh\QuyetDinh_ImportKhenThuongController.designer.cs">
+      <DependentUpon>QuyetDinh_ImportKhenThuongController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\QuyetDinh\QuyetDinh_ImportNangLuongController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\QuyetDinh\QuyetDinh_ImportNangLuongController.designer.cs">
+      <DependentUpon>QuyetDinh_ImportNangLuongController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\TuyenDung\TuyenDung_CapNhatUngVienVaoChiTietVongTuyenDungController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\TuyenDung\TuyenDung_CapNhatUngVienVaoChiTietVongTuyenDungController.designer.cs">
+      <DependentUpon>TuyenDung_CapNhatUngVienVaoChiTietVongTuyenDungController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\TuyenDung\TuyenDung_CapNhatHinhThucTuyenDungController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\TuyenDung\TuyenDung_CapNhatHinhThucTuyenDungController.designer.cs">
+      <DependentUpon>TuyenDung_CapNhatHinhThucTuyenDungController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\TuyenDung\TuyenDung_ChonUngVienLapQuyetDinhTuyenDungController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\TuyenDung\TuyenDung_ChonUngVienLapQuyetDinhTuyenDungController.designer.cs">
+      <DependentUpon>TuyenDung_ChonUngVienLapQuyetDinhTuyenDungController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\TuyenDung\TuyenDung_ChonViTriTuyenDungController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\TuyenDung\TuyenDung_ChonViTriTuyenDungController.designer.cs">
+      <DependentUpon>TuyenDung_ChonViTriTuyenDungController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\TuyenDung\TuyenDung_DuyetDangKyTuyenDungController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\TuyenDung\TuyenDung_DuyetDangKyTuyenDungController.designer.cs">
+      <DependentUpon>TuyenDung_DuyetDangKyTuyenDungController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\TuyenDung\TuyenDung_LapQuyetDinhThanhLapHoiDongTuyenDungController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\TuyenDung\TuyenDung_LapQuyetDinhThanhLapHoiDongTuyenDungController.designer.cs">
+      <DependentUpon>TuyenDung_LapQuyetDinhThanhLapHoiDongTuyenDungController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\TuyenDung\TuyenDung_LapQuyetDinhTuyenDungController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\TuyenDung\TuyenDung_LapQuyetDinhTuyenDungController.designer.cs">
+      <DependentUpon>TuyenDung_LapQuyetDinhTuyenDungController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\TuyenDung\TuyenDung_TaoMoiDanhSachThiController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\TuyenDung\TuyenDung_TaoMoiDanhSachThiController.designer.cs">
+      <DependentUpon>TuyenDung_TaoMoiDanhSachThiController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\TuyenDung\TuyenDung_TimKiemQuyetDinhTuyenDungController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\TuyenDung\TuyenDung_TimKiemQuyetDinhTuyenDungController.designer.cs">
+      <DependentUpon>TuyenDung_TimKiemQuyetDinhTuyenDungController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\TuyenDung\TuyenDung_TinhDiemTrungBinhController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\TuyenDung\TuyenDung_TinhDiemTrungBinhController.designer.cs">
+      <DependentUpon>TuyenDung_TinhDiemTrungBinhController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\TuyenDung\TuyenDung_TrungTuyenController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\TuyenDung\TuyenDung_TrungTuyenController.designer.cs">
+      <DependentUpon>TuyenDung_TrungTuyenController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\1.Custom\CustomOpenDetailViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\1.Custom\CustomOpenDetailViewController.Designer.cs">
+      <DependentUpon>CustomOpenDetailViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportClass\2.TienLuong\Imp_LuongNhanVien.cs" />
+    <Compile Include="Controllers\5.NghiepVu\2.TienLuong\0.ExecuteClass\Luong_TinhLuongNgoaiGio.cs" />
+    <Compile Include="Controllers\5.NghiepVu\2.TienLuong\0.ExecuteClass\Luong_TinhKhenThuong.cs" />
+    <Compile Include="Controllers\5.NghiepVu\2.TienLuong\0.ExecuteClass\Luong_TinhLuongVaPhuCap.cs" />
+    <Compile Include="Controllers\0.ExecuteImport\ImportClass\1.NhanSu\Imp_Contract.cs" />
+    <Compile Include="Controllers\0.ExecuteImport\ImportClass\1.NhanSu\Imp_GiangVienThinhGiang.cs" />
+    <Compile Include="Controllers\0.ExecuteImport\ImportClass\1.NhanSu\Imp_Staff.cs" />
+    <Compile Include="Controllers\0.ExecuteImport\ImportClass\1.NhanSu\Imp_Candidate.cs" />
+    <Compile Include="Controllers\0.ExecuteImport\ImportClass\2.TienLuong\Imp_ChamCong.cs" />
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\1.NhanSu\HopDong_ImportHopDongKhoanController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\1.NhanSu\HopDong_ImportHopDongKhoanController.designer.cs">
+      <DependentUpon>HopDong_ImportHopDongKhoanController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\1.NhanSu\HopDong_ImportHopDongLamViecController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\1.NhanSu\HopDong_ImportHopDongLamViecController.designer.cs">
+      <DependentUpon>HopDong_ImportHopDongLamViecController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\1.NhanSu\NhanVien_ImportQuanHeGiaDinhController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\1.NhanSu\NhanVien_ImportQuanHeGiaDinhController.designer.cs">
+      <DependentUpon>NhanVien_ImportQuanHeGiaDinhController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\1.NhanSu\NhanVien_ImportQuaTrinhNhanVienController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\1.NhanSu\NhanVien_ImportQuaTrinhNhanVienController.designer.cs">
+      <DependentUpon>NhanVien_ImportQuaTrinhNhanVienController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\1.NhanSu\NhanVien_ImportNhanVienController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\1.NhanSu\NhanVien_ImportNhanVienController.designer.cs">
+      <DependentUpon>NhanVien_ImportNhanVienController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\1.NhanSu\TuyenDung_ImportUngVienTuExcelController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\1.NhanSu\TuyenDung_ImportUngVienTuExcelController.designer.cs">
+      <DependentUpon>TuyenDung_ImportUngVienTuExcelController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\2.TienLuong\ChamCong_ImportChamCongController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\2.TienLuong\ChamCong_ImportChamCongController.designer.cs">
+      <DependentUpon>ChamCong_ImportChamCongController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\1.Custom\AllowLinkUnlinkController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\1.Custom\SetupGridViewAndTreeViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\1.Custom\SetupGridViewAndTreeViewController.designer.cs">
+      <DependentUpon>SetupGridViewAndTreeViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\1.Custom\SetupPreviewDocumentController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\1.Custom\SetupPreviewDocumentController.designer.cs">
+      <DependentUpon>SetupPreviewDocumentController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\1.Custom\SetupWindowController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\1.Custom\SetupWindowController.designer.cs">
+      <DependentUpon>SetupWindowController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\1.Custom\ShowReportOnToolbarController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\1.Custom\ShowReportOnToolbarController.designer.cs">
+      <DependentUpon>ShowReportOnToolbarController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\1.Custom\ShowTemplateOnToolbarController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\1.Custom\ShowTemplateOnToolbarController.designer.cs">
+      <DependentUpon>ShowTemplateOnToolbarController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_ChangePassController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_ChangePassController.designer.cs">
+      <DependentUpon>HeThong_ChangePassController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_ClassRoleTreeListController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_ClassRoleTreeListController.designer.cs">
+      <DependentUpon>HeThong_ClassRoleTreeListController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\GiayTo\GiayTo_XoaTapTinController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\GiayTo\GiayTo_XoaTapTinController.designer.cs">
+      <DependentUpon>GiayTo_XoaTapTinController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\GiangVien_AnCotCuaBoPhanController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\GiangVien_AnCotCuaBoPhanController.designer.cs">
+      <DependentUpon>GiangVien_AnCotCuaBoPhanController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\GiangVien_ChucNangImportController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\GiangVien_ChucNangImportController.designer.cs">
+      <DependentUpon>GiangVien_ChucNangImportController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\2.TienLuong\0.ExecuteClass\ChungTu_TinhChuyenKhoan.cs" />
+    <Compile Include="Controllers\5.NghiepVu\2.TienLuong\ChamCong\ChamCong_XoaBangCongGiangDayController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\2.TienLuong\ChamCong\ChamCong_XoaBangCongGiangDayController.designer.cs">
+      <DependentUpon>ChamCong_XoaBangCongGiangDayController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\2.TienLuong\ChamCong\ChamCong_XoaTiLeDanhGiaCongViecController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\2.TienLuong\ChamCong\ChamCong_XoaTiLeDanhGiaCongViecController.designer.cs">
+      <DependentUpon>ChamCong_XoaTiLeDanhGiaCongViecController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\2.TienLuong\ChamCong\ChamCong_XoaBangCongNgoaiGioController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\2.TienLuong\ChamCong\ChamCong_XoaBangCongNgoaiGioController.designer.cs">
+      <DependentUpon>ChamCong_XoaBangCongNgoaiGioController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\2.TienLuong\ChamCong\ChamCong_XoaBangChamCongController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\2.TienLuong\ChamCong\ChamCong_XoaBangChamCongController.designer.cs">
+      <DependentUpon>ChamCong_XoaBangChamCongController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\2.TienLuong\ChamCong\ChamCong_LayDuLieuCongGiangDayController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\2.TienLuong\ChamCong\ChamCong_LayDuLieuCongGiangDayController.designer.cs">
+      <DependentUpon>ChamCong_LayDuLieuCongGiangDayController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\2.TienLuong\ChungTu\ChungTu_TinhChuyenKhoanController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\2.TienLuong\ChungTu\ChungTu_TinhChuyenKhoanController.designer.cs">
+      <DependentUpon>ChungTu_TinhChuyenKhoanController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\2.TienLuong\ChungTu\ChungTu_XoaChungTuChuyenKhoanController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\2.TienLuong\ChungTu\ChungTu_XoaChungTuChuyenKhoanController.designer.cs">
+      <DependentUpon>ChungTu_XoaChungTuChuyenKhoanController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\2.TienLuong\KhauTru\KhauTru_XoaBangKhauTruLuongController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\2.TienLuong\KhauTru\KhauTru_XoaBangKhauTruLuongController.designer.cs">
+      <DependentUpon>KhauTru_XoaBangKhauTruLuongController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\2.TienLuong\Luong_ImportLuongNhanVienController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\2.TienLuong\Luong_ImportLuongNhanVienController.designer.cs">
+      <DependentUpon>Luong_ImportLuongNhanVienController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\2.TienLuong\NgoaiGio\NgoaiGio_XoaBangLuongNgoaiGioController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\2.TienLuong\NgoaiGio\NgoaiGio_XoaBangLuongNgoaiGioController.designer.cs">
+      <DependentUpon>NgoaiGio_XoaBangLuongNgoaiGioController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\2.TienLuong\NgoaiGio\NgoaiGio_TinhLuongNgoaiGioController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\2.TienLuong\NgoaiGio\NgoaiGio_TinhLuongNgoaiGioController.designer.cs">
+      <DependentUpon>NgoaiGio_TinhLuongNgoaiGioController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\2.TienLuong\Luong\Luong_TinhLuongNhanVienController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\2.TienLuong\Luong\Luong_TinhLuongNhanVienController.designer.cs">
+      <DependentUpon>Luong_TinhLuongNhanVienController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\2.TienLuong\Luong\Luong_XoaBangLuongNhanVienController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\2.TienLuong\Luong\Luong_XoaBangLuongNhanVienController.designer.cs">
+      <DependentUpon>Luong_XoaBangLuongNhanVienController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\2.TienLuong\PhanTichLuong\PhanTichLuong_CapNhatCostCenterChiPhiLuongController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\2.TienLuong\PhanTichLuong\PhanTichLuong_CapNhatCostCenterChiPhiLuongController.designer.cs">
+      <DependentUpon>PhanTichLuong_CapNhatCostCenterChiPhiLuongController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\2.TienLuong\PhanTichLuong\PhanTichLuong_DongBoDuLieuSAPController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\2.TienLuong\PhanTichLuong\PhanTichLuong_DongBoDuLieuSAPController.designer.cs">
+      <DependentUpon>PhanTichLuong_DongBoDuLieuSAPController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\2.TienLuong\PhanTichLuong\PhanTichLuong_TinhPhanTichLuongNhanVienController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\2.TienLuong\PhanTichLuong\PhanTichLuong_TinhPhanTichLuongNhanVienController.designer.cs">
+      <DependentUpon>PhanTichLuong_TinhPhanTichLuongNhanVienController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\2.TienLuong\PhanTichLuong\PhanTichLuong_XoaBangPhanTichLuongNhanVienController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\2.TienLuong\PhanTichLuong\PhanTichLuong_XoaBangPhanTichLuongNhanVienController.designer.cs">
+      <DependentUpon>PhanTichLuong_XoaBangPhanTichLuongNhanVienController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\2.TienLuong\ThuNhapKhac\ThuNhapKhac_XoaBangThuNhapKhacController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\2.TienLuong\ThuNhapKhac\ThuNhapKhac_XoaBangThuNhapKhacController.designer.cs">
+      <DependentUpon>ThuNhapKhac_XoaBangThuNhapKhacController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\2.TienLuong\ThuNhapKhac_ImportThuNhapKhacController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\2.TienLuong\ThuNhapKhac_ImportThuNhapKhacController.designer.cs">
+      <DependentUpon>ThuNhapKhac_ImportThuNhapKhacController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\2.TienLuong\Thuong\Thuong_XoaBangThuongNhanVienController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\2.TienLuong\Thuong\Thuong_XoaBangThuongNhanVienController.designer.cs">
+      <DependentUpon>Thuong_XoaBangThuongNhanVienController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\2.TienLuong\Thuong\Thuong_TinhKhenThuongPhucLoiController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\2.TienLuong\Thuong\Thuong_TinhKhenThuongPhucLoiController.designer.cs">
+      <DependentUpon>Thuong_TinhKhenThuongPhucLoiController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\6.Roles\VisibleCreateNewButtonListViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\6.Roles\VisibleCreateNewButtonListViewController.designer.cs">
+      <DependentUpon>VisibleCreateNewButtonListViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\6.Roles\VisibleDeleteButtonListViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\6.Roles\VisibleDeleteButtonListViewController.designer.cs">
+      <DependentUpon>VisibleDeleteButtonListViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_ChuanHoaDanhMucController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_ChuanHoaDanhMucController.designer.cs">
+      <DependentUpon>HeThong_ChuanHoaDanhMucController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_CreateAppmenuController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_CreateAppmenuController.designer.cs">
+      <DependentUpon>HeThong_CreateAppmenuController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_DepartmentRoleTreeListController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_DepartmentRoleTreeListController.designer.cs">
+      <DependentUpon>HeThong_DepartmentRoleTreeListController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_ReportRoleTreeListController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_ReportRoleTreeListController.designer.cs">
+      <DependentUpon>HeThong_ReportRoleTreeListController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_SetupDetailViewNonpersistentController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_SetupDetailViewNonpersistentController.designer.cs">
+      <DependentUpon>HeThong_SetupDetailViewNonpersistentController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_UpdateAppObjectController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\2.HeThong\HeThong_UpdateAppObjectController.designer.cs">
+      <DependentUpon>HeThong_UpdateAppObjectController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\3.AuditLog\Audit_PreviewAuditLogController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\3.AuditLog\Audit_PreviewAuditLogController.designer.cs">
+      <DependentUpon>Audit_PreviewAuditLogController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\BoPhan\BoPhan_ThemBoPhanController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\BoPhan\BoPhan_ThemBoPhanController.designer.cs">
+      <DependentUpon>BoPhan_ThemBoPhanController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\GiayTo\GiayTo_XemTatCaTapTinController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\GiayTo\GiayTo_XemTatCaTapTinController.designer.cs">
+      <DependentUpon>GiayTo_XemTatCaTapTinController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\GiayTo\GiayTo_XemTapTinController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\GiayTo\GiayTo_XemTapTinController.designer.cs">
+      <DependentUpon>GiayTo_XemTapTinController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\GiayTo\GiayTo_TaiTapTinController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\GiayTo\GiayTo_TaiTapTinController.designer.cs">
+      <DependentUpon>GiayTo_TaiTapTinController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\HopDong\HopDong_DanhSachHetHanController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\HopDong\HopDong_DanhSachHetHanController.designer.cs">
+      <DependentUpon>HopDong_DanhSachHetHanController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\HopDong\HopDong_TaoHopDongController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\HopDong\HopDong_TaoHopDongController.designer.cs">
+      <DependentUpon>HopDong_TaoHopDongController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\HopDong\HopDong_ChucNangImportController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\HopDong\HopDong_ChucNangImportController.designer.cs">
+      <DependentUpon>HopDong_ChucNangImportController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\HoSoLuong\HoSoLuong_ChotHoSoLuongController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\HoSoLuong\HoSoLuong_ChotHoSoLuongController.designer.cs">
+      <DependentUpon>HoSoLuong_ChotHoSoLuongController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\HoSoLuong\HoSoLuong_MoKhoaSoKyTinhLuongController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\HoSoLuong\HoSoLuong_MoKhoaSoKyTinhLuongController.designer.cs">
+      <DependentUpon>HoSoLuong_MoKhoaSoKyTinhLuongController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\HoSoLuong\HoSoLuong_XoaHoSoTinhLuongController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\HoSoLuong\HoSoLuong_XoaHoSoTinhLuongController.designer.cs">
+      <DependentUpon>HoSoLuong_XoaHoSoTinhLuongController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\HoSoLuong\HoSoLuong_CopyChiTietLuongController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\HoSoLuong\HoSoLuong_CopyChiTietLuongController.designer.cs">
+      <DependentUpon>HoSoLuong_CopyChiTietLuongController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\HoSoLuong\HoSoLuong_ChonCongThucLuongController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\HoSoLuong\HoSoLuong_ChonCongThucLuongController.designer.cs">
+      <DependentUpon>HoSoLuong_ChonCongThucLuongController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\HoSoLuong\HoSoLuong_CopyCongThucLuongController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\HoSoLuong\HoSoLuong_CopyCongThucLuongController.designer.cs">
+      <DependentUpon>HoSoLuong_CopyCongThucLuongController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\NhanVien_TrichDanhSachNhanVienController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\NhanVien_TrichDanhSachNhanVienController.designer.cs">
+      <DependentUpon>NhanVien_TrichDanhSachNhanVienController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\NhanVien_ChonCotXuatDuLieuController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\NhanVien_ChonCotXuatDuLieuController.designer.cs">
+      <DependentUpon>NhanVien_ChonCotXuatDuLieuController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\NhanVien_TimKiemNhanVienController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\NhanVien_TimKiemNhanVienController.designer.cs">
+      <DependentUpon>NhanVien_TimKiemNhanVienController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\NhanVien_AnCotCuaBoPhanController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\NhanVien_AnCotCuaBoPhanController.designer.cs">
+      <DependentUpon>NhanVien_AnCotCuaBoPhanController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\NhanVien_AnBoPhanNgungHoatDongController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\NhanVien_AnBoPhanNgungHoatDongController.designer.cs">
+      <DependentUpon>NhanVien_AnBoPhanNgungHoatDongController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\NhanVien_DoiTenThongTinNhanVienController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\NhanVien_DoiTenThongTinNhanVienController.designer.cs">
+      <DependentUpon>NhanVien_DoiTenThongTinNhanVienController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\NhanVien_KhoaNhanVienController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\NhanVien_KhoaNhanVienController.designer.cs">
+      <DependentUpon>NhanVien_KhoaNhanVienController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\NhanVien_ChucNangImportController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\NhanVien_ChucNangImportController.designer.cs">
+      <DependentUpon>NhanVien_ChucNangImportController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\NhanVien_GiamTruGiaCanhController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\NhanVien_GiamTruGiaCanhController.designer.cs">
+      <DependentUpon>NhanVien_GiamTruGiaCanhController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\NhanVien_TrinhDoCaoNhat.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\NhanVien_TrinhDoCaoNhat.designer.cs">
+      <DependentUpon>NhanVien_TrinhDoCaoNhat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\NhanVien_NgoaiNguChinhController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\NhanVien_NgoaiNguChinhController.designer.cs">
+      <DependentUpon>NhanVien_NgoaiNguChinhController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\PMS\QuanLyGioChuan_PMS_Clone_Controller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\PMS\QuanLyGioChuan_PMS_Clone_Controller.Designer.cs">
+      <DependentUpon>QuanLyGioChuan_PMS_Clone_Controller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\PMS\PMS_OnLoad_DongBoDuLieu_UIS_Controller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\PMS\PMS_OnLoad_DongBoDuLieu_UIS_Controller.Designer.cs">
+      <DependentUpon>PMS_OnLoad_DongBoDuLieu_UIS_Controller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\PMS\QuanLyHeSo_PMS_Clone_Controller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\PMS\QuanLyHeSo_PMS_Clone_Controller.Designer.cs">
+      <DependentUpon>QuanLyHeSo_PMS_Clone_Controller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\PMS\CauHinhQuyDoiPMS_PMS_Clone_Controller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\PMS\CauHinhQuyDoiPMS_PMS_Clone_Controller.Designer.cs">
+      <DependentUpon>CauHinhQuyDoiPMS_PMS_Clone_Controller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\PMS\DongBoBangChotThuLaoController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\PMS\DongBoBangChotThuLaoController.designer.cs">
+      <DependentUpon>DongBoBangChotThuLaoController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\PMS\DongBoBangChotThuLaoThinhGiangController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\PMS\DongBoBangChotThuLaoThinhGiangController.designer.cs">
+      <DependentUpon>DongBoBangChotThuLaoThinhGiangController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\PMS\DongBoQuanLyGioChuanController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\PMS\DongBoQuanLyGioChuanController.designer.cs">
+      <DependentUpon>DongBoQuanLyGioChuanController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\PMS\DongBoKhoiLuongGiangDayController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\PMS\DongBoKhoiLuongGiangDayController.designer.cs">
+      <DependentUpon>DongBoKhoiLuongGiangDayController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\PMS\DongBoKhoiLuongGiangDayThinhGiangController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\PMS\DongBoKhoiLuongGiangDayThinhGiangController.designer.cs">
+      <DependentUpon>DongBoKhoiLuongGiangDayThinhGiangController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\ThongKe\LoaiThongKeEnum.cs" />
+    <Compile Include="Controllers\5.NghiepVu\ThongKe\ThongKeFactory.cs" />
+    <Compile Include="Controllers\5.NghiepVu\ThongKe\TruyCapThongKeController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\ThongKe\TruyCapThongKeController.designer.cs">
+      <DependentUpon>TruyCapThongKeController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\ThongKe\UserControl\ThongKeTongHopBienDongNhanSuController.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\ThongKe\UserControl\ThongKeTongHopBienDongNhanSuController.Designer.cs">
+      <DependentUpon>ThongKeTongHopBienDongNhanSuController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\ThongKe\UserControl\ThongKeBienDongSoLuongNhanSuController.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\ThongKe\UserControl\ThongKeBienDongSoLuongNhanSuController.Designer.cs">
+      <DependentUpon>ThongKeBienDongSoLuongNhanSuController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\ThongKe\UserControl\ThongKeTyLeThoiViecController.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\ThongKe\UserControl\ThongKeTyLeThoiViecController.Designer.cs">
+      <DependentUpon>ThongKeTyLeThoiViecController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\ThongKe\UserControl\ThongKeThamNienController.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\ThongKe\UserControl\ThongKeThamNienController.Designer.cs">
+      <DependentUpon>ThongKeThamNienController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\ThongKe\UserControl\ThongKeBaseController.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\ThongKe\UserControl\ThongKeBaseController.Designer.cs">
+      <DependentUpon>ThongKeBaseController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\ThongKe\UserControl\ThongKeSoLuongNhanSuController.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\ThongKe\UserControl\ThongKeSoLuongNhanSuController.Designer.cs">
+      <DependentUpon>ThongKeSoLuongNhanSuController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\ThongKe\UserControl\ThongKeChucVuController.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\ThongKe\UserControl\ThongKeChucVuController.Designer.cs">
+      <DependentUpon>ThongKeChucVuController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\ThongKe\UserControl\ThongKeDoTuoiController.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\ThongKe\UserControl\ThongKeDoTuoiController.Designer.cs">
+      <DependentUpon>ThongKeDoTuoiController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\ThongKe\UserControl\ThongKeGioiTinhController.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\ThongKe\UserControl\ThongKeGioiTinhController.Designer.cs">
+      <DependentUpon>ThongKeGioiTinhController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\ThongKe\UserControl\ThongKeLoaiHopDongController.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\ThongKe\UserControl\ThongKeLoaiHopDongController.Designer.cs">
+      <DependentUpon>ThongKeLoaiHopDongController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\ThongKe\UserControl\ThongKeLoaiNhanSuController.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\ThongKe\UserControl\ThongKeLoaiNhanSuController.Designer.cs">
+      <DependentUpon>ThongKeLoaiNhanSuController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\ThongKe\UserControl\ThongKeNgachLuongController.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\ThongKe\UserControl\ThongKeNgachLuongController.Designer.cs">
+      <DependentUpon>ThongKeNgachLuongController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\ThongKe\UserControl\ThongKeTrinhDoChuyenMonController.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\ThongKe\UserControl\ThongKeTrinhDoChuyenMonController.Designer.cs">
+      <DependentUpon>ThongKeTrinhDoChuyenMonController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\ThongKe\XuLyThongKeController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\ThongKe\XuLyThongKeController.designer.cs">
+      <DependentUpon>XuLyThongKeController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\6.DanhMuc\DanhMuc_CopyNgayNghiTrongNamController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\6.DanhMuc\DanhMuc_CopyNgayNghiTrongNamController.designer.cs">
+      <DependentUpon>DanhMuc_CopyNgayNghiTrongNamController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diagrams\LoaiQuyTrinhEnum.cs" />
+    <Compile Include="Diagrams\QuyTrinhFactory.cs" />
+    <Compile Include="Diagrams\TruyCapQuyTrinhController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Diagrams\TruyCapQuyTrinhController.designer.cs">
+      <DependentUpon>TruyCapQuyTrinhController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diagrams\UserControl\QuyTrinhBaseController.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Diagrams\UserControl\QuyTrinhBaseController.Designer.cs">
+      <DependentUpon>QuyTrinhBaseController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diagrams\UserControl\QuyTrinhNangLuongController.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Diagrams\UserControl\QuyTrinhNangLuongController.Designer.cs">
+      <DependentUpon>QuyTrinhNangLuongController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diagrams\UserControl\QuyTrinhNghiViecController.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Diagrams\UserControl\QuyTrinhNghiViecController.Designer.cs">
+      <DependentUpon>QuyTrinhNghiViecController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diagrams\XuLyQuyTrinhController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Diagrams\XuLyQuyTrinhController.designer.cs">
+      <DependentUpon>XuLyQuyTrinhController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editors\0.Common\ButtonEdit\CustomButtonEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Editors\0.Common\ButtonEdit\CustomButtonEditViewInfo.cs" />
+    <Compile Include="Editors\0.Common\ButtonEdit\RepositoryItemCustomButtonEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Editors\0.Common\Editors\CheckedComboBoxEdit.cs" />
+    <Compile Include="Editors\0.Common\Editors\ComboBoxEditor.cs" />
+    <Compile Include="Editors\0.Common\Editors\DateEditor.cs" />
+    <Compile Include="Editors\0.Common\Editors\EditorFactory.cs" />
+    <Compile Include="Editors\0.Common\Editors\EditorTypeEnum.cs" />
+    <Compile Include="Editors\0.Common\Editors\GridLookUpEditor.cs" />
+    <Compile Include="Editors\0.Common\Editors\IEditor.cs" />
+    <Compile Include="Editors\0.Common\Editors\ImageComboBoxEditor.cs" />
+    <Compile Include="Editors\0.Common\Editors\LookUpEditor.cs" />
+    <Compile Include="Editors\0.Common\Editors\TextEditor.cs" />
+    <Compile Include="Editors\0.Common\ObjectProperty.cs" />
+    <Compile Include="Editors\0.Common\PersistentTypeEditor.cs" />
+    <Compile Include="Editors\0.Common\ReportTypeEditor.cs" />
+    <Compile Include="Editors\1.NhanSu\chkComboxEdit_NamHoc.cs" />
+    <Compile Include="Editors\1.NhanSu\chkComboxEdit_CongTy.cs" />
+    <Compile Include="Editors\1.NhanSu\DinhBien\chkComboxEdit_DieuKienDinhBien.cs" />
+    <Compile Include="Editors\1.NhanSu\HoSoLuong\btnEdit_CongThucLuong.cs" />
+    <Compile Include="Editors\1.NhanSu\NhanVien\CategorizedListEditor_NhanVien.cs" />
+    <Compile Include="Editors\1.NhanSu\NhanVien\CategorizedListEditor_GiangVienThinhGiang.cs" />
+    <Compile Include="Editors\2.TienLuong\ChungTu\chkComboxEdit_LoaiChi.cs" />
+    <Compile Include="Editors\PMS\btnEdit_CongThucPMS.cs" />
+    <Compile Include="MailMerge\Controller\HopDong\MailMerge_BieuMauKhiKyHopDongLaiController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MailMerge\Controller\HopDong\MailMerge_BieuMauKhiKyHopDongLaiController.designer.cs">
+      <DependentUpon>MailMerge_BieuMauKhiKyHopDongLaiController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MailMerge\Controller\HopDong\MailMerge_HopDongThinhGiangController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MailMerge\Controller\HopDong\MailMerge_HopDongThinhGiangController.designer.cs">
+      <DependentUpon>MailMerge_HopDongThinhGiangController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MailMerge\Controller\HopDong\MailMerge_HopDongKhoanController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MailMerge\Controller\HopDong\MailMerge_HopDongKhoanController.designer.cs">
+      <DependentUpon>MailMerge_HopDongKhoanController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MailMerge\Controller\HopDong\MailMerge_HopDongLamViecController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MailMerge\Controller\HopDong\MailMerge_HopDongLamViecController.designer.cs">
+      <DependentUpon>MailMerge_HopDongLamViecController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhKyLuatController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhKyLuatController.designer.cs">
+      <DependentUpon>MailMerge_QuyetDinhKyLuatController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhKhenThuongController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhKhenThuongController.designer.cs">
+      <DependentUpon>MailMerge_QuyetDinhKhenThuongController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhBietPhaiController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhBietPhaiController.Designer.cs">
+      <DependentUpon>MailMerge_QuyetDinhBietPhaiController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhBoNhiemController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhBoNhiemController.designer.cs">
+      <DependentUpon>MailMerge_QuyetDinhBoNhiemController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhBoNhiemKiemNhiemController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhBoNhiemKiemNhiemController.designer.cs">
+      <DependentUpon>MailMerge_QuyetDinhBoNhiemKiemNhiemController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhCacVanDeNhanSuController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhCacVanDeNhanSuController.Designer.cs">
+      <DependentUpon>MailMerge_QuyetDinhCacVanDeNhanSuController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhChamDutHopDongController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhChamDutHopDongController.designer.cs">
+      <DependentUpon>MailMerge_QuyetDinhChamDutHopDongController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhChuyenCongTacController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhChuyenCongTacController.designer.cs">
+      <DependentUpon>MailMerge_QuyetDinhChuyenCongTacController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhDieuDongController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhDieuDongController.designer.cs">
+      <DependentUpon>MailMerge_QuyetDinhDieuDongController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhLuanChuyenController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhLuanChuyenController.Designer.cs">
+      <DependentUpon>MailMerge_QuyetDinhLuanChuyenController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhMienNhiemController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhMienNhiemController.Designer.cs">
+      <DependentUpon>MailMerge_QuyetDinhMienNhiemController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhNangLuongController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhNangLuongController.designer.cs">
+      <DependentUpon>MailMerge_QuyetDinhNangLuongController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhNghiHuuController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhNghiHuuController.designer.cs">
+      <DependentUpon>MailMerge_QuyetDinhNghiHuuController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhTaiBoNhiemController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhTaiBoNhiemController.designer.cs">
+      <DependentUpon>MailMerge_QuyetDinhTaiBoNhiemController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhTamHoan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhTamHoan.Designer.cs">
+      <DependentUpon>MailMerge_QuyetDinhTamHoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhThoiChucController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhThoiChucController.designer.cs">
+      <DependentUpon>MailMerge_QuyetDinhThoiChucController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhThoiChucKiemNhiemController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhThoiChucKiemNhiemController.designer.cs">
+      <DependentUpon>MailMerge_QuyetDinhThoiChucKiemNhiemController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhThoiViecController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhThoiViecController.designer.cs">
+      <DependentUpon>MailMerge_QuyetDinhThoiViecController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhTienLuongChinhThucController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhTienLuongChinhThucController.designer.cs">
+      <DependentUpon>MailMerge_QuyetDinhTienLuongChinhThucController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhTienLuongThuViecController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhTienLuongThuViecController.designer.cs">
+      <DependentUpon>MailMerge_QuyetDinhTienLuongThuViecController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhTuyenDungController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhTuyenDungController.designer.cs">
+      <DependentUpon>MailMerge_QuyetDinhTuyenDungController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MailMerge\Controller\TuyenDung\MailMerge_BieuMauKhiDatTuyenDungController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MailMerge\Controller\TuyenDung\MailMerge_BieuMauKhiDatTuyenDungController.designer.cs">
+      <DependentUpon>MailMerge_BieuMauKhiDatTuyenDungController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MailMerge\Controller\TuyenDung\MailMerge_DanhGiaPhongVanController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MailMerge\Controller\TuyenDung\MailMerge_DanhGiaPhongVanController.designer.cs">
+      <DependentUpon>MailMerge_DanhGiaPhongVanController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MailMerge\Controller\TuyenDung\MailMerge_YeuCauTuyenDungController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MailMerge\Controller\TuyenDung\MailMerge_YeuCauTuyenDungController.designer.cs">
+      <DependentUpon>MailMerge_YeuCauTuyenDungController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MailMerge\Controller\TuyenDung\MailMerge_ThuCamOnController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MailMerge\Controller\TuyenDung\MailMerge_ThuCamOnController.designer.cs">
+      <DependentUpon>MailMerge_ThuCamOnController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MailMerge\Controller\TuyenDung\MailMerge_ThuTuyenDungController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MailMerge\Controller\TuyenDung\MailMerge_ThuTuyenDungController.designer.cs">
+      <DependentUpon>MailMerge_ThuTuyenDungController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MailMerge\Prosess\0.ShowMaiMerge\Prosess_Show.cs" />
+    <Compile Include="MailMerge\Prosess\HopDong\Process_BieuMauKhiKyLaiHopDong.cs" />
+    <Compile Include="MailMerge\Prosess\HopDong\Prosess_HopDongThingGiang.cs" />
+    <Compile Include="MailMerge\Prosess\HopDong\Prosess_HopDongKhoan.cs" />
+    <Compile Include="MailMerge\Prosess\HopDong\Prosess_HopDongLamViec.cs" />
+    <Compile Include="MailMerge\Prosess\QuyetDinh\Prosess_QuyetDinhKyLuat.cs" />
+    <Compile Include="MailMerge\Prosess\QuyetDinh\Prosess_QuyetDinhKhenThuong.cs" />
+    <Compile Include="MailMerge\Prosess\QuyetDinh\Process_QuyetDinhBietPhai.cs" />
+    <Compile Include="MailMerge\Prosess\QuyetDinh\Process_QuyetDinhLuanChuyen.cs" />
+    <Compile Include="MailMerge\Prosess\QuyetDinh\Process_QuyetDinhTamHoan.cs" />
+    <Compile Include="MailMerge\Prosess\QuyetDinh\Process_QuyetDinhTienLuongChinhThuc.cs" />
+    <Compile Include="MailMerge\Prosess\QuyetDinh\Process_QuyetDinhTienLuongThuViec.cs" />
+    <Compile Include="MailMerge\Prosess\TuyenDung\Process_ThuCamOn.cs" />
+    <Compile Include="MailMerge\Prosess\TuyenDung\Process_BieuMauKhiDatTuyenDung.cs" />
+    <Compile Include="MailMerge\Prosess\TuyenDung\Process_DanhGiaPhongVan.cs" />
+    <Compile Include="MailMerge\Prosess\TuyenDung\Process_YeuCauTuyenDung.cs" />
+    <Compile Include="MailMerge\Prosess\TuyenDung\Process_ThuTuyenDung.cs" />
+    <Compile Include="MailMerge\Prosess\QuyetDinh\Process_QuyetDinhTuyenDung.cs" />
+    <Compile Include="MailMerge\Prosess\QuyetDinh\Prosess_QuyetDinhBoNhiem.cs" />
+    <Compile Include="MailMerge\Prosess\QuyetDinh\Prosess_QuyetDinhBoNhiemKiemNhiem.cs" />
+    <Compile Include="MailMerge\Prosess\QuyetDinh\Prosess_QuyetDinhCacVanDeNhanSu.cs" />
+    <Compile Include="MailMerge\Prosess\QuyetDinh\Prosess_QuyetDinhChamDutHopDong.cs" />
+    <Compile Include="MailMerge\Prosess\QuyetDinh\Prosess_QuyetDinhChuyenCongTac.cs" />
+    <Compile Include="MailMerge\Prosess\QuyetDinh\Prosess_QuyetDinhDieuDong.cs" />
+    <Compile Include="MailMerge\Prosess\QuyetDinh\Prosess_QuyetDinhMienNhiem.cs" />
+    <Compile Include="MailMerge\Prosess\QuyetDinh\Prosess_QuyetDinhNangLuong.cs" />
+    <Compile Include="MailMerge\Prosess\QuyetDinh\Prosess_QuyetDinhNghiHuu.cs" />
+    <Compile Include="MailMerge\Prosess\QuyetDinh\Prosess_QuyetDinhTaiBoNhiem.cs" />
+    <Compile Include="MailMerge\Prosess\QuyetDinh\Prosess_QuyetDinhThoiChuc.cs" />
+    <Compile Include="MailMerge\Prosess\QuyetDinh\Prosess_QuyetDinhThoiChucKiemNhiem.cs" />
+    <Compile Include="MailMerge\Prosess\QuyetDinh\Prosess_QuyetDinhThoiViec.cs" />
+    <Compile Include="NormalForm\0.System\frmHelper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NormalForm\0.System\frmHelper.designer.cs">
+      <DependentUpon>frmHelper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NormalForm\0.System\frmNhatKyDuLieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NormalForm\0.System\frmNhatKyDuLieu.designer.cs">
+      <DependentUpon>frmNhatKyDuLieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NormalForm\1.NhanSu\frmChonNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NormalForm\1.NhanSu\frmChonNhanVien.designer.cs">
+      <DependentUpon>frmChonNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NormalForm\1.NhanSu\frmChonThinhGiang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NormalForm\1.NhanSu\frmChonThinhGiang.designer.cs">
+      <DependentUpon>frmChonThinhGiang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NormalForm\1.NhanSu\frmChonCanBo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NormalForm\1.NhanSu\frmChonCanBo.designer.cs">
+      <DependentUpon>frmChonCanBo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NormalForm\1.NhanSu\frmCongThucLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NormalForm\1.NhanSu\frmCongThucLuong.designer.cs">
+      <DependentUpon>frmCongThucLuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NormalForm\1.NhanSu\frmListViewColumns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NormalForm\1.NhanSu\frmListViewColumns.designer.cs">
+      <DependentUpon>frmListViewColumns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NormalForm\2.MailMerge\CustomCommandFactoryService.cs" />
+    <Compile Include="NormalForm\2.MailMerge\CustomSaveDocumentCommand.cs" />
+    <Compile Include="NormalForm\2.MailMerge\frmCreateMailMerge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NormalForm\2.MailMerge\frmCreateMailMerge.designer.cs">
+      <DependentUpon>frmCreateMailMerge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NormalForm\2.MailMerge\frmMailMergeManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NormalForm\2.MailMerge\frmMailMergeManager.designer.cs">
+      <DependentUpon>frmMailMergeManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NormalForm\2.MailMerge\frmShowMailMerge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NormalForm\2.MailMerge\frmShowMailMerge.designer.cs">
+      <DependentUpon>frmShowMailMerge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NormalForm\PMS\frmCongThucPMS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NormalForm\PMS\frmCongThucPMS.designer.cs">
+      <DependentUpon>frmCongThucPMS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="WinModule.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WinModule.Designer.cs">
+      <DependentUpon>WinModule.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controllers\0.ExecuteImport\ImportControl\1.NhanSu\BoNhiem_ImportQuyetDinhTaiBoNhiemController.resx">
+      <DependentUpon>BoNhiem_ImportQuyetDinhTaiBoNhiemController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\0.ExecuteImport\ImportControl\1.NhanSu\HopDong_ImportPhuLucHopDongController.resx">
+      <DependentUpon>HopDong_ImportPhuLucHopDongController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\0.ExecuteImport\ImportControl\1.NhanSu\DaoTao_ImportDangKyDaoTaoController.resx">
+      <DependentUpon>DaoTao_ImportDangKyDaoTaoController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\0.ExecuteImport\ImportControl\1.NhanSu\MienNhiem_ImportQuyetDinhMienNhiemController.resx">
+      <DependentUpon>MienNhiem_ImportQuyetDinhMienNhiemController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\0.ExecuteImport\ImportControl\1.NhanSu\HopDong_ImportHopDongKhoanController.resx">
+      <DependentUpon>HopDong_ImportHopDongKhoanController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\0.ExecuteImport\ImportControl\1.NhanSu\HopDong_ImportHopDongLamViecController.resx">
+      <DependentUpon>HopDong_ImportHopDongLamViecController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\0.ExecuteImport\ImportControl\1.NhanSu\NhanVien_ImportQuanHeGiaDinhController.resx">
+      <DependentUpon>NhanVien_ImportQuanHeGiaDinhController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\0.ExecuteImport\ImportControl\1.NhanSu\NhanVien_ImportQuaTrinhNhanVienController.resx">
+      <DependentUpon>NhanVien_ImportQuaTrinhNhanVienController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\0.ExecuteImport\ImportControl\1.NhanSu\NhanVien_ImportNhanVienController.resx">
+      <DependentUpon>NhanVien_ImportNhanVienController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\0.ExecuteImport\ImportControl\1.NhanSu\BoNhiem_ImportQuyetDinhBoNhiemController.resx">
+      <DependentUpon>BoNhiem_ImportQuyetDinhBoNhiemController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\0.ExecuteImport\ImportControl\1.NhanSu\NhanVien_ImportHoSoBaoHiemNhanVienController.resx">
+      <DependentUpon>NhanVien_ImportHoSoBaoHiemNhanVienController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\0.ExecuteImport\ImportControl\1.NhanSu\DinhBien_ImportDinhBienChucDanhController.resx">
+      <DependentUpon>DinhBien_ImportDinhBienChucDanhController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\0.ExecuteImport\ImportControl\1.NhanSu\TuyenDung_ImportUngVienTuExcelController.resx">
+      <DependentUpon>TuyenDung_ImportUngVienTuExcelController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\0.ExecuteImport\ImportControl\2.TienLuong\ChamCong_ImportTiLeDanhGiaCongViecController.resx">
+      <DependentUpon>ChamCong_ImportTiLeDanhGiaCongViecController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\0.ExecuteImport\ImportControl\2.TienLuong\ChamCong_ImportCongKhacController.resx">
+      <DependentUpon>ChamCong_ImportCongKhacController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\0.ExecuteImport\ImportControl\2.TienLuong\ChamCong_ImportCongNgoaiGioController.resx">
+      <DependentUpon>ChamCong_ImportCongNgoaiGioController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\0.ExecuteImport\ImportControl\2.TienLuong\ChamCong_ImportChamCongController.resx">
+      <DependentUpon>ChamCong_ImportChamCongController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\0.ExecuteImport\ImportControl\2.TienLuong\ChamCong_ImportChamCongGiangDayController.resx">
+      <DependentUpon>ChamCong_ImportChamCongGiangDayController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\0.ExecuteImport\ImportControl\2.TienLuong\KhauTru_ImportKhauTruLuongController.resx">
+      <DependentUpon>KhauTru_ImportKhauTruLuongController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\0.ExecuteImport\ImportControl\2.TienLuong\KhenThuongPhucLoi_ImportCacLoaiKhenThuocPhucLoiController.resx">
+      <DependentUpon>KhenThuongPhucLoi_ImportCacLoaiKhenThuocPhucLoiController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\0.ExecuteImport\ImportControl\2.TienLuong\Luong_ImportThuNhapKhacController.resx">
+      <DependentUpon>Luong_ImportThuNhapKhacController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\0.ExecuteImport\ImportControl\2.TienLuong\Luong_ImportNgoaiKhoaController.resx">
+      <DependentUpon>Luong_ImportNgoaiKhoaController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\0.ExecuteImport\ImportControl\PMS\PMS_ImportQuanLyGioChuanController.resx">
+      <DependentUpon>PMS_ImportQuanLyGioChuanController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\0.ExecuteImport\ImportControl\PMS\PMS_ImportCoVanHocTapController.resx">
+      <DependentUpon>PMS_ImportCoVanHocTapController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\1.Custom\CustomNumberColumnController.resx">
+      <DependentUpon>CustomNumberColumnController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\1.Custom\FocusGridController.resx">
+      <DependentUpon>FocusGridController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\1.Custom\HideProtectedContentRowsController.resx">
+      <DependentUpon>HideProtectedContentRowsController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\1.Custom\SetupGridViewAndTreeViewController.resx">
+      <DependentUpon>SetupGridViewAndTreeViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\1.Custom\SetupPreviewDocumentController.resx">
+      <DependentUpon>SetupPreviewDocumentController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\1.Custom\SetupWindowController.resx">
+      <DependentUpon>SetupWindowController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\1.Custom\ShowReportOnToolbarController.resx">
+      <DependentUpon>ShowReportOnToolbarController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\1.Custom\HideToolbarController.resx">
+      <DependentUpon>HideToolbarController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\1.Custom\ShowTemplateOnToolbarController.resx">
+      <DependentUpon>ShowTemplateOnToolbarController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\2.HeThong\HeThong_AutoCommitMasterController.resx">
+      <DependentUpon>HeThong_AutoCommitMasterController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\2.HeThong\HeThong_CopyRoleUserController.resx">
+      <DependentUpon>HeThong_CopyRoleUserController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\2.HeThong\HeThong_ChangePassController.resx">
+      <DependentUpon>HeThong_ChangePassController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\2.HeThong\HeThong_ClassRoleTreeListController.resx">
+      <DependentUpon>HeThong_ClassRoleTreeListController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\2.HeThong\HeThong_FilterNamHocContrller.resx">
+      <DependentUpon>HeThong_FilterNamHocContrller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\2.HeThong\HeThong_FilterSecuritySystemRoleContrller.resx">
+      <DependentUpon>HeThong_FilterSecuritySystemRoleContrller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\2.HeThong\HeThong_LayMatKhauTruocKhiThayDoi.resx">
+      <DependentUpon>HeThong_LayMatKhauTruocKhiThayDoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\2.HeThong\HeThong_ScriptRecorderController.resx">
+      <DependentUpon>HeThong_ScriptRecorderController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\2.HeThong\HeThong_XemThongTinUserController.resx">
+      <DependentUpon>HeThong_XemThongTinUserController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\2.HeThong\HeThong_XemNhatKyDuLieuContrller.resx">
+      <DependentUpon>HeThong_XemNhatKyDuLieuContrller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\2.HeThong\HeThong_XuatHinhController.resx">
+      <DependentUpon>HeThong_XuatHinhController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\2.HeThong\HeThong_ChucNangPhuController.resx">
+      <DependentUpon>HeThong_ChucNangPhuController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\2.HeThong\HeThong_CopyMailMergeTemlateController.resx">
+      <DependentUpon>HeThong_CopyMailMergeTemlateController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\4.BaoCao\BaoCao_ExportToWorkBookBaoCaoTienLuongController.resx">
+      <DependentUpon>BaoCao_ExportToWorkBookBaoCaoTienLuongController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\4.BaoCao\Custom_CreateReportController.resx">
+      <DependentUpon>Custom_CreateReportController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\4.BaoCao\Custom_EditReportController.resx">
+      <DependentUpon>Custom_EditReportController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\4.BaoCao\Custom_EditReportController_NewVersion.resx">
+      <DependentUpon>Custom_EditReportController_NewVersion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\4.BaoCao\Custom_ImportAndExportTemplateController.resx">
+      <DependentUpon>Custom_ImportAndExportTemplateController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\4.BaoCao\Show_Design_Report_Controller.resx">
+      <DependentUpon>Show_Design_Report_Controller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\DaoTao\DaoTao_ChonNhanVienDangKyDaoTaoController.resx">
+      <DependentUpon>DaoTao_ChonNhanVienDangKyDaoTaoController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\DaoTao\DaoTao_LapQuyetDinhCongNhanDaoTaoController.resx">
+      <DependentUpon>DaoTao_LapQuyetDinhCongNhanDaoTaoController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\DaoTao\DaoTao_ChonNhanVienCongNhanDaoTaoController.resx">
+      <DependentUpon>DaoTao_ChonNhanVienCongNhanDaoTaoController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\DaoTao\DaoTao_ChonNhanVienDuyetDaoTaoController.resx">
+      <DependentUpon>DaoTao_ChonNhanVienDuyetDaoTaoController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\DaoTao\DaoTao_DuyetDangKyDaoTaoController.resx">
+      <DependentUpon>DaoTao_DuyetDangKyDaoTaoController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\DaoTao\DaoTao_LapQuyetDinhDaoTaoController.resx">
+      <DependentUpon>DaoTao_LapQuyetDinhDaoTaoController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\GiayTo\GiayTo_XoaTapTinController.resx">
+      <DependentUpon>GiayTo_XoaTapTinController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\HopDong\HopDong_TaoQuyetDinhChamDutHopDongTuTimKiemController.resx">
+      <DependentUpon>HopDong_TaoQuyetDinhChamDutHopDongTuTimKiemController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\HopDong\HopDong_TaoHopDongTuTimKiemController.resx">
+      <DependentUpon>HopDong_TaoHopDongTuTimKiemController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\HoSoLuong\HoSoLuong_LayChiTietLuongNghiViecController.resx">
+      <DependentUpon>HoSoLuong_LayChiTietLuongNghiViecController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\HoSo_CapNhatHinhAnhNhanVienController.resx">
+      <DependentUpon>HoSo_CapNhatHinhAnhNhanVienController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\HoSo_TaoHoSoNhanVienGiangVienCoHuuController.resx">
+      <DependentUpon>HoSo_TaoHoSoNhanVienGiangVienCoHuuController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\HoSo_TaoHoSoGiangVienThinhGiangController.resx">
+      <DependentUpon>HoSo_TaoHoSoGiangVienThinhGiangController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\HoSo_CopyHoSoNhanVienController.resx">
+      <DependentUpon>HoSo_CopyHoSoNhanVienController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\GiangVien_ChucNangImportController.resx">
+      <DependentUpon>GiangVien_ChucNangImportController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\GiangVien_ThemGiangVienController.resx">
+      <DependentUpon>GiangVien_ThemGiangVienController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\NhanVien_ThemNhanVienController.resx">
+      <DependentUpon>NhanVien_ThemNhanVienController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\NhanVien_TimKiemThinhGiangController.resx">
+      <DependentUpon>NhanVien_TimKiemThinhGiangController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\NhanVien_TrichDanhSachThinhGiangController.resx">
+      <DependentUpon>NhanVien_TrichDanhSachThinhGiangController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\ThinhGiang_ChonCotXuatDuLieuController.resx">
+      <DependentUpon>ThinhGiang_ChonCotXuatDuLieuController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\QuyetDinh\QuyetDinh_ImportKyLuatController.resx">
+      <DependentUpon>QuyetDinh_ImportKyLuatController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\QuyetDinh\QuyetDinh_ImportKhenThuongController.resx">
+      <DependentUpon>QuyetDinh_ImportKhenThuongController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\QuyetDinh\QuyetDinh_ImportNangLuongController.resx">
+      <DependentUpon>QuyetDinh_ImportNangLuongController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\TuyenDung\TuyenDung_CapNhatUngVienVaoChiTietVongTuyenDungController.resx">
+      <DependentUpon>TuyenDung_CapNhatUngVienVaoChiTietVongTuyenDungController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\TuyenDung\TuyenDung_CapNhatHinhThucTuyenDungController.resx">
+      <DependentUpon>TuyenDung_CapNhatHinhThucTuyenDungController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\TuyenDung\TuyenDung_ChonUngVienLapQuyetDinhTuyenDungController.resx">
+      <DependentUpon>TuyenDung_ChonUngVienLapQuyetDinhTuyenDungController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\TuyenDung\TuyenDung_ChonViTriTuyenDungController.resx">
+      <DependentUpon>TuyenDung_ChonViTriTuyenDungController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\TuyenDung\TuyenDung_DuyetDangKyTuyenDungController.resx">
+      <DependentUpon>TuyenDung_DuyetDangKyTuyenDungController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\TuyenDung\TuyenDung_LapQuyetDinhThanhLapHoiDongTuyenDungController.resx">
+      <DependentUpon>TuyenDung_LapQuyetDinhThanhLapHoiDongTuyenDungController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\TuyenDung\TuyenDung_LapQuyetDinhTuyenDungController.resx">
+      <DependentUpon>TuyenDung_LapQuyetDinhTuyenDungController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\TuyenDung\TuyenDung_TaoMoiDanhSachThiController.resx">
+      <DependentUpon>TuyenDung_TaoMoiDanhSachThiController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\TuyenDung\TuyenDung_TimKiemQuyetDinhTuyenDungController.resx">
+      <DependentUpon>TuyenDung_TimKiemQuyetDinhTuyenDungController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\TuyenDung\TuyenDung_TinhDiemTrungBinhController.resx">
+      <DependentUpon>TuyenDung_TinhDiemTrungBinhController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\TuyenDung\TuyenDung_TrungTuyenController.resx">
+      <DependentUpon>TuyenDung_TrungTuyenController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\2.TienLuong\ChamCong\ChamCong_XoaBangCongGiangDayController.resx">
+      <DependentUpon>ChamCong_XoaBangCongGiangDayController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\2.TienLuong\ChamCong\ChamCong_XoaTiLeDanhGiaCongViecController.resx">
+      <DependentUpon>ChamCong_XoaTiLeDanhGiaCongViecController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\2.TienLuong\ChamCong\ChamCong_XoaBangCongNgoaiGioController.resx">
+      <DependentUpon>ChamCong_XoaBangCongNgoaiGioController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\2.TienLuong\ChamCong\ChamCong_XoaBangChamCongController.resx">
+      <DependentUpon>ChamCong_XoaBangChamCongController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\2.TienLuong\ChamCong\ChamCong_LayDuLieuCongGiangDayController.resx">
+      <DependentUpon>ChamCong_LayDuLieuCongGiangDayController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\2.TienLuong\ChungTu\ChungTu_TinhChuyenKhoanController.resx">
+      <DependentUpon>ChungTu_TinhChuyenKhoanController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\2.TienLuong\ChungTu\ChungTu_XoaChungTuChuyenKhoanController.resx">
+      <DependentUpon>ChungTu_XoaChungTuChuyenKhoanController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\2.TienLuong\KhauTru\KhauTru_XoaBangKhauTruLuongController.resx">
+      <DependentUpon>KhauTru_XoaBangKhauTruLuongController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\0.ExecuteImport\ImportControl\2.TienLuong\Luong_ImportLuongNhanVienController.resx">
+      <DependentUpon>Luong_ImportLuongNhanVienController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\2.TienLuong\NgoaiGio\NgoaiGio_XoaBangLuongNgoaiGioController.resx">
+      <DependentUpon>NgoaiGio_XoaBangLuongNgoaiGioController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\2.TienLuong\NgoaiGio\NgoaiGio_TinhLuongNgoaiGioController.resx">
+      <DependentUpon>NgoaiGio_TinhLuongNgoaiGioController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\2.TienLuong\Luong\Luong_TinhLuongNhanVienController.resx">
+      <DependentUpon>Luong_TinhLuongNhanVienController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\2.TienLuong\Luong\Luong_XoaBangLuongNhanVienController.resx">
+      <DependentUpon>Luong_XoaBangLuongNhanVienController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\2.TienLuong\PhanTichLuong\PhanTichLuong_CapNhatCostCenterChiPhiLuongController.resx">
+      <DependentUpon>PhanTichLuong_CapNhatCostCenterChiPhiLuongController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\2.TienLuong\PhanTichLuong\PhanTichLuong_DongBoDuLieuSAPController.resx">
+      <DependentUpon>PhanTichLuong_DongBoDuLieuSAPController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\2.TienLuong\PhanTichLuong\PhanTichLuong_TinhPhanTichLuongNhanVienController.resx">
+      <DependentUpon>PhanTichLuong_TinhPhanTichLuongNhanVienController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\2.TienLuong\PhanTichLuong\PhanTichLuong_XoaBangPhanTichLuongNhanVienController.resx">
+      <DependentUpon>PhanTichLuong_XoaBangPhanTichLuongNhanVienController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\2.TienLuong\ThuNhapKhac\ThuNhapKhac_XoaBangThuNhapKhacController.resx">
+      <DependentUpon>ThuNhapKhac_XoaBangThuNhapKhacController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\0.ExecuteImport\ImportControl\2.TienLuong\ThuNhapKhac_ImportThuNhapKhacController.resx">
+      <DependentUpon>ThuNhapKhac_ImportThuNhapKhacController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\2.TienLuong\Thuong\Thuong_XoaBangThuongNhanVienController.resx">
+      <DependentUpon>Thuong_XoaBangThuongNhanVienController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\2.TienLuong\Thuong\Thuong_TinhKhenThuongPhucLoiController.resx">
+      <DependentUpon>Thuong_TinhKhenThuongPhucLoiController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\6.Roles\VisibleCreateNewButtonListViewController.resx">
+      <DependentUpon>VisibleCreateNewButtonListViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\6.Roles\VisibleDeleteButtonListViewController.resx">
+      <DependentUpon>VisibleDeleteButtonListViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\2.HeThong\HeThong_ChuanHoaDanhMucController.resx">
+      <DependentUpon>HeThong_ChuanHoaDanhMucController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\2.HeThong\HeThong_CreateAppmenuController.resx">
+      <DependentUpon>HeThong_CreateAppmenuController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\2.HeThong\HeThong_DepartmentRoleTreeListController.resx">
+      <DependentUpon>HeThong_DepartmentRoleTreeListController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\2.HeThong\HeThong_ReportRoleTreeListController.resx">
+      <DependentUpon>HeThong_ReportRoleTreeListController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\2.HeThong\HeThong_SetupDetailViewNonpersistentController.resx">
+      <DependentUpon>HeThong_SetupDetailViewNonpersistentController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\2.HeThong\HeThong_UpdateAppObjectController.resx">
+      <DependentUpon>HeThong_UpdateAppObjectController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\3.AuditLog\Audit_PreviewAuditLogController.resx">
+      <DependentUpon>Audit_PreviewAuditLogController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\BoPhan\BoPhan_ThemBoPhanController.resx">
+      <DependentUpon>BoPhan_ThemBoPhanController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\GiayTo\GiayTo_XemTatCaTapTinController.resx">
+      <DependentUpon>GiayTo_XemTatCaTapTinController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\GiayTo\GiayTo_XemTapTinController.resx">
+      <DependentUpon>GiayTo_XemTapTinController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\GiayTo\GiayTo_TaiTapTinController.resx">
+      <DependentUpon>GiayTo_TaiTapTinController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\HopDong\HopDong_DanhSachHetHanController.resx">
+      <DependentUpon>HopDong_DanhSachHetHanController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\HopDong\HopDong_TaoHopDongController.resx">
+      <DependentUpon>HopDong_TaoHopDongController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\HopDong\HopDong_ChucNangImportController.resx">
+      <DependentUpon>HopDong_ChucNangImportController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\HoSoLuong\HoSoLuong_ChotHoSoLuongController.resx">
+      <DependentUpon>HoSoLuong_ChotHoSoLuongController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\HoSoLuong\HoSoLuong_MoKhoaSoKyTinhLuongController.resx">
+      <DependentUpon>HoSoLuong_MoKhoaSoKyTinhLuongController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\HoSoLuong\HoSoLuong_XoaHoSoTinhLuongController.resx">
+      <DependentUpon>HoSoLuong_XoaHoSoTinhLuongController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\HoSoLuong\HoSoLuong_CopyChiTietLuongController.resx">
+      <DependentUpon>HoSoLuong_CopyChiTietLuongController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\HoSoLuong\HoSoLuong_ChonCongThucLuongController.resx">
+      <DependentUpon>HoSoLuong_ChonCongThucLuongController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\HoSoLuong\HoSoLuong_CopyCongThucLuongController.resx">
+      <DependentUpon>HoSoLuong_CopyCongThucLuongController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\NhanVien_TrichDanhSachNhanVienController.resx">
+      <DependentUpon>NhanVien_TrichDanhSachNhanVienController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\NhanVien_ChonCotXuatDuLieuController.resx">
+      <DependentUpon>NhanVien_ChonCotXuatDuLieuController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\NhanVien_TimKiemNhanVienController.resx">
+      <DependentUpon>NhanVien_TimKiemNhanVienController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\NhanVien_AnBoPhanNgungHoatDongController.resx">
+      <DependentUpon>NhanVien_AnBoPhanNgungHoatDongController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\NhanVien_DoiTenThongTinNhanVienController.resx">
+      <DependentUpon>NhanVien_DoiTenThongTinNhanVienController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\NhanVien_KhoaNhanVienController.resx">
+      <DependentUpon>NhanVien_KhoaNhanVienController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\NhanVien_ChucNangImportController.resx">
+      <DependentUpon>NhanVien_ChucNangImportController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\NhanVien_GiamTruGiaCanhController.resx">
+      <DependentUpon>NhanVien_GiamTruGiaCanhController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\NhanVien_TrinhDoCaoNhat.resx">
+      <DependentUpon>NhanVien_TrinhDoCaoNhat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\NhanVien_NgoaiNguChinhController.resx">
+      <DependentUpon>NhanVien_NgoaiNguChinhController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\PMS\QuanLyGioChuan_PMS_Clone_Controller.resx">
+      <DependentUpon>QuanLyGioChuan_PMS_Clone_Controller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\PMS\PMS_OnLoad_DongBoDuLieu_UIS_Controller.resx">
+      <DependentUpon>PMS_OnLoad_DongBoDuLieu_UIS_Controller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\PMS\QuanLyHeSo_PMS_Clone_Controller.resx">
+      <DependentUpon>QuanLyHeSo_PMS_Clone_Controller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\PMS\CauHinhQuyDoiPMS_PMS_Clone_Controller.resx">
+      <DependentUpon>CauHinhQuyDoiPMS_PMS_Clone_Controller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\PMS\DongBoBangChotThuLaoController.resx">
+      <DependentUpon>DongBoBangChotThuLaoController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\PMS\DongBoBangChotThuLaoThinhGiangController.resx">
+      <DependentUpon>DongBoBangChotThuLaoThinhGiangController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\PMS\DongBoQuanLyGioChuanController.resx">
+      <DependentUpon>DongBoQuanLyGioChuanController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\PMS\DongBoKhoiLuongGiangDayController.resx">
+      <DependentUpon>DongBoKhoiLuongGiangDayController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\PMS\DongBoKhoiLuongGiangDayThinhGiangController.resx">
+      <DependentUpon>DongBoKhoiLuongGiangDayThinhGiangController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\ThongKe\UserControl\ThongKeTongHopBienDongNhanSuController.resx">
+      <DependentUpon>ThongKeTongHopBienDongNhanSuController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\ThongKe\UserControl\ThongKeBienDongSoLuongNhanSuController.resx">
+      <DependentUpon>ThongKeBienDongSoLuongNhanSuController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\ThongKe\UserControl\ThongKeTyLeThoiViecController.resx">
+      <DependentUpon>ThongKeTyLeThoiViecController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\ThongKe\UserControl\ThongKeThamNienController.resx">
+      <DependentUpon>ThongKeThamNienController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\ThongKe\UserControl\ThongKeBaseController.resx">
+      <DependentUpon>ThongKeBaseController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\ThongKe\UserControl\ThongKeSoLuongNhanSuController.resx">
+      <DependentUpon>ThongKeSoLuongNhanSuController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\ThongKe\UserControl\ThongKeChucVuController.resx">
+      <DependentUpon>ThongKeChucVuController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\ThongKe\UserControl\ThongKeDoTuoiController.resx">
+      <DependentUpon>ThongKeDoTuoiController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\ThongKe\UserControl\ThongKeGioiTinhController.resx">
+      <DependentUpon>ThongKeGioiTinhController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\ThongKe\UserControl\ThongKeLoaiHopDongController.resx">
+      <DependentUpon>ThongKeLoaiHopDongController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\ThongKe\UserControl\ThongKeLoaiNhanSuController.resx">
+      <DependentUpon>ThongKeLoaiNhanSuController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\ThongKe\UserControl\ThongKeNgachLuongController.resx">
+      <DependentUpon>ThongKeNgachLuongController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\ThongKe\UserControl\ThongKeTrinhDoChuyenMonController.resx">
+      <DependentUpon>ThongKeTrinhDoChuyenMonController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\ThongKe\XuLyThongKeController.resx">
+      <DependentUpon>XuLyThongKeController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\6.DanhMuc\DanhMuc_CopyNgayNghiTrongNamController.resx">
+      <DependentUpon>DanhMuc_CopyNgayNghiTrongNamController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diagrams\UserControl\QuyTrinhBaseController.resx">
+      <DependentUpon>QuyTrinhBaseController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diagrams\UserControl\QuyTrinhNangLuongController.resx">
+      <DependentUpon>QuyTrinhNangLuongController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diagrams\UserControl\QuyTrinhNghiViecController.resx">
+      <DependentUpon>QuyTrinhNghiViecController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diagrams\XuLyQuyTrinhController.resx">
+      <DependentUpon>XuLyQuyTrinhController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailMerge\Controller\HopDong\MailMerge_BieuMauKhiKyHopDongLaiController.resx">
+      <DependentUpon>MailMerge_BieuMauKhiKyHopDongLaiController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailMerge\Controller\HopDong\MailMerge_HopDongThinhGiangController.resx">
+      <DependentUpon>MailMerge_HopDongThinhGiangController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailMerge\Controller\HopDong\MailMerge_HopDongKhoanController.resx">
+      <DependentUpon>MailMerge_HopDongKhoanController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailMerge\Controller\HopDong\MailMerge_HopDongLamViecController.resx">
+      <DependentUpon>MailMerge_HopDongLamViecController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhKyLuatController.resx">
+      <DependentUpon>MailMerge_QuyetDinhKyLuatController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhKhenThuongController.resx">
+      <DependentUpon>MailMerge_QuyetDinhKhenThuongController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhBietPhaiController.resx">
+      <DependentUpon>MailMerge_QuyetDinhBietPhaiController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhBoNhiemController.resx">
+      <DependentUpon>MailMerge_QuyetDinhBoNhiemController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhBoNhiemKiemNhiemController.resx">
+      <DependentUpon>MailMerge_QuyetDinhBoNhiemKiemNhiemController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhCacVanDeNhanSuController.resx">
+      <DependentUpon>MailMerge_QuyetDinhCacVanDeNhanSuController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhChamDutHopDongController.resx">
+      <DependentUpon>MailMerge_QuyetDinhChamDutHopDongController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhChuyenCongTacController.resx">
+      <DependentUpon>MailMerge_QuyetDinhChuyenCongTacController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhDieuDongController.resx">
+      <DependentUpon>MailMerge_QuyetDinhDieuDongController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhLuanChuyenController.resx">
+      <DependentUpon>MailMerge_QuyetDinhLuanChuyenController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhMienNhiemController.resx">
+      <DependentUpon>MailMerge_QuyetDinhMienNhiemController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhNangLuongController.resx">
+      <DependentUpon>MailMerge_QuyetDinhNangLuongController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhNghiHuuController.resx">
+      <DependentUpon>MailMerge_QuyetDinhNghiHuuController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhTaiBoNhiemController.resx">
+      <DependentUpon>MailMerge_QuyetDinhTaiBoNhiemController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhTamHoan.resx">
+      <DependentUpon>MailMerge_QuyetDinhTamHoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhThoiChucController.resx">
+      <DependentUpon>MailMerge_QuyetDinhThoiChucController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhThoiChucKiemNhiemController.resx">
+      <DependentUpon>MailMerge_QuyetDinhThoiChucKiemNhiemController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhThoiViecController.resx">
+      <DependentUpon>MailMerge_QuyetDinhThoiViecController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhTienLuongChinhThucController.resx">
+      <DependentUpon>MailMerge_QuyetDinhTienLuongChinhThucController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhTienLuongThuViecController.resx">
+      <DependentUpon>MailMerge_QuyetDinhTienLuongThuViecController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhTuyenDungController.resx">
+      <DependentUpon>MailMerge_QuyetDinhTuyenDungController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailMerge\Controller\TuyenDung\MailMerge_BieuMauKhiDatTuyenDungController.resx">
+      <DependentUpon>MailMerge_BieuMauKhiDatTuyenDungController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailMerge\Controller\TuyenDung\MailMerge_DanhGiaPhongVanController.resx">
+      <DependentUpon>MailMerge_DanhGiaPhongVanController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailMerge\Controller\TuyenDung\MailMerge_YeuCauTuyenDungController.resx">
+      <DependentUpon>MailMerge_YeuCauTuyenDungController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailMerge\Controller\TuyenDung\MailMerge_ThuCamOnController.resx">
+      <DependentUpon>MailMerge_ThuCamOnController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailMerge\Controller\TuyenDung\MailMerge_ThuTuyenDungController.resx">
+      <DependentUpon>MailMerge_ThuTuyenDungController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model.DesignedDiffs.xafml" />
+    <EmbeddedResource Include="NormalForm\0.System\frmHelper.resx">
+      <DependentUpon>frmHelper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NormalForm\0.System\frmNhatKyDuLieu.resx">
+      <DependentUpon>frmNhatKyDuLieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NormalForm\1.NhanSu\frmChonNhanVien.resx">
+      <DependentUpon>frmChonNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NormalForm\1.NhanSu\frmChonThinhGiang.resx">
+      <DependentUpon>frmChonThinhGiang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NormalForm\1.NhanSu\frmChonCanBo.resx">
+      <DependentUpon>frmChonCanBo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NormalForm\1.NhanSu\frmCongThucLuong.resx">
+      <DependentUpon>frmCongThucLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NormalForm\1.NhanSu\frmListViewColumns.resx">
+      <DependentUpon>frmListViewColumns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NormalForm\2.MailMerge\frmCreateMailMerge.resx">
+      <DependentUpon>frmCreateMailMerge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NormalForm\2.MailMerge\frmMailMergeManager.resx">
+      <DependentUpon>frmMailMergeManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NormalForm\2.MailMerge\frmShowMailMerge.resx">
+      <DependentUpon>frmShowMailMerge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NormalForm\PMS\frmCongThucPMS.resx">
+      <DependentUpon>frmCongThucPMS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinModule.resx">
+      <DependentUpon>WinModule.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ERP.Module\ERP.Module.csproj">
+      <Project>{5F15837D-D1E5-44DC-92F0-4F2EBE9C3F8D}</Project>
+      <Name>ERP.Module</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ERP.NormalizationData\ERP.NormalizationData.csproj">
+      <Project>{F06F63D9-314A-40DE-9694-80AEC81FBB70}</Project>
+      <Name>ERP.NormalizationData</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\5.NghiepVu\12.DanhMuc\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <Fakes Include="Fakes\Newtonsoft.Json.fakes" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="Resources\QuyTrinhNangLuong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuyTrinhNghiViec.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Action_addicon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

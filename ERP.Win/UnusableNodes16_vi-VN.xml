@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="KeHoachTuan_TimParentDoParentAskDuyet_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="KeHoachTuan_TimParentDoParentAskDuyet_col2">
+              <LayoutGroup Id="Auto2094588b-3359-44e6-934f-04ba68defc26" Caption="Auto2094588b-3359-44e6-934f-04ba68defc26(8)" />
+              <LayoutGroup Id="Auto56895b48-1e1a-4f48-9e53-6a9876b1f335" Caption="Auto56895b48-1e1a-4f48-9e53-6a9876b1f335(11)" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="Auto3b599afc-7d8a-4e9f-83c4-b76150d74ff6" Caption="Auto3b599afc-7d8a-4e9f-83c4-b76150d74ff6(14)" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="KeHoachTuan_TimParentDoParentAskDuyet1_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="KeHoachTuan_TimParentDoParentAskDuyet1">
+              <LayoutGroup Id="KeHoachTuan_TimParentDoParentAskDuyet1_col2">
+                <LayoutGroup Id="Auto4ad7e54c-8de7-4a4a-bd68-74ad245b80c2" Caption="Auto4ad7e54c-8de7-4a4a-bd68-74ad245b80c2(9)" />
+                <LayoutGroup Id="Auto2e7081cf-96fc-4ba6-8929-0fca5089fac7" Caption="Auto2e7081cf-96fc-4ba6-8929-0fca5089fac7(12)" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="Autoa2b103de-67ba-4fed-84a7-44c12ef5afff" Caption="Autoa2b103de-67ba-4fed-84a7-44c12ef5afff(15)" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="KeHoachTuan_TimParentDoParentAskHoanThanh_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="KeHoachTuan_TimParentDoParentAskHoanThanh">
+              <LayoutGroup Id="KeHoachTuan_TimParentDoParentAskHoanThanh_col2" Caption="KeHoachTuan_TimParentDoParentAskHoanThanh_col2">
+                <LayoutGroup Id="Autob944805d-3abf-4dca-a4e9-6b6827267916" Caption="Autob944805d-3abf-4dca-a4e9-6b6827267916(9)" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Auto2b65180d-2d53-414d-b9e8-26534e911c82" Caption="Auto2b65180d-2d53-414d-b9e8-26534e911c82(11)" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

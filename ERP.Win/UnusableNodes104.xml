@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="ChiTietThuPhi_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="24.202127659574469">
+            <LayoutGroup Id="ChiTietThuPhi" ShowCaption="False" RelativeSize="100">
+              <LayoutGroup Id="ChiTietThuPhi_col1" RelativeSize="50.063856960408685">
+                <LayoutItem Id="Chon" RelativeSize="15.934065934065934" Index="0" />
+                <LayoutItem Id="MaChiTiet" RelativeSize="13.186813186813186" Index="1" />
+                <LayoutItem Id="DienGiai" RelativeSize="13.186813186813186" Index="2" />
+                <LayoutItem Id="BatBuoc" RelativeSize="11.538461538461538" Index="3" />
+                <LayoutItem Id="DonGia" RelativeSize="13.186813186813186" Index="4" />
+                <LayoutItem Id="SoLuong" RelativeSize="13.186813186813186" Index="5" />
+                <LayoutItem Id="ChiTietNoPhi" ViewItem="ChiTietNoPhi" Index="6" RelativeSize="19.780219780219781" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="ChiTietThuPhi_col2" RelativeSize="49.936143039591315">
+                <LayoutItem Id="SoTien" RelativeSize="17.582417582417584" />
+                <LayoutItem Id="KhauTruDoiTuong" RelativeSize="13.186813186813186" />
+                <LayoutItem Id="KhauTruNgayNghi" RelativeSize="13.186813186813186" />
+                <LayoutItem Id="KhauTruTheoChinhSach" RelativeSize="13.186813186813186" />
+                <LayoutItem Id="SoTienThucTe" RelativeSize="13.186813186813186" />
+                <LayoutItem Id="ConLai" RelativeSize="16.483516483516482" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="75.797872340425528" Caption="Ghi chú">
+            <LayoutItem Id="GhiChu" RelativeSize="10" />
+            <LayoutItem Id="Item1" Index="1" RelativeSize="90" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietThuPhiLanDau_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="ChiTietThuPhiLanDau" ShowCaption="False" RelativeSize="100">
+              <LayoutGroup Id="ChiTietThuPhiLanDau_col1" RelativeSize="50">
+                <LayoutItem Id="Chon" RelativeSize="2.8" />
+                <LayoutItem Id="MaChiTiet" RelativeSize="4.2666666666666666" />
+                <LayoutItem Id="DienGiai" RelativeSize="3.2" />
+                <LayoutItem Id="DonGia" RelativeSize="3.2" />
+                <LayoutItem Id="SoLuong" RelativeSize="86.533333333333331" />
+              </LayoutGroup>
+              <LayoutGroup Id="ChiTietThuPhiLanDau_col2" RelativeSize="50">
+                <LayoutItem Id="KhauTruDoiTuong" RelativeSize="3.2" />
+                <LayoutItem Id="KhauTruNgayNghi" RelativeSize="3.2" />
+                <LayoutItem Id="SoTienThucTe" RelativeSize="89.333333333333329" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="ChiTietThuPhiLanDau_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="KhauTruDoiTuong" Width="121" />
+        <ColumnInfo Id="KhauTruNgayNghi" Width="121" />
+        <ColumnInfo Id="SoTienThucTe" Width="91" />
+      </Columns>
+    </ListView>
+    <DetailView Id="ThuPhi_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="21.01063829787234">
+            <LayoutGroup Id="ThuPhi" ShowCaption="False" RelativeSize="100" Direction="Vertical">
+              <LayoutGroup Id="ThuPhi_col1" RelativeSize="100" Direction="Vertical" Caption="ThuPhi_col1">
+                <LayoutGroup Id="Auto70abce66-3733-4288-b9dd-093c2bfbe0bd" ShowCaption="False" Caption="Auto70abce66-3733-4288-b9dd-093c2bfbe0bd(5)" Direction="Horizontal" Index="0" RelativeSize="100">
+                  <LayoutGroup Id="Autod4d7a73a-fa53-4b60-8d93-c212d61d5afa" ShowCaption="False" Caption="" Index="0" RelativeSize="51.844660194174757">
+                    <LayoutItem Id="Lop" ViewItem="Lop" Index="0" RelativeSize="20.253164556962027" />
+                    <LayoutItem Id="HocSinh" ViewItem="HocSinh" Index="1" RelativeSize="15.189873417721518" />
+                    <LayoutItem Id="KyTinhHocPhi" ViewItem="KyTinhHocPhi" Index="2" RelativeSize="15.189873417721518" />
+                    <LayoutItem Id="SoBienLai" ViewItem="SoBienLai" Index="3" RelativeSize="15.189873417721518" />
+                    <LayoutItem Id="NgayLap" ViewItem="NgayLap" Index="4" RelativeSize="15.189873417721518" />
+                    <LayoutItem Id="NgayHocThangTruoc" ViewItem="NgayHocThangTruoc" Index="5" RelativeSize="18.9873417721519" />
+                  </LayoutGroup>
+                  <LayoutGroup Id="Auto268e7d10-0c12-4e7d-a38b-cb31d44a56a4" ShowCaption="False" Caption="" Index="1" RelativeSize="48.155339805825243">
+                    <LayoutItem Id="GoiHocPhi" ViewItem="GoiHocPhi" Index="0" RelativeSize="20.253164556962027" />
+                    <LayoutItem Id="ChinhSachKhuyenMai" ViewItem="ChinhSachKhuyenMai" Index="1" RelativeSize="15.189873417721518" />
+                    <LayoutItem Id="DuPhiConLai" ViewItem="DuPhiConLai" Index="2" RelativeSize="15.189873417721518" />
+                    <LayoutItem Id="ApDungDuPhi" ViewItem="ApDungDuPhi" Index="3" RelativeSize="13.291139240506329" />
+                    <LayoutItem Id="TongTien" ViewItem="TongTien" Index="4" RelativeSize="15.189873417721518" />
+                    <LayoutItem Id="SoTienPHDong" ViewItem="SoTienPHDong" Index="5" RelativeSize="20.88607594936709" />
+                  </LayoutGroup>
+                </LayoutGroup>
+                <LayoutItem Id="HocSinh" RelativeSize="13.186813186813186" Removed="True" />
+                <LayoutItem Id="KyTinhHocPhi" RelativeSize="13.186813186813186" Removed="True" />
+                <LayoutItem Id="Lop" RelativeSize="17.582417582417584" Removed="True" />
+                <LayoutItem Id="NgayHocThangTruoc" RelativeSize="13.186813186813186" Removed="True" />
+                <LayoutItem Id="NgayLap" RelativeSize="13.186813186813186" Removed="True" />
+                <LayoutItem Id="SoBienLai" RelativeSize="13.186813186813186" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="ThuPhi_col2" RelativeSize="48.403575989782887" Caption="ThuPhi_col2" Direction="Horizontal" Removed="True">
+                <LayoutItem Id="ApDungDuPhi" RelativeSize="15.934065934065934" Index="0" Removed="True" />
+                <LayoutItem Id="ChinhSachKhuyenMai" RelativeSize="100" Index="0" Removed="True" />
+                <LayoutItem Id="GhiChu" RelativeSize="17.582417582417584" Index="0" Removed="True" />
+                <LayoutItem Id="SoTienPHDong" RelativeSize="17.582417582417584" Index="0" Removed="True" />
+                <LayoutItem Id="TongTien" RelativeSize="17.582417582417584" Index="0" Removed="True" />
+                <LayoutItem Id="GoiHocPhi" RelativeSize="13.407821229050279" Index="4" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutItem Id="NoiDung" ViewItem="NoiDung" Index="1" RelativeSize="7.1808510638297873" />
+          <LayoutGroup Id="ListChiTietThuPhi_Group" TextAlignMode="AlignWithChildren" Direction="Vertical" RelativeSize="71.808510638297875" Index="2">
+            <LayoutItem Id="ListChiTietThuPhi" RelativeSize="100" />
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="1.7287234042553192" Caption="Nội dung" Direction="Horizontal" Removed="True">
+            <LayoutItem Id="NoiDung" RelativeSize="100" Removed="True" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="ThuPhi_ListChiTietThuPhi_ListView" AllowEdit="True">
+      <Columns Id="Columns">
+        <ColumnInfo Id="MaChiTiet" Index="-1" />
+        <ColumnInfo Id="Chon" Index="0" />
+        <ColumnInfo Id="DienGiai" Index="1" />
+        <ColumnInfo Id="BatBuoc" Index="2" />
+        <ColumnInfo Id="DonGia" Index="3" />
+        <ColumnInfo Id="SoLuong" Index="4" />
+        <ColumnInfo Id="SoTien" Index="5" />
+        <ColumnInfo Id="KhauTruDoiTuong" Index="6" />
+        <ColumnInfo Id="KhauTruNgayNghi" Index="7" />
+        <ColumnInfo Id="KhauTruTheoChinhSach" Index="8" />
+        <ColumnInfo Id="SoTienThucTe" Index="9" />
+        <ColumnInfo Id="ConLai" Index="11" />
+        <ColumnInfo Id="ChiTietNoPhi" Index="12" />
+      </Columns>
+    </ListView>
+    <DetailView Id="ThuPhiLanDau_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="17.819148936170212">
+            <LayoutGroup Id="ThuPhiLanDau" ShowCaption="False" RelativeSize="100" Direction="Vertical">
+              <LayoutGroup Id="ThuPhiLanDau_col1" RelativeSize="100" Direction="Horizontal">
+                <LayoutGroup Id="Auto79b8dd96-9cc8-411c-b382-af517e1b2718" ShowCaption="False" Caption="" Index="0" RelativeSize="51.785714285714285">
+                  <LayoutItem Id="HoSoNhapHoc" ViewItem="HoSoNhapHoc" Index="0" RelativeSize="23.880597014925375" />
+                  <LayoutItem Id="KyTinhHocPhi" ViewItem="KyTinhHocPhi" Index="1" RelativeSize="17.910447761194028" />
+                  <LayoutItem Id="SoBienLai" ViewItem="SoBienLai" Index="2" RelativeSize="17.910447761194028" />
+                  <LayoutItem Id="NgayLap" ViewItem="NgayLap" Index="3" RelativeSize="17.910447761194028" />
+                  <LayoutItem Id="GoiHocPhi" ViewItem="GoiHocPhi" Index="4" RelativeSize="22.388059701492537" />
+                </LayoutGroup>
+                <LayoutGroup Id="ThuPhiLanDau_col2" ShowCaption="False" Direction="Vertical" Index="1" RelativeSize="48.214285714285715" Caption="ThuPhiLanDau_col2">
+                  <LayoutItem Id="ChinhSachKhuyenMai" ViewItem="ChinhSachKhuyenMai" Index="0" RelativeSize="23.880597014925375" />
+                  <LayoutItem Id="TongTien" ViewItem="TongTien" Index="1" RelativeSize="17.910447761194028" />
+                  <LayoutItem Id="SoTienPHDong" ViewItem="SoTienPHDong" Index="2" RelativeSize="17.910447761194028" />
+                  <LayoutItem Id="GhiChu" ViewItem="GhiChu" Index="3" RelativeSize="40.298507462686565" />
+                </LayoutGroup>
+                <LayoutItem Id="TongTien" RelativeSize="10.434782608695652" Index="5" Removed="True" />
+                <LayoutItem Id="HoSoNhapHoc" RelativeSize="13.913043478260869" Removed="True" />
+                <LayoutItem Id="KyTinhHocPhi" RelativeSize="10.434782608695652" Removed="True" />
+                <LayoutItem Id="NgayLap" RelativeSize="10.434782608695652" Removed="True" />
+                <LayoutItem Id="SoBienLai" RelativeSize="10.434782608695652" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="ThuPhiLanDau_col2" RelativeSize="50" Caption="ThuPhiLanDau_col2" Direction="Horizontal" Removed="True">
+                <LayoutItem Id="ChinhSachKhuyenMai" RelativeSize="100" Index="0" Removed="True" />
+                <LayoutItem Id="GhiChu" RelativeSize="17.582417582417584" Index="0" Removed="True" />
+                <LayoutItem Id="GoiHocPhi" RelativeSize="20.253164556962027" Index="0" Removed="True" />
+                <LayoutItem Id="SoTienPHDong" RelativeSize="23.880597014925375" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="8.3776595744680851">
+            <LayoutItem Id="NoiDung" RelativeSize="100" />
+          </LayoutGroup>
+          <LayoutGroup Id="ListChiTietThuPhi_Group" TextAlignMode="AlignWithChildren" Direction="Vertical" RelativeSize="73.803191489361708">
+            <LayoutItem Id="ListChiTietThuPhi" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="ThuPhiLanDau_ListChiTietThuPhi_ListView" AllowEdit="True">
+      <Columns Id="Columns">
+        <ColumnInfo Id="MaChiTiet" Index="-1" />
+        <ColumnInfo Id="DienGiai" Index="1" />
+        <ColumnInfo Id="BatBuoc" Index="2" />
+        <ColumnInfo Id="DonGia" Index="3" />
+        <ColumnInfo Id="SoLuong" Index="4" />
+        <ColumnInfo Id="SoTien" Index="5" />
+        <ColumnInfo Id="KhauTruDoiTuong" Index="6" />
+        <ColumnInfo Id="KhauTruTheoChinhSach" Index="7" />
+        <ColumnInfo Id="KhauTruNgayNghi" Index="8" />
+        <ColumnInfo Id="SoTienThucTe" Index="9" />
+        <ColumnInfo Id="ConLai" Index="11" />
+      </Columns>
+    </ListView>
+    <DetailView Id="ChinhSachKhuyenMai_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SizeableEditors" RelativeSize="44.148936170212764" Direction="Horizontal">
+            <LayoutItem Id="DieuKienHocSinh" RelativeSize="48.580786026200876" CaptionLocation="Top" />
+            <LayoutItem Id="DieuKienHoSoNhapHoc" Index="1" RelativeSize="51.419213973799124" CaptionLocation="Top" />
+          </LayoutGroup>
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChinhSachKhuyenMai">
+              <LayoutGroup Id="ChinhSachKhuyenMai_col1" RelativeSize="48.580786026200876">
+                <LayoutItem Id="CongTy" RelativeSize="37.2093023255814" />
+                <LayoutItem Id="NamHoc" RelativeSize="27.906976744186046" />
+                <LayoutItem Id="MaQuanLy" RelativeSize="34.883720930232556" />
+              </LayoutGroup>
+              <LayoutGroup Id="ChinhSachKhuyenMai_col2" RelativeSize="51.419213973799124">
+                <LayoutItem Id="TenChinhSach" RelativeSize="37.2093023255814" />
+                <LayoutItem Id="TuNgay" RelativeSize="27.906976744186046" />
+                <LayoutItem Id="DenNgay" RelativeSize="34.883720930232556" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietCongNo_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietCongNo">
+              <LayoutGroup Id="ChiTietCongNo_col1">
+                <LayoutItem Id="TrangThaiChungTu" RelativeSize="4.25531914893617" />
+                <LayoutItem Id="BienLai" RelativeSize="3.1914893617021276" />
+                <LayoutItem Id="HoanPhi" RelativeSize="3.1914893617021276" />
+                <LayoutItem Id="PhatSinhCo" ViewItem="PhatSinhCo" />
+                <LayoutItem Id="PhatSinhNo" ViewItem="PhatSinhNo" />
+                <LayoutItem Id="NoiDung" ViewItem="NoiDung" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietDanhGiaChung_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietDanhGiaChung_col2">
+              <LayoutGroup Id="Item4">
+                <LayoutItem Id="TieuChay" ViewItem="TieuChay" />
+                <LayoutItem Id="DauBung" ViewItem="DauBung" />
+                <LayoutItem Id="DiI" ViewItem="DiI" />
+                <LayoutItem Id="DiTieu" ViewItem="DiTieu" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="ChiTietDanhGiaChung_col1">
+              <LayoutGroup Id="Item3">
+                <LayoutItem Id="LauMinh" ViewItem="LauMinh" />
+                <LayoutItem Id="Tam" ViewItem="Tam" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item2">
+                <LayoutItem Id="DaySom" ViewItem="DaySom" />
+                <LayoutItem Id="KhongNgu" ViewItem="KhongNgu" />
+                <LayoutItem Id="NguDuGiac" ViewItem="NguDuGiac" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietTimKiemHocSinh_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietTimKiemHocSinh_col2">
+              <LayoutItem Id="TinhTrang" ViewItem="TinhTrang" />
+              <LayoutItem Id="Email" ViewItem="Email" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="CongNo_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="CongNo">
+              <LayoutGroup Id="CongNo_col1">
+                <LayoutItem Id="Lop" RelativeSize="29.09090909090909" />
+                <LayoutItem Id="HocSinh" RelativeSize="21.818181818181817" />
+                <LayoutItem Id="NoDauKy" RelativeSize="21.818181818181817" />
+                <LayoutItem Id="CoDauKy" RelativeSize="27.272727272727273" />
+              </LayoutGroup>
+              <LayoutGroup Id="CongNo_col2">
+                <LayoutItem Id="PhatSinhNo" RelativeSize="29.09090909090909" />
+                <LayoutItem Id="PhatSinhCo" RelativeSize="21.818181818181817" />
+                <LayoutItem Id="DuNo" RelativeSize="21.818181818181817" />
+                <LayoutItem Id="DuCo" RelativeSize="27.272727272727273" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="CongTy_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="CongTy_Group">
+              <LayoutGroup Id="CongTy_Group_col1">
+                <LayoutGroup Id="Autocd6b0b1a-b4f0-406c-8a93-76ec1dafeae7">
+                  <LayoutItem Id="DinhPhi" ViewItem="DinhPhi" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="DinhPhi_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="DinhPhi">
+              <LayoutItem Id="CongTy" RelativeSize="51.612903225806448" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="KyTinhHocPhi_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="KyTinhHocPhi">
+              <LayoutGroup Id="KyTinhHocPhi_col2">
+                <LayoutItem Id="DinhPhi" RelativeSize="3.1914893617021276" Index="4" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="MonAn_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Auto2ff41116-fccd-48c7-a85e-262704dc22f4">
+              <LayoutGroup Id="MonAn">
+                <LayoutGroup Id="MonAn_col1">
+                  <LayoutGroup Id="Item2">
+                    <LayoutItem Id="NhomThucDon" ViewItem="NhomThucDon" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="NguoiDuaDon_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="NguoiDuaDon_col2">
+              <LayoutGroup Id="Autof463c6c5-38aa-4d4f-8988-8af9bacf0a35">
+                <LayoutGroup Id="Autodcdf0987-0474-42a8-a223-ab9b48c203cf">
+                  <LayoutItem Id="DuaDonChinh" ViewItem="DuaDonChinh" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ThoiKhoaBieu_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="Auto13ec78c2-99f7-418d-9697-78f7298ed190">
+            <LayoutGroup Id="Autoa175a2fe-f504-41aa-b8b7-caaa9d8e8e72">
+              <LayoutGroup Id="Autod365dfc4-91ab-40b1-96b6-7c62143c40f1">
+                <LayoutGroup Id="Autof28d6bda-5ca5-421c-a64b-b75029fae613">
+                  <LayoutGroup Id="Auto44b5759f-aef7-4835-8540-08c45e23cfae">
+                    <LayoutItem Id="ShowCTGD" ViewItem="ShowCTGD" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

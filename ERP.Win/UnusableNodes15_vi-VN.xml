@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="ThucDonKhung_SuatAn_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="DeNghiXuatKho" Caption="ĐN xuất kho" />
+        <PropertyEditor Id="DonDatHang" Caption="ĐN mua hàng" />
+      </Items>
+    </DetailView>
+  </Views>
+</Application>

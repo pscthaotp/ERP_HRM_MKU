@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="KeHoachTuyenSinh_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="KeHoachTuyenSinh">
+              <LayoutGroup Id="KeHoachTuyenSinh_col1">
+                <LayoutGroup Id="Autofe5cf943-81a3-48ae-ab75-555920932382" Caption="">
+                  <LayoutGroup Id="Auto5059dfa7-0367-49b7-a7af-0a3f3341564d" Caption="" />
+                  <LayoutGroup Id="Auto860078ae-86f2-4162-a2f3-009d52dc0558" Caption="">
+                    <LayoutGroup Id="Autoa482e2cf-7c6f-47f7-b95f-c9026f309afe" Caption="Autoa482e2cf-7c6f-47f7-b95f-c9026f309afe(8)" />
+                  </LayoutGroup>
+                </LayoutGroup>
+                <LayoutGroup Id="Auto199a2ccb-810a-46f5-a2bb-a8de96925881" Caption="Auto199a2ccb-810a-46f5-a2bb-a8de96925881(7)">
+                  <LayoutGroup Id="Auto59acdbe6-d7ab-4d1c-afd3-a20d6496838d" Caption="Auto59acdbe6-d7ab-4d1c-afd3-a20d6496838d(11)" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>

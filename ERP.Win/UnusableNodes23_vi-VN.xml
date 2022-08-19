@@ -1,0 +1,1016 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel Id="BOModel">
+    <Class Name="ERP.Module.DanhMuc.HocSinh.TinhTrangDinhDuong">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="BMI" Caption="Chỉ số BMI" />
+        <Member Name="MaQuanLy" Caption="Mã quản lý" />
+        <Member Name="TenTinhTrang" Caption="Tên tình trạng" />
+      </OwnMembers>
+    </Class>
+    <Class Name="DevExpress.Persistent.BaseImpl.Analysis">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Name" Caption="Tên" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <Views Id="Views">
+    <DetailView Id="BangChotHocSinh_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="BangChotHocSinh">
+              <LayoutGroup Id="Autoe81797b4-f7d9-402e-b4ad-a7ac413ad8dd">
+                <LayoutGroup Id="Auto32fb4c3a-7b65-4fe7-ad95-00493c3f861d" Caption="" />
+                <LayoutGroup Id="Auto13dbdef8-d665-4e07-a5fe-690f8469d67d" Caption="" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="BangHocPhi_ListDuToanThuPhi_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <DetailView Id="BaoCao_TuyenSinh_DanhSachKhachHang_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Auto24362ce0-1c05-437f-99d4-6c794b036a9d" Caption="Auto24362ce0-1c05-437f-99d4-6c794b036a9d(3)" />
+            <LayoutGroup Id="StoreProcedureReport" Caption="Ngày lập báo cáo" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="BaoCao_TuyenSinh_ThongBaoTuyenSinh_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="BaoCao_TuyenSinh_ThongBaoTuyenSinh" Caption="Năm học" />
+            <LayoutGroup Id="StoreProcedureReport" Caption="Ngày lập báo cáo" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Bep_DonDatHangDuTru_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Bep_DonDatHangDuTru" Caption="Bep_DonDatHangDuTru">
+              <LayoutGroup Id="Auto6d1b4d62-fcd9-4b68-a6cb-9d6705ecea67" Caption="Auto6d1b4d62-fcd9-4b68-a6cb-9d6705ecea67(4)" />
+              <LayoutGroup Id="Item1" Caption="Ghi chú">
+                <LayoutGroup Id="SizeableEditors" Caption="Ghi chú" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="Ghi chú" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="BienLai_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <TabbedGroup Id="Tabs">
+            <LayoutGroup Id="ListChiTietBienLai" Caption="Danh sách phí" />
+          </TabbedGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="Nội dung" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="BienLai_TimKiem_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="BienLai_TimKiem">
+              <LayoutGroup Id="BienLai_TimKiem_col2" Caption="BienLai_TimKiem_col2">
+                <LayoutGroup Id="Item1">
+                  <LayoutGroup Id="Item2">
+                    <LayoutGroup Id="Item3" Caption="Item3">
+                      <LayoutGroup Id="Auto102c782a-1283-4664-a521-3f760bf47321" Caption="" />
+                      <LayoutGroup Id="Autoe266e3af-d6bc-4c64-a15c-7ba160e52576" Caption="" />
+                    </LayoutGroup>
+                  </LayoutGroup>
+                </LayoutGroup>
+                <LayoutGroup Id="Item4" Caption="Item4">
+                  <LayoutGroup Id="Auto0fd1accc-0334-475d-a72d-23ad7daaffac" Caption="">
+                    <LayoutGroup Id="Auto42cf1273-48cd-47b2-aa4c-96478d3acd43" Caption="" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChiTietTheoDoiTre_TimKiem_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietTheoDoiTre_TimKiem">
+              <LayoutGroup Id="ChiTietTheoDoiTre_TimKiem_col2">
+                <LayoutGroup Id="Item2" Caption="Chỉnh sửa" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ChotHocSinh_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChotHocSinh" Caption="Chốt học sinh">
+              <LayoutGroup Id="Auto5343d4fe-935c-4d79-895a-c1e972af1c47" Caption="Auto5343d4fe-935c-4d79-895a-c1e972af1c47(4)" />
+              <LayoutGroup Id="ChotHocSinh_col1" Caption="ChotHocSinh_col1" />
+              <LayoutGroup Id="ChotHocSinh_col2" Caption="ChotHocSinh_col2" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="CTKhung_ChinhSua_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="CTKhung_ChinhSua">
+              <LayoutGroup Id="Auto59fb0370-0fe3-43ea-8896-091ca3a55cac" Caption="Auto59fb0370-0fe3-43ea-8896-091ca3a55cac(4)">
+                <TabbedGroup Id="Item2">
+                  <LayoutGroup Id="TuanList" Caption="Tuần" />
+                  <LayoutGroup Id="Item4" Caption="Loại khung giờ" />
+                  <LayoutGroup Id="HoatDongList" Caption="Hoạt động" />
+                </TabbedGroup>
+                <LayoutGroup Id="Item1" Caption="Cập nhật">
+                  <LayoutGroup Id="Auto41800d43-4a39-4d1d-90ea-62edf7e966b9" Caption="Auto41800d43-4a39-4d1d-90ea-62edf7e966b9(10)">
+                    <LayoutGroup Id="Autoe4c8c332-a5ce-471a-8b35-41e4d850d918" Caption="Autoe4c8c332-a5ce-471a-8b35-41e4d850d918(11)" />
+                    <LayoutGroup Id="Autobd0ad6b2-378c-43e1-a170-4b9b521034a4" Caption="Autobd0ad6b2-378c-43e1-a170-4b9b521034a4(14)" />
+                  </LayoutGroup>
+                </LayoutGroup>
+                <LayoutGroup Id="Item3" Caption="Nội dung - Chỉ số" />
+              </LayoutGroup>
+              <LayoutGroup Id="CTKhungList" Caption="Danh sách hoạt động" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="DangKyNgoaiKhoa_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SizeableEditors" Caption="Ghi chú" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="DeNghiCungCapCanTin_ChiTietDeNghiCungCapCanTin_ListView">
+      <BandsLayout Id="BandsLayout">
+        <Band Id="ThongTinMonAn" Caption="Thông tin món ăn" />
+        <Band Id="ThongTinHangHoa" Caption="Thông tin hàng hóa" />
+      </BandsLayout>
+    </ListView>
+    <DetailView Id="DeNghiCungCapCanTin_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="DeNghiCungCapCanTin" Caption="Đề nghị cung cấp" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="DoiTuongDinhDuong_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors" Caption="SimpleEditors">
+            <LayoutGroup Id="Item4" Caption="Đối tượng dinh dưỡng">
+              <LayoutGroup Id="Autof050b582-f1fe-40ae-992f-87be6104cd98" Caption="Autof050b582-f1fe-40ae-992f-87be6104cd98(4)">
+                <LayoutGroup Id="Autoc1ec1855-2911-4c82-b196-18598e41bbc9" Caption="Autoc1ec1855-2911-4c82-b196-18598e41bbc9(5)" />
+                <LayoutGroup Id="Auto36113e43-ba17-4ebc-b3db-3e36e48aff48" Caption="Auto36113e43-ba17-4ebc-b3db-3e36e48aff48(9)" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Item2" Caption="Cơ cấu P-L-G">
+              <LayoutGroup Id="Item3" Caption="Item3">
+                <LayoutGroup Id="Autoa1d00f5a-bd80-42ad-a6a2-5ec4ed3a1ade" Caption="">
+                  <LayoutGroup Id="Autoadc8e23f-b0ab-456b-8f59-675c569261ea" Caption="" />
+                  <LayoutGroup Id="Auto4fb8713a-b33d-462c-a88c-bc1d3dc3fcac" Caption="">
+                    <LayoutGroup Id="Item6" Caption="Số lượng gram tương ứng" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+      <Items Id="Items">
+        <PropertyEditor Id="TinhTrangDinhDuong" Caption="Tình trạng DD" />
+      </Items>
+    </DetailView>
+    <DetailView Id="DonDatHang_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="DonDatHang">
+              <LayoutGroup Id="DonDatHang_col1">
+                <LayoutGroup Id="Auto89e2a99d-5143-4694-91c1-62fc4a723ee1">
+                  <LayoutGroup Id="Auto47cf3b54-4ee7-4426-9363-59669b108143" Caption="Auto47cf3b54-4ee7-4426-9363-59669b108143(9)" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="DonHangBan_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="DonHang" Caption="Đơn hàng bán" />
+            <LayoutGroup Id="DonHangBan" Caption="DonHangBan" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="DonHangMua_ChiTietDonHangMua_NonList_ListView">
+      <BandsLayout Id="BandsLayout">
+        <Band Id="ThongTinDonHang" Caption="Thông tin đơn hàng" />
+        <Band Id="ThongTinNhaCungCap" Caption="Thông tin nhà cung cấp" />
+      </BandsLayout>
+    </ListView>
+    <ListView Id="DonHangMua_ChiTietDonHangMuaList_ListView">
+      <BandsLayout Id="BandsLayout">
+        <Band Id="ThongTinDonHang" Caption="Thông tin đơn hàng mua" />
+        <Band Id="ThongTinNhaCungCap" Caption="Thông tin nhà cung cấp" />
+      </BandsLayout>
+    </ListView>
+    <DetailView Id="DonViTinh_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SizeableEditors" Caption="Ghi chú" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="DuToanThuPhi_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="Name" Caption="Tên" />
+      </Items>
+    </DetailView>
+    <ListView Id="DuToanThuPhi_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <DetailView Id="HocSinh_DetailView" Caption="Học sinh">
+      <Items Id="Items">
+        <PropertyEditor Id="CanNang" Caption="Cân nặng (kg)" />
+        <PropertyEditor Id="Caption" Caption="Hoj tên" />
+        <PropertyEditor Id="ChieuCao" Caption="Chiều cao (cm)" />
+        <PropertyEditor Id="ChuHo" Caption="Chủ hộ" />
+        <PropertyEditor Id="CMNDNguoiDon" Caption="CMND người đón" />
+        <PropertyEditor Id="CongTy" Caption="Trường" />
+        <PropertyEditor Id="CoQuanCha" Caption="Công ty cha" />
+        <PropertyEditor Id="CoQuanMe" Caption="Cơ quan mẹ" />
+        <PropertyEditor Id="DanhSachBenhLyList" Caption="&#xD;&#xA;Danh sách bệnh lý" />
+        <PropertyEditor Id="DanToc" Caption="Dân tộc" />
+        <PropertyEditor Id="DCCoQuanCha" Caption="Địa chỉ cơ quan cha" />
+        <PropertyEditor Id="DCCoQuanMe" Caption="Địa chỉ cơ quan mẹ" />
+        <PropertyEditor Id="DiaChiCongTy" Caption="Địa chỉ công ty" />
+        <PropertyEditor Id="DiaChiNguoiDon" Caption="Địa chỉ người đón" />
+        <PropertyEditor Id="DiaChiThuongTru" Caption="Địa chỉ thường trú" />
+        <PropertyEditor Id="DichVuList" Caption="Danh sách dịch vụ" />
+        <PropertyEditor Id="DienBienBatThuong" Caption="Diễn biến bất thường" />
+        <PropertyEditor Id="DienThoaiCha" Caption="Điện thoại cha" />
+        <PropertyEditor Id="DienThoaiMe" Caption="Điện thoại mẹ" />
+        <PropertyEditor Id="DienThoaiNguoiDon" Caption="Điện thoại người đón" />
+        <PropertyEditor Id="EmailCha" Caption="Email cha" />
+        <PropertyEditor Id="EmailMe" Caption="Email mẹ" />
+        <PropertyEditor Id="GhiChu" Caption="Ghi chú" />
+        <PropertyEditor Id="GhiChuPH" Caption="Ghi chú của cha mẹ" />
+        <PropertyEditor Id="GioiTinh" Caption="Giới tính" />
+        <PropertyEditor Id="HinhAnh" Caption="Hình ảnh" />
+        <PropertyEditor Id="HinhNguoiDon" Caption="Hình ảnh người đón" />
+        <PropertyEditor Id="Ho" Caption="Họ" />
+        <PropertyEditor Id="HoSoNhapHoc" Caption="Hồ sơ nhập học" />
+        <PropertyEditor Id="HoTen" Caption="Họ và tên" />
+        <PropertyEditor Id="HoTenCha" Caption="Họ tên cha" />
+        <PropertyEditor Id="HoTenMe" Caption="Họ tên mẹ" />
+        <PropertyEditor Id="HoTenNguoiDon" Caption="Người đón" />
+        <PropertyEditor Id="Khoi" Caption="Khối" />
+        <PropertyEditor Id="Lop" Caption="Lớp" />
+        <PropertyEditor Id="LyDoNghiHoc_BaoLuu" Caption="Lý do nghỉ học - bảo lưu" />
+        <PropertyEditor Id="MaQuanLy" Caption="Mã quản lý" />
+        <PropertyEditor Id="MaSoThue" Caption="Mã số thuế" />
+        <PropertyEditor Id="NamHoc" Caption="Năm học" />
+        <PropertyEditor Id="NamSinhCha" Caption="Năm sinh cha" />
+        <PropertyEditor Id="NamSinhMe" Caption="Năm sinh mẹ" />
+        <PropertyEditor Id="NamSinhNguoiDon" Caption="Năm sinh người đón" />
+        <PropertyEditor Id="NgaySinh" Caption="Ngày sinh" />
+        <PropertyEditor Id="NgayVaoHoc" Caption="Ngày vào học (Lần đầu)" />
+        <PropertyEditor Id="NgayVaoHocHienTai" Caption="Ngày vào học (Năm hiện tại)" />
+        <PropertyEditor Id="NgheNghiepCha" Caption="Nghề nghiệp cha" />
+        <PropertyEditor Id="NgheNghiepMe" Caption="Nghề nghiệp mẹ" />
+        <PropertyEditor Id="NhomDinhDuong" Caption="Nhóm dinh dưỡng" />
+        <PropertyEditor Id="NoiOHienNay" Caption="Nơi ở hiện nay" />
+        <PropertyEditor Id="QuanHe" Caption="Quan hệ với chủ hộ" />
+        <PropertyEditor Id="QuaTrinhChuyenLop" Caption="Quá trình chuyển lớp" />
+        <PropertyEditor Id="QuaTrinhPhatTrien" Caption="Quá trình phát triển" />
+        <PropertyEditor Id="QuaTrinhSucKhoe" Caption="Quá trình sức khỏe" />
+        <PropertyEditor Id="QuocTich" Caption="Quốc tịch" />
+        <PropertyEditor Id="Ten" Caption="Tên" />
+        <PropertyEditor Id="TenCongTy" Caption="Tên công ty" />
+        <PropertyEditor Id="TenGoiKhac" Caption="Tên gọi khác" />
+        <PropertyEditor Id="TenTiengAnh" Caption="English name - tên tiếng anh" />
+        <PropertyEditor Id="ThangTuoi" Caption="Tháng tuổi" />
+        <PropertyEditor Id="ThucPhamDiUngList" Caption="Thực phẩm dị ứng" />
+        <PropertyEditor Id="TiemChungNgoaiTruong" Caption="Ngoài trường" />
+        <PropertyEditor Id="TiemChungTaiTruong" Caption="Tại trường" />
+        <PropertyEditor Id="TinhTrangDinhDuong" Caption="Tình trạng dinh dưỡng" />
+        <PropertyEditor Id="TinhTrangHS" Caption="Tình trạng" />
+        <PropertyEditor Id="TonGiao" Caption="Tôn giáo" />
+        <PropertyEditor Id="TuNgay" Caption="Từ ngày" />
+      </Items>
+    </DetailView>
+    <DetailView Id="HoSoBaoLuu_HuyHoSo_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SizeableEditors" Caption="Lý do hủy" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="HS_TimKiemNDD_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="HS_TimKiemNDD">
+              <LayoutGroup Id="Auto6fcf6b4d-ff59-46ea-b4bb-a87a33ebb806" Caption="Auto6fcf6b4d-ff59-46ea-b4bb-a87a33ebb806(7)" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="HuyCongNo_TimKiem_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="HuyCongNo_TimKiem">
+              <LayoutGroup Id="HuyCongNo_TimKiem_col2">
+                <LayoutGroup Id="Item1" Caption="Trạng thái Hủy" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="KhoBep_TimKiemDeNghiXuatKho_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="KhoBep_TimKiemDeNghiXuatKho">
+              <LayoutGroup Id="Auto2fda932d-051d-4b27-a2fd-b997507e1eac" Caption="Auto2fda932d-051d-4b27-a2fd-b997507e1eac(4)">
+                <LayoutGroup Id="Autob6ecc3d5-5de2-48f8-84ee-01eb3dcc3b60" Caption="Autob6ecc3d5-5de2-48f8-84ee-01eb3dcc3b60(6)">
+                  <LayoutGroup Id="Auto005065d3-7c2c-4061-b424-50de1b7f80d5" Caption="Auto005065d3-7c2c-4061-b424-50de1b7f80d5(7)" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="KhoBep_TimKiemDonDatHang_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="KhoBep_TimKiemDonDatHang">
+              <LayoutGroup Id="Auto63e6d937-54ce-4f8a-aff8-1f1f46113a4b" Caption="Auto63e6d937-54ce-4f8a-aff8-1f1f46113a4b(4)">
+                <LayoutGroup Id="Auto34baafca-d1c1-4b38-8a5c-5f4d05f69ee7" Caption="Auto34baafca-d1c1-4b38-8a5c-5f4d05f69ee7(6)">
+                  <LayoutGroup Id="Autof3b493bd-40d9-4e1f-9307-f73ce005844a" Caption="Autof3b493bd-40d9-4e1f-9307-f73ce005844a(7)" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="KhungGioTKB_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="LoaiKhungGioTKB.MaQuanLy" Caption="Mã loại khung giờ" />
+      </Columns>
+    </ListView>
+    <DetailView Id="MonAn_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Auto2ff41116-fccd-48c7-a85e-262704dc22f4">
+              <LayoutGroup Id="MonAn">
+                <LayoutGroup Id="MonAn_col1">
+                  <LayoutGroup Id="Item3" Caption="Item3" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="Item1" Caption="Dụng cụ" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="MonAn_LookupListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="MonAnThongTin.TenMonAn" Caption="Thông tin món ăn" />
+      </Columns>
+    </ListView>
+    <ListView Id="MonAn_ThietBiBep_LookupListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="ThietBiBep.HangHoa.TenHangHoa" Caption="Thiết bị bếp" />
+      </Columns>
+    </ListView>
+    <DetailView Id="MonAnThongTin_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="MonAnThongTin" Caption="MonAnThongTin">
+              <LayoutGroup Id="Auto11e4002d-1450-4bb1-b33e-dc46c4ff44a1" Caption="">
+                <LayoutGroup Id="Item4">
+                  <LayoutGroup Id="Item1" Caption="Thông tin món ăn" />
+                </LayoutGroup>
+                <LayoutGroup Id="Item3" Caption="Cách làm" />
+              </LayoutGroup>
+              <TabbedGroup Id="Tabs">
+                <LayoutGroup Id="ListMonAnThongTin_ThucPham" Caption="Danh sách thực phẩm" />
+                <LayoutGroup Id="ListMonAn" Caption="Danh sách định lượng" />
+              </TabbedGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="SizeableEditors" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="NguyenPhuLieu_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="NguyenPhuLieu">
+              <LayoutGroup Id="NguyenPhuLieu_col1" Caption="NguyenPhuLieu_col1" />
+              <LayoutGroup Id="NguyenPhuLieu_col2" Caption="NguyenPhuLieu_col2" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="Ghi chú" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="NhomDinhDuong_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="NhomDinhDuong">
+              <LayoutGroup Id="Item1">
+                <LayoutGroup Id="Autob31edaf5-8e3e-4f82-8da8-3a9014f15a06" Caption="Autob31edaf5-8e3e-4f82-8da8-3a9014f15a06(5)" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="NhuCauDinhDuong_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Auto0f6bd360-ad5b-4a45-8291-bcca7c08e6cc" Caption="Auto0f6bd360-ad5b-4a45-8291-bcca7c08e6cc(3)">
+              <LayoutGroup Id="Item1" Caption="Nhu cầu dinh dưỡng">
+                <LayoutGroup Id="Auto05933aae-0e8e-4b6b-9453-57a245e9b6f9" Caption="Auto05933aae-0e8e-4b6b-9453-57a245e9b6f9(4)">
+                  <LayoutGroup Id="Autocec0f38d-1c90-4578-bd9d-34abcc3d717d" Caption="Autocec0f38d-1c90-4578-bd9d-34abcc3d717d(5)" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="Item5" Caption="Cơ cấu P-L-G">
+                <LayoutGroup Id="Auto90d83c05-cc12-4088-b21c-35186c0d97a8" Caption="" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="Ghi chú" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ParentDoParentAsk_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ParentDoParentAsk">
+              <LayoutGroup Id="ParentDoParentAsk_col1" Caption="ParentDoParentAsk_col1" />
+              <LayoutGroup Id="Autoef5d80d2-770b-4c57-9791-abddaee6e80f" Caption="Autoef5d80d2-770b-4c57-9791-abddaee6e80f(6)">
+                <LayoutGroup Id="Item9" Caption="Item9">
+                  <LayoutGroup Id="Auto6dfa8a28-29f6-40ed-a170-2252a9411418" Caption="Auto6dfa8a28-29f6-40ed-a170-2252a9411418(8)">
+                    <LayoutGroup Id="Item10" Caption="Item10" />
+                  </LayoutGroup>
+                  <LayoutGroup Id="Auto96c37d0e-436c-4e6b-9d18-3f7ba0a7b717" Caption="Auto96c37d0e-436c-4e6b-9d18-3f7ba0a7b717(12)">
+                    <LayoutGroup Id="Item12">
+                      <LayoutGroup Id="Item13" Caption="Item13" />
+                    </LayoutGroup>
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="ParentDoParentAsk_col2" Caption="ParentDoParentAsk_col2" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors">
+            <LayoutGroup Id="Auto1663fbeb-4441-4ee3-a8ce-541600ec8a71" Caption="">
+              <TabbedGroup Id="Item2">
+                <LayoutGroup Id="Item1" Caption="Parent do">
+                  <LayoutGroup Id="Auto7ebea373-5706-4ee7-8467-b3abd9fff440" Caption="Auto7ebea373-5706-4ee7-8467-b3abd9fff440(19)">
+                    <LayoutGroup Id="Item4" Caption="Thể loại 1" />
+                    <LayoutGroup Id="Auto3a4fc5f1-5d24-4a20-9579-e4b14700c542" Caption="Auto3a4fc5f1-5d24-4a20-9579-e4b14700c542(25)">
+                      <LayoutGroup Id="Item5" Caption="Thể loại 2" />
+                      <LayoutGroup Id="Item6" Caption="Thể loại 3" />
+                    </LayoutGroup>
+                  </LayoutGroup>
+                </LayoutGroup>
+                <LayoutGroup Id="Item3" Caption="Parent ask" />
+              </TabbedGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="PhieuNhap_ChiTietPhieuNhapList_ListView">
+      <BandsLayout Id="BandsLayout">
+        <Band Id="ThongTinNhapKho" Caption="Thông tin nhập kho" />
+        <Band Id="ThongTinNhaCungCap" Caption="Thông tin nhà cung cấp" />
+      </BandsLayout>
+    </ListView>
+    <ListView Id="PhieuXuat_ChiTietPhieuXuatList_ListView">
+      <BandsLayout Id="BandsLayout">
+        <Band Id="ThongTinXuatKho" Caption="Thông tin xuất kho" />
+        <Band Id="ThongTinNhaCungCap" Caption="Thông tin nhà cung cấp" />
+      </BandsLayout>
+    </ListView>
+    <DetailView Id="QuanLyDonHangBan_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="QuanLyDonHangBan" Caption="QuanLyDonHangBan">
+              <LayoutGroup Id="Auto302d18b2-6a0a-4b9f-85ea-cac4ec72034d" Caption="Auto302d18b2-6a0a-4b9f-85ea-cac4ec72034d(4)" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="QuanLyInMaVachCCDC_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="QuanLyInMaVachCCDC">
+              <LayoutGroup Id="Auto8ad8377f-47da-49a8-aa16-ad574881cddb" Caption="Auto8ad8377f-47da-49a8-aa16-ad574881cddb(7)" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="QuanLyInMaVachTSCD_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="Autoc36d7ca6-5a61-43d0-bbdd-50137bceeaaf" Caption="Autoc36d7ca6-5a61-43d0-bbdd-50137bceeaaf(7)" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="QuyDinhHoanPhi_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SizeableEditors" Caption="Loại điểm danh" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Report_BepAn_KhoBep_DonDatHangDuTru_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="StoreProcedureReport" Caption="Ngày lập báo cáo" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="SoKiemThuc_TimKiemSoKiemThucBuoc1A_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="SoKiemThuc_TimKiemSoKiemThucBuoc1A">
+              <LayoutGroup Id="Auto4ee3e295-d0b0-41b3-ac05-2d26c8475b97" Caption="Auto4ee3e295-d0b0-41b3-ac05-2d26c8475b97(4)">
+                <LayoutGroup Id="Auto83ebba5d-bd1c-4c3c-9288-6af7b2708c0c" Caption="Auto83ebba5d-bd1c-4c3c-9288-6af7b2708c0c(6)" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="Auto9a273369-f958-49fb-b888-a0e2bb3cb6f0" Caption="Auto9a273369-f958-49fb-b888-a0e2bb3cb6f0(10)" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="SoKiemThuc_TimKiemSoKiemThucBuoc1B_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="SoKiemThuc_TimKiemSoKiemThucBuoc1B">
+              <LayoutGroup Id="Autodf679537-1687-4f0e-a235-8b1eb8d8d4ca" Caption="Autodf679537-1687-4f0e-a235-8b1eb8d8d4ca(4)">
+                <LayoutGroup Id="Auto3d8d0b4e-0a5a-4a54-9631-a3a8f52ae827" Caption="Auto3d8d0b4e-0a5a-4a54-9631-a3a8f52ae827(6)" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="Auto26b3282c-fb15-467c-9fcb-fa13f9cfa533" Caption="Auto26b3282c-fb15-467c-9fcb-fa13f9cfa533(10)" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="SoKiemThuc_TimKiemSoKiemThucBuoc2_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="SoKiemThuc_TimKiemSoKiemThucBuoc2">
+              <LayoutGroup Id="Auto7b5718f6-deb4-4aa0-bfe4-1e70288543e2" Caption="Auto7b5718f6-deb4-4aa0-bfe4-1e70288543e2(4)">
+                <LayoutGroup Id="Auto6bf5d7dd-a838-4689-9ec6-c77464a2492d" Caption="Auto6bf5d7dd-a838-4689-9ec6-c77464a2492d(7)" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="Auto92d960e6-9524-4b34-83b1-f879696b133d" Caption="Auto92d960e6-9524-4b34-83b1-f879696b133d(11)" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="SoKiemThuc_TimKiemSoKiemThucBuoc3_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="SoKiemThuc_TimKiemSoKiemThucBuoc3" Caption="SoKiemThuc_TimKiemSoKiemThucBuoc3">
+              <LayoutGroup Id="Autofbf46c76-b338-405f-92a9-2c56acae5b57" Caption="Autofbf46c76-b338-405f-92a9-2c56acae5b57(4)">
+                <LayoutGroup Id="Auto905a2c16-09f5-40a6-bf99-a767cc315a54" Caption="Auto905a2c16-09f5-40a6-bf99-a767cc315a54(5)">
+                  <LayoutGroup Id="Auto44858f08-46cc-4122-99ef-033643d1a0c3" Caption="Auto44858f08-46cc-4122-99ef-033643d1a0c3(8)" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="Auto6b28f626-2808-4ba6-9c47-e8a841e59d93" Caption="Auto6b28f626-2808-4ba6-9c47-e8a841e59d93(12)" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="SuatAn_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Autobb1621f6-2974-4063-a3be-2a07a7b29c71">
+              <LayoutGroup Id="Autoe30f91c1-9586-4c02-861c-c1e309e497d2">
+                <LayoutGroup Id="Auto14f736f1-b6aa-4a6b-a594-b27b912de9a5" Caption="Auto14f736f1-b6aa-4a6b-a594-b27b912de9a5(5)">
+                  <LayoutGroup Id="Autof20d7769-8fd7-44de-9fa6-bfa847e4ff2c" Caption="Autof20d7769-8fd7-44de-9fa6-bfa847e4ff2c(6)">
+                    <LayoutGroup Id="Item1">
+                      <LayoutGroup Id="SuatAn" Caption="Thông tin suất ăn" />
+                    </LayoutGroup>
+                    <LayoutGroup Id="Item13" Caption="Nội dung suất ăn" />
+                    <LayoutGroup Id="Item11" Caption="Dụng cụ" />
+                  </LayoutGroup>
+                  <LayoutGroup Id="Auto99ca2f52-a4c4-44b3-9d5a-d42509c7876c" Caption="Auto99ca2f52-a4c4-44b3-9d5a-d42509c7876c(22)">
+                    <LayoutGroup Id="Auto0ba5f2bf-4826-41aa-b656-3bebc8a688fa" Caption="Auto0ba5f2bf-4826-41aa-b656-3bebc8a688fa(24)">
+                      <TabbedGroup Id="Tabs">
+                        <LayoutGroup Id="Item8" Caption="DS món ăn" />
+                        <LayoutGroup Id="ListSuatAn_ThucPham" Caption="DS thực phẩm" />
+                        <LayoutGroup Id="Item10" Caption="DS dụng cụ" />
+                      </TabbedGroup>
+                      <LayoutGroup Id="Item9">
+                        <LayoutGroup Id="Item7">
+                          <LayoutGroup Id="Item19" Caption="Thành phần dinh dưỡng">
+                            <LayoutGroup Id="Item4" Caption="Thành phần dinh dưỡng">
+                              <LayoutGroup Id="Auto928102fa-120b-4724-87df-c671f63dcf7c" Caption="Auto928102fa-120b-4724-87df-c671f63dcf7c(13)">
+                                <LayoutGroup Id="Autod140a2ab-d01e-437b-bbce-4a1890e01346" Caption="Autod140a2ab-d01e-437b-bbce-4a1890e01346(14)">
+                                  <LayoutGroup Id="Item2" Caption="Thành phần" />
+                                  <LayoutGroup Id="Item23" Caption="Định mức" />
+                                  <LayoutGroup Id="Item22" Caption="Tỉ lệ" />
+                                  <LayoutGroup Id="Item5" Caption="Thành phần" />
+                                  <LayoutGroup Id="Item20" Caption="Định mức" />
+                                  <LayoutGroup Id="Item21" Caption="Tỉ lệ" />
+                                </LayoutGroup>
+                              </LayoutGroup>
+                            </LayoutGroup>
+                          </LayoutGroup>
+                          <LayoutGroup Id="Item14" Caption="Ghi chú" />
+                        </LayoutGroup>
+                      </LayoutGroup>
+                    </LayoutGroup>
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="TaoHoSoHocSinh_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="TaoHoSoHocSinh">
+              <LayoutGroup Id="TaoHoSoHocSinh_col1">
+                <LayoutGroup Id="Item1" Caption="Thông tin hồ sơ" />
+                <LayoutGroup Id="Item2" Caption="Thông tin thu phí" />
+              </LayoutGroup>
+              <LayoutGroup Id="TaoHoSoHocSinh_col2" Caption="TaoHoSoHocSinh_col2">
+                <LayoutGroup Id="ListChiTietTaoHoSoHocSinh_Group" Caption="Danh sách phí" />
+                <LayoutGroup Id="Item3" Caption="Phí phân bổ" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs">
+            <LayoutGroup Id="ListDetailHocPhi" Caption="Detail học phí" />
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ThucDonKhung_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="TuanHoc" Caption="Tuần học áp dụng" />
+      </Items>
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ThucDonKhung_col2">
+              <LayoutGroup Id="ThucDonKhung" Caption="Thực đơn khung">
+                <LayoutGroup Id="ThucDonKhung_col1">
+                  <LayoutGroup Id="Auto09afd929-ffa6-4202-ac04-ce29f09724c2" Caption="Auto09afd929-ffa6-4202-ac04-ce29f09724c2(6)">
+                    <LayoutGroup Id="Item1">
+                      <LayoutGroup Id="Auto26566967-eafd-449c-88c5-5216d646ec23" Caption="Auto26566967-eafd-449c-88c5-5216d646ec23(8)">
+                        <LayoutGroup Id="Item8" Caption="Thời gian" />
+                        <LayoutGroup Id="Item10" Caption="Thông tin thực đơn">
+                          <LayoutGroup Id="Item9" Caption="Nội dung thực đơn">
+                            <LayoutGroup Id="Item16" Caption="Nội dung thực đơn" />
+                            <LayoutGroup Id="Item17" Caption="Dụng cụ" />
+                          </LayoutGroup>
+                        </LayoutGroup>
+                      </LayoutGroup>
+                    </LayoutGroup>
+                    <LayoutGroup Id="Auto18804f4b-a9e3-4244-a813-5d5f2905dd38" Caption="Auto18804f4b-a9e3-4244-a813-5d5f2905dd38(25)">
+                      <LayoutGroup Id="Item2">
+                        <TabbedGroup Id="Tabs">
+                          <LayoutGroup Id="ListThucDonKhung_SuatAn" Caption="DS Suất ăn" />
+                          <LayoutGroup Id="Item18" Caption="DS Món ăn" />
+                          <LayoutGroup Id="Item19" Caption="DS Thực phẩm" />
+                          <LayoutGroup Id="Item20" Caption="DS Thiết bị bếp" />
+                          <LayoutGroup Id="ListThucDonKhung_NguyenPhuLieu" Caption="DS Năng lượng và dịch vụ" />
+                        </TabbedGroup>
+                      </LayoutGroup>
+                      <LayoutGroup Id="Item6" Caption="Thành phần dinh dưỡng">
+                        <LayoutGroup Id="Auto3967589f-5a39-4768-b428-52b8428fa078" Caption="Auto3967589f-5a39-4768-b428-52b8428fa078(58)">
+                          <LayoutGroup Id="Item15" Caption="Thành phần dinh dưỡng">
+                            <LayoutGroup Id="Item5" Caption="Thành phần" />
+                            <LayoutGroup Id="Item3" Caption="Định mức" />
+                            <LayoutGroup Id="Item4" Caption="Tỉ lệ" />
+                            <LayoutGroup Id="Item12" Caption="Thành phần" />
+                            <LayoutGroup Id="Item13" Caption="Định mức" />
+                            <LayoutGroup Id="Item14" Caption="Tỉ lệ" />
+                          </LayoutGroup>
+                          <LayoutGroup Id="Item11" Caption="Ghi chú" />
+                        </LayoutGroup>
+                      </LayoutGroup>
+                    </LayoutGroup>
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="ThucDonKhung">
+              <LayoutGroup Id="ThucDonKhung_col1" Caption="ThucDonKhung_col1">
+                <LayoutGroup Id="Auto09afd929-ffa6-4202-ac04-ce29f09724c2" Caption="Auto09afd929-ffa6-4202-ac04-ce29f09724c2(6)" />
+              </LayoutGroup>
+              <LayoutGroup Id="ThucDonKhung_col2" Caption="ThucDonKhung_col2" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ThucDonKhung_SuatAn_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="Item6" Caption="Thông tin suất ăn">
+            <LayoutGroup Id="ThucDonKhung_SuatAn">
+              <LayoutGroup Id="ThucDonKhung_SuatAn_col1">
+                <LayoutGroup Id="Item19" Caption="Nội dung" />
+                <LayoutGroup Id="Item18" Caption="Dụng cụ" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="Autoc400d99b-407f-44eb-8a7e-3bc9916cb6a4" Caption="Autoc400d99b-407f-44eb-8a7e-3bc9916cb6a4(20)">
+            <TabbedGroup Id="Tabs">
+              <LayoutGroup Id="ListThucDonKhung_SuatAnMonAn" Caption="Danh sách món ăn" />
+              <LayoutGroup Id="ListThucDonKhung_SuatAnThucPham" Caption="Danh sách thực phẩm" />
+              <LayoutGroup Id="ListThucDonKhung_SuatAnThietBiBep" Caption="Danh sách thiết bị bếp" />
+            </TabbedGroup>
+            <LayoutGroup Id="Auto41832810-4a67-4ee7-aaee-4497be23260f" Caption="Auto41832810-4a67-4ee7-aaee-4497be23260f(29)">
+              <LayoutGroup Id="Item4" Caption="Thành phần dinh dưỡng">
+                <LayoutGroup Id="Item3">
+                  <LayoutGroup Id="Item8" Caption="Thành phần" />
+                  <LayoutGroup Id="Item9" Caption="Định mức" />
+                  <LayoutGroup Id="Item7" Caption="Tỉ lệ" />
+                </LayoutGroup>
+                <LayoutGroup Id="Item5">
+                  <LayoutGroup Id="Item10" Caption="Thành phần" />
+                  <LayoutGroup Id="Item11" Caption="Định mức" />
+                  <LayoutGroup Id="Item2" Caption="Tỉ lệ" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="Item1" Caption="Ghi chú" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs">
+            <LayoutGroup Id="ListThucDonKhung_SuatAnMonAn" Caption="Danh sách món ăn">
+              <LayoutGroup Id="Item4" Caption="Thành phần dinh dưỡng">
+                <LayoutGroup Id="Item13" Caption=" ">
+                  <LabelItem Id="LabelItem1" Text="Thành phần" />
+                  <LabelItem Id="LabelItem2" Text="Định mức" />
+                  <LabelItem Id="LabelItem3" Text="Tỉ lệ" />
+                </LayoutGroup>
+                <LayoutGroup Id="Item7" Caption="Năng lượng" />
+                <LayoutGroup Id="Item8" Caption="Đạm ĐV" />
+                <LayoutGroup Id="Item9" Caption="Đạm TV" />
+                <LayoutGroup Id="Item10" Caption="Béo ĐV" />
+                <LayoutGroup Id="Item11" Caption="Béo TV" />
+                <LayoutGroup Id="Item12" Caption="Đường" />
+                <LayoutGroup Id="Item1" Caption="Ghi chú" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="ListThucDonKhung_SuatAnThucPham" Caption="Danh sách thực phẩm" />
+            <LayoutGroup Id="ListThucDonKhung_SuatAnThietBiBep" Caption="Danh sách thiết bị bếp" />
+          </TabbedGroup>
+          <LayoutGroup Id="SimpleEditors" Caption="SimpleEditors">
+            <LayoutGroup Id="Item6" Caption="Thông tin suất ăn">
+              <LayoutGroup Id="ThucDonKhung_SuatAn">
+                <LayoutGroup Id="ThucDonKhung_SuatAn_col1">
+                  <LayoutGroup Id="Auto5c6c905e-4e5e-4d4f-9eb3-70d325a62d52" Caption="" />
+                  <LayoutGroup Id="Item15">
+                    <LayoutGroup Id="Auto3e7558b6-c623-4c0a-b128-9cc1e782003c" Caption="" />
+                    <LayoutGroup Id="Autof4d70a23-4598-479c-94db-08c959e43011" Caption="" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+      <Items Id="Items">
+        <PropertyEditor Id="DMTPNangLuong" Caption="Định mức" />
+        <PropertyEditor Id="TLTPNangLuong" Caption="Tỉ lệ" />
+        <PropertyEditor Id="TPNangLuong" Caption="Calo" />
+      </Items>
+    </DetailView>
+    <DetailView Id="ThucDonNgay_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ThucDonNgay">
+              <LayoutGroup Id="Autode6f4471-3e9b-4e11-bdf5-9ab920c54de1">
+                <LayoutGroup Id="Item1">
+                  <LayoutGroup Id="Item4">
+                    <LayoutGroup Id="Item11" Caption="Thông tin thực đơn ngày" />
+                    <LayoutGroup Id="Item13" Caption="Nội dung">
+                      <LayoutGroup Id="Item14" Caption="Dụng cụ" />
+                    </LayoutGroup>
+                  </LayoutGroup>
+                </LayoutGroup>
+                <LayoutGroup Id="Autodb9a736e-5789-44a3-92fd-40316fb47bcf">
+                  <LayoutGroup Id="Item3" Caption="Ghi chú">
+                    <TabbedGroup Id="Tabs">
+                      <LayoutGroup Id="ListThucDonNgay_SuatAn" Caption="DS Suất ăn" />
+                      <LayoutGroup Id="ListThucDonNgay_MonAn" Caption="DS Món ăn" />
+                      <LayoutGroup Id="ListThucDonNgay_ThucPham" Caption="DS Thực phẩm" />
+                      <LayoutGroup Id="ListThucDonNgay_ThietBiBep" Caption="DS Thiết bị bếp" />
+                      <LayoutGroup Id="ListThucDonNgay_NguyenPhuLieu" Caption="DS Năng lượng và dịch vụ" />
+                    </TabbedGroup>
+                  </LayoutGroup>
+                  <LayoutGroup Id="Item5" Caption="Item5">
+                    <LayoutGroup Id="Item6" Caption="Thành phần" />
+                    <LayoutGroup Id="Item7" Caption="Định mức" />
+                    <LayoutGroup Id="Item8" Caption="Tỉ lệ" />
+                    <LayoutGroup Id="Item9" Caption="Thành phần" />
+                    <LayoutGroup Id="Item10" Caption="Định mức" />
+                    <LayoutGroup Id="Item12" Caption="Tỉ lệ" />
+                    <LayoutGroup Id="Item2" Caption="Ghi chú" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs">
+            <LayoutGroup Id="ListThucDonNgay_SuatAn" Caption="DS Suất ăn" />
+            <LayoutGroup Id="ListThucDonNgay_MonAn" Caption="DS Món ăn" />
+            <LayoutGroup Id="ListThucDonNgay_ThucPham" Caption="DS Thực phẩm" />
+            <LayoutGroup Id="ListThucDonNgay_ThietBiBep" Caption="DS Thiết bị bếp" />
+            <LayoutGroup Id="ListThucDonNgay_NguyenPhuLieu" Caption="DS Năng lượng và dịch vụ" />
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ThucPham_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ThucPham_col1">
+              <LayoutGroup Id="Auto3ae00e70-f93f-497c-885d-200cea61a4bd" Caption="Auto3ae00e70-f93f-497c-885d-200cea61a4bd(4)">
+                <LayoutGroup Id="Autoea02409e-272a-4d9e-974c-80ce69166e6c" Caption="Autoea02409e-272a-4d9e-974c-80ce69166e6c(5)">
+                  <LayoutGroup Id="Auto00d243af-3a6e-4553-9c56-cd4bd6ebe7fd" Caption="">
+                    <LayoutGroup Id="Item4" Caption="Thực phẩm" />
+                    <LayoutGroup Id="Item5" Caption="Đơn giá" />
+                  </LayoutGroup>
+                  <LayoutGroup Id="Auto25772826-0a6c-49cb-9372-c4df3e7bf40d" Caption="">
+                    <LayoutGroup Id="Item1" Caption="Thành phần dinh dưỡng" />
+                    <LayoutGroup Id="Item3" Caption="Vitamin" />
+                    <LayoutGroup Id="Item2" Caption="Muối khoáng" />
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="ListThucPhamCon_Group" Caption="Danh sách thực phẩm" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ThuPhi_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ThuPhi">
+              <LayoutGroup Id="ThuPhi_col1">
+                <LayoutGroup Id="Auto7debed6e-24e5-4289-bfc5-7a7f703060f9" Caption="Auto7debed6e-24e5-4289-bfc5-7a7f703060f9(5)">
+                  <LayoutGroup Id="Autoeedc73ac-b534-4bd7-b4ed-c0fbc6e33fb8" Caption="Autoeedc73ac-b534-4bd7-b4ed-c0fbc6e33fb8(6)">
+                    <LayoutGroup Id="Item1" Caption="Thông tin học sinh" />
+                    <LayoutGroup Id="Item2" Caption="Thông tin thu phí" />
+                  </LayoutGroup>
+                  <LayoutGroup Id="Autoc56d8840-af33-4076-96b1-09a2af1b40f8" Caption="Autoc56d8840-af33-4076-96b1-09a2af1b40f8(30)">
+                    <LayoutGroup Id="ListChiTietThuPhi" Caption="Danh sách phí" />
+                    <LayoutGroup Id="Auto9eb3f69f-446a-4848-8360-bc018f1b8cec" Caption="Auto9eb3f69f-446a-4848-8360-bc018f1b8cec(33)">
+                      <LayoutGroup Id="ListDetailHocPhi" Caption="Detail học phí" />
+                      <LayoutGroup Id="ListDetailDongPhucHocPham" Caption="Detail Đồng phục - Học phẩm" />
+                    </LayoutGroup>
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ThuPhiLanDau_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ThuPhiLanDau">
+              <LayoutGroup Id="ThuPhiLanDau_col1">
+                <LayoutGroup Id="Auto1acf8a8d-12da-4144-9b0d-057fb43b534b">
+                  <LayoutGroup Id="Auto4d363a6c-06b3-42e4-af9a-ce08dd1a5676" Caption="Auto4d363a6c-06b3-42e4-af9a-ce08dd1a5676(6)">
+                    <LayoutGroup Id="Auto5138b00c-6966-48c9-b511-254d74916074" Caption="Auto5138b00c-6966-48c9-b511-254d74916074(7)">
+                      <LayoutGroup Id="Item1" Caption="Thông tin học sinh" />
+                      <LayoutGroup Id="Item2" Caption="Thông tin thu phí" />
+                    </LayoutGroup>
+                    <LayoutGroup Id="Auto1decd04e-ec43-4d6e-9a48-00f4ffa98688" Caption="Auto1decd04e-ec43-4d6e-9a48-00f4ffa98688(34)">
+                      <LayoutGroup Id="ListChiTietThuPhiLanDau" Caption="Danh sách phí" />
+                      <LayoutGroup Id="Auto2c24ed6d-5ac1-4a96-bdb9-026d6dfeaeab" Caption="Auto2c24ed6d-5ac1-4a96-bdb9-026d6dfeaeab(37)">
+                        <LayoutGroup Id="ListDetailHocPhi" Caption="Detail học phí" />
+                        <LayoutGroup Id="ListDetailDongPhucHocPham" Caption="Detail Đồng phục - Học phẩm" />
+                      </LayoutGroup>
+                    </LayoutGroup>
+                  </LayoutGroup>
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="TinhTrang_CapNhatTinhTrang_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="TinhTrang_CapNhatTinhTrang">
+              <LayoutGroup Id="TinhTrang_CapNhatTinhTrang_col2" Caption="TinhTrang_CapNhatTinhTrang_col2">
+                <LayoutGroup Id="Auto92874852-f24a-4a9a-ac1a-51bee80d6093" Caption="Auto92874852-f24a-4a9a-ac1a-51bee80d6093(5)">
+                  <LayoutGroup Id="Item2" Caption="Tìm kiếm">
+                    <LayoutGroup Id="Auto5f873b3e-2112-4c3f-9bd1-02b90f586248" Caption="Auto5f873b3e-2112-4c3f-9bd1-02b90f586248(7)" />
+                    <LayoutGroup Id="Auto1485d3f7-a0c2-4b05-a2bd-2a5c5ac7f470" Caption="Auto1485d3f7-a0c2-4b05-a2bd-2a5c5ac7f470(11)" />
+                  </LayoutGroup>
+                </LayoutGroup>
+                <LayoutGroup Id="Autoa760365d-0e70-4604-b6e9-662500579423" Caption="Autoa760365d-0e70-4604-b6e9-662500579423(11)">
+                  <LayoutGroup Id="Item1" Caption="Loại nghiệp vụ" />
+                  <LayoutGroup Id="Autob3125921-fb65-4c11-9215-1e53129b4821" Caption="Autob3125921-fb65-4c11-9215-1e53129b4821(17)" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" Caption="Lý do" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Analysis_DetailView">
+      <Items Id="Items">
+        <PropertyEditor Id="Name" Caption="Tên" />
+      </Items>
+    </DetailView>
+    <ListView Id="Analysis_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <ListView Id="Analysis_LookupListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <ListView Id="DuToanThuPhi_LookupListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Name" Caption="Tên" />
+      </Columns>
+    </ListView>
+    <ListView Id="HoaDonBienLai_ListView" Caption="Hóa đơn" />
+  </Views>
+</Application>

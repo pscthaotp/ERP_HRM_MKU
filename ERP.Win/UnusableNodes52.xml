@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="ChiTietLoaiGiamTru_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="11.066666666666666">
+            <LayoutGroup Id="ChiTietLoaiGiamTru" RelativeSize="100">
+              <LayoutItem Id="MaChiTiet" RelativeSize="38.554216867469883" />
+              <LayoutItem Id="DienGiai" RelativeSize="28.91566265060241" />
+              <LayoutItem Id="NgungSuDung" RelativeSize="32.53012048192771" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="88.933333333333337">
+            <LayoutItem Id="CongThucTinhSoTien" CaptionLocation="Top" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="LoaiGiamTru_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="17.819148936170212">
+            <LayoutGroup Id="LoaiGiamTru" ShowCaption="False" RelativeSize="100" Direction="Vertical">
+              <LayoutGroup Id="LoaiGiamTru_col1" RelativeSize="100">
+                <LayoutItem Id="MaQuanLy" RelativeSize="23.880597014925375" />
+                <LayoutItem Id="TenLoaiGiamTru" RelativeSize="17.910447761194028" />
+                <LayoutItem Id="ChinhSachGiamTru" RelativeSize="17.910447761194028" />
+                <LayoutItem Id="TuNgay" ViewItem="TuNgay" Index="3" RelativeSize="17.910447761194028" />
+                <LayoutItem Id="DenNgay" ViewItem="DenNgay" Index="4" RelativeSize="22.388059701492537" />
+              </LayoutGroup>
+              <LayoutGroup Id="LoaiGiamTru_col2" RelativeSize="49.936143039591315" Caption="LoaiGiamTru_col2" Direction="Horizontal" Removed="True">
+                <LayoutItem Id="DenNgay" RelativeSize="100" Index="0" Removed="True" />
+                <LayoutItem Id="TuNgay" RelativeSize="37.2093023255814" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SizeableEditors" RelativeSize="41.090425531914896">
+            <LayoutItem Id="DieuKienHocSinh" RelativeSize="100" CaptionLocation="Top" />
+          </LayoutGroup>
+          <LayoutGroup Id="ListChiTietLoaiGiamTru_Group" TextAlignMode="AlignWithChildren" Direction="Vertical" RelativeSize="41.090425531914896">
+            <LayoutItem Id="ListChiTietLoaiGiamTru" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="LoaiGiamTru_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="MaQuanLy" Index="0" />
+        <ColumnInfo Id="TenLoaiGiamTru" Width="111" Index="1" />
+        <ColumnInfo Id="ChinhSachGiamTru" Width="115" />
+      </Columns>
+    </ListView>
+    <DetailView Id="ChiTietTimKiemHocSinh_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ChiTietTimKiemHocSinh_col2">
+              <LayoutItem Id="TinhTrang" ViewItem="TinhTrang" />
+              <LayoutItem Id="Email" ViewItem="Email" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="ThucDonNgay_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="ThucDonNgay">
+              <LayoutGroup Id="Autode6f4471-3e9b-4e11-bdf5-9ab920c54de1">
+                <LayoutGroup Id="Item1">
+                  <LayoutItem Id="MaQuanLy" ViewItem="MaQuanLy" />
+                </LayoutGroup>
+              </LayoutGroup>
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>
