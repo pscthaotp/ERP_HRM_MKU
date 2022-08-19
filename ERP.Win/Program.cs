@@ -47,7 +47,7 @@ namespace ERP.Win {
             }
 
             //Cập nhật databse
-            winApplication.DatabaseUpdateMode = DatabaseUpdateMode.Never;
+            winApplication.DatabaseUpdateMode = DatabaseUpdateMode.UpdateDatabaseAlways;
 
             //Code để mở ScriptRecorderController (bắt buộc)
             DevExpress.ExpressApp.ScriptRecorder.ScriptRecorderControllerBase.ScriptRecorderEnabled = true;
