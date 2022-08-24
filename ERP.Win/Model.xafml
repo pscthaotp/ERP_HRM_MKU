@@ -582,25 +582,30 @@
       </Layout>
     </DetailView>
     <DetailView Id="BoPhan_DetailView">
+      <Items>
+        <PropertyEditor Id="BoPhanCha" PropertyName="BoPhanCha" IsNewNode="True" />
+      </Items>
       <Layout>
         <LayoutGroup Id="Main" RelativeSize="100">
-          <LayoutGroup Id="SimpleEditors" RelativeSize="29.310344827586206">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="29.938271604938272">
             <LayoutGroup Id="BoPhan" Caption="Đơn vị" RelativeSize="100" Direction="Vertical">
               <LayoutGroup Id="BoPhan_col1" RelativeSize="100" Caption="BoPhan_col1" Direction="Horizontal">
-                <LayoutGroup Id="Auto90c1ab85-3532-4f35-93dd-20c6cb1a4372" ShowCaption="False" Caption="Auto90c1ab85-3532-4f35-93dd-20c6cb1a4372(5)" Index="0" RelativeSize="50.07727975270479" IsNewNode="True">
-                  <LayoutItem Id="STT" ViewItem="STT" Index="0" RelativeSize="24.615384615384617" IsNewNode="True" />
-                  <LayoutItem Id="MaQuanLy" ViewItem="MaQuanLy" Index="1" RelativeSize="18.46153846153846" IsNewNode="True" />
-                  <LayoutItem Id="MaBoPhan" ViewItem="MaBoPhan" Index="2" RelativeSize="18.46153846153846" IsNewNode="True" />
-                  <LayoutItem Id="TenBoPhan" ViewItem="TenBoPhan" Index="3" RelativeSize="38.46153846153846" IsNewNode="True" />
+                <LayoutGroup Id="Auto90c1ab85-3532-4f35-93dd-20c6cb1a4372" ShowCaption="False" Caption="Auto90c1ab85-3532-4f35-93dd-20c6cb1a4372(5)" Index="0" RelativeSize="37.481031866464342" IsNewNode="True">
+                  <LayoutItem Id="STT" ViewItem="STT" Index="0" RelativeSize="20.779220779220779" IsNewNode="True" />
+                  <LayoutItem Id="MaQuanLy" ViewItem="MaQuanLy" Index="1" RelativeSize="15.584415584415584" IsNewNode="True" />
+                  <LayoutItem Id="MaBoPhan" ViewItem="MaBoPhan" Index="2" RelativeSize="15.584415584415584" IsNewNode="True" />
+                  <LayoutItem Id="TenBoPhan" ViewItem="TenBoPhan" Index="3" RelativeSize="48.051948051948052" IsNewNode="True" />
                 </LayoutGroup>
-                <LayoutGroup Id="Autoba9cdb99-f1ac-4574-84ac-833ef9c9b1c6" ShowCaption="False" Caption="Autoba9cdb99-f1ac-4574-84ac-833ef9c9b1c6(10)" Index="1" RelativeSize="49.92272024729521" IsNewNode="True">
-                  <LayoutItem Id="LoaiBoPhan" ViewItem="LoaiBoPhan" Index="0" RelativeSize="24.615384615384617" IsNewNode="True" />
-                  <LayoutItem Id="CapDonVi" ViewItem="CapDonVi" Index="1" RelativeSize="18.46153846153846" IsNewNode="True" />
-                  <LayoutItem Id="CongTy" ViewItem="CongTy" Index="2" RelativeSize="18.46153846153846" IsNewNode="True" />
-                  <LayoutItem Id="KhongTinhLuong" ViewItem="KhongTinhLuong" Index="3" RelativeSize="16.153846153846153" IsNewNode="True" />
-                  <LayoutItem Id="NgungHoatDong" ViewItem="NgungHoatDong" Index="4" RelativeSize="22.307692307692307" IsNewNode="True" />
+                <LayoutGroup Id="Autoba9cdb99-f1ac-4574-84ac-833ef9c9b1c6" ShowCaption="False" Caption="Autoba9cdb99-f1ac-4574-84ac-833ef9c9b1c6(10)" Index="1" RelativeSize="37.329286798179062" IsNewNode="True">
+                  <LayoutItem Id="LoaiBoPhan" ViewItem="LoaiBoPhan" Index="0" RelativeSize="20.779220779220779" IsNewNode="True" />
+                  <LayoutItem Id="CapDonVi" ViewItem="CapDonVi" Index="1" RelativeSize="15.584415584415584" IsNewNode="True" />
+                  <LayoutItem Id="BoPhanCha" ViewItem="BoPhanCha" Index="2" RelativeSize="15.584415584415584" IsNewNode="True" />
+                  <LayoutItem Id="CongTy" ViewItem="CongTy" Index="3" RelativeSize="15.584415584415584" IsNewNode="True" />
+                  <LayoutItem Id="KhongTinhLuong" ViewItem="KhongTinhLuong" Index="4" RelativeSize="13.636363636363637" IsNewNode="True" />
+                  <LayoutItem Id="NgungHoatDong" ViewItem="NgungHoatDong" Index="5" RelativeSize="18.831168831168831" IsNewNode="True" />
                 </LayoutGroup>
                 <LayoutItem Id="STT" RelativeSize="15.286624203821656" Index="1" Removed="True" />
+                <LayoutItem Id="CostCenter" RelativeSize="25.1896813353566" />
                 <LayoutItem Id="MaQuanLy" RelativeSize="15.286624203821656" Index="3" Removed="True" />
                 <LayoutItem Id="TenBoPhan" RelativeSize="15.286624203821656" Index="4" Removed="True" />
                 <LayoutItem Id="MaBoPhan" Removed="True" />
@@ -612,7 +617,7 @@
               </LayoutGroup>
             </LayoutGroup>
           </LayoutGroup>
-          <LayoutGroup Id="ListBoPhanCon_Group" TextAlignMode="AlignWithChildren" Direction="Vertical" RelativeSize="70.6896551724138">
+          <LayoutGroup Id="ListBoPhanCon_Group" TextAlignMode="AlignWithChildren" Direction="Vertical" RelativeSize="70.061728395061735">
             <LayoutItem Id="ListBoPhanCon" RelativeSize="100" />
           </LayoutGroup>
         </LayoutGroup>
