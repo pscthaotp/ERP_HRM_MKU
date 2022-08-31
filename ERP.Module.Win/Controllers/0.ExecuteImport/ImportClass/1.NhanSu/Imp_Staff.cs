@@ -4083,10 +4083,6 @@ namespace ERP.Module.Controllers.Win.ExecuteImport.ImportClass.NhanSu
                                                 errorLog.AppendLine(" + Chức danh không hợp lệ: " + txtChucDanhCongViec);
                                             }
                                         }
-                                        else
-                                        {
-                                            errorLog.AppendLine(" + Thiếu chức danh công việc.");
-                                        }
                                         #endregion
 
                                         #region 29. Bộ phận
@@ -4107,11 +4103,13 @@ namespace ERP.Module.Controllers.Win.ExecuteImport.ImportClass.NhanSu
                                                     else
                                                     {
                                                         errorLog.AppendLine(string.Format(" + {0} không được tìm thấy trong {1}: ", txtDonVi, obj.CongTy.TenBoPhan.ToString()));
+                                                        sucessImport = false;
                                                     }
                                                 }
                                                 else
                                                 {
                                                     errorLog.AppendLine(" + Bộ phận không được để trống.");
+                                                    sucessImport = false;
                                                 }
                                             }
                                         }
@@ -4128,6 +4126,7 @@ namespace ERP.Module.Controllers.Win.ExecuteImport.ImportClass.NhanSu
                                             else
                                             {
                                                 errorLog.AppendLine(" + Công việc hiện nay không hợp lệ: " + txtCongViecHienNay);
+                                                sucessImport = false;
                                             }
                                         }
                                         #endregion
@@ -4143,6 +4142,7 @@ namespace ERP.Module.Controllers.Win.ExecuteImport.ImportClass.NhanSu
                                             catch
                                             {
                                                 errorLog.AppendLine(" + Ngày tuyển dụng lần đầu không hợp lệ: " + txtNgayTuyenDung);
+                                                sucessImport = false;
                                             }
                                         }
                                         #endregion
@@ -5112,24 +5112,36 @@ namespace ERP.Module.Controllers.Win.ExecuteImport.ImportClass.NhanSu
                                             }
                                         }
                                         #endregion
+                                        if(sucessImport == true)
+                                        {
+                                            sucessNumber++;
+                                            sucessImport = true;
+
+                                        }
+                                        else
+                                        {
+                                            erorrNumber++;
+                                            sucessImport = true;
+
+                                        }
                                     }
                                     #endregion
 
                                     ///////////////////////////NẾU THÀNH CÔNG THÌ SAVE/////////////////////////////////
-                                    if (sucessImport)
-                                    {
-                                        //Lưu
-                                        uow.CommitChanges();
-                                        //
-                                        sucessNumber++;
-                                    }
-                                    else
-                                    {
-                                        uow.RollbackTransaction();
-                                        erorrNumber++;
-                                        //
-                                        sucessImport = true;
-                                    }
+
+                                }
+
+                               if (erorrNumber == 0)
+                                {
+                                    //Lưu
+                                    uow.CommitChanges();
+                                    //
+                                }
+                                else
+                                {
+                                    uow.RollbackTransaction();
+                                    erorrNumber++;
+                                    //
                                 }
                                 // End Duyệt qua tất cả các dòng trong file excel
                             }
