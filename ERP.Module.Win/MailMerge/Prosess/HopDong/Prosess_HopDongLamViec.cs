@@ -63,7 +63,7 @@ namespace ERP.Module.Win.MailMerge.Prosess.HopDong
                     hd.CMNDNguoiKy = hopDong.NguoiKy.CMND;
                     hd.NgayCapNguoiKy = hopDong.NguoiKy.NgayCap.ToString("dd/MM/yyyy");
                     hd.NoiCapNguoiKy = hopDong.NguoiKy.NoiCap != null ? "CA. " + hopDong.NguoiKy.NoiCap.TenTinhThanh : "";
-                    hd.TenChucVuNguoiKy = hopDong.ChucVuNguoiKy != null ? hopDong.ChucVuNguoiKy.ChucDanh.TenChucDanh : "";
+                    hd.TenChucVuNguoiKy = hopDong.ChucVuNguoiKy != null ? hopDong.ChucVuNguoiKy.ChucVu.TenChucVu : "";
                 }
                 //Người lao động
                 if (hopDong.ThongTinNhanVien != null)
@@ -300,7 +300,7 @@ namespace ERP.Module.Win.MailMerge.Prosess.HopDong
                     hd.CMNDNguoiKy = hopDong.NguoiKy.CMND;
                     hd.NgayCapNguoiKy = hopDong.NguoiKy.NgayCap.ToString("dd/MM/yyyy");
                     hd.NoiCapNguoiKy = hopDong.NguoiKy.NoiCap != null ? "CA. " + hopDong.NguoiKy.NoiCap.TenTinhThanh : "";
-                    hd.TenChucVuNguoiKy = hopDong.ChucVuNguoiKy != null ? hopDong.ChucVuNguoiKy.ChucDanh.TenChucDanh : "";
+                    hd.TenChucVuNguoiKy = hopDong.ChucVuNguoiKy != null ? hopDong.ChucVuNguoiKy.ChucVu.TenChucVu : "";
                     hd.SoDienThoaiNK = hopDong.NguoiKy.DienThoaiDiDong != null ? hopDong.NguoiKy.DienThoaiDiDong.ToString() : "" ;
                 }
                 //Người lao động

@@ -34,7 +34,7 @@ namespace ERP.Module.Win.MailMerge.Prosess.HopDong
                 hd.SoHopDong = hopDong.SoHopDong;
                 hd.NgayKy = hopDong.NgayKy.ToString("'ngày' dd 'tháng' MM 'năm' yyyy");
                 hd.NgayKyDate = hopDong.NgayKy.ToString("dd/MM/yyyy");
-                hd.TenChucVuNguoiKy = hopDong.ChucVuNguoiKy != null ? hopDong.ChucVuNguoiKy.ChucDanh.TenChucDanh : "";
+                hd.TenChucVuNguoiKy = hopDong.ChucVuNguoiKy != null ? hopDong.ChucVuNguoiKy.ChucVu.TenChucVu : "";
                 hd.CanCu = hopDong.CanCu;
                 if (hopDong.NguoiKy != null)
                 {

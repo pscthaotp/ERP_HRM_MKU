@@ -43,8 +43,8 @@ namespace ERP.Module.Win.MailMerge.Prosess.TuyenDung
                 non_ThuTuyenDung.LuongCoBan = trungTuyen.LuongCoBan.ToString("N0");
                 non_ThuTuyenDung.LuongKinhDoanh = trungTuyen.LuongKinhDoanh.ToString("N0");
                 non_ThuTuyenDung.PhanTramTinhLuong = trungTuyen.PhanTramTinhLuong.ToString("N0");
-                non_ThuTuyenDung.ChucVuNguoiKy = trungTuyen.QuanLyTuyenDung.ChucVuNguoiKy != null ? trungTuyen.QuanLyTuyenDung.ChucVuNguoiKy.ChucDanh.TenChucDanh.ToUpper() : "";
-                non_ThuTuyenDung.ChucVuNguoiKyVietThuong = trungTuyen.QuanLyTuyenDung.ChucVuNguoiKy != null ? trungTuyen.QuanLyTuyenDung.ChucVuNguoiKy.ChucDanh.TenChucDanh : "";
+                non_ThuTuyenDung.ChucVuNguoiKy = trungTuyen.QuanLyTuyenDung.ChucVuNguoiKy != null ? trungTuyen.QuanLyTuyenDung.ChucVuNguoiKy.ChucVu.TenChucVu.ToUpper() : "";
+                non_ThuTuyenDung.ChucVuNguoiKyVietThuong = trungTuyen.QuanLyTuyenDung.ChucVuNguoiKy != null ? trungTuyen.QuanLyTuyenDung.ChucVuNguoiKy.ChucVu.TenChucVu : "";
                 if (trungTuyen.QuanLyTuyenDung.NguoiKy != null)
                 {
                     non_ThuTuyenDung.TenNguoiKyVietHoa = trungTuyen.QuanLyTuyenDung.NguoiKy.HoTen != "" ? trungTuyen.QuanLyTuyenDung.NguoiKy.HoTen.ToUpper() : trungTuyen.QuanLyTuyenDung.TenNguoiKy.ToUpper();

@@ -92,15 +92,15 @@ namespace ERP.Module.Commons
         {
             CriteriaOperator filter;
             if (phanLoai.TenPhanLoaiNguoiKy.Contains("đang tại chức"))
-                filter = CriteriaOperator.Parse("ChucDanh.Oid=?", chucVu.ChucDanh != null ? chucVu.ChucDanh.Oid : Guid.Empty);
+                filter = CriteriaOperator.Parse("ChucVu.Oid=?", chucVu.ChucVu != null ? chucVu.ChucVu.Oid : Guid.Empty);
             else if (phanLoai.TenPhanLoaiNguoiKy.Contains("không tại chức"))
             {
-                List<Guid> guidList = DataProvider.GetGuidList("spd_HopDong_ChucVuDaQuaCuaNguoiDaKhongTaiChuc", CommandType.StoredProcedure, new SqlParameter("@ChucVu", chucVu.ChucDanh != null ? chucVu.ChucDanh.Oid : Guid.Empty));
+                List<Guid> guidList = DataProvider.GetGuidList("spd_HopDong_ChucVuDaQuaCuaNguoiDaKhongTaiChuc", CommandType.StoredProcedure, new SqlParameter("@ChucVu", chucVu.ChucVu != null ? chucVu.ChucVu.Oid : Guid.Empty));
                 //
                 filter = new InOperator("Oid", guidList);
             }
             else
-                filter = CriteriaOperator.Parse("ChucDanh.Oid=?", chucVu.ChucDanh != null ? chucVu.ChucDanh.Oid : Guid.Empty);
+                filter = CriteriaOperator.Parse("ChucVu.Oid=?", chucVu.ChucVu != null ? chucVu.ChucVu.Oid : Guid.Empty);
             //
             return filter;
         }

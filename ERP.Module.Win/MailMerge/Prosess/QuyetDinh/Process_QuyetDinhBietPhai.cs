@@ -44,7 +44,7 @@ namespace ERP.Module.Win.MailMerge.Prosess.QuyetDinh
                 qd.CanCu = quyetDinh.CanCu;
                 qd.NoiNhan = quyetDinh.NoiNhan;
                 qd.NoiDung = quyetDinh.NoiDung;
-                qd.ChucVuNguoiKy = quyetDinh.ChucVuNguoiKy != null ? quyetDinh.ChucVuNguoiKy.ChucDanh.TenChucDanh.ToUpper() : "";
+                qd.ChucVuNguoiKy = quyetDinh.ChucVuNguoiKy != null ? quyetDinh.ChucVuNguoiKy.ChucVu.TenChucVu.ToUpper() : "";
                 if (quyetDinh.NguoiKy != null)
                 {
                     qd.TenNguoiKyVietHoa = quyetDinh.NguoiKy.HoTen != "" ? quyetDinh.NguoiKy.HoTen.ToUpper() : quyetDinh.TenNguoiKy.ToUpper();
@@ -61,7 +61,7 @@ namespace ERP.Module.Win.MailMerge.Prosess.QuyetDinh
                 qd.ChucVu = quyetDinh.ThongTinNhanVien.ChucVu != null ? quyetDinh.ThongTinNhanVien.ChucVu.TenChucVu : "";
                 //
                 qd.ChucVuCu = quyetDinh.ChucVuCu != null ? quyetDinh.ChucVuCu.TenChucVu : "";
-                qd.ChucVuNguoiKyVietThuong = quyetDinh.ChucVuNguoiKy != null ? quyetDinh.ChucVuNguoiKy.ChucDanh.TenChucDanh : "";
+                qd.ChucVuNguoiKyVietThuong = quyetDinh.ChucVuNguoiKy != null ? quyetDinh.ChucVuNguoiKy.ChucVu.TenChucVu : "";
                 qd.ChucDanhMoi = quyetDinh.ChucDanhMoi.TenChucDanh != null ? quyetDinh.ChucDanhMoi.TenChucDanh : "";
                 qd.TenTruongHoacCongTyMoi = quyetDinh.BoPhanMoi.CongTy.TenBoPhan != null ? quyetDinh.BoPhanMoi.CongTy.TenBoPhan : "";
                 qd.BoPhanMoi = quyetDinh.BoPhanMoi.TenBoPhan != null ? quyetDinh.BoPhanMoi.TenBoPhan : "";

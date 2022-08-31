@@ -127,15 +127,15 @@ namespace ERP.Module.NonPersistentObjects.NhanSu
             {
                 LoaiCongTy = Session.FindObject<LoaiCongTy>(CriteriaOperator.Parse("TenLoaiCongTy like ?", "%Công ty%"));
                 PhanLoaiNguoiKy = Session.FindObject<PhanLoaiNguoiKy>(CriteriaOperator.Parse("TenPhanLoaiNguoiKy like ? and LoaiCongTy=?", "%đang tại chức%", LoaiCongTy != null ? LoaiCongTy.Oid : Guid.Empty));
-                ChucVuNguoiKy = Session.FindObject<ChucVuNguoiKy>(CriteriaOperator.Parse("ChucDanh.TenChucDanh like ?", "Tổng Giám đốc"));
-                NguoiKy = Session.FindObject<ThongTinNhanVien>(CriteriaOperator.Parse("ChucDanh.Oid = ? and !TinhTrang.DaNghiViec and CongTy=?", ChucVuNguoiKy != null ? ChucVuNguoiKy.ChucDanh.Oid : Guid.Empty, CongTy!= null ? CongTy.Oid : Guid.Empty));
+                ChucVuNguoiKy = Session.FindObject<ChucVuNguoiKy>(CriteriaOperator.Parse("ChucVu.TenChucVu like ?", "Tổng Giám đốc"));
+                NguoiKy = Session.FindObject<ThongTinNhanVien>(CriteriaOperator.Parse("ChucVu.Oid = ? and !TinhTrang.DaNghiViec and CongTy=?", ChucVuNguoiKy != null ? ChucVuNguoiKy.ChucVu.Oid : Guid.Empty, CongTy!= null ? CongTy.Oid : Guid.Empty));
             }
             else
             {
                 LoaiCongTy = Session.FindObject<LoaiCongTy>(CriteriaOperator.Parse("TenLoaiCongTy like ?", "%Trường%"));
                 PhanLoaiNguoiKy = Session.FindObject<PhanLoaiNguoiKy>(CriteriaOperator.Parse("TenPhanLoaiNguoiKy like ? and LoaiCongTy=?", "%đang tại chức%", LoaiCongTy != null ? LoaiCongTy.Oid : Guid.Empty));
-                ChucVuNguoiKy = Session.FindObject<ChucVuNguoiKy>(CriteriaOperator.Parse("ChucDanh.TenChucDanh like ?", "Hiệu trưởng"));
-                NguoiKy = Session.FindObject<ThongTinNhanVien>(CriteriaOperator.Parse("ChucDanh.Oid = ? and !TinhTrang.DaNghiViec and CongTy.Oid=?", ChucVuNguoiKy != null ? ChucVuNguoiKy.ChucDanh.Oid : Guid.Empty, CongTy != null ? CongTy.Oid : Guid.Empty));
+                ChucVuNguoiKy = Session.FindObject<ChucVuNguoiKy>(CriteriaOperator.Parse("ChucVu.TenChucVu like ?", "Hiệu trưởng"));
+                NguoiKy = Session.FindObject<ThongTinNhanVien>(CriteriaOperator.Parse("ChucVu.Oid = ? and !TinhTrang.DaNghiViec and CongTy.Oid=?", ChucVuNguoiKy != null ? ChucVuNguoiKy.ChucVu.Oid : Guid.Empty, CongTy != null ? CongTy.Oid : Guid.Empty));
             }
             //
             UpdateNguoiKyList();
