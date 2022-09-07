@@ -311,6 +311,7 @@ namespace ERP.Module.Win.MailMerge.Prosess.HopDong
                     hd.DanhXungNLDVietThuong = hopDong.ThongTinNhanVien.GioiTinh == GioiTinhEnum.Nam ? "ông" : "bà";
                     hd.TenNguoiLaoDongVietHoa = hopDong.ThongTinNhanVien.HoTen.ToUpper();
                     hd.TenNguoiLaoDongVietThuong = hopDong.ThongTinNhanVien.HoTen;
+                    hd.DonVi = hopDong.ThongTinNhanVien.BoPhan != null ? hopDong.ThongTinNhanVien.BoPhan.TenBoPhan : "";
                     hd.QuocTich = hopDong.ThongTinNhanVien.QuocTich != null ? hopDong.ThongTinNhanVien.QuocTich.TenQuocGia : "";
                     hd.NgaySinh = hopDong.ThongTinNhanVien.NgaySinh.ToString("'ngày' dd 'tháng' MM 'năm' yyyy");
                     hd.NgaySinhDate = hopDong.ThongTinNhanVien.NgaySinh.ToString("dd/MM/yyyy");
@@ -341,6 +342,15 @@ namespace ERP.Module.Win.MailMerge.Prosess.HopDong
                 hd.NgachLuong = hopDong.NgachLuong != null ? hopDong.NgachLuong.TenNgachLuong : "";
                 hd.BacLuong = hopDong.BacLuong != null ? hopDong.BacLuong.TenBacLuong : "";
                 hd.LuongCoBan = (hopDong.LuongCoBan * hopDong.PhanTramTinhLuong/100).ToString("N0");
+                hd.LuongCoBanThuan = hopDong.LuongCoBan.ToString("N0");
+                hd.LuongBoSung = hopDong.LuongKinhDoanh.ToString("N0");
+                hd.LuongGop = hopDong.LuongGop.ToString("N0");
+                hd.PhuCapTienAn = hopDong.PhuCapTienAn.ToString("N0");
+                hd.PhuCapTienXang = hopDong.PhuCapTienXang.ToString("N0");
+                hd.PhuCapDienThoai = hopDong.PhuCapDienThoai.ToString("N0");
+                hd.PhuCapChucVu = hopDong.PhuCapChucVu.ToString("N0");
+                hd.TongLuong = hopDong.TongLuong.ToString("N0");
+
                 //
 
                 if (hopDong.LoaiHopDong != null && hopDong.LoaiHopDong.MaQuanLy.Equals("HĐTV"))

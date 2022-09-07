@@ -96,6 +96,8 @@ namespace ERP.Module.MailMerge.NhanSu.HopDong
 
         [DisplayName("Tên NLĐ viết thường")]
         public string TenNguoiLaoDongVietThuong { get; set; }
+        [DisplayName("Đơn vị NLĐ")]
+        public string DonVi { get; set; }
 
         [DisplayName("Quốc tịch NLĐ")]
         public string QuocTich { get; set; }
@@ -105,6 +107,8 @@ namespace ERP.Module.MailMerge.NhanSu.HopDong
 
         [DisplayName("Ngày sinh NLĐ (date)")]
         public string NgaySinhDate { get; set; }
+        [DisplayName("Giới tính")]
+        public string GioiTinh { get; set; }
 
         [DisplayName("Nơi sinh NLĐ")]
         public string NoiSinh { get; set; }

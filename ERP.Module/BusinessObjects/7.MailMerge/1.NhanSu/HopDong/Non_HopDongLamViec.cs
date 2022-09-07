@@ -19,6 +19,12 @@ namespace ERP.Module.MailMerge.NhanSu.HopDong
 
         [DisplayName("Lương chức danh")]
         public string LuongCoBan { get; set; }
+        [DisplayName("Lương chức danh(Thuần)")]
+        public string LuongCoBanThuan { get; set; }
+        [DisplayName("Lương bổ sung")]
+        public string LuongBoSung { get; set; }
+        [DisplayName("Lương gộp")]
+        public string LuongGop { get; set; }
 
         [DisplayName("Ngày hưởng lương")]
         public string NgayHuongLuong { get; set; }
@@ -49,6 +55,12 @@ namespace ERP.Module.MailMerge.NhanSu.HopDong
 
         [DisplayName("Phụ cấp tiền xăng")]
         public string PhuCapTienXang { get; set; }
+        [DisplayName("Phụ cấp tiền điện thoại")]
+        public string PhuCapDienThoai { get; set; }
+        [DisplayName("Phụ cấp chức vụ")]
+        public string PhuCapChucVu { get; set; }
+        [DisplayName("Tổng lương")]
+        public string TongLuong { get; set; }
 
         [DisplayName("Tỉnh Thành")]
         public string TinhThanh { get; set; }

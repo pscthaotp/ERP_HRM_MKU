@@ -7,6 +7,8 @@ namespace ERP.Module.MailMerge.NhanSu.HopDong
     {
         [DisplayName("Loại hợp đồng khoán")]
         public string LoaiHopDongKhoan { get; set; }
+        [DisplayName("Hình thức hợp đồng")]
+        public string HinhThucHopDong { get; set; }
 
         [DisplayName("Lương khoán")]
         public string LuongKhoan { get; set; }
@@ -34,6 +36,24 @@ namespace ERP.Module.MailMerge.NhanSu.HopDong
 
         [DisplayName("Số ngày")]
         public string SoNgay { get; set; }
+        [DisplayName("PC tiền xăng")]
+        public string PCTienXang { get; set; }
+        [DisplayName("Tổng lương")]
+        public string TongLuong { get; set; }
+        [DisplayName("PC tiền ăn")]
+        public string PCTienAn { get; set; }
+        [DisplayName("PC tiền BHXH")]
+        public string PCTienBHXH { get; set; }
+        [DisplayName("PC chức vụ")]
+        public string PCChucVu { get; set; }
+        [DisplayName("PC học vị")]
+        public string PCHocVi { get; set; }
+        [DisplayName("PC hiệu quả CV")]
+        public string PCHieuQuaCV { get; set; }
+        [DisplayName("PC kiêm nhiệm")]
+        public string PCKiemNhiem { get; set; }
+        [DisplayName("PC điện thoại")]
+        public string PCDienThoai { get; set; }
 
     }
 }
