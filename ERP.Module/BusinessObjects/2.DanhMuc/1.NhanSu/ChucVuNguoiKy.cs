@@ -12,26 +12,26 @@ using ERP.Module.Enum.NhanSu;
 namespace ERP.Module.DanhMuc.NhanSu
 {
     [DefaultClassOptions]
-    [DefaultProperty("ChucDanh")]
+    [DefaultProperty("ChucVu")]
     [ModelDefault("Caption", "Chức vụ người ký")]
     [ImageName("BO_Position")]
     public class ChucVuNguoiKy : BaseObject
     {
-        private ChucDanh _ChucDanh;
+        private ChucVu _ChucVu;
 
         //
         [ModelDefault("Caption", "Chức vụ")]
         [RuleRequiredField(DefaultContexts.Save)]
         [RuleUniqueValue("", DefaultContexts.Save)]
-        public ChucDanh ChucDanh
+        public ChucVu ChucVu
         {
             get
             {
-                return _ChucDanh;
+                return _ChucVu;
             }
             set
             {
-                SetPropertyValue("ChucDanh", ref _ChucDanh, value);
+                SetPropertyValue("ChucVu", ref _ChucVu, value);
             }
         }
         

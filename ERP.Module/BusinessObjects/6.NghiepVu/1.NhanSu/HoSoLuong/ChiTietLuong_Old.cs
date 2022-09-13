@@ -48,6 +48,8 @@ namespace ERP.Module.NghiepVu.NhanSu.HoSoLuong
         private decimal _LuongCoBan;
         private decimal _LuongKinhDoanh;
         private decimal _HieuQuaCongViec;
+        private decimal _TienBHXH;
+        private decimal _PhuCapHocVi;
         private decimal _LuongKhoan;
         private decimal _HSPCChucVu;
         private decimal _HSPCVuotKhung;
@@ -56,6 +58,7 @@ namespace ERP.Module.NghiepVu.NhanSu.HoSoLuong
         private decimal _HSPCChucVuDoan;
         private decimal _PhuCapKiemNhiem;
         private decimal _PhuCapTrachNhiem;
+        private decimal _PhuCapChucVu;
         private decimal _HSPCKhac;
         private decimal _PhuCapDienThoai;
         private decimal _PhuCapTienAn;
@@ -403,6 +406,34 @@ namespace ERP.Module.NghiepVu.NhanSu.HoSoLuong
                 SetPropertyValue("HieuQuaCongViec", ref _HieuQuaCongViec, value);
             }
         }
+        [ModelDefault("Caption", "Phụ cấp BHXH")]
+        [ModelDefault("DisplayFormat", "N0")]
+        [ModelDefault("EditMask", "N0")]
+        public decimal TienBHXH
+        {
+            get
+            {
+                return _TienBHXH;
+            }
+            set
+            {
+                SetPropertyValue("TienBHXH", ref _TienBHXH, value);
+            }
+        }
+        [ModelDefault("Caption", "Phụ cấp học vị")]
+        [ModelDefault("DisplayFormat", "N0")]
+        [ModelDefault("EditMask", "N0")]
+        public decimal PhuCapHocVi
+        {
+            get
+            {
+                return _PhuCapHocVi;
+            }
+            set
+            {
+                SetPropertyValue("PhuCapHocVi", ref _PhuCapHocVi, value);
+            }
+        }
         
         [ImmediatePostData]
         [ModelDefault("Caption", "Lương khoán")]
@@ -528,6 +559,20 @@ namespace ERP.Module.NghiepVu.NhanSu.HoSoLuong
             set
             {
                 SetPropertyValue("PhuCapTrachNhiem", ref _PhuCapTrachNhiem, value);
+            }
+        }
+        [ModelDefault("Caption", "PC chức vụ")]
+        [ModelDefault("EditMask", "N0")]
+        [ModelDefault("DisplayFormat", "N0")]
+        public decimal PhuCapChucVu
+        {
+            get
+            {
+                return _PhuCapChucVu;
+            }
+            set
+            {
+                SetPropertyValue("PhuCapChucVu", ref _PhuCapChucVu, value);
             }
         }
 
@@ -855,6 +900,7 @@ namespace ERP.Module.NghiepVu.NhanSu.HoSoLuong
             PhuCapDienThoai = value.NhanVienThongTinLuong.PhuCapDienThoai;
             PhuCapTienAn = value.NhanVienThongTinLuong.PhuCapTienAn;
             PhuCapTienXang = value.NhanVienThongTinLuong.PhuCapTienXang;
+            PhuCapChucVu = value.NhanVienThongTinLuong.PhuCapChucVu;
             KhongDongBHXH = value.NhanVienThongTinLuong.KhongDongBHXH;
             KhongDongBHYT = value.NhanVienThongTinLuong.KhongDongBHYT;
             KhongDongBHTN = value.NhanVienThongTinLuong.KhongDongBHTN;
@@ -868,6 +914,9 @@ namespace ERP.Module.NghiepVu.NhanSu.HoSoLuong
             To = value.To;
             NhomPhanBo = value.NhomPhanBo;
             SoThangLamViec = value.SoThangLamViec;
+            HieuQuaCongViec = value.NhanVienThongTinLuong.HieuQuaCongViec;
+            PhuCapHocVi = value.NhanVienThongTinLuong.PhuCapHocVi;
+            TienBHXH = value.NhanVienThongTinLuong.TienBHXH;
         }
 
         protected override void OnSaved()

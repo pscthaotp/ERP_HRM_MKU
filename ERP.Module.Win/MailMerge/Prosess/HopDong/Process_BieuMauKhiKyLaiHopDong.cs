@@ -33,8 +33,8 @@ namespace ERP.Module.Win.MailMerge.Prosess.HopDong
                 nhanVien.TenCongTyVietThuong = thongTinNhanVien.CongTy != null ? thongTinNhanVien.CongTy.TenBoPhan : "";
                 nhanVien.DiaChiCongTyHoacTruong = (thongTinNhanVien.CongTy != null && thongTinNhanVien.CongTy.DiaChi != null) ? thongTinNhanVien.CongTy.DiaChi.FullDiaChi : "";
 
-                nhanVien.ChucVuNguoiKy = hopDongLamViec.ChucVuNguoiKy != null ? hopDongLamViec.ChucVuNguoiKy.ChucDanh.TenChucDanh.ToUpper() : "";
-                nhanVien.ChucVuNguoiKyVietThuong = hopDongLamViec.ChucVuNguoiKy != null ? hopDongLamViec.ChucVuNguoiKy.ChucDanh.TenChucDanh : "";
+                nhanVien.ChucVuNguoiKy = hopDongLamViec.ChucVuNguoiKy != null ? hopDongLamViec.ChucVuNguoiKy.ChucVu.TenChucVu.ToUpper() : "";
+                nhanVien.ChucVuNguoiKyVietThuong = hopDongLamViec.ChucVuNguoiKy != null ? hopDongLamViec.ChucVuNguoiKy.ChucVu.TenChucVu : "";
                 if (hopDongLamViec.NguoiKy != null)
                 {
                     nhanVien.TenNguoiKyVietHoa = hopDongLamViec.NguoiKy != null ? hopDongLamViec.NguoiKy.HoTen.ToUpper() : hopDongLamViec.TenNguoiKy.ToUpper();

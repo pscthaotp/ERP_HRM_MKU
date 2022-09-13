@@ -101,7 +101,7 @@ namespace ERP.Module.NghiepVu.NhanSu.DinhBien
 
         [ImmediatePostData]
         [ModelDefault("Caption", "Chức vụ")]
-        [RuleRequiredField(DefaultContexts.Save)]
+        //[RuleRequiredField(DefaultContexts.Save)]
         public ChucVu ChucVu
         {
             get
@@ -111,15 +111,15 @@ namespace ERP.Module.NghiepVu.NhanSu.DinhBien
             set
             {
                 SetPropertyValue("ChucVu", ref _ChucVu, value);
-                if (!IsLoading)
-                    CapNhatChucDanh();
+                //if (!IsLoading)
+                //    CapNhatChucDanh();
             }
         }
 
         [ImmediatePostData]
-        [DataSourceProperty("CDList")]
+        //[DataSourceProperty("CDList")]
         [ModelDefault("Caption", "Chức danh")]
-        [RuleRequiredField(DefaultContexts.Save)]
+        //[RuleRequiredField(DefaultContexts.Save)]
         public ChucDanh ChucDanh
         {
             get

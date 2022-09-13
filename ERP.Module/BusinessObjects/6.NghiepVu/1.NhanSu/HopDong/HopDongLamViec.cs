@@ -13,6 +13,7 @@ using ERP.Module.DanhMuc.NhanSu;
 using ERP.Module.DanhMuc.TienLuong;
 using ERP.Module.NghiepVu.MaTuDong;
 using ERP.Module.Enum.NhanSu;
+using ERP.Module.Commons;
 //
 namespace ERP.Module.NghiepVu.NhanSu.HopDongs
 {
@@ -36,16 +37,38 @@ namespace ERP.Module.NghiepVu.NhanSu.HopDongs
         //Điều khoản hợp đồng
         private decimal _LuongCoBan;
         private decimal _LuongKinhDoanh;
-        private NgachLuong _NgachLuong;
         private BacLuong _BacLuong;
+        private NgachLuong _NgachLuong;
         private DateTime _NgayHuongLuong;
         private decimal _PhuCapTienXang;
         private decimal _PhuCapTienAn;
+        private decimal _PhuCapDienThoai;
+        private decimal _PhuCapChucVu;
+        private decimal _TongLuong;
         private string _NoiDungDieuKhoanThayDoi;
         private string _DieuThayDoi;
         private string _KhoanThayDoi;
         private string _DieuKhoanThayDoi;
         private HopDongLamViec _HopDongLaoDong;
+
+        //dữ liệu cũ
+        private decimal _PhanTramTinhLuongCu;
+        private decimal _LuongCoBanCu;
+        private decimal _LuongKinhDoanhCu;
+        private NgachLuong _NgachLuongCu;
+        private BacLuong _BacLuongCu;
+        private DateTime _NgayHuongLuongCu;
+        private string _LuongDoanhNghiepCu;
+        private decimal _PhuCapChucVuCu;
+        private decimal _PhuCapTienXangCu;
+        private decimal _PhuCapTienAnCu;
+        private decimal _PhuCapDienThoaiCu;
+        private decimal _PhuCapDongPhucCu;
+        private decimal _PhuCapKhacCu;
+        private decimal _PhuCapTrachNhiemCu;
+        private decimal _LuongHopDongCu;
+        private LoaiHopDong _LoaiHopDongCu;
+        private HopDong _ThongTinHopDongCu;
         //        
         [ModelDefault("Caption", "Khối")]
         [Browsable(false)]
@@ -198,6 +221,17 @@ namespace ERP.Module.NghiepVu.NhanSu.HopDongs
                 SetPropertyValue("LuongKinhDoanh", ref _LuongKinhDoanh, value);
             }
         }
+        [NonPersistent]
+        [ModelDefault("Caption", "Lương gộp")]
+        [ModelDefault("EditMask", "N0")]
+        [ModelDefault("DisplayFormat", "N0")]
+        public decimal LuongGop
+        {
+            get
+            {
+                return LuongCoBan + LuongKinhDoanh;
+            }
+        }
 
         [ImmediatePostData]
         [ModelDefault("Caption", "Ngạch lương")]
@@ -269,6 +303,20 @@ namespace ERP.Module.NghiepVu.NhanSu.HopDongs
                 SetPropertyValue("PhuCapTienAn", ref _PhuCapTienAn, value);
             }
         }
+        [ModelDefault("Caption", "Phụ cấp tiền điện thoại")]
+        [ModelDefault("EditMask", "N0")]
+        [ModelDefault("DisplayFormat", "N0")]
+        public decimal PhuCapDienThoai
+        {
+            get
+            {
+                return _PhuCapDienThoai;
+            }
+            set
+            {
+                SetPropertyValue("PhuCapDienThoai", ref _PhuCapDienThoai, value);
+            }
+        }
 
         [ModelDefault("Caption", "Phụ cấp tiền xăng")]
         [ModelDefault("EditMask", "N0")]
@@ -282,6 +330,31 @@ namespace ERP.Module.NghiepVu.NhanSu.HopDongs
             set
             {
                 SetPropertyValue("PhuCapTienXang", ref _PhuCapTienXang, value);
+            }
+        }
+        [ModelDefault("Caption", "Phụ cấp chức vụ")]
+        [ModelDefault("EditMask", "N0")]
+        [ModelDefault("DisplayFormat", "N0")]
+        public decimal PhuCapChucVu
+        {
+            get
+            {
+                return _PhuCapChucVu;
+            }
+            set
+            {
+                SetPropertyValue("PhuCapChucVu", ref _PhuCapChucVu, value);
+            }
+        }
+        [NonPersistent]
+        [ModelDefault("Caption", "Tổng lương")]
+        [ModelDefault("EditMask", "N0")]
+        [ModelDefault("DisplayFormat", "N0")]
+        public decimal TongLuong
+        {
+            get
+            {
+                return (LuongCoBan*PhanTramTinhLuong/100) + LuongKinhDoanh + PhuCapTienAn + PhuCapDienThoai + PhuCapTienXang;
             }
         }
 
@@ -376,6 +449,242 @@ namespace ERP.Module.NghiepVu.NhanSu.HopDongs
                 SetPropertyValue("PhanTramTinhLuong", ref _PhanTramTinhLuong, value);
             }
         }
+        #region Lưu vết cũ
+        [Browsable(false)]
+        [ModelDefault("Caption", "mức hưởng lương cũ")]
+        [ModelDefault("EditMask", "N0")]
+        [ModelDefault("DisplayFormat", "N0")]
+        public decimal PhanTramTinhLuongCu
+        {
+            get
+            {
+                return _PhanTramTinhLuongCu;
+            }
+            set
+            {
+                SetPropertyValue("PhanTramTinhLuongCu", ref _PhanTramTinhLuongCu, value);
+            }
+        }
+        [Browsable(false)]
+        [ModelDefault("Caption", "Lương chức danh cũ")]
+        [ModelDefault("EditMask", "N0")]
+        [ModelDefault("DisplayFormat", "N0")]
+        public decimal LuongCoBanCu
+        {
+            get
+            {
+                return _LuongCoBanCu;
+            }
+            set
+            {
+                SetPropertyValue("LuongCoBanCu", ref _LuongCoBanCu, value);
+            }
+        }
+        [Browsable(false)]
+        [ModelDefault("Caption", "Lương bổ sung (HQCV) cũ")]
+        [ModelDefault("EditMask", "N0")]
+        [ModelDefault("DisplayFormat", "N0")]
+        public decimal LuongKinhDoanhCu
+        {
+            get
+            {
+                return _LuongKinhDoanhCu;
+            }
+            set
+            {
+                SetPropertyValue("LuongKinhDoanhCu", ref _LuongKinhDoanhCu, value);
+            }
+        }
+        [Browsable(false)]
+        [ModelDefault("Caption", "Ngạch lương cũ")]
+        public NgachLuong NgachLuongCu
+        {
+            get
+            {
+                return _NgachLuongCu;
+            }
+            set
+            {
+                SetPropertyValue("NgachLuongCu", ref _NgachLuongCu, value);
+
+            }
+        }
+        [Browsable(false)]
+        [ModelDefault("Caption", "Bậc lương cũ")]
+        public BacLuong BacLuongCu
+        {
+            get
+            {
+                return _BacLuongCu;
+            }
+            set
+            {
+                SetPropertyValue("BacLuongCu", ref _BacLuongCu, value);
+
+            }
+        }
+        [Browsable(false)]
+        [ModelDefault("Caption", "Ngày hưởng lương cũ")]
+        [ModelDefault("EditMask", "dd/MM/yyyy")]
+        [ModelDefault("DisplayFormat", "dd/MM/yyyy")]
+        public DateTime NgayHuongLuongCu
+        {
+            get
+            {
+                return _NgayHuongLuongCu;
+            }
+            set
+            {
+                SetPropertyValue("NgayHuongLuongCu", ref _NgayHuongLuongCu, value);
+            }
+        }
+        [Browsable(false)]
+        [ModelDefault("Caption", "Phụ cấp chức vụ cũ")]
+        [ModelDefault("EditMask", "N0")]
+        [ModelDefault("DisplayFormat", "N0")]
+        public decimal PhuCapChucVuCu
+        {
+            get
+            {
+                return _PhuCapChucVuCu;
+            }
+            set
+            {
+                SetPropertyValue("PhuCapChucVuCu", ref _PhuCapChucVuCu, value);
+            }
+        }
+        [Browsable(false)]
+        [ModelDefault("Caption", "Phụ cấp tiền ăn cũ")]
+        [ModelDefault("EditMask", "N0")]
+        [ModelDefault("DisplayFormat", "N0")]
+        public decimal PhuCapTienAnCu
+        {
+            get
+            {
+                return _PhuCapTienAnCu;
+            }
+            set
+            {
+                SetPropertyValue("PhuCapTienAnCu", ref _PhuCapTienAnCu, value);
+            }
+        }
+        [Browsable(false)]
+        [ModelDefault("Caption", "Phụ cấp điện thoại cũ")]
+        [ModelDefault("EditMask", "N0")]
+        [ModelDefault("DisplayFormat", "N0")]
+        public decimal PhuCapDienThoaiCu
+        {
+            get
+            {
+                return _PhuCapDienThoaiCu;
+            }
+            set
+            {
+                SetPropertyValue("PhuCapDienThoaiCu", ref _PhuCapDienThoaiCu, value);
+            }
+        }
+        [Browsable(false)]
+        [ModelDefault("Caption", "Phụ cấp tiền xăng cũ")]
+        [ModelDefault("EditMask", "N0")]
+        [ModelDefault("DisplayFormat", "N0")]
+        public decimal PhuCapTienXangCu
+        {
+            get
+            {
+                return _PhuCapTienXangCu;
+            }
+            set
+            {
+                SetPropertyValue("PhuCapTienXangCu", ref _PhuCapTienXangCu, value);
+            }
+        }
+        [Browsable(false)]
+        [ModelDefault("Caption", "Phụ cấp đồng phục cũ")]
+        [ModelDefault("EditMask", "N0")]
+        [ModelDefault("DisplayFormat", "N0")]
+        public decimal PhuCapDongPhucCu
+        {
+            get
+            {
+                return _PhuCapDongPhucCu;
+            }
+            set
+            {
+                SetPropertyValue("PhuCapDongPhucCu", ref _PhuCapDongPhucCu, value);
+            }
+        }
+        [Browsable(false)]
+        [ModelDefault("Caption", "Phụ cấp trách nhiệm cũ")]
+        [ModelDefault("EditMask", "N0")]
+        [ModelDefault("DisplayFormat", "N0")]
+        public decimal PhuCapTrachNhiemCu
+        {
+            get
+            {
+                return _PhuCapTrachNhiemCu;
+            }
+            set
+            {
+                SetPropertyValue("PhuCapTrachNhiemCu", ref _PhuCapTrachNhiemCu, value);
+            }
+        }
+        [Browsable(false)]
+        [ModelDefault("Caption", "Phụ cấp khác cũ")]
+        [ModelDefault("EditMask", "N0")]
+        [ModelDefault("DisplayFormat", "N0")]
+        public decimal PhuCapKhacCu
+        {
+            get
+            {
+                return _PhuCapKhacCu;
+            }
+            set
+            {
+                SetPropertyValue("PhuCapKhacCu", ref _PhuCapKhacCu, value);
+            }
+        }
+        [Browsable(false)]
+        [ModelDefault("Caption", "Lương hợp đồng cũ")]
+        [ModelDefault("EditMask", "N0")]
+        [ModelDefault("DisplayFormat", "N0")]
+        public decimal LuongHopDongCu
+        {
+            get
+            {
+                return _LuongHopDongCu;
+            }
+            set
+            {
+                SetPropertyValue("LuongHopDongCu", ref _LuongHopDongCu, value);
+            }
+        }
+        [Browsable(false)]
+        [ModelDefault("Caption", "Loại hợp đồng cũ")]
+        public LoaiHopDong LoaiHopDongCu
+        {
+            get
+            {
+                return _LoaiHopDongCu;
+            }
+            set
+            {
+                SetPropertyValue("LoaiHopDongCu", ref _LoaiHopDongCu, value);
+            }
+        }
+        [Browsable(false)]
+        [ModelDefault("Caption", "Hợp đồng cũ")]
+        public HopDong ThongTinHopDongCu
+        {
+            get
+            {
+                return _ThongTinHopDongCu;
+            }
+            set
+            {
+                SetPropertyValue("ThongTinHopDongCu", ref _ThongTinHopDongCu, value);
+            }
+        }
+        #endregion
 
         [Browsable(false)]
         public XPCollection<HinhThucHopDong> HTHDList { get; set; }
@@ -416,6 +725,10 @@ namespace ERP.Module.NghiepVu.NhanSu.HopDongs
                 NgayHuongLuong = ThongTinNhanVien.NhanVienThongTinLuong.NgayHuongLuong;
                 LuongCoBan = ThongTinNhanVien.NhanVienThongTinLuong.LuongCoBan;
                 LuongKinhDoanh = ThongTinNhanVien.NhanVienThongTinLuong.LuongKinhDoanh;
+                PhuCapTienAn = ThongTinNhanVien.NhanVienThongTinLuong.PhuCapTienAn;
+                PhuCapTienXang = ThongTinNhanVien.NhanVienThongTinLuong.PhuCapTienXang;
+                PhuCapDienThoai = ThongTinNhanVien.NhanVienThongTinLuong.PhuCapDienThoai;
+                PhuCapChucVu = ThongTinNhanVien.NhanVienThongTinLuong.PhuCapChucVu;
                 LoaiHopDongLuuTru = ThongTinNhanVien.LoaiHopDong;
                 //
                 KhongDongBHXH = ThongTinNhanVien.NhanVienThongTinLuong.KhongDongBHXH;
@@ -423,12 +736,98 @@ namespace ERP.Module.NghiepVu.NhanSu.HopDongs
                 KhongDongBHTN = ThongTinNhanVien.NhanVienThongTinLuong.KhongDongBHTN;
                 KhongDongCD = ThongTinNhanVien.NhanVienThongTinLuong.KhongDongCongDoan;
 
+                // dữ liệu cũ mới thêm
+                LuongCoBanCu = ThongTinNhanVien.NhanVienThongTinLuong.LuongCoBan;
+                LuongKinhDoanhCu = ThongTinNhanVien.NhanVienThongTinLuong.LuongKinhDoanh;
+                NgachLuongCu = ThongTinNhanVien.NhanVienThongTinLuong.NgachLuong;
+                BacLuongCu = ThongTinNhanVien.NhanVienThongTinLuong.BacLuong;
+                NgayHuongLuongCu = ThongTinNhanVien.NhanVienThongTinLuong.NgayHuongLuong;
+                PhanTramTinhLuongCu = ThongTinNhanVien.NhanVienThongTinLuong.PhanTramTinhLuong;
+                PhuCapTienAnCu = ThongTinNhanVien.NhanVienThongTinLuong.PhuCapTienAn;
+                PhuCapDienThoaiCu = ThongTinNhanVien.NhanVienThongTinLuong.PhuCapDienThoai;
+                PhuCapTienXangCu = ThongTinNhanVien.NhanVienThongTinLuong.PhuCapTienXang;
+                PhuCapTrachNhiemCu = ThongTinNhanVien.NhanVienThongTinLuong.PhuCapTrachNhiem;
+                LuongHopDongCu = ThongTinNhanVien.NhanVienThongTinLuong.LuongKhoan;
+                LoaiHopDongCu = ThongTinNhanVien.LoaiHopDong;
+                ThongTinHopDongCu = ThongTinNhanVien.HopDongHienTai;
+                PhuCapChucVuCu = ThongTinNhanVien.NhanVienThongTinLuong.PhuCapChucVu;
+
                 if (HTLVList == null)
                     HTLVList = new XPCollection<HopDongLamViec>(Session);
                 //
                 if (ThongTinNhanVien != null)
                     HTLVList.Criteria = CriteriaOperator.Parse("ThongTinNhanVien.Oid = ? and HopDongCu = false", this.ThongTinNhanVien.Oid);
             }
+        }
+        protected override void OnSaving()
+        {
+            base.OnSaving();
+
+            if (!IsDeleted)
+            {
+                //
+                if (NgayKy <= Common.GetServerCurrentTime())
+                {
+                    //Cập nhất thông tin hồ sơ
+                    //Lương theo ngạch bậc
+                    ThongTinNhanVien.NhanVienThongTinLuong.NgachLuong = NgachLuong;
+                    ThongTinNhanVien.NhanVienThongTinLuong.BacLuong = BacLuong;
+                    ThongTinNhanVien.NhanVienThongTinLuong.PhanTramTinhLuong = PhanTramTinhLuong;
+                    ThongTinNhanVien.NhanVienThongTinLuong.LuongCoBan = LuongCoBan;
+                    ThongTinNhanVien.NhanVienThongTinLuong.LuongKinhDoanh = LuongKinhDoanh;
+                    ThongTinNhanVien.NhanVienThongTinLuong.NgayHuongLuong = NgayHuongLuong;
+                    ThongTinNhanVien.NhanVienThongTinLuong.PhuCapTienAn = PhuCapTienAn;
+                    ThongTinNhanVien.NhanVienThongTinLuong.PhuCapTienXang = PhuCapTienXang;
+                    ThongTinNhanVien.NhanVienThongTinLuong.PhuCapDienThoai = PhuCapDienThoai;
+                    ThongTinNhanVien.NhanVienThongTinLuong.PhuCapChucVu = PhuCapChucVu;
+                    ThongTinNhanVien.LoaiHopDong = LoaiHopDong;
+                    ThongTinNhanVien.HopDongHienTai = this;
+                    ///JobUpdated = true;
+
+                }
+            }
+        }
+        protected override void OnDeleting()
+        {
+            if (!IsSaving)
+            {
+
+
+                //Cập nhất thông tin hồ sơ
+                //Lương theo ngạch bậc
+                ThongTinNhanVien.NhanVienThongTinLuong.BacLuong = BacLuongCu;
+                ThongTinNhanVien.NhanVienThongTinLuong.NgachLuong = NgachLuongCu;
+                ThongTinNhanVien.NhanVienThongTinLuong.PhanTramTinhLuong = PhanTramTinhLuongCu;
+                ThongTinNhanVien.NhanVienThongTinLuong.LuongCoBan = LuongCoBanCu;
+                ThongTinNhanVien.NhanVienThongTinLuong.LuongKinhDoanh = LuongKinhDoanhCu;
+                ThongTinNhanVien.NhanVienThongTinLuong.NgayHuongLuong = NgayHuongLuongCu;
+                ThongTinNhanVien.NhanVienThongTinLuong.PhuCapTienAn = PhuCapTienAnCu;
+                ThongTinNhanVien.NhanVienThongTinLuong.PhuCapTienXang = PhuCapTienXangCu;
+                ThongTinNhanVien.NhanVienThongTinLuong.PhuCapTrachNhiem = PhuCapTrachNhiemCu;
+                ThongTinNhanVien.NhanVienThongTinLuong.PhuCapDienThoai = PhuCapDienThoaiCu;
+                ThongTinNhanVien.NhanVienThongTinLuong.PhuCapChucVu = PhuCapChucVuCu;
+                if (LoaiHopDongCu != null)
+                {
+                    ThongTinNhanVien.LoaiHopDong = LoaiHopDongCu;
+                }
+                //else
+                //{
+                //    ThongTinNhanVien.LoaiHopDong =null;
+                //}
+                if (ThongTinHopDongCu != null)
+                {
+                    ThongTinNhanVien.HopDongHienTai = ThongTinHopDongCu;
+                }
+                //else
+                //{
+                //    ThongTinNhanVien.HopDongHienTai = null;
+                //}
+
+
+                //Lương theo hợp đồng
+                ThongTinNhanVien.NhanVienThongTinLuong.LuongKhoan = LuongHopDongCu;
+            }
+            base.OnDeleting();
         }
 
         protected override void AfterLoaiHopDongChanged()

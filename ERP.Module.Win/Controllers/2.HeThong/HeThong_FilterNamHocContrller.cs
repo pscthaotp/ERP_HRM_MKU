@@ -39,14 +39,14 @@ namespace ERP.Module.Win.Controllers.HeThong
         }
         private void HeThong_FilterNamHocContrller_ViewControlsCreated(object sender, EventArgs e)
         {
-            ListView listView = View as ListView;
+            //ListView listView = View as ListView;
 
-            if (listView != null &&
-                ((listView.CollectionSource.DisplayableProperties.Contains("NamHoc")
-                || listView.CollectionSource.DisplayableProperties.Contains("KyTinhLuong")
-                || listView.CollectionSource.DisplayableProperties.Contains("SoQuyetDinh"))
-                && !listView.Id.Contains("_LookupListView")))
-            {
+            //if (listView != null &&
+            //    ((listView.CollectionSource.DisplayableProperties.Contains("NamHoc")
+            //    || listView.CollectionSource.DisplayableProperties.Contains("KyTinhLuong")
+            //    || listView.CollectionSource.DisplayableProperties.Contains("SoQuyetDinh"))
+            //    && !listView.Id.Contains("_LookupListView")))
+            //{
                 _obs = Application.CreateObjectSpace();
                 _ses = ((XPObjectSpace)_obs).Session;
                 _NamHoc = new XPCollection<NamHoc>(_ses);
@@ -73,7 +73,7 @@ namespace ERP.Module.Win.Controllers.HeThong
                         Execute(_ses.GetObjectByKey<NamHoc>(Guid.Parse(subItem.Id)));
                     }
                 }
-            }
+            //}
         }
         private void singleChoiceAction1_Execute(object sender, SingleChoiceActionExecuteEventArgs e)
         {

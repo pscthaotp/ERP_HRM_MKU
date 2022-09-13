@@ -39,6 +39,8 @@ namespace ERP.Module.NghiepVu.NhanSu.NhanViens
         private decimal _LuongKinhDoanh;
         private decimal _LuongGop;
         private decimal _HieuQuaCongViec;
+        private decimal _PhuCapHocVi;
+        private decimal _TienBHXH;
         private int _VuotKhung;
         private decimal _HSPCVuotKhung;
         private DateTime _NgayHuongVuotKhung;
@@ -46,6 +48,7 @@ namespace ERP.Module.NghiepVu.NhanSu.NhanViens
         private decimal _HSPCThamNien;
         private DateTime _NgayHuongThamNien;
         private decimal _HSPCChucVu;
+        private decimal _PhuCapChucVu;
         private DateTime _NgayHuongHSPCChucVu;
         private decimal _HSPCChucVuDang;
         private decimal _HSPCChucVuDoan;      
@@ -281,6 +284,34 @@ namespace ERP.Module.NghiepVu.NhanSu.NhanViens
                 SetPropertyValue("HieuQuaCongViec", ref _HieuQuaCongViec, value);
             }
         }
+        [ModelDefault("Caption", "Phụ cấp học vị")]
+        [ModelDefault("DisplayFormat", "N0")]
+        [ModelDefault("EditMask", "N0")]
+        public decimal PhuCapHocVi
+        {
+            get
+            {
+                return _PhuCapHocVi;
+            }
+            set
+            {
+                SetPropertyValue("PhuCapHocVi", ref _PhuCapHocVi, value);
+            }
+        }
+        [ModelDefault("Caption", "Phụ cấp BHXH")]
+        [ModelDefault("DisplayFormat", "N0")]
+        [ModelDefault("EditMask", "N0")]
+        public decimal TienBHXH
+        {
+            get
+            {
+                return _TienBHXH;
+            }
+            set
+            {
+                SetPropertyValue("TienBHXH", ref _TienBHXH, value);
+            }
+        }
 
         [ImmediatePostData]
         [ModelDefault("Caption", "Mốc nâng lương điều chỉnh")]
@@ -357,6 +388,20 @@ namespace ERP.Module.NghiepVu.NhanSu.NhanViens
             set
             {
                 SetPropertyValue("HSPCChucVu", ref _HSPCChucVu, value);
+            }
+        }
+        [ModelDefault("Caption", "Phụ cấp chức vụ")]
+        [ModelDefault("EditMask", "N0")]
+        [ModelDefault("DisplayFormat", "N0")]
+        public decimal PhuCapChucVu
+        {
+            get
+            {
+                return _PhuCapChucVu;
+            }
+            set
+            {
+                SetPropertyValue("PhuCapChucVu", ref _PhuCapChucVu, value);
             }
         }
 
