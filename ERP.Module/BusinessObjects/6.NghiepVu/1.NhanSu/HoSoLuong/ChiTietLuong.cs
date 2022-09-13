@@ -59,6 +59,7 @@ namespace ERP.Module.NghiepVu.NhanSu.HoSoLuong
         private decimal _PhuCapKiemNhiem;
         private decimal _PhuCapTrachNhiem;
         private decimal _HSPCKhac;
+        private decimal _HSTroCap;
         private decimal _PhuCapDienThoai;
         private decimal _PhuCapTienAn;
         private decimal _PhuCapTienXang;
@@ -581,6 +582,20 @@ namespace ERP.Module.NghiepVu.NhanSu.HoSoLuong
                 SetPropertyValue("HSPCKhac", ref _HSPCKhac, value);
             }
         }
+        [ModelDefault("Caption", "Hệ số trợ cấp")]
+        [ModelDefault("DisplayFormat", "N2")]
+        [ModelDefault("EditMask", "N2")]
+        public decimal HSTroCap
+        {
+            get
+            {
+                return _HSTroCap;
+            }
+            set
+            {
+                SetPropertyValue("HSTroCap", ref _HSTroCap, value);
+            }
+        }
 
         [ModelDefault("Caption", "Không đóng BHXH")]
         public bool KhongDongBHXH
@@ -974,6 +989,7 @@ namespace ERP.Module.NghiepVu.NhanSu.HoSoLuong
             PhuCapTrachNhiem = value.NhanVienThongTinLuong.PhuCapTrachNhiem;
             PhuCapChucVu = value.NhanVienThongTinLuong.PhuCapChucVu;
             HSPCKhac = value.NhanVienThongTinLuong.HSPCKhac;
+            HSTroCap = value.NhanVienThongTinLuong.HSTroCap;
             PhuCapDienThoai = value.NhanVienThongTinLuong.PhuCapDienThoai;
             PhuCapTienAn = value.NhanVienThongTinLuong.PhuCapTienAn;
             PhuCapTienXang = value.NhanVienThongTinLuong.PhuCapTienXang;
