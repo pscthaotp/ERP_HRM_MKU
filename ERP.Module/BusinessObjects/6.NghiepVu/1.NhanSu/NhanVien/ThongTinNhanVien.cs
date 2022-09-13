@@ -78,6 +78,8 @@ namespace ERP.Module.NghiepVu.NhanSu.NhanViens
         private string _IDChamCong;
         private LoaiGioLamViec _LoaiGioLamViec;
         private LoaiChamCongEnum _LoaiChamCong = LoaiChamCongEnum.CongHanhChinh;
+        private PhanLoaiNhanSu _PhanLoaiNhanSu;
+
 
         //Phục vụ tập đoàn
         private NhomPhanBo _NhomPhanBo;
@@ -90,7 +92,24 @@ namespace ERP.Module.NghiepVu.NhanSu.NhanViens
 
         //ThuHuong _ Ngiệp vụ PMS Yersin : Xác định những giảng viên cơ hữu nhưng tính thù lao như giảng viên thỉnh giảng 
         private bool _TinhThinhGiang;
-        
+
+
+        [ModelDefault("Caption", "Phân loại nhân sự*")]
+        public PhanLoaiNhanSu PhanLoaiNhanSu
+        {
+            get
+            {
+                return _PhanLoaiNhanSu;
+            }
+            set
+            {
+                SetPropertyValue("PhanLoaiNhanSu", ref _PhanLoaiNhanSu, value);
+            }
+        }
+
+
+
+
         //Mon hoc
         private MonHoc _MonHoc;
 
