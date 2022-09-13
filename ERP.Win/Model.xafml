@@ -4515,6 +4515,24 @@
         <ColumnInfo Id="TenLoaiHocPhan" Index="1" />
       </Columns>
     </ListView>
+    <DetailView Id="LoaiKhauTruLuong_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="LoaiKhauTruLuong" RelativeSize="100">
+              <LayoutItem Id="MaQuanLy" RelativeSize="4.2666666666666666" />
+              <LayoutItem Id="TenLoaiKhauTru" Index="1" RelativeSize="95.733333333333334" />
+              <LayoutItem Id="ChiPhiTienLuong" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="LoaiKhauTruLuong_ListView">
+      <Columns>
+        <ColumnInfo Id="ChiPhiTienLuong" Index="-1" />
+      </Columns>
+    </ListView>
     <DetailView Id="LoaiKhenThuongPhucLoi_DetailView">
       <Layout>
         <LayoutGroup Id="Main" RelativeSize="100">
@@ -4578,6 +4596,25 @@
         <ColumnInfo Id="DenPhut" Removed="True" />
         <ColumnInfo Id="TuGio" Removed="True" />
         <ColumnInfo Id="TuPhut" Removed="True" />
+      </Columns>
+    </ListView>
+    <DetailView Id="LoaiThuNhapKhac_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="LoaiThuNhapKhac" RelativeSize="100">
+              <LayoutItem Id="MaQuanLy" RelativeSize="4.2666666666666666" />
+              <LayoutItem Id="TenLoaiThuNhapKhac" Index="1" RelativeSize="3.2" />
+              <LayoutItem Id="NgungApDung" Index="2" RelativeSize="92.533333333333331" />
+              <LayoutItem Id="ChiPhiTienLuong" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="LoaiThuNhapKhac_ListView">
+      <Columns>
+        <ColumnInfo Id="ChiPhiTienLuong" Index="-1" />
       </Columns>
     </ListView>
     <ListView Id="LoaiTien_ListView">
