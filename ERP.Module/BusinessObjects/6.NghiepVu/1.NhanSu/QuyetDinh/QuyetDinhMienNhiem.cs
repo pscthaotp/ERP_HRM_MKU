@@ -77,7 +77,7 @@ namespace ERP.Module.NghiepVu.NhanSu.QuyetDinhs
 
         [ImmediatePostData]
         [ModelDefault("Caption", "Chức vụ mới")]
-        [RuleRequiredField(DefaultContexts.Save)]
+        //[RuleRequiredField(DefaultContexts.Save)]
         public ChucVu ChucVuMoi
         {
             get
@@ -97,8 +97,8 @@ namespace ERP.Module.NghiepVu.NhanSu.QuyetDinhs
 
      
         [ModelDefault("Caption", "Chức danh mới")]
-        [RuleRequiredField(DefaultContexts.Save)]
-        [DataSourceProperty("CDList")]
+        //[RuleRequiredField(DefaultContexts.Save)]
+        //[DataSourceProperty("CDList")]
         public ChucDanh ChucDanhMoi
         {
             get

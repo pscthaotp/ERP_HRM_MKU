@@ -23,7 +23,7 @@
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
-    <PublishUrl>D:\Publishes\TLU\</PublishUrl>
+    <PublishUrl>E:\Publishes\MKU\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -33,8 +33,8 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>true</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>http://autoupdate.hrmtlu.psctelecom.com.vn/</InstallUrl>
-    <UpdateUrl>http://autoupdate.hrmtlu.psctelecom.com.vn/</UpdateUrl>
+    <InstallUrl>http://autoupdate.hrmmku.psctelecom.com.vn/</InstallUrl>
+    <UpdateUrl>http://autoupdate.hrmmku.psctelecom.com.vn/</UpdateUrl>
     <SupportUrl>http://psctelecom.com.vn</SupportUrl>
     <ErrorReportUrl>http://psctelecom.com.vn</ErrorReportUrl>
     <ProductName>ERP</ProductName>
@@ -44,7 +44,7 @@
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>index.htm</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>9</ApplicationRevision>
+    <ApplicationRevision>3</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -564,6 +564,18 @@
     <Content Include="Configs\MKU\PSC_HRM.bin">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="UnusableNodes974.xml">
+      <DependentUpon>Model.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes973.xml">
+      <DependentUpon>Model.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes972.xml">
+      <DependentUpon>Model.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
     <None Include="UnusableNodes971.xml">
       <DependentUpon>Model.xafml</DependentUpon>
       <SubType>Designer</SubType>

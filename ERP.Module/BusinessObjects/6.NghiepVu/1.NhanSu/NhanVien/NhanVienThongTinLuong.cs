@@ -55,6 +55,7 @@ namespace ERP.Module.NghiepVu.NhanSu.NhanViens
         private decimal _PhuCapKiemNhiem;     
         private decimal _PhuCapTrachNhiem;
         private decimal _HSPCKhac;
+        private decimal _HSTroCap;
         //
         private decimal _PhuCapBanTru;
         private decimal _PhuCapNhaO;
@@ -581,6 +582,20 @@ namespace ERP.Module.NghiepVu.NhanSu.NhanViens
             set
             {
                 SetPropertyValue("HSPCKhac", ref _HSPCKhac, value);
+            }
+        }
+        [ModelDefault("Caption", "Hệ số trợ cấp")]
+        [ModelDefault("DisplayFormat", "N2")]
+        [ModelDefault("EditMask", "N2")]
+        public decimal HSTroCap
+        {
+            get
+            {
+                return _HSTroCap;
+            }
+            set
+            {
+                SetPropertyValue("HSTroCap", ref _HSTroCap, value);
             }
         }
 
