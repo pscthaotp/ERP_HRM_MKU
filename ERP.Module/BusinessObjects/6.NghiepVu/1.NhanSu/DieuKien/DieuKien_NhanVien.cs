@@ -29,6 +29,8 @@ namespace ERP.Module.NghiepVu.NhanSu.DieuKien
 
         [ModelDefault("Caption", "Ngày nghỉ thai sản")]
         public DateTime NgayNghiThaiSan { get; set; }
+        [ModelDefault("Caption", "Phân loại nhân sự")]
+        public PhanLoaiNhanSu PhanLoaiNhanSu { get; set; }
 
         public DieuKien_NhanVien(Session session) : base(session) { }
     }

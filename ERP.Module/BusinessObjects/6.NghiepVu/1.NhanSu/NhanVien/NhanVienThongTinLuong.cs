@@ -34,13 +34,16 @@ namespace ERP.Module.NghiepVu.NhanSu.NhanViens
         private DateTime _MocNangLuongLanSau; 
         private string _LyDoDieuChinh;
         private DateTime _MocNangLuongDieuChinh;
+        private decimal _HeSoLuong;
         private decimal _LuongKhoan;
         private decimal _LuongCoBan;
         private decimal _LuongKinhDoanh;
         private decimal _LuongGop;
+        private decimal _MucLuongDongBHXH;
         private decimal _HieuQuaCongViec;
         private decimal _PhuCapHocVi;
         private decimal _TienBHXH;
+        private decimal _MucHoTroBHXH;
         private int _VuotKhung;
         private decimal _HSPCVuotKhung;
         private DateTime _NgayHuongVuotKhung;
@@ -56,6 +59,7 @@ namespace ERP.Module.NghiepVu.NhanSu.NhanViens
         private decimal _PhuCapTrachNhiem;
         private decimal _HSPCKhac;
         private decimal _HSTroCap;
+        private decimal _HSDieuChinh;
         //
         private decimal _PhuCapBanTru;
         private decimal _PhuCapNhaO;
@@ -106,6 +110,7 @@ namespace ERP.Module.NghiepVu.NhanSu.NhanViens
                     {
                         LuongCoBan = 0;
                         LuongKinhDoanh = 0;
+                        HeSoLuong = 0;
                     }
                 }
             }
@@ -164,11 +169,13 @@ namespace ERP.Module.NghiepVu.NhanSu.NhanViens
                     {
                         LuongCoBan = value.LuongCoBan;
                         LuongKinhDoanh = value.LuongKinhDoanh;
+                        HeSoLuong = value.HeSoLuong;
                     }
                     else
                     {
                         LuongCoBan = 0;
                         LuongKinhDoanh = 0;
+                        HeSoLuong = 0;
                     }
                 }
             }
@@ -228,6 +235,34 @@ namespace ERP.Module.NghiepVu.NhanSu.NhanViens
                 SetPropertyValue("LuongKhoan", ref _LuongKhoan, value);
             }
         }
+        [ModelDefault("Caption", "Hệ số lương")]
+        [ModelDefault("DisplayFormat", "N2")]
+        [ModelDefault("EditMask", "N2")]
+        public decimal HeSoLuong
+        {
+            get
+            {
+                return _HeSoLuong;
+            }
+            set
+            {
+                SetPropertyValue("HeSoLuong", ref _HeSoLuong, value);
+            }
+        }
+        [ModelDefault("Caption", "Mức lương đóng BHXH")]
+        [ModelDefault("DisplayFormat", "N0")]
+        [ModelDefault("EditMask", "N0")]
+        public decimal MucLuongDongBHXH
+        {
+            get
+            {
+                return _MucLuongDongBHXH;
+            }
+            set
+            {
+                SetPropertyValue("MucLuongDongBHXH", ref _MucLuongDongBHXH, value);
+            }
+        }
 
         [ModelDefault("Caption", "Lương chức danh")]
         [ModelDefault("DisplayFormat", "N0")]
@@ -241,6 +276,10 @@ namespace ERP.Module.NghiepVu.NhanSu.NhanViens
             set
             {
                 SetPropertyValue("LuongCoBan", ref _LuongCoBan, value);
+                if (!IsLoading && value != null)
+                {
+                    MucLuongDongBHXH = value;
+                }
             }
         }
 
@@ -311,6 +350,20 @@ namespace ERP.Module.NghiepVu.NhanSu.NhanViens
             set
             {
                 SetPropertyValue("TienBHXH", ref _TienBHXH, value);
+            }
+        }
+        [ModelDefault("Caption", "Mức hỗ trợ BHXH")]
+        [ModelDefault("DisplayFormat", "N0")]
+        [ModelDefault("EditMask", "N0")]
+        public decimal MucHoTroBHXH
+        {
+            get
+            {
+                return _MucHoTroBHXH;
+            }
+            set
+            {
+                SetPropertyValue("MucHoTroBHXH", ref _MucHoTroBHXH, value);
             }
         }
 
@@ -555,7 +608,7 @@ namespace ERP.Module.NghiepVu.NhanSu.NhanViens
         }      
 
         [ImmediatePostData]
-        [ModelDefault("Caption", "PC chủ nhiệm")]
+        [ModelDefault("Caption", "PC trách nhiệm")]
         [ModelDefault("EditMask", "N0")]
         [ModelDefault("DisplayFormat", "N0")]
         public decimal PhuCapTrachNhiem
@@ -596,6 +649,20 @@ namespace ERP.Module.NghiepVu.NhanSu.NhanViens
             set
             {
                 SetPropertyValue("HSTroCap", ref _HSTroCap, value);
+            }
+        }
+        [ModelDefault("Caption", "Hệ số điều chỉnh trợ cấp")]
+        [ModelDefault("DisplayFormat", "N2")]
+        [ModelDefault("EditMask", "N2")]
+        public decimal HSDieuChinh
+        {
+            get
+            {
+                return _HSDieuChinh;
+            }
+            set
+            {
+                SetPropertyValue("HSDieuChinh", ref _HSDieuChinh, value);
             }
         }
 

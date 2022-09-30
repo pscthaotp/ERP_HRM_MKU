@@ -341,6 +341,7 @@ namespace ERP.Module.Win.MailMerge.Prosess.HopDong
                 hd.MaNgach = hopDong.NgachLuong != null ? hopDong.NgachLuong.MaQuanLy : "";
                 hd.NgachLuong = hopDong.NgachLuong != null ? hopDong.NgachLuong.TenNgachLuong : "";
                 hd.BacLuong = hopDong.BacLuong != null ? hopDong.BacLuong.TenBacLuong : "";
+                hd.HeSoLuong = hopDong.HeSoLuong.ToString("N2");
                 hd.LuongCoBan = (hopDong.LuongCoBan * hopDong.PhanTramTinhLuong/100).ToString("N0");
                 hd.LuongCoBanThuan = hopDong.LuongCoBan.ToString("N0");
                 hd.LuongBoSung = hopDong.LuongKinhDoanh.ToString("N0");
@@ -350,6 +351,10 @@ namespace ERP.Module.Win.MailMerge.Prosess.HopDong
                 hd.PhuCapDienThoai = hopDong.PhuCapDienThoai.ToString("N0");
                 hd.PhuCapChucVu = hopDong.PhuCapChucVu.ToString("N0");
                 hd.TongLuong = hopDong.TongLuong.ToString("N0");
+                hd.MucLuongChinh = hopDong.MucLuongChinh.ToString("N0");
+                hd.MucHoTroBHXH = hopDong.MucHoTroBHXH.ToString("N0");
+                hd.MucLuongDongBHXH = hopDong.MucLuongDongBHXH.ToString("N0");
+
 
                 //
 

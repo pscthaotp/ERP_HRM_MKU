@@ -20,6 +20,7 @@ namespace ERP.Module.DanhMuc.TienLuong
         private string _MaQuanLy;
         private string _TenBacLuong;
         private bool _BacLuongCu;
+        private decimal _HeSoLuong;
         private decimal _LuongCoBan;
         private decimal _LuongKinhDoanh;
         private decimal _LuongGop;
@@ -67,7 +68,21 @@ namespace ERP.Module.DanhMuc.TienLuong
                 SetPropertyValue("TenBacLuong", ref _TenBacLuong, value);
             }
         }
-
+        [ModelDefault("EditMask", "N2")]
+        [ModelDefault("DisplayFormat", "N2")]
+        [RuleRequiredField(DefaultContexts.Save)]
+        [ModelDefault("Caption", "Hệ số lương")]
+        public decimal HeSoLuong
+        {
+            get
+            {
+                return _HeSoLuong;
+            }
+            set
+            {
+                SetPropertyValue("HeSoLuong", ref _HeSoLuong, value);
+            }
+        }
         [ModelDefault("EditMask", "N0")]
         [ModelDefault("DisplayFormat", "N0")]
         [RuleRequiredField(DefaultContexts.Save)]
