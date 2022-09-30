@@ -605,9 +605,18 @@ namespace ERP.Module.NghiepVu.NhanSu.NhanViens
             if (string.IsNullOrEmpty(MaNhanVien))
                 MaNhanVien = ManageKeyFactory.ManageKey(ManageKeyEnum.MaNhanVien);
 
-            //Loại giờ làm việc
-            LoaiGioLamViec = CongTy.CauHinhChung.CauHinhHoSo.LoaiGioLamViec; //Session.FindObject<LoaiGioLamViec>(CriteriaOperator.Parse("SoGio=8"));
-            //
+            if(CongTy.CauHinhChung != null)
+            {
+                if(CongTy.CauHinhChung.CauHinhHoSo != null)
+                {
+                    if(CongTy.CauHinhChung.CauHinhHoSo.LoaiGioLamViec != null)
+                    {
+                        LoaiGioLamViec = CongTy.CauHinhChung.CauHinhHoSo.LoaiGioLamViec; //Session.FindObject<LoaiGioLamViec>(CriteriaOperator.Parse("SoGio=8"));
+                    }
+                }
+
+            }
+
             _Create = true;      
         }
         public void OnLoad()
