@@ -85,7 +85,7 @@ namespace ERP.Module.NghiepVu.TienLuong.ThuNhapKhac
         }
 
         [ModelDefault("Caption", "Nhóm phân bổ")]
-        [RuleRequiredField("", DefaultContexts.Save)]
+        //[RuleRequiredField("", DefaultContexts.Save)]
         public NhomPhanBo NhomPhanBo
         {
             get
