@@ -21,8 +21,8 @@ using ERP.Module.DanhMuc.NhanSu;
 namespace ERP.Module.Report.TienLuong
 {
     [NonPersistent]
-    [ModelDefault("Caption", "Bảng thanh toán lương tiền mặt - Tiền lương")]
-    public class BaoCao_ChungTu_BangThanhToanLuongTienMat : StoreProcedureReport
+    [ModelDefault("Caption", "Bảng thanh toán lương hệ số chuyên viên - tiền lương")]
+    public class BaoCao_Luong_BangThanhToanTienLuongChuyenVien: StoreProcedureReport
     {
         private KyTinhLuong _KyTinhLuong;
         private CongTy _CongTy;
@@ -91,8 +91,8 @@ namespace ERP.Module.Report.TienLuong
                 SetPropertyValue("KyTinhLuong", ref _KyTinhLuong, value);
             }
         }
-       
-        public BaoCao_ChungTu_BangThanhToanLuongTienMat(Session session) : base(session) { }
+
+        public BaoCao_Luong_BangThanhToanTienLuongChuyenVien(Session session) : base(session) { }
 
         public override void AfterConstruction()
         {
@@ -105,22 +105,11 @@ namespace ERP.Module.Report.TienLuong
 
         public override SqlCommand CreateCommand()
         {
-            List<string> listBP = new List<string>();
             //
-            if (TatCa)
-                listBP = Common.Department_GetRoledDepartmentList_ByCurrentUser();
-            else
-                listBP = Common.Department_GetRoledDepartmentList_ByDepartment(BoPhan);
-            //
-            StringBuilder roled = new StringBuilder();
-            foreach (string item in listBP)
-            {
-                roled.Append(String.Format("{0};", item));
-            }
-            //
-            SqlCommand cmd = new SqlCommand("spd_Rpt_ChungTu_BangThanhToanLuongTienMat");
+            SqlCommand cmd = new SqlCommand("spd_Rpt_Luong_BangThanhToanTienLuongChuyenVien");
             cmd.CommandType = System.Data.CommandType.StoredProcedure;          
             cmd.Parameters.AddWithValue("@KyTinhLuong", KyTinhLuong.Oid);
+            cmd.Parameters.AddWithValue("@BoPhanPhanQuyen","");
             cmd.Parameters.AddWithValue("@CongTy", CongTy.Oid);
             return cmd;
         }

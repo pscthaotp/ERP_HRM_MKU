@@ -21,13 +21,14 @@ using ERP.Module.DanhMuc.NhanSu;
 namespace ERP.Module.Report.TienLuong
 {
     [NonPersistent]
-    [ModelDefault("Caption", "Bảng thanh toán lương tiền mặt - Tiền lương")]
-    public class BaoCao_ChungTu_BangThanhToanLuongTienMat : StoreProcedureReport
+    [ModelDefault("Caption", "Bảng thanh toán tiền lương thử việc - tiền lương")]
+    public class BaoCao_Luong_BangThanhToanTienLuongThuViec: StoreProcedureReport
     {
         private KyTinhLuong _KyTinhLuong;
         private CongTy _CongTy;
         private bool _TatCa;
         private BoPhan _BoPhan;
+
         //
         [ImmediatePostData]
         [ModelDefault("Caption", "Trường")]
@@ -91,8 +92,8 @@ namespace ERP.Module.Report.TienLuong
                 SetPropertyValue("KyTinhLuong", ref _KyTinhLuong, value);
             }
         }
-       
-        public BaoCao_ChungTu_BangThanhToanLuongTienMat(Session session) : base(session) { }
+
+        public BaoCao_Luong_BangThanhToanTienLuongThuViec(Session session) : base(session) { }
 
         public override void AfterConstruction()
         {
@@ -118,9 +119,10 @@ namespace ERP.Module.Report.TienLuong
                 roled.Append(String.Format("{0};", item));
             }
             //
-            SqlCommand cmd = new SqlCommand("spd_Rpt_ChungTu_BangThanhToanLuongTienMat");
+            SqlCommand cmd = new SqlCommand("spd_Rpt_Luong_BangThanhToanTienLuongThuViec");
             cmd.CommandType = System.Data.CommandType.StoredProcedure;          
             cmd.Parameters.AddWithValue("@KyTinhLuong", KyTinhLuong.Oid);
+            cmd.Parameters.AddWithValue("@BoPhanPhanQuyen",roled.ToString());
             cmd.Parameters.AddWithValue("@CongTy", CongTy.Oid);
             return cmd;
         }
