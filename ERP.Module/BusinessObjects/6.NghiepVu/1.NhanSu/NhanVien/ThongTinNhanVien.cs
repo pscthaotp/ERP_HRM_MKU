@@ -50,7 +50,7 @@ namespace ERP.Module.NghiepVu.NhanSu.NhanViens
     #endregion
 
     #region Ẩn theo phân loại lương
-    [Appearance("Hide_LuongNgachBac", TargetItems = "NhanVienThongTinLuong.LuongKhoan", Visibility = ViewItemVisibility.Hide, Criteria = "NhanVienThongTinLuong.PhanLoaiLuong=1")]
+    //[Appearance("Hide_LuongNgachBac", TargetItems = "NhanVienThongTinLuong.LuongKhoan", Visibility = ViewItemVisibility.Hide, Criteria = "NhanVienThongTinLuong.PhanLoaiLuong=1")]
     [Appearance("Hide_LuongKhoan", TargetItems = "NhanVienThongTinLuong.PhanTramTinhLuong;NhanVienThongTinLuong.LyDoDieuChinh;NhanVienThongTinLuong.MocNangLuongDieuChinh;NhanVienThongTinLuong.NgayBoNhiemNgach;NhanVienThongTinLuong.NgachLuong;NhanVienThongTinLuong.BacLuong;NhanVienThongTinLuong.LuongCoBan;NhanVienThongTinLuong.LuongKinhDoanh;NhanVienThongTinLuong.MocNangLuongLanSau;NhanVienThongTinLuong.LuongGop", Visibility = ViewItemVisibility.Hide, Criteria = "NhanVienThongTinLuong.PhanLoaiLuong=2")]
     #endregion
 

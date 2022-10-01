@@ -16,6 +16,8 @@ namespace ERP.Module.MailMerge.NhanSu.HopDong
 
         [DisplayName("Bậc lương")]
         public string BacLuong { get; set; }
+        [DisplayName("Hệ số lương")]
+        public string HeSoLuong { get; set; }
 
         [DisplayName("Lương chức danh")]
         public string LuongCoBan { get; set; }
@@ -25,6 +27,12 @@ namespace ERP.Module.MailMerge.NhanSu.HopDong
         public string LuongBoSung { get; set; }
         [DisplayName("Lương gộp")]
         public string LuongGop { get; set; }
+        [DisplayName("Mức lương chính")]
+        public string MucLuongChinh { get; set; }
+        [DisplayName("Mức hỗ trợ (BHXH)")]
+        public string MucHoTroBHXH { get; set; }
+        [DisplayName("Mức lương đóng BHXH")]
+        public string MucLuongDongBHXH { get; set; }
 
         [DisplayName("Ngày hưởng lương")]
         public string NgayHuongLuong { get; set; }

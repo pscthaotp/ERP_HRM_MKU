@@ -37,6 +37,7 @@ namespace ERP.Module.NghiepVu.NhanSu.HoSoLuong
         private TinhTrang _TinhTrang;
         private ChucDanh _ChucDanh;
         private LoaiHopDong _LoaiHopDong;
+        private PhanLoaiNhanSu _PhanLoaiNhanSu;
         private ChucVu _ChucVu;
         private DateTime _NgayVaoCongTy;
         private bool _TinhLuong;
@@ -45,11 +46,13 @@ namespace ERP.Module.NghiepVu.NhanSu.HoSoLuong
         private BacLuong _BacLuong;
         private decimal _PhanTramTinhLuong;
         private decimal _HeSoLuong;
+        private decimal _MucLuongDongBHXH;
         private decimal _LuongCoBan;
         private decimal _LuongKinhDoanh;
         private decimal _LuongKhoan;
         private decimal _HieuQuaCongViec;
         private decimal _TienBHXH;
+        private decimal _MucHoTroBHXH;
         private decimal _PhuCapHocVi;
         private decimal _HSPCChucVu;
         private decimal _HSPCVuotKhung;
@@ -60,6 +63,7 @@ namespace ERP.Module.NghiepVu.NhanSu.HoSoLuong
         private decimal _PhuCapTrachNhiem;
         private decimal _HSPCKhac;
         private decimal _HSTroCap;
+        private decimal _HSDieuChinh;
         private decimal _PhuCapDienThoai;
         private decimal _PhuCapTienAn;
         private decimal _PhuCapTienXang;
@@ -200,6 +204,18 @@ namespace ERP.Module.NghiepVu.NhanSu.HoSoLuong
             set
             {
                 SetPropertyValue("LoaiHopDong", ref _LoaiHopDong, value);
+            }
+        }
+        [ModelDefault("Caption", "Phân loại nhân sự")]
+        public PhanLoaiNhanSu PhanLoaiNhanSu
+        {
+            get
+            {
+                return _PhanLoaiNhanSu;
+            }
+            set
+            {
+                SetPropertyValue("PhanLoaiNhanSu", ref _PhanLoaiNhanSu, value);
             }
         }
 
@@ -367,6 +383,21 @@ namespace ERP.Module.NghiepVu.NhanSu.HoSoLuong
         }
 
         [ImmediatePostData]
+        [ModelDefault("Caption", "Mức lương đóng BHXH")]
+        [ModelDefault("DisplayFormat", "N0")]
+        [ModelDefault("EditMask", "N0")]
+        public decimal MucLuongDongBHXH
+        {
+            get
+            {
+                return _MucLuongDongBHXH;
+            }
+            set
+            {
+                SetPropertyValue("MucLuongDongBHXH", ref _MucLuongDongBHXH, value);
+            }
+        }
+        [ImmediatePostData]
         [ModelDefault("Caption", "Lương chức danh")]
         [ModelDefault("DisplayFormat", "N0")]
         [ModelDefault("EditMask", "N0")]
@@ -424,6 +455,20 @@ namespace ERP.Module.NghiepVu.NhanSu.HoSoLuong
             set
             {
                 SetPropertyValue("TienBHXH", ref _TienBHXH, value);
+            }
+        }
+        [ModelDefault("Caption", "Mức hỗ trợ BHXH")]
+        [ModelDefault("DisplayFormat", "N0")]
+        [ModelDefault("EditMask", "N0")]
+        public decimal MucHoTroBHXH
+        {
+            get
+            {
+                return _MucHoTroBHXH;
+            }
+            set
+            {
+                SetPropertyValue("MucHoTroBHXH", ref _MucHoTroBHXH, value);
             }
         }
         [ModelDefault("Caption", "Phụ cấp học vị")]
@@ -553,7 +598,7 @@ namespace ERP.Module.NghiepVu.NhanSu.HoSoLuong
         }
 
         [ImmediatePostData]
-        [ModelDefault("Caption", "PC chủ nhiệm")]
+        [ModelDefault("Caption", "PC trách nhiệm")]
         [ModelDefault("EditMask", "N0")]
         [ModelDefault("DisplayFormat", "N0")]
         public decimal PhuCapTrachNhiem
@@ -596,7 +641,20 @@ namespace ERP.Module.NghiepVu.NhanSu.HoSoLuong
                 SetPropertyValue("HSTroCap", ref _HSTroCap, value);
             }
         }
-
+        [ModelDefault("Caption", "Hệ số điều chỉnh trợ cấp")]
+        [ModelDefault("DisplayFormat", "N2")]
+        [ModelDefault("EditMask", "N2")]
+        public decimal HSDieuChinh
+        {
+            get
+            {
+                return _HSDieuChinh;
+            }
+            set
+            {
+                SetPropertyValue("HSDieuChinh", ref _HSDieuChinh, value);
+            }
+        }
         [ModelDefault("Caption", "Không đóng BHXH")]
         public bool KhongDongBHXH
         {
@@ -974,12 +1032,15 @@ namespace ERP.Module.NghiepVu.NhanSu.HoSoLuong
             NgayVaoCongTy = value.NgayVaoCongTy;
             SoThangLamViec = value.SoThangLamViec;
             LoaiHopDong = value.LoaiHopDong;
+            PhanLoaiNhanSu = value.PhanLoaiNhanSu;
             ChucVu = value.ChucVu;
             ChucDanh = value.ChucDanh;
             PhanTramTinhLuong = value.NhanVienThongTinLuong.PhanTramTinhLuong;
+            MucLuongDongBHXH = value.NhanVienThongTinLuong.MucLuongDongBHXH;
             LuongCoBan = value.NhanVienThongTinLuong.LuongCoBan;
             LuongKinhDoanh = value.NhanVienThongTinLuong.LuongKinhDoanh;
             LuongKhoan = value.NhanVienThongTinLuong.LuongKhoan;
+            HeSoLuong = value.NhanVienThongTinLuong.HeSoLuong;
             HSPCChucVu = value.NhanVienThongTinLuong.HSPCChucVu;
             HSPCThamNien = value.NhanVienThongTinLuong.HSPCThamNien;
             HSPCVuotKhung = value.NhanVienThongTinLuong.HSPCVuotKhung;
@@ -990,6 +1051,7 @@ namespace ERP.Module.NghiepVu.NhanSu.HoSoLuong
             PhuCapChucVu = value.NhanVienThongTinLuong.PhuCapChucVu;
             HSPCKhac = value.NhanVienThongTinLuong.HSPCKhac;
             HSTroCap = value.NhanVienThongTinLuong.HSTroCap;
+            HSDieuChinh = value.NhanVienThongTinLuong.HSDieuChinh;
             PhuCapDienThoai = value.NhanVienThongTinLuong.PhuCapDienThoai;
             PhuCapTienAn = value.NhanVienThongTinLuong.PhuCapTienAn;
             PhuCapTienXang = value.NhanVienThongTinLuong.PhuCapTienXang;
@@ -1008,6 +1070,7 @@ namespace ERP.Module.NghiepVu.NhanSu.HoSoLuong
             HieuQuaCongViec = value.NhanVienThongTinLuong.HieuQuaCongViec;
             PhuCapHocVi = value.NhanVienThongTinLuong.PhuCapHocVi;
             TienBHXH = value.NhanVienThongTinLuong.TienBHXH;
+            MucHoTroBHXH = value.NhanVienThongTinLuong.MucHoTroBHXH;
         }
     }
 
