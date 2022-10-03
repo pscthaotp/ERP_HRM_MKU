@@ -22,11 +22,12 @@ namespace ERP.Module.Report.TienLuong
 {
     [NonPersistent]
     [ModelDefault("Caption", "Bảng thanh toán lương hệ số chuyên viên - tiền lương")]
+    [Appearance("BangLuong.TatCaDonVi", TargetItems = "BoPhan", Enabled = false, Criteria = "TatCa")]
     public class BaoCao_Luong_BangThanhToanTienLuongChuyenVien: StoreProcedureReport
     {
         private KyTinhLuong _KyTinhLuong;
         private CongTy _CongTy;
-        private bool _TatCa;
+        private bool _TatCa = true;
         private BoPhan _BoPhan;
         //
         [ImmediatePostData]

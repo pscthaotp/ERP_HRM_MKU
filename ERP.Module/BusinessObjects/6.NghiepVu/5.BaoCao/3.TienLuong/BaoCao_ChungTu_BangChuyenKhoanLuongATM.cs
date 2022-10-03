@@ -22,6 +22,7 @@ namespace ERP.Module.Report.TienLuong
 {
     [NonPersistent]
     [ModelDefault("Caption", "Bảng chuyển khoản lương ATM - Tiền lương")]
+    [Appearance("BangLuong.TatCaDonVi", TargetItems = "BoPhan", Enabled = false, Criteria = "TatCa")]
     public class BaoCao_ChungTu_BangChuyenKhoanLuongATM : StoreProcedureReport
     {
         private KyTinhLuong _KyTinhLuong;

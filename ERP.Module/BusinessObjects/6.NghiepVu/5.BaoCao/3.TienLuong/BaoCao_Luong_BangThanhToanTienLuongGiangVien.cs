@@ -26,7 +26,7 @@ namespace ERP.Module.Report.TienLuong
     {
         private KyTinhLuong _KyTinhLuong;
         private CongTy _CongTy;
-        private bool _TatCa;
+        private bool _TatCa = true;
         private BoPhan _BoPhan;
         //
         [ImmediatePostData]
