@@ -121,7 +121,7 @@ namespace ERP.Module.Report.TienLuong
             SqlCommand cmd = new SqlCommand("spd_Rpt_Luong_BangThanhToanTienLuongGiangVien");
             cmd.CommandType = System.Data.CommandType.StoredProcedure;          
             cmd.Parameters.AddWithValue("@KyTinhLuong", KyTinhLuong.Oid);
-            cmd.Parameters.AddWithValue("@BoPhanPhanQuyen","");
+            cmd.Parameters.AddWithValue("@BoPhanPhanQuyen", roled.ToString());
             cmd.Parameters.AddWithValue("@CongTy", CongTy.Oid);
             return cmd;
         }
