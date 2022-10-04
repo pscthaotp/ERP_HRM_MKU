@@ -22,6 +22,7 @@ namespace ERP.Module.Report.TienLuong
 {
     [NonPersistent]
     [ModelDefault("Caption", "Bảng thanh toán lương hệ số giảng viên - tiền lương")]
+    [Appearance("BangLuong.TatCaDonVi", TargetItems = "BoPhan", Enabled = false, Criteria = "TatCa")]
     public class BaoCao_Luong_BangThanhToanTienLuongGiangVien: StoreProcedureReport
     {
         private KyTinhLuong _KyTinhLuong;

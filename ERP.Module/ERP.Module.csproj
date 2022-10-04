@@ -330,6 +330,7 @@
     <Compile Include="BusinessObjects\2.DanhMuc\1.NhanSu\ChuyenNganhDaoTao.cs" />
     <Compile Include="BusinessObjects\2.DanhMuc\1.NhanSu\CongViec.cs" />
     <Compile Include="BusinessObjects\2.DanhMuc\1.NhanSu\DanhHieuKhenThuong.cs" />
+    <Compile Include="BusinessObjects\2.DanhMuc\1.NhanSu\PhanLoaiBangLuong.cs" />
     <Compile Include="BusinessObjects\2.DanhMuc\1.NhanSu\PhanLoaiNhanSu.cs" />
     <Compile Include="BusinessObjects\2.DanhMuc\1.NhanSu\TenDuong.cs" />
     <Compile Include="BusinessObjects\2.DanhMuc\1.NhanSu\KhuPho.cs" />

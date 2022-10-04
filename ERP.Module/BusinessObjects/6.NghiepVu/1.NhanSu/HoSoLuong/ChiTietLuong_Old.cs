@@ -36,6 +36,7 @@ namespace ERP.Module.NghiepVu.NhanSu.HoSoLuong
         private ThongTinNhanVien _ThongTinNhanVien;
         private TinhTrang _TinhTrang;
         private ChucDanh _ChucDanh;
+        private PhanLoaiBangLuong _PhanLoaiBangLuong;
         private LoaiHopDong _LoaiHopDong;
         private PhanLoaiNhanSu _PhanLoaiNhanSu;
         private ChucVu _ChucVu;
@@ -198,6 +199,18 @@ namespace ERP.Module.NghiepVu.NhanSu.HoSoLuong
             set
             {
                 SetPropertyValue("LoaiHopDong", ref _LoaiHopDong, value);
+            }
+        }
+        [ModelDefault("Caption", "Phân loại bảng lương")]
+        public PhanLoaiBangLuong PhanLoaiBangLuong
+        {
+            get
+            {
+                return _PhanLoaiBangLuong;
+            }
+            set
+            {
+                SetPropertyValue("PhanLoaiBangLuong", ref _PhanLoaiBangLuong, value);
             }
         }
         [ModelDefault("Caption", "Phân loại nhân sự")]
@@ -955,6 +968,7 @@ namespace ERP.Module.NghiepVu.NhanSu.HoSoLuong
             PhanLoaiLuong = value.NhanVienThongTinLuong.PhanLoaiLuong;
             NgachLuong = value.NhanVienThongTinLuong.NgachLuong != null ? value.NhanVienThongTinLuong.NgachLuong : null;
             BacLuong = value.NhanVienThongTinLuong.BacLuong != null ? value.NhanVienThongTinLuong.BacLuong : null;
+            PhanLoaiBangLuong = value.PhanLoaiBangLuong;
             LoaiHopDong = value.LoaiHopDong;
             PhanLoaiNhanSu = value.PhanLoaiNhanSu;
             ChucVu = value.ChucVu;
@@ -1002,22 +1016,22 @@ namespace ERP.Module.NghiepVu.NhanSu.HoSoLuong
         {
             base.OnSaved();
 
-            int loai = 0;
-            SqlParameter[] param = new SqlParameter[2];
-            param[0] = new SqlParameter("@ChiTietLuong_Old", this.Oid);
-            param[1] = new SqlParameter("@Loai", loai); // 0: Thêm chi tiết -> tính công trước - sau điều chỉnh
-            DataProvider.ExecuteNonQuery("spd_HoSoLuong_CapNhatCongTruocVaSauDieuChinh", CommandType.StoredProcedure, param);
+            //int loai = 0;
+            //SqlParameter[] param = new SqlParameter[2];
+            //param[0] = new SqlParameter("@ChiTietLuong_Old", this.Oid);
+            //param[1] = new SqlParameter("@Loai", loai); // 0: Thêm chi tiết -> tính công trước - sau điều chỉnh
+            //DataProvider.ExecuteNonQuery("spd_HoSoLuong_CapNhatCongTruocVaSauDieuChinh", CommandType.StoredProcedure, param);
         }
 
         protected override void OnDeleting()
         {
             base.OnDeleting();
 
-            int loai = 1;
-            SqlParameter[] param = new SqlParameter[2];
-            param[0] = new SqlParameter("@ChiTietLuong_Old", this.Oid);
-            param[1] = new SqlParameter("@Loai", loai); // 1: Xóa chi tiết -> cập nhật tổng công trước - sau = 0
-            DataProvider.ExecuteNonQuery("spd_HoSoLuong_CapNhatCongTruocVaSauDieuChinh", CommandType.StoredProcedure, param);
+            //int loai = 1;
+            //SqlParameter[] param = new SqlParameter[2];
+            //param[0] = new SqlParameter("@ChiTietLuong_Old", this.Oid);
+            //param[1] = new SqlParameter("@Loai", loai); // 1: Xóa chi tiết -> cập nhật tổng công trước - sau = 0
+            //DataProvider.ExecuteNonQuery("spd_HoSoLuong_CapNhatCongTruocVaSauDieuChinh", CommandType.StoredProcedure, param);
         }
     }
 
