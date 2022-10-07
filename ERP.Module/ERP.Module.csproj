@@ -485,6 +485,8 @@
     <Compile Include="BusinessObjects\4.NonPersistentObjects\ReportCustom\ReportViewGroup.cs" />
     <Compile Include="BusinessObjects\4.NonPersistentObjects\ReportCustom\ReportCustomView.cs" />
     <Compile Include="BusinessObjects\6.NghiepVu\0.MaTuDong\MaKyHieuBienLai.cs" />
+    <Compile Include="BusinessObjects\6.NghiepVu\1.NhanSu\QuyetDinh\ChiTietQuyetDinhThanhLapDonVi.cs" />
+    <Compile Include="BusinessObjects\6.NghiepVu\1.NhanSu\QuyetDinh\QuyetDinhThanhLapDonVi.cs" />
     <Compile Include="BusinessObjects\6.NghiepVu\2.TienLuong\Thuong\ChiTietThuongNhanVien.cs" />
     <Compile Include="BusinessObjects\6.NghiepVu\2.TienLuong\Thuong\CongThucKhenThuongPhucLoi.cs" />
     <Compile Include="BusinessObjects\6.NghiepVu\2.TienLuong\Thuong\BangThuongNhanVien.cs" />
@@ -894,6 +896,10 @@
     <Compile Include="BusinessObjects\7.MailMerge\1.NhanSu\HopDong\Non_HopDongLamViec.cs" />
     <Compile Include="BusinessObjects\7.MailMerge\1.NhanSu\HopDong\Non_HopDongThinhGiang.cs" />
     <Compile Include="BusinessObjects\7.MailMerge\1.NhanSu\QuyetDinh\0.Non_QuyetDinh.cs" />
+    <Compile Include="BusinessObjects\7.MailMerge\1.NhanSu\QuyetDinh\Non_QuyetDinhThanhLapDonViDetail.cs" />
+    <Compile Include="BusinessObjects\7.MailMerge\1.NhanSu\QuyetDinh\Non_QuyetDinhThanhLapDonViMaster.cs" />
+    <Compile Include="BusinessObjects\7.MailMerge\1.NhanSu\QuyetDinh\Non_QuyetDinhThanhLapDonViTapThe.cs" />
+    <Compile Include="BusinessObjects\7.MailMerge\1.NhanSu\QuyetDinh\Non_QuyetDinhThanhLapDonViCaNhan.cs" />
     <Compile Include="BusinessObjects\7.MailMerge\1.NhanSu\QuyetDinh\1.Non_QuyetDinhNhanVien.cs" />
     <Compile Include="BusinessObjects\7.MailMerge\1.NhanSu\QuyetDinh\2.Non_MergeItem.cs" />
     <Compile Include="BusinessObjects\7.MailMerge\1.NhanSu\QuyetDinh\Non_QuyetDinhBietPhai.cs" />
