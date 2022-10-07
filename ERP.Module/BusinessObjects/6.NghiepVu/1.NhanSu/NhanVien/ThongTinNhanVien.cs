@@ -79,6 +79,7 @@ namespace ERP.Module.NghiepVu.NhanSu.NhanViens
         private LoaiGioLamViec _LoaiGioLamViec;
         private LoaiChamCongEnum _LoaiChamCong = LoaiChamCongEnum.CongHanhChinh;
         private PhanLoaiNhanSu _PhanLoaiNhanSu;
+        private PhanLoaiBangLuong _PhanLoaiBangLuong;
 
 
         //Phục vụ tập đoàn
@@ -106,7 +107,18 @@ namespace ERP.Module.NghiepVu.NhanSu.NhanViens
                 SetPropertyValue("PhanLoaiNhanSu", ref _PhanLoaiNhanSu, value);
             }
         }
-
+        [ModelDefault("Caption", "Phân loại bảng lương")]
+        public PhanLoaiBangLuong PhanLoaiBangLuong
+        {
+            get
+            {   
+                return _PhanLoaiBangLuong;
+            }
+            set
+            {
+                SetPropertyValue("PhanLoaiBangLuong", ref _PhanLoaiBangLuong, value);
+            }
+        }
 
 
 

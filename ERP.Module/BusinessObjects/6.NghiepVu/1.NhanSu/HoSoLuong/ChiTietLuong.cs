@@ -36,6 +36,7 @@ namespace ERP.Module.NghiepVu.NhanSu.HoSoLuong
         private ThongTinNhanVien _ThongTinNhanVien;
         private TinhTrang _TinhTrang;
         private ChucDanh _ChucDanh;
+        private PhanLoaiBangLuong _PhanLoaiBangLuong;
         private LoaiHopDong _LoaiHopDong;
         private PhanLoaiNhanSu _PhanLoaiNhanSu;
         private ChucVu _ChucVu;
@@ -204,6 +205,18 @@ namespace ERP.Module.NghiepVu.NhanSu.HoSoLuong
             set
             {
                 SetPropertyValue("LoaiHopDong", ref _LoaiHopDong, value);
+            }
+        }
+        [ModelDefault("Caption", "Phân loại bảng lương")]
+        public PhanLoaiBangLuong PhanLoaiBangLuong
+        {
+            get
+            {
+                return _PhanLoaiBangLuong;
+            }
+            set
+            {
+                SetPropertyValue("PhanLoaiBangLuong", ref _PhanLoaiBangLuong, value);
             }
         }
         [ModelDefault("Caption", "Phân loại nhân sự")]
@@ -1031,6 +1044,7 @@ namespace ERP.Module.NghiepVu.NhanSu.HoSoLuong
             BacLuong = value.NhanVienThongTinLuong.BacLuong != null ? value.NhanVienThongTinLuong.BacLuong : null;
             NgayVaoCongTy = value.NgayVaoCongTy;
             SoThangLamViec = value.SoThangLamViec;
+            PhanLoaiBangLuong = value.PhanLoaiBangLuong;
             LoaiHopDong = value.LoaiHopDong;
             PhanLoaiNhanSu = value.PhanLoaiNhanSu;
             ChucVu = value.ChucVu;

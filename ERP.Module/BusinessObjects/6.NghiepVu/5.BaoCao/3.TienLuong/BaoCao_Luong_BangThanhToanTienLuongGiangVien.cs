@@ -22,6 +22,7 @@ namespace ERP.Module.Report.TienLuong
 {
     [NonPersistent]
     [ModelDefault("Caption", "Bảng thanh toán lương hệ số giảng viên - tiền lương")]
+    [Appearance("BangLuong.TatCaDonVi", TargetItems = "BoPhan", Enabled = false, Criteria = "TatCa")]
     public class BaoCao_Luong_BangThanhToanTienLuongGiangVien: StoreProcedureReport
     {
         private KyTinhLuong _KyTinhLuong;
@@ -121,7 +122,7 @@ namespace ERP.Module.Report.TienLuong
             SqlCommand cmd = new SqlCommand("spd_Rpt_Luong_BangThanhToanTienLuongGiangVien");
             cmd.CommandType = System.Data.CommandType.StoredProcedure;          
             cmd.Parameters.AddWithValue("@KyTinhLuong", KyTinhLuong.Oid);
-            cmd.Parameters.AddWithValue("@BoPhanPhanQuyen","");
+            cmd.Parameters.AddWithValue("@BoPhanPhanQuyen", roled.ToString());
             cmd.Parameters.AddWithValue("@CongTy", CongTy.Oid);
             return cmd;
         }

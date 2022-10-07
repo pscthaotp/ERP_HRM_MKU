@@ -106,11 +106,23 @@ namespace ERP.Module.Report.TienLuong
 
         public override SqlCommand CreateCommand()
         {
+            List<string> listBP = new List<string>();
+            //
+            if (TatCa)
+                listBP = Common.Department_GetRoledDepartmentList_ByCurrentUser();
+            else
+                listBP = Common.Department_GetRoledDepartmentList_ByDepartment(BoPhan);
+            //
+            StringBuilder roled = new StringBuilder();
+            foreach (string item in listBP)
+            {
+                roled.Append(String.Format("{0};", item));
+            }
             //
             SqlCommand cmd = new SqlCommand("spd_Rpt_Luong_BangThanhToanTienLuongChuyenVien");
             cmd.CommandType = System.Data.CommandType.StoredProcedure;          
             cmd.Parameters.AddWithValue("@KyTinhLuong", KyTinhLuong.Oid);
-            cmd.Parameters.AddWithValue("@BoPhanPhanQuyen","");
+            cmd.Parameters.AddWithValue("@BoPhanPhanQuyen", roled.ToString());
             cmd.Parameters.AddWithValue("@CongTy", CongTy.Oid);
             return cmd;
         }
