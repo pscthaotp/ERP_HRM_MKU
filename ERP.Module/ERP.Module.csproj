@@ -538,6 +538,8 @@
     <Compile Include="BusinessObjects\6.NghiepVu\5.BaoCao\2.NhanSu\DanhSach\BaoCao_DanhSach_HopDongQuyetDinhKhongHopLe.cs" />
     <Compile Include="BusinessObjects\6.NghiepVu\5.BaoCao\2.NhanSu\ThongKe\BaoCao_ThongKe_CoCauNhanSuTheoThang.cs" />
     <Compile Include="BusinessObjects\6.NghiepVu\5.BaoCao\2.NhanSu\ThongKe\BaoCao_ThongKe_SoLuongTuyenDungHangThang.cs" />
+    <Compile Include="BusinessObjects\6.NghiepVu\5.BaoCao\3.TienLuong\BaoCao_ChungTu_BangChuyenKhoanThuNhapTangThem.cs" />
+    <Compile Include="BusinessObjects\6.NghiepVu\5.BaoCao\3.TienLuong\BaoCao_Luong_BangThanhToanThuNhapTangThem.cs" />
     <Compile Include="BusinessObjects\6.NghiepVu\5.BaoCao\3.TienLuong\BaoCao_ChamCong_BangTongHopCongNgoaiGio.cs" />
     <Compile Include="BusinessObjects\6.NghiepVu\5.BaoCao\3.TienLuong\BaoCao_Luong_BangThanhToanTienLuongDaiHan.cs" />
     <Compile Include="BusinessObjects\6.NghiepVu\5.BaoCao\3.TienLuong\BaoCao_Luong_BangThanhToanTienLuongThuViec.cs" />
