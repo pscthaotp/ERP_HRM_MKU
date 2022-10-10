@@ -63,6 +63,8 @@ namespace ERP.Module.NghiepVu.NhanSu.HoSoLuong
         private decimal _PhuCapKiemNhiem;
         private decimal _PhuCapTrachNhiem;
         private decimal _PhuCapChucVu;
+        private decimal _PhuCapKiemNhiemThem;
+        private decimal _TroCapKhac;
         private decimal _HSPCKhac;
         private decimal _HSTroCap;
         private decimal _HSDieuChinh;
@@ -633,6 +635,34 @@ namespace ERP.Module.NghiepVu.NhanSu.HoSoLuong
                 SetPropertyValue("PhuCapChucVu", ref _PhuCapChucVu, value);
             }
         }
+        [ModelDefault("Caption", "Phụ cấp kiêm nhiệm thêm(TNTT)")]
+        [ModelDefault("DisplayFormat", "N0")]
+        [ModelDefault("EditMask", "N0")]
+        public decimal PhuCapKiemNhiemThem
+        {
+            get
+            {
+                return _PhuCapKiemNhiemThem;
+            }
+            set
+            {
+                SetPropertyValue("PhuCapKiemNhiemThem", ref _PhuCapKiemNhiemThem, value);
+            }
+        }
+        [ModelDefault("Caption", "Trợ cấp khác(TNTT)")]
+        [ModelDefault("DisplayFormat", "N0")]
+        [ModelDefault("EditMask", "N0")]
+        public decimal TroCapKhac
+        {
+            get
+            {
+                return _TroCapKhac;
+            }
+            set
+            {
+                SetPropertyValue("TroCapKhac", ref _TroCapKhac, value);
+            }
+        }
 
         [ModelDefault("Caption", "HSPC khác")]
         [ModelDefault("DisplayFormat", "N2")]
@@ -1010,6 +1040,8 @@ namespace ERP.Module.NghiepVu.NhanSu.HoSoLuong
             PhuCapHocVi = value.NhanVienThongTinLuong.PhuCapHocVi;
             TienBHXH = value.NhanVienThongTinLuong.TienBHXH;
             MucHoTroBHXH = value.NhanVienThongTinLuong.MucHoTroBHXH;
+            PhuCapKiemNhiemThem = value.NhanVienThongTinLuong.PhuCapKiemNhiemThem;
+            TroCapKhac = value.NhanVienThongTinLuong.TroCapKhac;
         }
 
         protected override void OnSaved()

@@ -60,6 +60,8 @@ namespace ERP.Module.NghiepVu.NhanSu.NhanViens
         private decimal _HSPCKhac;
         private decimal _HSTroCap;
         private decimal _HSDieuChinh;
+        private decimal _PhuCapKiemNhiemThem;
+        private decimal _TroCapKhac;
         //
         private decimal _PhuCapBanTru;
         private decimal _PhuCapNhaO;
@@ -665,7 +667,34 @@ namespace ERP.Module.NghiepVu.NhanSu.NhanViens
                 SetPropertyValue("HSDieuChinh", ref _HSDieuChinh, value);
             }
         }
-
+        [ModelDefault("Caption", "Phụ cấp kiêm nhiệm thêm(TNTT)")]
+        [ModelDefault("DisplayFormat", "N0")]
+        [ModelDefault("EditMask", "N0")]
+        public decimal PhuCapKiemNhiemThem
+        {
+            get
+            {
+                return _PhuCapKiemNhiemThem;
+            }
+            set
+            {
+                SetPropertyValue("PhuCapKiemNhiemThem", ref _PhuCapKiemNhiemThem, value);
+            }
+        }
+        [ModelDefault("Caption", "Trợ cấp khác(TNTT)")]
+        [ModelDefault("DisplayFormat", "N0")]
+        [ModelDefault("EditMask", "N0")]
+        public decimal TroCapKhac
+        {
+            get
+            {
+                return _TroCapKhac;
+            }
+            set
+            {
+                SetPropertyValue("TroCapKhac", ref _TroCapKhac, value);
+            }
+        }
         [ModelDefault("Caption", "Không đóng BHXH")]
         public bool KhongDongBHXH
         {
