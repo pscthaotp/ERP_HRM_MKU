@@ -1482,6 +1482,12 @@
     <Compile Include="MailMerge\Controller\HopDong\MailMerge_HopDongLamViecController.designer.cs">
       <DependentUpon>MailMerge_HopDongLamViecController.cs</DependentUpon>
     </Compile>
+    <Compile Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhThanhLapDonViController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhThanhLapDonViController.designer.cs">
+      <DependentUpon>MailMerge_QuyetDinhThanhLapDonViController.cs</DependentUpon>
+    </Compile>
     <Compile Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhKyLuatController.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1643,6 +1649,7 @@
     <Compile Include="MailMerge\Prosess\HopDong\Prosess_HopDongThingGiang.cs" />
     <Compile Include="MailMerge\Prosess\HopDong\Prosess_HopDongKhoan.cs" />
     <Compile Include="MailMerge\Prosess\HopDong\Prosess_HopDongLamViec.cs" />
+    <Compile Include="MailMerge\Prosess\QuyetDinh\Prosess_QuyetDinhThanhLapDonVi.cs" />
     <Compile Include="MailMerge\Prosess\QuyetDinh\Prosess_QuyetDinhKyLuat.cs" />
     <Compile Include="MailMerge\Prosess\QuyetDinh\Prosess_QuyetDinhKhenThuong.cs" />
     <Compile Include="MailMerge\Prosess\QuyetDinh\Process_QuyetDinhBietPhai.cs" />
@@ -2263,6 +2270,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MailMerge\Controller\HopDong\MailMerge_HopDongLamViecController.resx">
       <DependentUpon>MailMerge_HopDongLamViecController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhThanhLapDonViController.resx">
+      <DependentUpon>MailMerge_QuyetDinhThanhLapDonViController.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MailMerge\Controller\QuyetDinh\MailMerge_QuyetDinhKyLuatController.resx">
       <DependentUpon>MailMerge_QuyetDinhKyLuatController.cs</DependentUpon>
