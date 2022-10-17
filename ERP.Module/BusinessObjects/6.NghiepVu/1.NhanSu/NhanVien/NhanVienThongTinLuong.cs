@@ -278,10 +278,10 @@ namespace ERP.Module.NghiepVu.NhanSu.NhanViens
             set
             {
                 SetPropertyValue("LuongCoBan", ref _LuongCoBan, value);
-                if (!IsLoading && value != null)
-                {
-                    MucLuongDongBHXH = value;
-                }
+                //if (!IsLoading && value != null)
+                //{
+                //    MucLuongDongBHXH = value;
+                //}
             }
         }
 

@@ -225,6 +225,7 @@
     <ListView Id="BacLuong_LookupListView">
       <Columns>
         <ColumnInfo Id="TenBacLuong" Index="0" />
+        <ColumnInfo Id="HeSoLuong" PropertyName="HeSoLuong" Index="1" IsNewNode="True" />
         <ColumnInfo Id="LuongCoBan" PropertyName="LuongCoBan" Index="1" IsNewNode="True" />
         <ColumnInfo Id="LuongKinhDoanh" PropertyName="LuongKinhDoanh" Index="2" IsNewNode="True" />
         <ColumnInfo Id="LuongGop" PropertyName="LuongGop" Index="3" IsNewNode="True" />
