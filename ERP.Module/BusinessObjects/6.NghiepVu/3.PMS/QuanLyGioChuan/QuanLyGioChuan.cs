@@ -3,13 +3,8 @@ using DevExpress.Persistent.BaseImpl;
 using DevExpress.Persistent.Validation;
 using DevExpress.ExpressApp.Model;
 using DevExpress.Persistent.Base;
-using System.ComponentModel;
 using ERP.Module.DanhMuc.NhanSu;
 using ERP.Module.NghiepVu.NhanSu.BoPhans;
-using DevExpress.Data.Filtering;
-using ERP.Module.Enum.PMS;
-using ERP.Module.NghiepVu.PMS.QuanLy;
-using ERP.Module.NghiepVu.NhanSu.NhanViens;
 using ERP.Module.Commons;
 
 namespace ERP.Module.NghiepVu.PMS.QuanLyGioChuan

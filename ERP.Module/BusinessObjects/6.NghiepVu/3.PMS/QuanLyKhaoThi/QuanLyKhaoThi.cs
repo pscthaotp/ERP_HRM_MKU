@@ -10,21 +10,18 @@ using DevExpress.Data.Filtering;
 using ERP.Module.Enum.PMS;
 using ERP.Module.Commons;
 using ERP.Module.NghiepVu.PMS.HeSo;
-using System;
-using DevExpress.ExpressApp.ConditionalAppearance;
 
-namespace ERP.Module.NghiepVu.PMS.BangChotThuLao
+namespace ERP.Module.NghiepVu.PMS.QuanLyKhaoThi
 {
     [DefaultClassOptions]
-    [Appearance("BangChotThuLao_ThinhGiang_Khoa", TargetItems = "*", Enabled = false, Criteria = "Khoa = 1")]
-    [ModelDefault("Caption", "Bảng chốt thù lao(Thỉnh giảng)")]
-    public class BangChotThuLao_ThinhGiang : BaseObject
+    [ModelDefault("Caption", "Quản lý khảo thí")]
+    [DefaultProperty("TenQuanLyKhaoThi")]
+    public class QuanLyKhaoThi : BaseObject
     {
         private BoPhan _ThongTinTruong;
         private NamHoc _NamHoc;
         private HocKy _HocKy;
         private bool _Khoa;
-        private DateTime _NgayChot;
 
 
         [ModelDefault("Caption", "Trường")]
@@ -58,7 +55,6 @@ namespace ERP.Module.NghiepVu.PMS.BangChotThuLao
             set { SetPropertyValue("HocKy", ref _HocKy, value); }
         }
         [ModelDefault("Caption", "Khóa dữ liệu")]
-        [ModelDefault("AllowEdit", "false")]
         [ImmediatePostData]
         public bool Khoa
         {
@@ -66,26 +62,54 @@ namespace ERP.Module.NghiepVu.PMS.BangChotThuLao
             set { SetPropertyValue("Khoa", ref _Khoa, value); }
         }
 
-        [ModelDefault("Caption", "Ngày chốt")]
-        [ModelDefault("AllowEdit", "false")]
-        [ImmediatePostData]
-        public DateTime NgayChot
-        {
-            get { return _NgayChot; }
-            set { SetPropertyValue("NgayChot", ref _NgayChot, value); }
-        }
 
-        [Aggregated]
-        [ModelDefault("Caption", "Thông tin khối lượng")]
-        [Association("BangChotThuLao_ThinhGiang-ListThongTinBangChotThuLao")]
-        public XPCollection<ThongTinBangChotThuLao> ListThongTinBangChotThuLao
+        [ModelDefault("Caption", "Tên quản lý khảo thí")]
+        [VisibleInDetailView(false)]
+        public string TenQuanLyKhaoThi
         {
             get
             {
-                return GetCollection<ThongTinBangChotThuLao>("ListThongTinBangChotThuLao");
+
+                return string.Format("{0} - {1}", NamHoc != null ? NamHoc.TenNamHoc : "", HocKy != null ? HocKy.TenHocKy : "");
             }
         }
-        public BangChotThuLao_ThinhGiang(Session session)
+
+
+        [Aggregated]
+        [ModelDefault("Caption", "Chi tiết coi thi")]
+        [Association("QuanLyKhaoThi-ListChiTietCoiThi")]
+        public XPCollection<ChiTietCoiThi> ListChiTietCoiThi
+        {
+            get
+            {
+                return GetCollection<ChiTietCoiThi>("ListChiTietCoiThi");
+            }
+        }
+
+
+        [Aggregated]
+        [ModelDefault("Caption", "Chi tiết chấm bài")]
+        [Association("QuanLyKhaoThi-ListChiTietChamBai")]
+        public XPCollection<ChiTietChamBai> ListChiTietChamBai
+        {
+            get
+            {
+                return GetCollection<ChiTietChamBai>("ListChiTietChamBai");
+            }
+        }
+
+        [Aggregated]
+        [ModelDefault("Caption", "Chi tiết ra đề")]
+        [Association("QuanLyKhaoThi-ListChiTietRaDe")]
+        public XPCollection<ChiTietRaDe> ListChiTietRaDe
+        {
+            get
+            {
+                return GetCollection<ChiTietRaDe>("ListChiTietRaDe");
+            }
+        }
+
+        public QuanLyKhaoThi(Session session)
             : base(session)
         {
         }

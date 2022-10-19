@@ -50,7 +50,7 @@ namespace ERP.Module.NghiepVu.PMS.QuanLyGiangDay
 
         [ModelDefault("Caption", "Học kỳ")]
         [DataSourceProperty("NamHoc.ListHocKy")]
-        [RuleRequiredField(DefaultContexts.Save)]
+        //[RuleRequiredField(DefaultContexts.Save)]
         [VisibleInListView(false)]
         public HocKy HocKy
         {
@@ -83,6 +83,18 @@ namespace ERP.Module.NghiepVu.PMS.QuanLyGiangDay
                 return GetCollection<ThongTinKhoiLuongGiangDay>("ListThongTinKhoiLuongGiangDay");
             }
         }
+
+        [Aggregated]
+        [ModelDefault("Caption", "Chi tiết hướng dẫn TTTN")]
+        [Association("QuanLyKhoiLuongGiangDay-ListChiTietHuongDanTTTN")]
+        public XPCollection<ChiTietHuongDanTTTN> ListChiTietHuongDanTTTN
+        {
+            get
+            {
+                return GetCollection<ChiTietHuongDanTTTN>("ListChiTietHuongDanTTTN");
+            }
+        }
+
         public QuanLyKhoiLuongGiangDay(Session session)
             : base(session)
         {
