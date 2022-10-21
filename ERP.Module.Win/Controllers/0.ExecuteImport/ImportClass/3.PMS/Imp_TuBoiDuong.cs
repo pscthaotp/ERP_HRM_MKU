@@ -16,10 +16,8 @@ using ERP.Module.Enum.Systems;
 //
 namespace ERP.Module.Controllers.Win.ExecuteImport.ImportClass.PMS
 {
-    public class Imp_CoVanHocTap
-    {
-
-        #region 1. Chấm công
+    public class Imp_TuBoiDuong
+    {       
         public static void XuLy(IObjectSpace obs, Guid OidQuanLy)
         {
             //
@@ -113,7 +111,7 @@ namespace ERP.Module.Controllers.Win.ExecuteImport.ImportClass.PMS
                                     pImport[0] = new SqlParameter("@OidQuanLy", OidQuanLy);
                                     pImport[1] = new SqlParameter("@String", sql.Substring(11));
                                     pImport[2] = new SqlParameter("@User", Common.SecuritySystemUser_GetCurrentUser().UserName);
-                                    DataProvider.ExecuteNonQuery("spd_PMS_Import_CoVanHocTap", CommandType.StoredProcedure, pImport);
+                                    DataProvider.ExecuteNonQuery("spd_PMS_Import_TuBoiDuong", CommandType.StoredProcedure, pImport);
                                     //Lưu
                                     //uow.CommitChanges();
                                     //
@@ -149,6 +147,6 @@ namespace ERP.Module.Controllers.Win.ExecuteImport.ImportClass.PMS
                 }
             }
         }
-        #endregion
+        
     }
 }

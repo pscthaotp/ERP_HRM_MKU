@@ -6,10 +6,7 @@ using DevExpress.Persistent.Base;
 using System.ComponentModel;
 using ERP.Module.DanhMuc.NhanSu;
 using ERP.Module.NghiepVu.NhanSu.BoPhans;
-using DevExpress.Data.Filtering;
-using ERP.Module.Enum.PMS;
 using ERP.Module.Commons;
-using ERP.Module.NghiepVu.PMS.HeSo;
 
 namespace ERP.Module.NghiepVu.PMS.QuanLyKhaoThi
 {

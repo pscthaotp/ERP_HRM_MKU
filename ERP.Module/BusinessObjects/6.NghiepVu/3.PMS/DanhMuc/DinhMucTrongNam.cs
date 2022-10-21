@@ -23,6 +23,7 @@ namespace ERP.Module.NghiepVu.PMS.DanhMuc
         private HocHam _HocHam;
         private decimal _DinhMucGiangDay;
         private decimal _DinhMucNCKH;
+        private decimal _DinhMucTuBoiDuong;
         private bool _MacDinh;
 
         [ModelDefault("Caption", "Chức danh")]
@@ -33,6 +34,7 @@ namespace ERP.Module.NghiepVu.PMS.DanhMuc
         }
 
         [ModelDefault("Caption", "Trình độ chuyên môn")]
+        [Browsable(false)]
         public TrinhDoChuyenMon TrinhDoChuyenMon
         {
             get { return _TrinhDoChuyenMon; }
@@ -40,7 +42,7 @@ namespace ERP.Module.NghiepVu.PMS.DanhMuc
         }
 
         [ModelDefault("Caption", "Chức vụ")]
-        [Browsable(false)]
+        [Browsable(false)]      
         public ChucVu ChucVu
         {
             get { return _ChucVu; }
@@ -48,6 +50,7 @@ namespace ERP.Module.NghiepVu.PMS.DanhMuc
         }
 
         [ModelDefault("Caption", "Học hàm")]
+        [Browsable(false)]
         public HocHam HocHam
         {
             get { return _HocHam; }
@@ -72,7 +75,17 @@ namespace ERP.Module.NghiepVu.PMS.DanhMuc
             set { SetPropertyValue("DinhMucNCKH", ref _DinhMucNCKH, value); }
         }
 
+        [ModelDefault("Caption", "Định mức tự bồi dưỡng")]
+        [ModelDefault("DisplayFormat", "N0")]
+        [ModelDefault("EditMask", "N0")]
+        public decimal DinhMucTuBoiDuong
+        {
+            get { return _DinhMucTuBoiDuong; }
+            set { SetPropertyValue("DinhMucTuBoiDuong", ref _DinhMucTuBoiDuong, value); }
+        }
+
         [ModelDefault("Caption", "Mặc định")]
+        [Browsable(false)]
         public bool MacDinh
         {
             get { return _MacDinh; }

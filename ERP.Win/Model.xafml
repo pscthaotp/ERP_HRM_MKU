@@ -3337,7 +3337,6 @@
     <ListView Id="DonGiaGiangDay_ListView">
       <Columns>
         <ColumnInfo Id="ThongTinTruong" Index="0" />
-        <ColumnInfo Id="LoaiDonGia" Index="1" />
       </Columns>
     </ListView>
     <ListView Id="DonViTinh_ListView">
@@ -3736,11 +3735,6 @@
       <Columns>
         <ColumnInfo Id="MaQuanLy" Index="0" />
         <ColumnInfo Id="TenHeDaoTao" Index="1" />
-      </Columns>
-    </ListView>
-    <ListView Id="HeSoLopDong_ListView">
-      <Columns>
-        <ColumnInfo Id="HeSo_LopDong" Index="2" />
       </Columns>
     </ListView>
     <DetailView Id="HinhThucHopDong_DetailView">
@@ -5244,12 +5238,6 @@
         <ColumnInfo Id="CongTy" GroupIndex="1" />
       </Columns>
     </ListView>
-    <ListView Id="QuanLyDonGiaDacBiet_ListView">
-      <Columns>
-        <ColumnInfo Id="NamHoc" Index="1" />
-        <ColumnInfo Id="HocKy" Index="2" />
-      </Columns>
-    </ListView>
     <ListView Id="QuanLyGioChuan_ListDinhMucChucVu_ListView">
       <Columns>
         <ColumnInfo Id="ChucVu" Width="60" />
@@ -5278,11 +5266,6 @@
         <ColumnInfo Id="ThongTinTruong" Index="0" Width="55" />
         <ColumnInfo Id="NamHoc" Index="1" Width="61" />
         <ColumnInfo Id="HocKy" Width="52" />
-      </Columns>
-    </ListView>
-    <ListView Id="QuanLyHeSo_ListHeSoLopDong_ListView">
-      <Columns>
-        <ColumnInfo Id="HeSo_LopDong" Index="2" />
       </Columns>
     </ListView>
     <ListView Id="QuanLyHeSo_ListView">
@@ -5433,6 +5416,35 @@
         <ColumnInfo Id="Khoa" Index="3" />
       </Columns>
     </ListView>
+    <DetailView Id="QuanLyThongTinKLGiangDay_Non_DetailView">
+      <Items>
+        <ControlDetailItem Id="btnLoadData" ControlTypeName="DevExpress.XtraEditors.SimpleButton" IsNewNode="True" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="15.384615384615385">
+            <LayoutGroup Id="QuanLyThongTinKLGiangDay_Non" RelativeSize="100" Direction="Horizontal">
+              <LayoutGroup Id="Auto3862fc95-5de4-4b55-bf8f-82cc6b37bee4" ShowCaption="False" Caption="" Index="0" RelativeSize="50" IsNewNode="True">
+                <LayoutItem Id="ThongTinTruong" ViewItem="ThongTinTruong" Index="0" RelativeSize="37.2093023255814" IsNewNode="True" />
+                <LayoutItem Id="BoPhanGiangDay" ViewItem="BoPhanGiangDay" Index="1" RelativeSize="27.906976744186046" IsNewNode="True" />
+                <LayoutItem Id="btnLoadData" ViewItem="btnLoadData" Index="2" RelativeSize="34.883720930232556" ShowCaption="False" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Auto346b3238-fc36-486f-b095-d383b52e178a" ShowCaption="False" Caption="" Index="1" RelativeSize="50" IsNewNode="True">
+                <LayoutItem Id="NamHoc" ViewItem="NamHoc" Index="0" RelativeSize="37.2093023255814" IsNewNode="True" />
+                <LayoutItem Id="HocKy" ViewItem="HocKy" Index="1" RelativeSize="62.7906976744186" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutItem Id="BoPhanGiangDay" Index="1" RelativeSize="27.906976744186046" Removed="True" />
+              <LayoutItem Id="HocKy" Index="2" RelativeSize="34.883720930232556" Removed="True" />
+              <LayoutItem Id="NamHoc" Index="2" RelativeSize="21.818181818181817" Removed="True" />
+              <LayoutItem Id="ThongTinTruong" RelativeSize="29.09090909090909" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="listTTKL_Group" TextAlignMode="AlignWithChildren" Direction="Vertical" RelativeSize="84.615384615384613" ShowCaption="False">
+            <LayoutItem Id="listTTKL" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
     <DetailView Id="QuanLyThueThuNhapCaNhan_DetailView">
       <Layout>
         <LayoutGroup Id="Main" RelativeSize="100">

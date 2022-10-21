@@ -478,6 +478,8 @@
     <Compile Include="BusinessObjects\4.NonPersistentObjects\1.NhanSu\HoSo_ChonHoSoCopy.cs" />
     <Compile Include="BusinessObjects\4.NonPersistentObjects\1.NhanSu\GiangVien_ChonLoaiGiangVien.cs" />
     <Compile Include="BusinessObjects\4.NonPersistentObjects\1.NhanSu\QuyetDinh_ChonNguoiKy.cs" />
+    <Compile Include="BusinessObjects\4.NonPersistentObjects\18.PMS\dsThongTinKLGiangDay_Non.cs" />
+    <Compile Include="BusinessObjects\4.NonPersistentObjects\18.PMS\QuanLyThongTinKLGiangDay_Non.cs" />
     <Compile Include="BusinessObjects\4.NonPersistentObjects\18.PMS\ThongTinClone.cs" />
     <Compile Include="BusinessObjects\4.NonPersistentObjects\18.PMS\dsMonHocTheoTKB.cs" />
     <Compile Include="BusinessObjects\4.NonPersistentObjects\18.PMS\dsThongTinNhanVien.cs" />

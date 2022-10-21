@@ -67,7 +67,7 @@ namespace ERP.Module.NghiepVu.PMS.HeSo
             get
             {
 
-                return string.Format("{0} - {1}", NamHoc != null ? NamHoc.TenNamHoc : "", HocKy != null ? HocKy.TenHocKy : "");
+                return string.Format("{0} - {1} - {2}", ThongTinTruong!=null? ThongTinTruong.TenBoPhan:"", NamHoc != null ? NamHoc.TenNamHoc : "", HocKy != null ? HocKy.TenHocKy : "");
             }
         }
 

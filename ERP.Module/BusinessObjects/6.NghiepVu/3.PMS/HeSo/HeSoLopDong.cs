@@ -117,8 +117,7 @@ namespace ERP.Module.NghiepVu.PMS.HeSo
 
         [ModelDefault("Caption", "Hệ số")]
         [ModelDefault("DisplayFormat", "N2")]
-        [ModelDefault("EditMask", "N2")]
-        [ModelDefault("AllowEdit", "false")]
+        [ModelDefault("EditMask", "N2")]       
         public decimal HeSo
         {
             get { return _HeSo; }

@@ -116,7 +116,7 @@ namespace ERP.Module.NghiepVu.PMS.QuanLyGioChuan
             get { return _DinhMuc_NCKH; }
             set { SetPropertyValue("DinhMuc_NCKH", ref _DinhMuc_NCKH, value); }
         }
-        [ModelDefault("Caption", "Đinh mức(Khác)")]
+        [ModelDefault("Caption", "Đinh mức(Tự bồi dưỡng)")]
         [ModelDefault("DisplayFormat", "N2")]
         [ModelDefault("EditMask", "N2")]
         public decimal DinhMuc_Khac
