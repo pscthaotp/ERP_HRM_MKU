@@ -21,7 +21,7 @@ namespace ERP.Module.Win.Controllers.NghiepVu.PMS
         {
             QuanLyKhoiLuongGiangDay_ThinhGiang qly = View.CurrentObject as QuanLyKhoiLuongGiangDay_ThinhGiang;
 
-            if (qly.BangChotThuLao_ThinhGiang == null)
+            if (qly.BangChotThuLao_ThinhGiang == Guid.Parse("00000000-0000-0000-0000-000000000000"))
             {
                 SqlParameter[] param = new SqlParameter[3];
                 param[0] = new SqlParameter("@KhoiLuongGiangDay", qly.Oid);

@@ -50,7 +50,6 @@ namespace ERP.Module.NghiepVu.PMS.DanhMuc
         }
 
         [ModelDefault("Caption", "Học hàm")]
-        [Browsable(false)]
         public HocHam HocHam
         {
             get { return _HocHam; }

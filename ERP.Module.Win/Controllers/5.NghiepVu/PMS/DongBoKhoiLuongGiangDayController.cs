@@ -20,7 +20,7 @@ namespace ERP.Module.Win.Controllers.NghiepVu.PMS
         private void simpleAction1_Execute(object sender, SimpleActionExecuteEventArgs e)
         {
             QuanLyKhoiLuongGiangDay qly = View.CurrentObject as QuanLyKhoiLuongGiangDay;
-            if (qly.BangChotThuLao == null)
+            if (qly.BangChotThuLao == Guid.Parse("00000000-0000-0000-0000-000000000000"))
             {
                 SqlParameter[] param = new SqlParameter[3];
                 param[0] = new SqlParameter("@KhoiLuongGiangDay", qly.Oid);
