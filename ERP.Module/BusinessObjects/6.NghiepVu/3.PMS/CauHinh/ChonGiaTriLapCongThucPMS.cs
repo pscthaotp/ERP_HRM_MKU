@@ -35,6 +35,25 @@ namespace ERP.Module.NghiepVu.PMS.CauHinh
         [ModelDefault("Caption", "Cấu hình quy đổi PMS")]
         public CauHinhQuyDoiPMS CauHinhQuyDoiPMS { get; set; }
 
+        [NonPersistent]
+        [VisibleInListView(false)]
+        [VisibleInDetailView(false)]
+        [ModelDefault("Caption", "Hệ số lớp đông")]
+        public string HeSoLopDong { get; set; }
+
+        [NonPersistent]
+        [VisibleInListView(false)]
+        [VisibleInDetailView(false)]
+        [ModelDefault("Caption", "Hệ số môn học")]
+        public string HeSoMonHoc { get; set; }
+
+        [NonPersistent]
+        [VisibleInListView(false)]
+        [VisibleInDetailView(false)]
+        [ModelDefault("Caption", "Hệ số thời gian")]
+        public string HeSoThoiGian { get; set; }
+
+
         public ChonGiaTriLapCongThucPMS(Session session)
             : base(session)
         {

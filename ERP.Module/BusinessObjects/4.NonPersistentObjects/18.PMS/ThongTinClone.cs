@@ -5,12 +5,6 @@ using DevExpress.Persistent.Validation;
 using DevExpress.Xpo;
 using ERP.Module.DanhMuc.NhanSu;
 using ERP.Module.NghiepVu.NhanSu.BoPhans;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ERP.Module.NonPersistentObjects
 {

@@ -111,7 +111,7 @@ namespace ERP.Module.NghiepVu.PMS.CauHinh
         }
 
 
-        [ModelDefault("Caption", "Tính hệ số lương")]
+        [ModelDefault("Caption", "Tính tổng hệ số")]
         //[RuleRequiredField("", DefaultContexts.Save)]
         [ModelDefault("PropertyEditorType", "ERP.Module.Win.Editors.PMS.btnEdit_CongThucPMS")]
         [VisibleInListView(false)]
