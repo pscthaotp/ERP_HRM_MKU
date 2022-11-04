@@ -225,6 +225,7 @@
     <ListView Id="BacLuong_LookupListView">
       <Columns>
         <ColumnInfo Id="TenBacLuong" Index="0" />
+        <ColumnInfo Id="HeSoLuong" PropertyName="HeSoLuong" Index="1" IsNewNode="True" />
         <ColumnInfo Id="LuongCoBan" PropertyName="LuongCoBan" Index="1" IsNewNode="True" />
         <ColumnInfo Id="LuongKinhDoanh" PropertyName="LuongKinhDoanh" Index="2" IsNewNode="True" />
         <ColumnInfo Id="LuongGop" PropertyName="LuongGop" Index="3" IsNewNode="True" />
@@ -3336,7 +3337,6 @@
     <ListView Id="DonGiaGiangDay_ListView">
       <Columns>
         <ColumnInfo Id="ThongTinTruong" Index="0" />
-        <ColumnInfo Id="LoaiDonGia" Index="1" />
       </Columns>
     </ListView>
     <ListView Id="DonViTinh_ListView">
@@ -3735,11 +3735,6 @@
       <Columns>
         <ColumnInfo Id="MaQuanLy" Index="0" />
         <ColumnInfo Id="TenHeDaoTao" Index="1" />
-      </Columns>
-    </ListView>
-    <ListView Id="HeSoLopDong_ListView">
-      <Columns>
-        <ColumnInfo Id="HeSo_LopDong" Index="2" />
       </Columns>
     </ListView>
     <DetailView Id="HinhThucHopDong_DetailView">
@@ -5243,12 +5238,6 @@
         <ColumnInfo Id="CongTy" GroupIndex="1" />
       </Columns>
     </ListView>
-    <ListView Id="QuanLyDonGiaDacBiet_ListView">
-      <Columns>
-        <ColumnInfo Id="NamHoc" Index="1" />
-        <ColumnInfo Id="HocKy" Index="2" />
-      </Columns>
-    </ListView>
     <ListView Id="QuanLyGioChuan_ListDinhMucChucVu_ListView">
       <Columns>
         <ColumnInfo Id="ChucVu" Width="60" />
@@ -5277,11 +5266,6 @@
         <ColumnInfo Id="ThongTinTruong" Index="0" Width="55" />
         <ColumnInfo Id="NamHoc" Index="1" Width="61" />
         <ColumnInfo Id="HocKy" Width="52" />
-      </Columns>
-    </ListView>
-    <ListView Id="QuanLyHeSo_ListHeSoLopDong_ListView">
-      <Columns>
-        <ColumnInfo Id="HeSo_LopDong" Index="2" />
       </Columns>
     </ListView>
     <ListView Id="QuanLyHeSo_ListView">
@@ -5432,6 +5416,35 @@
         <ColumnInfo Id="Khoa" Index="3" />
       </Columns>
     </ListView>
+    <DetailView Id="QuanLyThongTinKLGiangDay_Non_DetailView">
+      <Items>
+        <ControlDetailItem Id="btnLoadData" ControlTypeName="DevExpress.XtraEditors.SimpleButton" IsNewNode="True" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="15.384615384615385">
+            <LayoutGroup Id="QuanLyThongTinKLGiangDay_Non" RelativeSize="100" Direction="Horizontal">
+              <LayoutGroup Id="Auto3862fc95-5de4-4b55-bf8f-82cc6b37bee4" ShowCaption="False" Caption="" Index="0" RelativeSize="50" IsNewNode="True">
+                <LayoutItem Id="ThongTinTruong" ViewItem="ThongTinTruong" Index="0" RelativeSize="37.2093023255814" IsNewNode="True" />
+                <LayoutItem Id="BoPhanGiangDay" ViewItem="BoPhanGiangDay" Index="1" RelativeSize="27.906976744186046" IsNewNode="True" />
+                <LayoutItem Id="btnLoadData" ViewItem="btnLoadData" Index="2" RelativeSize="34.883720930232556" ShowCaption="False" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Auto346b3238-fc36-486f-b095-d383b52e178a" ShowCaption="False" Caption="" Index="1" RelativeSize="50" IsNewNode="True">
+                <LayoutItem Id="NamHoc" ViewItem="NamHoc" Index="0" RelativeSize="37.2093023255814" IsNewNode="True" />
+                <LayoutItem Id="HocKy" ViewItem="HocKy" Index="1" RelativeSize="62.7906976744186" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutItem Id="BoPhanGiangDay" Index="1" RelativeSize="27.906976744186046" Removed="True" />
+              <LayoutItem Id="HocKy" Index="2" RelativeSize="34.883720930232556" Removed="True" />
+              <LayoutItem Id="NamHoc" Index="2" RelativeSize="21.818181818181817" Removed="True" />
+              <LayoutItem Id="ThongTinTruong" RelativeSize="29.09090909090909" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="listTTKL_Group" TextAlignMode="AlignWithChildren" Direction="Vertical" RelativeSize="84.615384615384613" ShowCaption="False">
+            <LayoutItem Id="listTTKL" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
     <DetailView Id="QuanLyThueThuNhapCaNhan_DetailView">
       <Layout>
         <LayoutGroup Id="Main" RelativeSize="100">
@@ -8771,54 +8784,55 @@
       <Layout>
         <LayoutGroup Id="Main" RelativeSize="100">
           <LayoutGroup Id="SimpleEditors" RelativeSize="100" Direction="Vertical">
-            <LayoutGroup Id="Item2" ShowCaption="True" Caption="Giảm trừ gia cảnh" CaptionLocation="Top" Index="0" RelativeSize="12.802768166089965" Direction="Horizontal" IsNewNode="True">
-              <LayoutItem Id="GiamTruBanThan" ViewItem="GiamTruBanThan" Index="0" RelativeSize="49.910873440285208" IsNewNode="True" />
-              <LayoutItem Id="GiamTruNguoiPhuThuoc" ViewItem="GiamTruNguoiPhuThuoc" Index="1" RelativeSize="50.089126559714792" IsNewNode="True" />
+            <LayoutGroup Id="Item2" ShowCaption="True" Caption="Giảm trừ gia cảnh" CaptionLocation="Top" Index="0" RelativeSize="8.7132725430597766" Direction="Horizontal" IsNewNode="True">
+              <LayoutItem Id="GiamTruBanThan" ViewItem="GiamTruBanThan" Index="0" RelativeSize="49.860529986052995" IsNewNode="True" />
+              <LayoutItem Id="GiamTruNguoiPhuThuoc" ViewItem="GiamTruNguoiPhuThuoc" Index="1" RelativeSize="50.139470013947005" IsNewNode="True" />
             </LayoutGroup>
             <LayoutGroup Id="ThongTinChung" ShowCaption="True" Caption="Thông tin lương" Index="0" RelativeSize="23.270440251572328" Removed="True">
               <LayoutGroup Id="ThongTinChung_col1" ShowCaption="False" Index="0" RelativeSize="100" IsNewNode="True">
                 <LayoutItem Id="MocDongBaoHiem" ViewItem="MocDongBaoHiem" Index="0" RelativeSize="100" IsNewNode="True" />
               </LayoutGroup>
             </LayoutGroup>
-            <LayoutGroup Id="Item4" ShowCaption="True" CaptionLocation="Top" Direction="Horizontal" Index="1" RelativeSize="23.875432525951556" Caption="Mức đóng bảo hiểm tối đa" IsNewNode="True">
-              <LayoutGroup Id="Auto61cbfa93-ff4a-4901-885d-60959de9c3a5" ShowCaption="False" Caption="Auto61cbfa93-ff4a-4901-885d-60959de9c3a5(7)" Index="0" RelativeSize="49.910873440285208" IsNewNode="True">
-                <LayoutItem Id="MucLuongCoBan" ViewItem="MucLuongCoBan" Index="0" RelativeSize="28.571428571428573" IsNewNode="True" />
-                <LayoutItem Id="MucLuongToiThieuVung" ViewItem="MucLuongToiThieuVung" Index="1" RelativeSize="71.428571428571431" IsNewNode="True" />
+            <LayoutGroup Id="Item4" ShowCaption="True" CaptionLocation="Top" Direction="Horizontal" Index="1" RelativeSize="17.021276595744681" Caption="Mức đóng bảo hiểm tối đa" IsNewNode="True">
+              <LayoutGroup Id="Auto61cbfa93-ff4a-4901-885d-60959de9c3a5" ShowCaption="False" Caption="Auto61cbfa93-ff4a-4901-885d-60959de9c3a5(7)" Index="0" RelativeSize="49.860529986052995" IsNewNode="True">
+                <LayoutItem Id="MucLuongCoBan" ViewItem="MucLuongCoBan" Index="0" RelativeSize="27.941176470588236" IsNewNode="True" />
+                <LayoutItem Id="MucLuongToiThieuVung" ViewItem="MucLuongToiThieuVung" Index="1" RelativeSize="22.058823529411764" IsNewNode="True" />
+                <LayoutItem Id="MucChiTNTT" ViewItem="MucChiTNTT" Index="2" RelativeSize="50" IsNewNode="True" />
               </LayoutGroup>
-              <LayoutGroup Id="Autoccca8c6d-2c14-4185-af83-cbb215159c94" ShowCaption="False" Caption="Autoccca8c6d-2c14-4185-af83-cbb215159c94(10)" Index="1" RelativeSize="50.089126559714792" IsNewNode="True">
-                <LayoutItem Id="MucDongBHXHToiDa" ViewItem="MucDongBHXHToiDa" Index="0" RelativeSize="28.571428571428573" IsNewNode="True" />
-                <LayoutItem Id="MucDongBHYTToiDa" ViewItem="MucDongBHYTToiDa" Index="1" RelativeSize="21.428571428571427" IsNewNode="True" />
-                <LayoutItem Id="MucDongBHTNToiDa" ViewItem="MucDongBHTNToiDa" Index="2" RelativeSize="21.428571428571427" IsNewNode="True" />
-                <LayoutItem Id="MucDongCDToiDa" ViewItem="MucDongCDToiDa" Index="3" RelativeSize="28.571428571428573" IsNewNode="True" />
+              <LayoutGroup Id="Autoccca8c6d-2c14-4185-af83-cbb215159c94" ShowCaption="False" Caption="Autoccca8c6d-2c14-4185-af83-cbb215159c94(10)" Index="1" RelativeSize="50.139470013947005" IsNewNode="True">
+                <LayoutItem Id="MucDongBHXHToiDa" ViewItem="MucDongBHXHToiDa" Index="0" RelativeSize="27.941176470588236" IsNewNode="True" />
+                <LayoutItem Id="MucDongBHYTToiDa" ViewItem="MucDongBHYTToiDa" Index="1" RelativeSize="22.058823529411764" IsNewNode="True" />
+                <LayoutItem Id="MucDongBHTNToiDa" ViewItem="MucDongBHTNToiDa" Index="2" RelativeSize="22.058823529411764" IsNewNode="True" />
+                <LayoutItem Id="MucDongCDToiDa" ViewItem="MucDongCDToiDa" Index="3" RelativeSize="27.941176470588236" IsNewNode="True" />
               </LayoutGroup>
             </LayoutGroup>
-            <LayoutGroup Id="Item1" ShowCaption="True" Caption="Bảo hiểm" CaptionLocation="Top" Index="2" RelativeSize="23.875432525951556" IsNewNode="True">
+            <LayoutGroup Id="Item1" ShowCaption="True" Caption="Bảo hiểm" CaptionLocation="Top" Index="2" RelativeSize="17.021276595744681" IsNewNode="True">
               <LayoutGroup Id="Auto76911080-478f-4d3c-8e33-2e31b71fc760" ShowCaption="False" Caption="Auto76911080-478f-4d3c-8e33-2e31b71fc760(11)" Direction="Horizontal" Index="0" RelativeSize="100" IsNewNode="True">
-                <LayoutGroup Id="Auto09582e83-f858-444f-88dc-c99453ed2a70" ShowCaption="False" Caption="Auto09582e83-f858-444f-88dc-c99453ed2a70(8)" Index="0" RelativeSize="49.910873440285208" IsNewNode="True">
-                  <LayoutItem Id="PTBHXH" ViewItem="PTBHXH" Index="0" RelativeSize="28.571428571428573" IsNewNode="True" />
-                  <LayoutItem Id="PTBHYT" ViewItem="PTBHYT" Index="1" RelativeSize="21.428571428571427" IsNewNode="True" />
-                  <LayoutItem Id="PTBHTN" ViewItem="PTBHTN" Index="2" RelativeSize="21.428571428571427" IsNewNode="True" />
-                  <LayoutItem Id="PTCD" ViewItem="PTCD" Index="3" RelativeSize="28.571428571428573" IsNewNode="True" />
+                <LayoutGroup Id="Auto09582e83-f858-444f-88dc-c99453ed2a70" ShowCaption="False" Caption="Auto09582e83-f858-444f-88dc-c99453ed2a70(8)" Index="0" RelativeSize="49.860529986052995" IsNewNode="True">
+                  <LayoutItem Id="PTBHXH" ViewItem="PTBHXH" Index="0" RelativeSize="27.941176470588236" IsNewNode="True" />
+                  <LayoutItem Id="PTBHYT" ViewItem="PTBHYT" Index="1" RelativeSize="22.058823529411764" IsNewNode="True" />
+                  <LayoutItem Id="PTBHTN" ViewItem="PTBHTN" Index="2" RelativeSize="22.058823529411764" IsNewNode="True" />
+                  <LayoutItem Id="PTCD" ViewItem="PTCD" Index="3" RelativeSize="27.941176470588236" IsNewNode="True" />
                 </LayoutGroup>
-                <LayoutGroup Id="Auto09fc53c5-fe3a-471d-9f67-f3f6012c2b21" ShowCaption="False" Caption="Auto09fc53c5-fe3a-471d-9f67-f3f6012c2b21(13)" Index="1" RelativeSize="50.089126559714792" IsNewNode="True">
-                  <LayoutItem Id="PTBHXHCTY" ViewItem="PTBHXHCTY" Index="0" RelativeSize="28.571428571428573" IsNewNode="True" />
-                  <LayoutItem Id="PTBHYTCTY" ViewItem="PTBHYTCTY" Index="1" RelativeSize="21.428571428571427" IsNewNode="True" />
-                  <LayoutItem Id="PTBHTNCTY" ViewItem="PTBHTNCTY" Index="2" RelativeSize="21.428571428571427" IsNewNode="True" />
-                  <LayoutItem Id="PTCDCTY" ViewItem="PTCDCTY" Index="3" RelativeSize="28.571428571428573" IsNewNode="True" />
+                <LayoutGroup Id="Auto09fc53c5-fe3a-471d-9f67-f3f6012c2b21" ShowCaption="False" Caption="Auto09fc53c5-fe3a-471d-9f67-f3f6012c2b21(13)" Index="1" RelativeSize="50.139470013947005" IsNewNode="True">
+                  <LayoutItem Id="PTBHXHCTY" ViewItem="PTBHXHCTY" Index="0" RelativeSize="27.941176470588236" IsNewNode="True" />
+                  <LayoutItem Id="PTBHYTCTY" ViewItem="PTBHYTCTY" Index="1" RelativeSize="22.058823529411764" IsNewNode="True" />
+                  <LayoutItem Id="PTBHTNCTY" ViewItem="PTBHTNCTY" Index="2" RelativeSize="22.058823529411764" IsNewNode="True" />
+                  <LayoutItem Id="PTCDCTY" ViewItem="PTCDCTY" Index="3" RelativeSize="27.941176470588236" IsNewNode="True" />
                 </LayoutGroup>
               </LayoutGroup>
             </LayoutGroup>
-            <LayoutGroup Id="Auto291605f8-41a5-4dae-8c02-7fb30ac58ab2" ShowCaption="False" Caption="" Direction="Horizontal" Index="3" RelativeSize="39.446366782006919" IsNewNode="True">
-              <LayoutGroup Id="Item3" ShowCaption="True" Caption="Đơn giá chung" CaptionLocation="Top" Index="0" RelativeSize="49.914529914529915" IsNewNode="True">
+            <LayoutGroup Id="Auto291605f8-41a5-4dae-8c02-7fb30ac58ab2" ShowCaption="False" Caption="Auto291605f8-41a5-4dae-8c02-7fb30ac58ab2(27)" Direction="Horizontal" Index="3" RelativeSize="57.244174265450859" IsNewNode="True">
+              <LayoutGroup Id="Item3" ShowCaption="True" Caption="Đơn giá chung" CaptionLocation="Top" Index="0" RelativeSize="49.862825788751714" IsNewNode="True">
                 <LayoutGroup Id="Auto3e364aa7-4da7-4dfa-a190-cf09d576cc94" ShowCaption="False" Index="0" RelativeSize="100" IsNewNode="True">
-                  <LayoutItem Id="DonGiaNgoaiGio" ViewItem="DonGiaNgoaiGio" Index="0" RelativeSize="16.494845360824741" IsNewNode="True" />
-                  <LayoutItem Id="DonGiaThuBay" ViewItem="DonGiaThuBay" Index="1" RelativeSize="12.371134020618557" IsNewNode="True" />
-                  <LayoutItem Id="DonGiaNgonNgu" ViewItem="DonGiaNgonNgu" Index="2" RelativeSize="12.371134020618557" IsNewNode="True" />
-                  <LayoutItem Id="DonGiaGoKid" ViewItem="DonGiaGoKid" Index="3" RelativeSize="12.371134020618557" IsNewNode="True" />
-                  <LayoutItem Id="DonGiaTiengAnh" ViewItem="DonGiaTiengAnh" Index="4" RelativeSize="46.391752577319586" IsNewNode="True" />
+                  <LayoutItem Id="DonGiaNgoaiGio" ViewItem="DonGiaNgoaiGio" Index="0" RelativeSize="7.3217726396917149" IsNewNode="True" />
+                  <LayoutItem Id="DonGiaThuBay" ViewItem="DonGiaThuBay" Index="1" RelativeSize="5.7803468208092488" IsNewNode="True" />
+                  <LayoutItem Id="DonGiaNgonNgu" ViewItem="DonGiaNgonNgu" Index="2" RelativeSize="5.7803468208092488" IsNewNode="True" />
+                  <LayoutItem Id="DonGiaGoKid" ViewItem="DonGiaGoKid" Index="3" RelativeSize="5.7803468208092488" IsNewNode="True" />
+                  <LayoutItem Id="DonGiaTiengAnh" ViewItem="DonGiaTiengAnh" Index="4" RelativeSize="75.337186897880542" IsNewNode="True" />
                 </LayoutGroup>
               </LayoutGroup>
-              <LayoutGroup Id="Item5" ShowCaption="True" Caption="Công chuẩn (phân bổ) " CaptionLocation="Top" Index="1" RelativeSize="50.085470085470085" IsNewNode="True">
+              <LayoutGroup Id="Item5" ShowCaption="True" Caption="Công chuẩn (phân bổ) " CaptionLocation="Top" Index="1" RelativeSize="50.137174211248286" IsNewNode="True">
                 <LayoutItem Id="CongChuan" ViewItem="CongChuan" Index="0" RelativeSize="100" IsNewNode="True" />
               </LayoutGroup>
             </LayoutGroup>

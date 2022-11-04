@@ -1,16 +1,7 @@
 ﻿using DevExpress.Xpo;
 using DevExpress.Persistent.BaseImpl;
-using DevExpress.Persistent.Validation;
 using DevExpress.ExpressApp.Model;
 using DevExpress.Persistent.Base;
-using System.ComponentModel;
-using ERP.Module.DanhMuc.NhanSu;
-using ERP.Module.NghiepVu.NhanSu.BoPhans;
-using DevExpress.Data.Filtering;
-using ERP.Module.Enum.PMS;
-using ERP.Module.NghiepVu.PMS.QuanLy;
-using ERP.Module.NghiepVu.NhanSu.NhanViens;
-using ERP.Module.NghiepVu.PMS.DanhMuc;
 using ERP.Module.NghiepVu.PMS.QuanLyGiangDay;
 
 namespace ERP.Module.NghiepVu.PMS.CauHinh
@@ -43,6 +34,25 @@ namespace ERP.Module.NghiepVu.PMS.CauHinh
         [VisibleInDetailView(false)]
         [ModelDefault("Caption", "Cấu hình quy đổi PMS")]
         public CauHinhQuyDoiPMS CauHinhQuyDoiPMS { get; set; }
+
+        [NonPersistent]
+        [VisibleInListView(false)]
+        [VisibleInDetailView(false)]
+        [ModelDefault("Caption", "Hệ số lớp đông")]
+        public string HeSoLopDong { get; set; }
+
+        [NonPersistent]
+        [VisibleInListView(false)]
+        [VisibleInDetailView(false)]
+        [ModelDefault("Caption", "Hệ số môn học")]
+        public string HeSoMonHoc { get; set; }
+
+        [NonPersistent]
+        [VisibleInListView(false)]
+        [VisibleInDetailView(false)]
+        [ModelDefault("Caption", "Hệ số thời gian")]
+        public string HeSoThoiGian { get; set; }
+
 
         public ChonGiaTriLapCongThucPMS(Session session)
             : base(session)

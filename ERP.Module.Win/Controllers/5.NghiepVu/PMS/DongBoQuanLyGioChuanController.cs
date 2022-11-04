@@ -1,17 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using DevExpress.ExpressApp;
 using DevExpress.ExpressApp.Actions;
-using DevExpress.ExpressApp.Security;
-using DevExpress.Xpo;
-using DevExpress.Data.Filtering;
-using DevExpress.ExpressApp.Xpo;
-using ERP.Module.NghiepVu.TienLuong.ChungTus;
-using ERP.Module.Extends;
 using ERP.Module.Commons;
-using ERP.Module.Win.Controllers.NghiepVu.TienLuong.ExecuteClass;
 using System.Data.SqlClient;
-using ERP.Module.NghiepVu.PMS.QuanLyGiangDay;
 using System.Data;
 using ERP.Module.NghiepVu.PMS.QuanLyGioChuan;
 

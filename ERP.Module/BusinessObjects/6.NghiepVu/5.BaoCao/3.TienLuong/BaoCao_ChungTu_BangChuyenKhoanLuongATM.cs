@@ -28,6 +28,8 @@ namespace ERP.Module.Report.TienLuong
         private KyTinhLuong _KyTinhLuong;
         private CongTy _CongTy;
         private NganHang _NganHang;
+        private bool _TatCa = true;
+        private BoPhan _BoPhan;
 
         //
         [ImmediatePostData]
@@ -46,6 +48,33 @@ namespace ERP.Module.Report.TienLuong
                 {
                     UpdateKTLList();
                 }
+            }
+        }
+        [ImmediatePostData]
+        [ModelDefault("Caption", "Tất cả")]
+        public bool TatCa
+        {
+            get
+            {
+                return _TatCa;
+            }
+            set
+            {
+                SetPropertyValue("TatCa", ref _TatCa, value);
+            }
+        }
+
+        [ModelDefault("Caption", "Đơn vị")]
+        [RuleRequiredField(DefaultContexts.Save, TargetCriteria = "!TatCa")]
+        public BoPhan BoPhan
+        {
+            get
+            {
+                return _BoPhan;
+            }
+            set
+            {
+                SetPropertyValue("BoPhan", ref _BoPhan, value);
             }
         }
 
@@ -89,10 +118,24 @@ namespace ERP.Module.Report.TienLuong
 
         public override SqlCommand CreateCommand()
         {
+            List<string> listBP = new List<string>();
             //
+            if (TatCa)
+                listBP = Common.Department_GetRoledDepartmentList_ByCurrentUser();
+            else
+                listBP = Common.Department_GetRoledDepartmentList_ByDepartment(BoPhan);
+            //
+            StringBuilder roled = new StringBuilder();
+            foreach (string item in listBP)
+            {
+                roled.Append(String.Format("{0};", item));
+            }
+            //
+
             SqlCommand cmd = new SqlCommand("spd_Rpt_ChungTu_BangChuyenKhoanLuongATM");
             cmd.CommandType = System.Data.CommandType.StoredProcedure;          
             cmd.Parameters.AddWithValue("@KyTinhLuong", KyTinhLuong.Oid);
+            cmd.Parameters.AddWithValue("@BoPhanPhanQuyen", roled.ToString());
             cmd.Parameters.AddWithValue("@CongTy", CongTy.Oid);
             cmd.Parameters.AddWithValue("@NganHang", NganHang != null ? NganHang.Oid : Guid.Empty);
             return cmd;

@@ -44,7 +44,7 @@
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>index.htm</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationRevision>5</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -564,6 +564,18 @@
     <Content Include="Configs\MKU\PSC_HRM.bin">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="UnusableNodes986.xml">
+      <DependentUpon>Model.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes985.xml">
+      <DependentUpon>Model.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes984.xml">
+      <DependentUpon>Model.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
     <None Include="UnusableNodes983.xml">
       <DependentUpon>Model.xafml</DependentUpon>
       <SubType>Designer</SubType>

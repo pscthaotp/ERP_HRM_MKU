@@ -8,17 +8,19 @@ using ERP.Module.NghiepVu.NhanSu.BoPhans;
 using ERP.Module.NghiepVu.NhanSu.NhanViens;
 using ERP.Module.NghiepVu.PMS.DanhMuc;
 
-namespace ERP.Module.NghiepVu.PMS.NCKH
+namespace ERP.Module.NghiepVu.PMS.BoiDuong
 {
     [DefaultClassOptions]
     [ImageName("BO_List")]
-    [ModelDefault("Caption", "Chi tiết NCKH")]
+    [ModelDefault("Caption", "Chi tiết bồi dưỡng")]
 
-    public class ChiTietNCKH : BaseObject
+    public class ChiTietBoiDuong : BaseObject
     {
-        private QuanLyNCKH _QuanLyNCKH; //
+        private QuanLyBoiDuong _QuanLyBoiDuong; //
         private NhanVien _NhanVien;//
         private TrinhDoChuyenMon _TrinhDoChuyenMon;
+        private BacDaoTao _BacDaoTao;
+        private HeDaoTao _HeDaoTao;
         private BoPhan _BoPhan;
         private string _MaQuanLy;
         private string _CongViec;
@@ -29,18 +31,17 @@ namespace ERP.Module.NghiepVu.PMS.NCKH
         private string _GhiChu;
         private bool _TinhThuLao;
 
-        [ModelDefault("Caption", "Quản lý NCKH")]
-        [Association("QuanLyNCKH-ListChiTietNCKH")]
+        [ModelDefault("Caption", "Quản lý bồi dưỡng")]
+        [Association("QuanLyBoiDuong-ListChiTietBoiDuong")]
         [Browsable(false)]
-        public QuanLyNCKH QuanLyNCKH
+        public QuanLyBoiDuong QuanLyBoiDuong
         {
-            get { return _QuanLyNCKH; }
+            get { return _QuanLyBoiDuong; }
             set
             {
-                SetPropertyValue("QuanLyNCKH", ref _QuanLyNCKH, value);
+                SetPropertyValue("QuanLyBoiDuong", ref _QuanLyBoiDuong, value);
             }
         }
-
 
         [ModelDefault("Caption", "Giảng viên")]
         [ModelDefault("AllowEdit", "false")]
@@ -77,8 +78,7 @@ namespace ERP.Module.NghiepVu.PMS.NCKH
         }
 
 
-        [ModelDefault("Caption", "Mã quản lý")]
-        [Size(-1)]
+        [ModelDefault("Caption", "Mã quản lý")]    
         [ModelDefault("AllowEdit", "false")]
         public string MaQuanLy
         {
@@ -169,7 +169,7 @@ namespace ERP.Module.NghiepVu.PMS.NCKH
             }
         }
         
-        public ChiTietNCKH(Session session)
+        public ChiTietBoiDuong(Session session)
             : base(session)
         {
         }

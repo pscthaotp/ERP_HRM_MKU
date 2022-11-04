@@ -332,6 +332,8 @@
     <Compile Include="Controllers\0.ExecuteImport\ImportClass\2.TienLuong\Imp_KhauTruLuong.cs" />
     <Compile Include="Controllers\0.ExecuteImport\ImportClass\2.TienLuong\Imp_ThuNhapKhac.cs" />
     <Compile Include="Controllers\0.ExecuteImport\ImportClass\2.TienLuong\Imp_TruyLinhLuong.cs" />
+    <Compile Include="Controllers\0.ExecuteImport\ImportClass\3.PMS\Imp_TuBoiDuong.cs" />
+    <Compile Include="Controllers\0.ExecuteImport\ImportClass\3.PMS\Imp_NCKH.cs" />
     <Compile Include="Controllers\0.ExecuteImport\ImportClass\3.PMS\Imp_QuanLyGioChuan.cs" />
     <Compile Include="Controllers\0.ExecuteImport\ImportClass\3.PMS\Imp_CoVanHocTap.cs" />
     <Compile Include="Controllers\0.ExecuteImport\ImportControl\1.NhanSu\BoNhiem_ImportQuyetDinhTaiBoNhiemController.cs">
@@ -435,6 +437,18 @@
     </Compile>
     <Compile Include="Controllers\0.ExecuteImport\ImportControl\2.TienLuong\Luong_ImportNgoaiKhoaController.designer.cs">
       <DependentUpon>Luong_ImportNgoaiKhoaController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\PMS\PMS_ImportTuBoiDuongController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\PMS\PMS_ImportTuBoiDuongController.designer.cs">
+      <DependentUpon>PMS_ImportTuBoiDuongController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\PMS\PMS_ImportNCKHController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\PMS\PMS_ImportNCKHController.designer.cs">
+      <DependentUpon>PMS_ImportNCKHController.cs</DependentUpon>
     </Compile>
     <Compile Include="Controllers\0.ExecuteImport\ImportControl\PMS\PMS_ImportQuanLyGioChuanController.cs">
       <SubType>Component</SubType>
@@ -1253,6 +1267,12 @@
     <Compile Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\NhanVien_NgoaiNguChinhController.designer.cs">
       <DependentUpon>NhanVien_NgoaiNguChinhController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\5.NghiepVu\PMS\QuanLyThongTinKLGiangDay_NonController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\5.NghiepVu\PMS\QuanLyThongTinKLGiangDay_NonController.Designer.cs">
+      <DependentUpon>QuanLyThongTinKLGiangDay_NonController.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\5.NghiepVu\PMS\QuanLyGioChuan_PMS_Clone_Controller.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1277,17 +1297,17 @@
     <Compile Include="Controllers\5.NghiepVu\PMS\CauHinhQuyDoiPMS_PMS_Clone_Controller.Designer.cs">
       <DependentUpon>CauHinhQuyDoiPMS_PMS_Clone_Controller.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\5.NghiepVu\PMS\DongBoBangChotThuLaoController.cs">
+    <Compile Include="Controllers\5.NghiepVu\PMS\BangChotThuLaoController.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Controllers\5.NghiepVu\PMS\DongBoBangChotThuLaoController.designer.cs">
-      <DependentUpon>DongBoBangChotThuLaoController.cs</DependentUpon>
+    <Compile Include="Controllers\5.NghiepVu\PMS\BangChotThuLaoController.designer.cs">
+      <DependentUpon>BangChotThuLaoController.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\5.NghiepVu\PMS\DongBoBangChotThuLaoThinhGiangController.cs">
+    <Compile Include="Controllers\5.NghiepVu\PMS\BangChotThuLaoThinhGiangController.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Controllers\5.NghiepVu\PMS\DongBoBangChotThuLaoThinhGiangController.designer.cs">
-      <DependentUpon>DongBoBangChotThuLaoThinhGiangController.cs</DependentUpon>
+    <Compile Include="Controllers\5.NghiepVu\PMS\BangChotThuLaoThinhGiangController.designer.cs">
+      <DependentUpon>BangChotThuLaoThinhGiangController.cs</DependentUpon>
     </Compile>
     <Compile Include="Controllers\5.NghiepVu\PMS\DongBoQuanLyGioChuanController.cs">
       <SubType>Component</SubType>
@@ -1834,6 +1854,12 @@
     <EmbeddedResource Include="Controllers\0.ExecuteImport\ImportControl\2.TienLuong\Luong_ImportNgoaiKhoaController.resx">
       <DependentUpon>Luong_ImportNgoaiKhoaController.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\0.ExecuteImport\ImportControl\PMS\PMS_ImportTuBoiDuongController.resx">
+      <DependentUpon>PMS_ImportTuBoiDuongController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\0.ExecuteImport\ImportControl\PMS\PMS_ImportNCKHController.resx">
+      <DependentUpon>PMS_ImportNCKHController.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controllers\0.ExecuteImport\ImportControl\PMS\PMS_ImportQuanLyGioChuanController.resx">
       <DependentUpon>PMS_ImportQuanLyGioChuanController.cs</DependentUpon>
     </EmbeddedResource>
@@ -2185,6 +2211,9 @@
     <EmbeddedResource Include="Controllers\5.NghiepVu\1.NhanSu\NhanVien\NhanVien_NgoaiNguChinhController.resx">
       <DependentUpon>NhanVien_NgoaiNguChinhController.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\PMS\QuanLyThongTinKLGiangDay_NonController.resx">
+      <DependentUpon>QuanLyThongTinKLGiangDay_NonController.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controllers\5.NghiepVu\PMS\QuanLyGioChuan_PMS_Clone_Controller.resx">
       <DependentUpon>QuanLyGioChuan_PMS_Clone_Controller.cs</DependentUpon>
     </EmbeddedResource>
@@ -2197,11 +2226,11 @@
     <EmbeddedResource Include="Controllers\5.NghiepVu\PMS\CauHinhQuyDoiPMS_PMS_Clone_Controller.resx">
       <DependentUpon>CauHinhQuyDoiPMS_PMS_Clone_Controller.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controllers\5.NghiepVu\PMS\DongBoBangChotThuLaoController.resx">
-      <DependentUpon>DongBoBangChotThuLaoController.cs</DependentUpon>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\PMS\BangChotThuLaoController.resx">
+      <DependentUpon>BangChotThuLaoController.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controllers\5.NghiepVu\PMS\DongBoBangChotThuLaoThinhGiangController.resx">
-      <DependentUpon>DongBoBangChotThuLaoThinhGiangController.cs</DependentUpon>
+    <EmbeddedResource Include="Controllers\5.NghiepVu\PMS\BangChotThuLaoThinhGiangController.resx">
+      <DependentUpon>BangChotThuLaoThinhGiangController.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controllers\5.NghiepVu\PMS\DongBoQuanLyGioChuanController.resx">
       <DependentUpon>DongBoQuanLyGioChuanController.cs</DependentUpon>

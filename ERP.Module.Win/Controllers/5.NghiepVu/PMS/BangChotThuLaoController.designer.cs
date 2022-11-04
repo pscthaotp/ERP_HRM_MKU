@@ -6,7 +6,7 @@ using ERP.Module.NghiepVu.PMS.BangChotThuLao;
 
 namespace ERP.Module.Win.Controllers.NghiepVu.PMS
 {
-    partial class DongBoBangChotThuLaoController
+    partial class BangChotThuLaoController
     {
         /// <summary>
         /// Required designer variable.
@@ -43,7 +43,7 @@ namespace ERP.Module.Win.Controllers.NghiepVu.PMS
             this.simpleAction1.Caption = "Chốt thù lao";
             this.simpleAction1.ConfirmationMessage = null;
             this.simpleAction1.Id = "DongBoBangChotThuLaoCHController";
-            this.simpleAction1.ImageName = "TemplatesV2Images.BO_Opportunity";
+            this.simpleAction1.ImageName = "BO_Money_Calculator";
             this.simpleAction1.SelectionDependencyType = DevExpress.ExpressApp.Actions.SelectionDependencyType.RequireSingleObject;
             this.simpleAction1.TargetObjectType = typeof(ERP.Module.NghiepVu.PMS.BangChotThuLao.BangChotThuLao);
             this.simpleAction1.TargetViewType = DevExpress.ExpressApp.ViewType.DetailView;
@@ -57,14 +57,14 @@ namespace ERP.Module.Win.Controllers.NghiepVu.PMS
             this.simpleAction2.ConfirmationMessage = null;
             this.simpleAction2.Id = "MoKhoaBangChotThuLaoCHController";
             this.simpleAction2.ImageName = "Action_Security_ChangePassword";
-            this.simpleAction2.ToolTip = "Mở khóa thù lao giảng dạy.";
             this.simpleAction2.SelectionDependencyType = DevExpress.ExpressApp.Actions.SelectionDependencyType.RequireSingleObject;
             this.simpleAction2.TargetObjectType = typeof(ERP.Module.NghiepVu.PMS.BangChotThuLao.BangChotThuLao);
             this.simpleAction2.TargetViewType = DevExpress.ExpressApp.ViewType.DetailView;
+            this.simpleAction2.ToolTip = "Mở khóa thù lao giảng dạy.";
             this.simpleAction2.TypeOfView = typeof(DevExpress.ExpressApp.DetailView);
             this.simpleAction2.Execute += new DevExpress.ExpressApp.Actions.SimpleActionExecuteEventHandler(this.simpleAction2_Execute);
             // 
-            // DongBoBangChotThuLaoController
+            // BangChotThuLaoController
             // 
             this.Actions.Add(this.simpleAction1);
             this.Actions.Add(this.simpleAction2);

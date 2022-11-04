@@ -3,18 +3,17 @@ using DevExpress.Persistent.BaseImpl;
 using DevExpress.Persistent.Validation;
 using DevExpress.ExpressApp.Model;
 using DevExpress.Persistent.Base;
+using System.ComponentModel;
 using ERP.Module.DanhMuc.NhanSu;
 using ERP.Module.NghiepVu.NhanSu.BoPhans;
 using ERP.Module.Commons;
-using DevExpress.ExpressApp.ConditionalAppearance;
 
-namespace ERP.Module.NghiepVu.PMS.NCKH
+namespace ERP.Module.NghiepVu.PMS.QuanLyKhaoThi
 {
     [DefaultClassOptions]
-    [ModelDefault("Caption", "Quản lý NCKH")]
-    [Appearance("KhoiLuongGiangDay_Khoa", TargetItems = "*", Enabled = false, Criteria = "Khoa = 1")]
-    [RuleCombinationOfPropertiesIsUnique("QuanLyNCKH.Unique", DefaultContexts.Save, "NamHoc;HocKy;ThongTinTruong;")]
-    public class QuanLyNCKH : BaseObject
+    [ModelDefault("Caption", "Quản lý khảo thí")]
+    [DefaultProperty("TenQuanLyKhaoThi")]
+    public class QuanLyKhaoThi : BaseObject
     {
         private BoPhan _ThongTinTruong;
         private NamHoc _NamHoc;
@@ -45,7 +44,7 @@ namespace ERP.Module.NghiepVu.PMS.NCKH
 
         [ModelDefault("Caption", "Học kỳ")]
         [DataSourceProperty("NamHoc.ListHocKy")]
-       // [RuleRequiredField(DefaultContexts.Save)]
+        //[RuleRequiredField(DefaultContexts.Save)]
         [VisibleInListView(false)]
         public HocKy HocKy
         {
@@ -53,7 +52,7 @@ namespace ERP.Module.NghiepVu.PMS.NCKH
             set { SetPropertyValue("HocKy", ref _HocKy, value); }
         }
         [ModelDefault("Caption", "Khóa dữ liệu")]
-        [ModelDefault("AllowEdit", "false")]
+        [ImmediatePostData]
         public bool Khoa
         {
             get { return _Khoa; }
@@ -61,29 +60,53 @@ namespace ERP.Module.NghiepVu.PMS.NCKH
         }
 
 
-        [Aggregated]
-        [ModelDefault("Caption", "Chi tiết nghiên cứu khoa học")]
-        [Association("QuanLyNCKH-ListChiTietNCKH")]
-        public XPCollection<ChiTietNCKH> ListChiTietNCKH
+        [ModelDefault("Caption", "Tên quản lý khảo thí")]
+        [VisibleInDetailView(false)]
+        public string TenQuanLyKhaoThi
         {
             get
             {
-                return GetCollection<ChiTietNCKH>("ListChiTietNCKH");
+
+                return string.Format("{0} - {1}", NamHoc != null ? NamHoc.TenNamHoc : "", HocKy != null ? HocKy.TenHocKy : "");
+            }
+        }
+
+
+        [Aggregated]
+        [ModelDefault("Caption", "Chi tiết coi thi")]
+        [Association("QuanLyKhaoThi-ListChiTietCoiThi")]
+        public XPCollection<ChiTietCoiThi> ListChiTietCoiThi
+        {
+            get
+            {
+                return GetCollection<ChiTietCoiThi>("ListChiTietCoiThi");
+            }
+        }
+
+
+        [Aggregated]
+        [ModelDefault("Caption", "Chi tiết chấm bài")]
+        [Association("QuanLyKhaoThi-ListChiTietChamBai")]
+        public XPCollection<ChiTietChamBai> ListChiTietChamBai
+        {
+            get
+            {
+                return GetCollection<ChiTietChamBai>("ListChiTietChamBai");
             }
         }
 
         [Aggregated]
-        [ModelDefault("Caption", "Bảo lưu nghiên cứu khoa học")]
-        [Association("QuanLyNCKH-ListBaoLuuNCKH")]
-        public XPCollection<BaoLuuNCKH> ListBaoLuuNCKH
+        [ModelDefault("Caption", "Chi tiết ra đề")]
+        [Association("QuanLyKhaoThi-ListChiTietRaDe")]
+        public XPCollection<ChiTietRaDe> ListChiTietRaDe
         {
             get
             {
-                return GetCollection<BaoLuuNCKH>("ListBaoLuuNCKH");
+                return GetCollection<ChiTietRaDe>("ListChiTietRaDe");
             }
         }
 
-        public QuanLyNCKH(Session session)
+        public QuanLyKhaoThi(Session session)
             : base(session)
         {
         }

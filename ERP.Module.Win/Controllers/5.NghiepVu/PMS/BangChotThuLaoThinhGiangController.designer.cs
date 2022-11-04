@@ -6,7 +6,7 @@ using ERP.Module.NghiepVu.PMS.BangChotThuLao;
 
 namespace ERP.Module.Win.Controllers.NghiepVu.PMS
 {
-    partial class DongBoBangChotThuLaoThinhGiangController
+    partial class BangChotThuLaoThinhGiangController
     {
         /// <summary>
         /// Required designer variable.
@@ -35,21 +35,8 @@ namespace ERP.Module.Win.Controllers.NghiepVu.PMS
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.simpleAction1 = new DevExpress.ExpressApp.Actions.SimpleAction(this.components);
             this.simpleAction2 = new DevExpress.ExpressApp.Actions.SimpleAction(this.components);
-            // 
-            // simpleAction1
-            // 
-            this.simpleAction1.Caption = "Chốt thù lao";
-            this.simpleAction1.ConfirmationMessage = null;
-            this.simpleAction1.Id = "DongBoBangChotThuLaoTGController";
-            this.simpleAction1.ImageName = "TemplatesV2Images.BO_Opportunity";
-            this.simpleAction1.SelectionDependencyType = DevExpress.ExpressApp.Actions.SelectionDependencyType.RequireSingleObject;
-            this.simpleAction1.TargetObjectType = typeof(ERP.Module.NghiepVu.PMS.BangChotThuLao.BangChotThuLao_ThinhGiang);
-            this.simpleAction1.TargetViewType = DevExpress.ExpressApp.ViewType.DetailView;
-            this.simpleAction1.ToolTip = "Chốt thù lao giảng dạy.";
-            this.simpleAction1.TypeOfView = typeof(DevExpress.ExpressApp.DetailView);
-            this.simpleAction1.Execute += new DevExpress.ExpressApp.Actions.SimpleActionExecuteEventHandler(this.simpleAction1_Execute);
+            this.popupTinhThuLao = new DevExpress.ExpressApp.Actions.PopupWindowShowAction(this.components);
             // 
             // simpleAction2
             // 
@@ -57,24 +44,35 @@ namespace ERP.Module.Win.Controllers.NghiepVu.PMS
             this.simpleAction2.ConfirmationMessage = null;
             this.simpleAction2.Id = "MoKhoaBangChotThuLaoTGController";
             this.simpleAction2.ImageName = "Action_Security_ChangePassword";
-            this.simpleAction2.ToolTip = "Mở khóa thù lao giảng dạy.";
             this.simpleAction2.SelectionDependencyType = DevExpress.ExpressApp.Actions.SelectionDependencyType.RequireSingleObject;
             this.simpleAction2.TargetObjectType = typeof(ERP.Module.NghiepVu.PMS.BangChotThuLao.BangChotThuLao_ThinhGiang);
             this.simpleAction2.TargetViewType = DevExpress.ExpressApp.ViewType.DetailView;
+            this.simpleAction2.ToolTip = "Mở khóa thù lao giảng dạy.";
             this.simpleAction2.TypeOfView = typeof(DevExpress.ExpressApp.DetailView);
             this.simpleAction2.Execute += new DevExpress.ExpressApp.Actions.SimpleActionExecuteEventHandler(this.simpleAction2_Execute);
             // 
-            // DongBoBangChotThuLaoController
+            // popupTinhThuLao
             // 
-            this.Actions.Add(this.simpleAction1);
+            this.popupTinhThuLao.AcceptButtonCaption = null;
+            this.popupTinhThuLao.CancelButtonCaption = null;
+            this.popupTinhThuLao.Caption = "Tính thù lao";
+            this.popupTinhThuLao.ConfirmationMessage = null;
+            this.popupTinhThuLao.Id = "popTinhThuLaoThinhGiang_Controller";
+            this.popupTinhThuLao.ImageName = "BO_Money1";
+            this.popupTinhThuLao.ToolTip = "Tính thù lao";
+            this.popupTinhThuLao.CustomizePopupWindowParams += new DevExpress.ExpressApp.Actions.CustomizePopupWindowParamsEventHandler(this.popupTinhThuLao_CustomizePopupWindowParams);
+            this.popupTinhThuLao.Execute += new DevExpress.ExpressApp.Actions.PopupWindowShowActionExecuteEventHandler(this.popupTinhThuLao_Execute);
+            // 
+            // BangChotThuLaoThinhGiangController
+            // 
             this.Actions.Add(this.simpleAction2);
+            this.Actions.Add(this.popupTinhThuLao);
             this.Activated += new System.EventHandler(this.DongBoBangChotThuLaoThinhGiangController_Activated);
 
         }
 
         #endregion
-
-        private DevExpress.ExpressApp.Actions.SimpleAction simpleAction1;
         private DevExpress.ExpressApp.Actions.SimpleAction simpleAction2;
+        private DevExpress.ExpressApp.Actions.PopupWindowShowAction popupTinhThuLao;
     }
 }
