@@ -320,6 +320,7 @@
     <Compile Include="Controllers\0.ExecuteImport\ImportClass\1.NhanSu\Imp_QuyetDinhBoNhiem.cs" />
     <Compile Include="Controllers\0.ExecuteImport\ImportClass\1.NhanSu\Imp_QuyetDinhNangLuong.cs" />
     <Compile Include="Controllers\0.ExecuteImport\ImportClass\1.NhanSu\Imp_DinhBienChucDanh.cs" />
+    <Compile Include="Controllers\0.ExecuteImport\ImportClass\2.TienLuong\Imp_PhuCapTruongBoMon.cs" />
     <Compile Include="Controllers\0.ExecuteImport\ImportClass\2.TienLuong\Imp_KhenThuongPhucLoi.cs" />
     <Compile Include="Controllers\0.ExecuteImport\ImportClass\2.TienLuong\Imp_ChamCongGiangDayPhoThong.cs" />
     <Compile Include="Controllers\0.ExecuteImport\ImportClass\2.TienLuong\Imp_ChamCongGiangDay.cs" />
@@ -380,6 +381,12 @@
     </Compile>
     <Compile Include="Controllers\0.ExecuteImport\ImportControl\1.NhanSu\DinhBien_ImportDinhBienChucDanhController.designer.cs">
       <DependentUpon>DinhBien_ImportDinhBienChucDanhController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\2.TienLuong\KhenThuongPhucLoi_ImportPhuCapTruongBoMonController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\2.TienLuong\KhenThuongPhucLoi_ImportPhuCapTruongBoMonController.designer.cs">
+      <DependentUpon>KhenThuongPhucLoi_ImportPhuCapTruongBoMonController.cs</DependentUpon>
     </Compile>
     <Compile Include="Controllers\0.ExecuteImport\ImportControl\2.TienLuong\ChamCong_ImportTiLeDanhGiaCongViecController.cs">
       <SubType>Component</SubType>
@@ -1796,6 +1803,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controllers\0.ExecuteImport\ImportControl\1.NhanSu\TuyenDung_ImportUngVienTuExcelController.resx">
       <DependentUpon>TuyenDung_ImportUngVienTuExcelController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\0.ExecuteImport\ImportControl\2.TienLuong\KhenThuongPhucLoi_ImportPhuCapTruongBoMonController.resx">
+      <DependentUpon>KhenThuongPhucLoi_ImportPhuCapTruongBoMonController.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controllers\0.ExecuteImport\ImportControl\2.TienLuong\ChamCong_ImportTiLeDanhGiaCongViecController.resx">
       <DependentUpon>ChamCong_ImportTiLeDanhGiaCongViecController.cs</DependentUpon>

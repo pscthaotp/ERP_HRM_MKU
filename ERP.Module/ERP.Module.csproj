@@ -491,6 +491,8 @@
     <Compile Include="BusinessObjects\6.NghiepVu\2.TienLuong\Thuong\ChiTietThuongNhanVien.cs" />
     <Compile Include="BusinessObjects\6.NghiepVu\2.TienLuong\Thuong\CongThucKhenThuongPhucLoi.cs" />
     <Compile Include="BusinessObjects\6.NghiepVu\2.TienLuong\Thuong\BangThuongNhanVien.cs" />
+    <Compile Include="BusinessObjects\6.NghiepVu\2.TienLuong\TienTruongBoMon\PhuCapTruongBoMon.cs" />
+    <Compile Include="BusinessObjects\6.NghiepVu\2.TienLuong\TienTruongBoMon\ChiTietPhuCapTruongBoMon.cs" />
     <Compile Include="BusinessObjects\6.NghiepVu\3.PMS\BangChotThuLao\BangChotThuLao.cs" />
     <Compile Include="BusinessObjects\6.NghiepVu\3.PMS\BangChotThuLao\BangChotThuLao_ThinhGiang.cs" />
     <Compile Include="BusinessObjects\6.NghiepVu\3.PMS\BangChotThuLao\ChiTietBangChotThuLao.cs" />
@@ -539,6 +541,7 @@
     <Compile Include="BusinessObjects\6.NghiepVu\5.BaoCao\2.NhanSu\ThongKe\BaoCao_ThongKe_CoCauNhanSuTheoThang.cs" />
     <Compile Include="BusinessObjects\6.NghiepVu\5.BaoCao\2.NhanSu\ThongKe\BaoCao_ThongKe_SoLuongTuyenDungHangThang.cs" />
     <Compile Include="BusinessObjects\6.NghiepVu\5.BaoCao\3.TienLuong\BaoCao_ChungTu_BangChuyenKhoanThuNhapTangThem.cs" />
+    <Compile Include="BusinessObjects\6.NghiepVu\5.BaoCao\3.TienLuong\BaoCao_ChungTu_BangTongHopLuong.cs" />
     <Compile Include="BusinessObjects\6.NghiepVu\5.BaoCao\3.TienLuong\BaoCao_Luong_BangThanhToanThuNhapTangThem.cs" />
     <Compile Include="BusinessObjects\6.NghiepVu\5.BaoCao\3.TienLuong\BaoCao_ChamCong_BangTongHopCongNgoaiGio.cs" />
     <Compile Include="BusinessObjects\6.NghiepVu\5.BaoCao\3.TienLuong\BaoCao_Luong_BangThanhToanTienLuongDaiHan.cs" />
