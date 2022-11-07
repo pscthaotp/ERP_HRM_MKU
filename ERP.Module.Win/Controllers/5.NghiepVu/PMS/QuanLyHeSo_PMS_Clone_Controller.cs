@@ -1,28 +1,15 @@
-﻿using System;
-using System.Linq;
-using System.Text;
-using DevExpress.ExpressApp;
+﻿using DevExpress.ExpressApp;
 using DevExpress.Data.Filtering;
-using System.Collections.Generic;
-using DevExpress.Persistent.Base;
-using DevExpress.ExpressApp.Utils;
-using DevExpress.ExpressApp.Layout;
 using DevExpress.ExpressApp.Actions;
-using DevExpress.ExpressApp.Editors;
-using DevExpress.ExpressApp.Templates;
-using DevExpress.Persistent.Validation;
-using DevExpress.ExpressApp.SystemModule;
-using DevExpress.ExpressApp.Model.NodeGenerators;
 using DevExpress.Xpo;
 using DevExpress.ExpressApp.Xpo;
 using System.Data.SqlClient;
 using ERP.Module.Commons;
 using DevExpress.XtraEditors;
 using System.Data;
-using ERP.Module.NghiepVu.PMS.CauHinh;
 using ERP.Module.NonPersistentObjects;
 using ERP.Module.NghiepVu.NhanSu.BoPhans;
-using ERP.Module.NghiepVu.PMS.QuanLy;
+using ERP.Module.NghiepVu.PMS.HeSo;
 
 namespace ERP.Module.Win.Controllers.PMS
 {

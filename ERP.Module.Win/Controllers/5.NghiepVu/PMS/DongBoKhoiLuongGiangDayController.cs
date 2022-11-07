@@ -1,15 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using DevExpress.ExpressApp;
 using DevExpress.ExpressApp.Actions;
-using DevExpress.ExpressApp.Security;
-using DevExpress.Xpo;
-using DevExpress.Data.Filtering;
-using DevExpress.ExpressApp.Xpo;
-using ERP.Module.NghiepVu.TienLuong.ChungTus;
-using ERP.Module.Extends;
 using ERP.Module.Commons;
-using ERP.Module.Win.Controllers.NghiepVu.TienLuong.ExecuteClass;
 using System.Data.SqlClient;
 using ERP.Module.NghiepVu.PMS.QuanLyGiangDay;
 using System.Data;
@@ -28,20 +20,14 @@ namespace ERP.Module.Win.Controllers.NghiepVu.PMS
         private void simpleAction1_Execute(object sender, SimpleActionExecuteEventArgs e)
         {
             QuanLyKhoiLuongGiangDay qly = View.CurrentObject as QuanLyKhoiLuongGiangDay;
-            if (qly.BangChotThuLao == null)
+            if (qly.BangChotThuLao == Guid.Parse("00000000-0000-0000-0000-000000000000"))
             {
                 SqlParameter[] param = new SqlParameter[3];
-                param[0] = new SqlParameter("@KhoiLuongGiangDay", qly.Oid);
-                param[1] = new SqlParameter("@LoaiGV", 0);
+                param[0] = new SqlParameter("@QuanLyKhoiLuongGiangDay", qly.Oid);
+                param[1] = new SqlParameter("@LoaiGV", 1);
                 param[2] = new SqlParameter("@User", Common.SecuritySystemUser_GetCurrentUser().UserName);
                 //
-                DataProvider.ExecuteNonQuery("spd_PMS_DongBoKhoiLuongGiangDay", CommandType.StoredProcedure, param);
-                //QuyDoi
-                SqlParameter[] param1 = new SqlParameter[1];
-                param1[0] = new SqlParameter("@KhoiLuongGiangDay", qly.Oid);
-                //
-                DataProvider.ExecuteNonQuery("spd_PMS_QuyDoiKhoiLuongGiangDay", CommandType.StoredProcedure, param1);
-
+                DataProvider.ExecuteNonQuery("spd_PMS_DongBoKhoiLuongGiangDay", CommandType.StoredProcedure, param);           
                 View.ObjectSpace.Refresh();
 
                 MessageBox.Show("Đồng bộ dữ liệu thành công!");

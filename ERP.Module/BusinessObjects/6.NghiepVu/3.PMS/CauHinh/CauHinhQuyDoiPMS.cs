@@ -6,10 +6,7 @@ using DevExpress.Persistent.Base;
 using System.ComponentModel;
 using ERP.Module.DanhMuc.NhanSu;
 using ERP.Module.NghiepVu.NhanSu.BoPhans;
-using DevExpress.Data.Filtering;
 using ERP.Module.Enum.PMS;
-using ERP.Module.NghiepVu.PMS.QuanLy;
-using ERP.Module.NghiepVu.NhanSu.NhanViens;
 using ERP.Module.NghiepVu.PMS.DanhMuc;
 using ERP.Module.Commons;
 
@@ -114,7 +111,7 @@ namespace ERP.Module.NghiepVu.PMS.CauHinh
         }
 
 
-        [ModelDefault("Caption", "Tính hệ số lương")]
+        [ModelDefault("Caption", "Tính tổng hệ số")]
         //[RuleRequiredField("", DefaultContexts.Save)]
         [ModelDefault("PropertyEditorType", "ERP.Module.Win.Editors.PMS.btnEdit_CongThucPMS")]
         [VisibleInListView(false)]

@@ -6,7 +6,6 @@ using DevExpress.Persistent.Base;
 using System.ComponentModel;
 using ERP.Module.DanhMuc.NhanSu;
 using ERP.Module.NghiepVu.NhanSu.BoPhans;
-using DevExpress.Data.Filtering;
 using ERP.Module.Enum.PMS;
 using ERP.Module.Commons;
 
@@ -20,8 +19,8 @@ namespace ERP.Module.NghiepVu.PMS.DanhMuc
     {
         private BoPhan _ThongTinTruong;
         private NamHoc _NamHoc;
-        //private HocKy _HocKy;
-
+        private HocKy _HocKy;
+        private TrinhDoChuyenMon _TrinhDoChuyenMon;
         private DonGiaGiangDayEnum _LoaiDonGia;
         private decimal _DonGia;
 
@@ -37,24 +36,30 @@ namespace ERP.Module.NghiepVu.PMS.DanhMuc
 
         [ModelDefault("Caption", "Năm học")]
         [ImmediatePostData]
-        [VisibleInListView(false)]
         public NamHoc NamHoc
         {
             get { return _NamHoc; }
             set { SetPropertyValue("NamHoc", ref _NamHoc, value); }
         }
 
-        //[ModelDefault("Caption", "Học kỳ")]
-        //[DataSourceProperty("NamHoc.ListHocKy")]
-        //[RuleRequiredField(DefaultContexts.Save)]
-        //[VisibleInListView(false)]
-        //public HocKy HocKy
-        //{
-        //    get { return _HocKy; }
-        //    set { SetPropertyValue("HocKy", ref _HocKy, value); }
-        //}
+        [ModelDefault("Caption", "Học kỳ")]
+        [DataSourceProperty("NamHoc.ListHocKy")]       
+        public HocKy HocKy
+        {
+            get { return _HocKy; }
+            set { SetPropertyValue("HocKy", ref _HocKy, value); }
+        }
+
+        [ModelDefault("Caption", "Học vị")]       
+        public TrinhDoChuyenMon TrinhDoChuyenMon
+        {
+            get { return _TrinhDoChuyenMon; }
+            set { SetPropertyValue("TrinhDoChuyenMon", ref _TrinhDoChuyenMon, value); }
+        }
+
 
         [ModelDefault("Caption", "Loại đơn giá")]
+        [Browsable(false)]
         public DonGiaGiangDayEnum LoaiDonGia
         {
             get
