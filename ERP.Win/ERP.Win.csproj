@@ -564,6 +564,14 @@
     <Content Include="Configs\MKU\PSC_HRM.bin">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="UnusableNodes986.xml">
+      <DependentUpon>Model.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes985.xml">
+      <DependentUpon>Model.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
     <None Include="UnusableNodes984.xml">
       <DependentUpon>Model.xafml</DependentUpon>
       <SubType>Designer</SubType>
