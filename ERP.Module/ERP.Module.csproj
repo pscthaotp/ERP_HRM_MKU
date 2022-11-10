@@ -528,6 +528,8 @@
     <Compile Include="BusinessObjects\6.NghiepVu\3.PMS\QuanLyGioChuan\DinhMucChucVu_NhanVien.cs" />
     <Compile Include="BusinessObjects\6.NghiepVu\3.PMS\QuanLyGioChuan\DinhMucChucVu.cs" />
     <Compile Include="BusinessObjects\6.NghiepVu\3.PMS\QuanLyGioChuan\QuanLyGioChuan.cs" />
+    <Compile Include="BusinessObjects\6.NghiepVu\3.PMS\QuanLyHoatDongKhac\ChiTietHoatDongKhac.cs" />
+    <Compile Include="BusinessObjects\6.NghiepVu\3.PMS\QuanLyHoatDongKhac\QuanLyHoatDongKhac.cs" />
     <Compile Include="BusinessObjects\6.NghiepVu\3.PMS\QuanLyKhaoThi\ChiTietRaDe.cs" />
     <Compile Include="BusinessObjects\6.NghiepVu\3.PMS\QuanLyKhaoThi\ChiTietCoiThi.cs" />
     <Compile Include="BusinessObjects\6.NghiepVu\3.PMS\QuanLyKhaoThi\ChiTietChamBai.cs" />

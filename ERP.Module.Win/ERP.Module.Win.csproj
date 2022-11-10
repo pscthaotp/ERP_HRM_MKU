@@ -438,6 +438,12 @@
     <Compile Include="Controllers\0.ExecuteImport\ImportControl\2.TienLuong\Luong_ImportNgoaiKhoaController.designer.cs">
       <DependentUpon>Luong_ImportNgoaiKhoaController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\PMS\PMS_ImportHoatDongKhacController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\0.ExecuteImport\ImportControl\PMS\PMS_ImportHoatDongKhacController.designer.cs">
+      <DependentUpon>PMS_ImportHoatDongKhacController.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\0.ExecuteImport\ImportControl\PMS\PMS_ImportTuBoiDuongController.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1853,6 +1859,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controllers\0.ExecuteImport\ImportControl\2.TienLuong\Luong_ImportNgoaiKhoaController.resx">
       <DependentUpon>Luong_ImportNgoaiKhoaController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\0.ExecuteImport\ImportControl\PMS\PMS_ImportHoatDongKhacController.resx">
+      <DependentUpon>PMS_ImportHoatDongKhacController.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controllers\0.ExecuteImport\ImportControl\PMS\PMS_ImportTuBoiDuongController.resx">
       <DependentUpon>PMS_ImportTuBoiDuongController.cs</DependentUpon>
