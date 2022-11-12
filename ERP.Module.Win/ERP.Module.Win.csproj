@@ -332,6 +332,7 @@
     <Compile Include="Controllers\0.ExecuteImport\ImportClass\2.TienLuong\Imp_KhauTruLuong.cs" />
     <Compile Include="Controllers\0.ExecuteImport\ImportClass\2.TienLuong\Imp_ThuNhapKhac.cs" />
     <Compile Include="Controllers\0.ExecuteImport\ImportClass\2.TienLuong\Imp_TruyLinhLuong.cs" />
+    <Compile Include="Controllers\0.ExecuteImport\ImportClass\3.PMS\Imp_HoatDongKhac.cs" />
     <Compile Include="Controllers\0.ExecuteImport\ImportClass\3.PMS\Imp_TuBoiDuong.cs" />
     <Compile Include="Controllers\0.ExecuteImport\ImportClass\3.PMS\Imp_NCKH.cs" />
     <Compile Include="Controllers\0.ExecuteImport\ImportClass\3.PMS\Imp_QuanLyGioChuan.cs" />

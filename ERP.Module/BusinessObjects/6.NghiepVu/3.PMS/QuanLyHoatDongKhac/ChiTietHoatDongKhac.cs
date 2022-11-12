@@ -20,6 +20,7 @@ namespace ERP.Module.NghiepVu.PMS.QuanLyHoatDongKhac
         private NhanVien _NhanVien;//
         private TrinhDoChuyenMon _TrinhDoChuyenMon;      
         private BoPhan _BoPhan;
+        private DanhMucHoatDongKhac _DanhMucHoatDongKhac;
         private string _MaQuanLy;
         private string _CongViec;
         private string _ChiTiet;
@@ -71,7 +72,18 @@ namespace ERP.Module.NghiepVu.PMS.QuanLyHoatDongKhac
             }
         }
 
-        [ModelDefault("Caption", "Mã quản lý")]          
+        [ModelDefault("Caption", "Loại hoạt động")]
+        public DanhMucHoatDongKhac DanhMucHoatDongKhac
+        {
+            get { return _DanhMucHoatDongKhac; }
+            set
+            {
+                SetPropertyValue("DanhMucHoatDongKhac", ref _DanhMucHoatDongKhac, value);
+            }
+        }
+
+        [ModelDefault("Caption", "Mã quản lý")]    
+        [Browsable(false)]
         public string MaQuanLy
         {
             get { return _MaQuanLy; }
@@ -82,6 +94,7 @@ namespace ERP.Module.NghiepVu.PMS.QuanLyHoatDongKhac
         }
         
         [ModelDefault("Caption", "Công việc")]
+        [Browsable(false)]
         [Size(-1)]      
         public string CongViec
         {
@@ -93,6 +106,7 @@ namespace ERP.Module.NghiepVu.PMS.QuanLyHoatDongKhac
         }
         
         [ModelDefault("Caption", "Chi tiết")]
+        [Browsable(false)]
         [Size(-1)]       
         public string ChiTiet
         {
@@ -104,6 +118,7 @@ namespace ERP.Module.NghiepVu.PMS.QuanLyHoatDongKhac
         }
 
 
+        [Browsable(false)]
         [ModelDefault("Caption", "Diễn giải")]
         [Size(-1)]      
         public string DienGiai
@@ -116,7 +131,8 @@ namespace ERP.Module.NghiepVu.PMS.QuanLyHoatDongKhac
         }
 
 
-        [ModelDefault("Caption", "Đơn vị tính")]      
+        [ModelDefault("Caption", "Đơn vị tính")]
+        [Browsable(false)]
         public DonViTinh DonViTinh
         {
             get { return _DonViTinh; }

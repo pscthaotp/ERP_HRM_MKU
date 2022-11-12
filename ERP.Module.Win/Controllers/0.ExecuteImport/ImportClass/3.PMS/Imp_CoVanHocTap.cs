@@ -31,13 +31,13 @@ namespace ERP.Module.Controllers.Win.ExecuteImport.ImportClass.PMS
 
             using (OpenFileDialog open = new OpenFileDialog())
             {
-                open.Filter = "Excel 2003 file (*.xls)|*.xls;*.xlsx";
+                open.Filter = "Excel 2010 file (*.xls)|*.xls;*.xlsx";
                 //
                 if (open.ShowDialog() == DialogResult.OK)
                 {
                     using (DialogUtil.AutoWait())
                     {
-                        using (DataTable dt = DataProvider.GetDataTableFromExcel(open.FileName, "[Sheet1$A2:D]", LoaiOfficeEnum.Office2003))
+                        using (DataTable dt = DataProvider.GetDataTableFromExcel(open.FileName, "[Sheet$A2:E]", LoaiOfficeEnum.Office2010))
                         {
                             /////////////////////////////KHỞI TẠO CÁC IDX/////////////////////////////////////////////////////
 
@@ -74,7 +74,7 @@ namespace ERP.Module.Controllers.Win.ExecuteImport.ImportClass.PMS
                                     #region Kiểm tra dữ
                                     //
                                     #region 1. Mã quản lý
-                                    if (!string.IsNullOrEmpty(txt_MaGV))
+                                    if (!string.IsNullOrEmpty(txt_MaGV)&& !string.IsNullOrEmpty(txt_LopPhuTrach)&& !string.IsNullOrEmpty(txt_SoLuongSV))
                                     {
                                         NhanVien nhanVien = uow.FindObject<NhanVien>(CriteriaOperator.Parse("MaNhanVien = ?", txt_MaGV));
                                         if (nhanVien == null)
@@ -95,7 +95,7 @@ namespace ERP.Module.Controllers.Win.ExecuteImport.ImportClass.PMS
                                     else
                                     {
                                         mainLog.AppendLine("- Mã: " + txt_MaGV);
-                                        mainLog.AppendLine(string.Format("- Mã quản lý của nhân viên : {0} không được trống.", txt_HoTen));
+                                        mainLog.AppendLine(string.Format("- Dữ liệu của nhân viên : {0} không được trống.", txt_HoTen));
                                         //
                                         sucessImport = false;
                                     }

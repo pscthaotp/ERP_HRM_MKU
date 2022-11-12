@@ -16,11 +16,9 @@ namespace ERP.Module.NghiepVu.PMS.BoiDuong
 
     public class ChiTietBoiDuong : BaseObject
     {
-        private QuanLyBoiDuong _QuanLyBoiDuong; //
-        private NhanVien _NhanVien;//
-        private TrinhDoChuyenMon _TrinhDoChuyenMon;
-        private BacDaoTao _BacDaoTao;
-        private HeDaoTao _HeDaoTao;
+        private QuanLyBoiDuong _QuanLyBoiDuong;
+        private NhanVien _NhanVien;
+        private TrinhDoChuyenMon _TrinhDoChuyenMon;      
         private BoPhan _BoPhan;
         private string _MaQuanLy;
         private string _CongViec;

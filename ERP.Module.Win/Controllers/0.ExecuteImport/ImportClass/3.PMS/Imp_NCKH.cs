@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using ERP.Module.NghiepVu.NhanSu.NhanViens;
 using System.Data.SqlClient;
 using ERP.Module.Enum.Systems;
+using ERP.Module.NghiepVu.PMS.DanhMuc;
 //
 namespace ERP.Module.Controllers.Win.ExecuteImport.ImportClass.PMS
 {
@@ -29,21 +30,29 @@ namespace ERP.Module.Controllers.Win.ExecuteImport.ImportClass.PMS
 
             using (OpenFileDialog open = new OpenFileDialog())
             {
-                open.Filter = "Excel 2003 file (*.xls)|*.xls;*.xlsx";
+                open.Filter = "Excel 2010 file (*.xls)|*.xls;*.xlsx";
                 //
                 if (open.ShowDialog() == DialogResult.OK)
                 {
                     using (DialogUtil.AutoWait())
                     {
-                        using (DataTable dt = DataProvider.GetDataTableFromExcel(open.FileName, "[Sheet1$A2:D]", LoaiOfficeEnum.Office2003))
+                        using (DataTable dt = DataProvider.GetDataTableFromExcel(open.FileName, "[Sheet$A2:L]", LoaiOfficeEnum.Office2003))
                         {
                             /////////////////////////////KHỞI TẠO CÁC IDX/////////////////////////////////////////////////////
 
                             #region Khởi tạo các idx
-                            const int idx_MaGV = 0;
-                            const int idx_HoTen = 1;
-                            const int idx_LopPhuTrach = 2;
-                            const int idx_SoLuongSV = 3;
+                            const int idx_STT = 0;
+                            const int idx_MaGV = 1;
+                            const int idx_HoTen = 2;
+                            const int idx_HocVi = 3;
+                            const int idx_BoPhan = 4;
+                            const int idx_MaQuanLy = 5;
+                            const int idx_CongViec = 6;
+                            const int idx_ChiTiet = 7;
+                            const int idx_DienGiai = 8;
+                            const int idx_DonViTinh = 9;
+                            const int idx_GioQuyDoi = 10;
+                            const int idx_GhiChu = 11;
                             string sql = "";
                             #endregion
 
@@ -61,10 +70,18 @@ namespace ERP.Module.Controllers.Win.ExecuteImport.ImportClass.PMS
                                     //////////////////////////ĐỌC DỮ LIỆU//////////////////////////////////////
 
                                     #region Đọc dữ liệu
+                                    string txt_STT = dr[idx_STT].ToString().Trim();
                                     string txt_MaGV = dr[idx_MaGV].ToString().Trim();
                                     string txt_HoTen = dr[idx_HoTen].ToString().Trim();
-                                    string txt_LopPhuTrach = dr[idx_LopPhuTrach].ToString().Trim();
-                                    string txt_SoLuongSV = dr[idx_SoLuongSV].ToString().Trim();
+                                    string txt_HocVi = dr[idx_HocVi].ToString().Trim();
+                                    string txt_BoPhan = dr[idx_BoPhan].ToString().Trim();
+                                    string txt_MaQuanLy = dr[idx_MaQuanLy].ToString().Trim();
+                                    string txt_CongViec = dr[idx_CongViec].ToString().Trim();
+                                    string txt_ChiTiet = dr[idx_ChiTiet].ToString().Trim();
+                                    string txt_DienGiai = dr[idx_DienGiai].ToString().Trim();
+                                    string txt_DonViTinh = dr[idx_DonViTinh].ToString().Trim();
+                                    string txt_GioQuyDoi = dr[idx_GioQuyDoi].ToString().Trim();
+                                    string txt_GhiChu = dr[idx_GhiChu].ToString().Trim();
                                     #endregion
 
                                     //////////////////////////KIỂM TRA VÀ LẤY DỮ LIỆU//////////////////////////
@@ -72,9 +89,13 @@ namespace ERP.Module.Controllers.Win.ExecuteImport.ImportClass.PMS
                                     #region Kiểm tra dữ
                                     //
                                     #region 1. Mã quản lý
-                                    if (!string.IsNullOrEmpty(txt_MaGV))
+                                    if (!string.IsNullOrEmpty(txt_MaGV) && !string.IsNullOrEmpty(txt_MaQuanLy)
+                                        && !string.IsNullOrEmpty(txt_CongViec) && !string.IsNullOrEmpty(txt_ChiTiet)
+                                        && !string.IsNullOrEmpty(txt_DonViTinh)
+                                        && !string.IsNullOrEmpty(txt_DienGiai) && !string.IsNullOrEmpty(txt_GioQuyDoi))
                                     {
                                         NhanVien nhanVien = uow.FindObject<NhanVien>(CriteriaOperator.Parse("MaNhanVien = ?", txt_MaGV));
+                                        DonViTinh _DonViTinh = uow.FindObject<DonViTinh>(CriteriaOperator.Parse("MaQuanLy = ? or TenDonViTinh=?", txt_DonViTinh, txt_DonViTinh));
                                         if (nhanVien == null)
                                         {
                                             mainLog.AppendLine("- Mã: " + txt_MaGV);
@@ -82,11 +103,22 @@ namespace ERP.Module.Controllers.Win.ExecuteImport.ImportClass.PMS
                                             //
                                             sucessImport = false;
                                         }
+                                        else if (_DonViTinh == null)
+                                        {
+                                            mainLog.AppendLine(string.Format("- Mã hoặc tên đơn vị tính :{0} không tồn tại trong hệ thống.", txt_DonViTinh));
+
+                                            sucessImport = false;
+                                        }
                                         else
                                         {
                                             sql += " Union All select N'" + nhanVien.Oid + "' as NhanVien"
-                                                          + ", N'" + txt_LopPhuTrach + "' as LopPhuTrach"                                               
-                                                          + ", N'" + txt_SoLuongSV + "' as SoLuongSV";
+                                                          + ", N'" + txt_MaQuanLy + "' as MaQuanLy"
+                                                          + ", N'" + txt_CongViec + "' as CongViec"
+                                                          + ", N'" + txt_ChiTiet + "' as ChiTiet"
+                                                           + ", N'" + txt_DienGiai + "' as DienGiai"
+                                                          + ", N'" + _DonViTinh.Oid + "' as DonViTinh"
+                                                          + ", N'" + txt_GhiChu + "' as GhiChu"
+                                                          + ", N'" + txt_GioQuyDoi + "' as GioQuyDoi";
                                             sucessNumber++;
                                         }
                                     }

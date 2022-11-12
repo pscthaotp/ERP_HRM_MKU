@@ -5,13 +5,14 @@ using ERP.Module.NonPersistentObjects.HeThong;
 using ERP.Module.Extends;
 using ERP.Module.Controllers.Win.ExecuteImport.ImportClass.PMS;
 using ERP.Module.NghiepVu.PMS.BoiDuong;
+using ERP.Module.NghiepVu.PMS.QuanLyHoatDongKhac;
 //
 namespace ERP.Module.Controllers.Win.ExecuteImport.ImportControl.PMS
 {
     public partial class PMS_ImportHoatDongKhacController : ViewController
     {
         private IObjectSpace _obs;
-        private QuanLyBoiDuong _QuanLyBoiDuong;
+        private QuanLyHoatDongKhac _QuanLyHoatDongKhac;
         private OfficeBaseObject _typeOffice;
 
         public PMS_ImportHoatDongKhacController()
@@ -23,8 +24,8 @@ namespace ERP.Module.Controllers.Win.ExecuteImport.ImportControl.PMS
        
         private void popupWindowShowAction_CustomizePopupWindowParams(object sender, CustomizePopupWindowParamsEventArgs e)
         {
-            _QuanLyBoiDuong = View.CurrentObject as QuanLyBoiDuong;
-            if (_QuanLyBoiDuong != null)
+            _QuanLyHoatDongKhac = View.CurrentObject as QuanLyHoatDongKhac;
+            if (_QuanLyHoatDongKhac != null)
             {
                 _obs = Application.CreateObjectSpace();
                 //
@@ -42,7 +43,7 @@ namespace ERP.Module.Controllers.Win.ExecuteImport.ImportControl.PMS
             if (_typeOffice != null)
             {
                 //
-                Imp_TuBoiDuong.XuLy(_obs, _QuanLyBoiDuong.Oid);
+                Imp_HoatDongKhac.XuLy(_obs, _QuanLyHoatDongKhac.Oid);
                 //
                 View.ObjectSpace.Refresh();
             }

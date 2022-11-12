@@ -17,7 +17,7 @@ using ERP.Module.NghiepVu.PMS.DanhMuc;
 //
 namespace ERP.Module.Controllers.Win.ExecuteImport.ImportClass.PMS
 {
-    public class Imp_TuBoiDuong
+    public class Imp_HoatDongKhac
     {       
         public static void XuLy(IObjectSpace obs, Guid OidQuanLy)
         {
@@ -36,7 +36,7 @@ namespace ERP.Module.Controllers.Win.ExecuteImport.ImportClass.PMS
                 {
                     using (DialogUtil.AutoWait())
                     {
-                        using (DataTable dt = DataProvider.GetDataTableFromExcel(open.FileName, "[Sheet$A2:L]", LoaiOfficeEnum.Office2010))
+                        using (DataTable dt = DataProvider.GetDataTableFromExcel(open.FileName, "[Sheet$A2:H]", LoaiOfficeEnum.Office2010))
                         {
                             /////////////////////////////KHỞI TẠO CÁC IDX/////////////////////////////////////////////////////
 
@@ -46,13 +46,9 @@ namespace ERP.Module.Controllers.Win.ExecuteImport.ImportClass.PMS
                             const int idx_HoTen = 2;
                             const int idx_HocVi = 3;
                             const int idx_BoPhan = 4;
-                            const int idx_MaQuanLy = 5;
-                            const int idx_CongViec = 6;
-                            const int idx_ChiTiet = 7;
-                            const int idx_DienGiai = 8;
-                            const int idx_DonViTinh = 9;
-                            const int idx_GioQuyDoi = 10;
-                            const int idx_GhiChu = 11;
+                            const int idx_LoaiHoatDong = 5;
+                            const int idx_GioQuyDoi = 6;
+                            const int idx_GhiChu = 7;
                             string sql = "";
                             #endregion
 
@@ -75,11 +71,7 @@ namespace ERP.Module.Controllers.Win.ExecuteImport.ImportClass.PMS
                                     string txt_HoTen = dr[idx_HoTen].ToString().Trim();
                                     string txt_HocVi = dr[idx_HocVi].ToString().Trim();
                                     string txt_BoPhan = dr[idx_BoPhan].ToString().Trim();
-                                    string txt_MaQuanLy = dr[idx_MaQuanLy].ToString().Trim();
-                                    string txt_CongViec = dr[idx_CongViec].ToString().Trim();
-                                    string txt_ChiTiet = dr[idx_ChiTiet].ToString().Trim();
-                                    string txt_DienGiai = dr[idx_DienGiai].ToString().Trim();
-                                    string txt_DonViTinh = dr[idx_DonViTinh].ToString().Trim();
+                                    string txt_LoaiHoatDong = dr[idx_LoaiHoatDong].ToString().Trim();
                                     string txt_GioQuyDoi = dr[idx_GioQuyDoi].ToString().Trim();
                                     string txt_GhiChu = dr[idx_GhiChu].ToString().Trim();
                                     #endregion
@@ -89,13 +81,10 @@ namespace ERP.Module.Controllers.Win.ExecuteImport.ImportClass.PMS
                                     #region Kiểm tra dữ
                                     //
                                     #region 1. Mã quản lý
-                                    if (!string.IsNullOrEmpty(txt_MaGV) && !string.IsNullOrEmpty(txt_MaQuanLy) 
-                                        && !string.IsNullOrEmpty(txt_CongViec) && !string.IsNullOrEmpty(txt_ChiTiet)
-                                        && !string.IsNullOrEmpty(txt_DonViTinh)
-                                        && !string.IsNullOrEmpty(txt_DienGiai) && !string.IsNullOrEmpty(txt_GioQuyDoi))
+                                    if (!string.IsNullOrEmpty(txt_MaGV) && !string.IsNullOrEmpty(txt_LoaiHoatDong) && !string.IsNullOrEmpty(txt_GioQuyDoi))
                                     {
                                         NhanVien nhanVien = uow.FindObject<NhanVien>(CriteriaOperator.Parse("MaNhanVien = ?", txt_MaGV));
-                                        DonViTinh _DonViTinh = uow.FindObject<DonViTinh>(CriteriaOperator.Parse("MaQuanLy = ? or TenDonViTinh=?", txt_DonViTinh, txt_DonViTinh));
+                                        DanhMucHoatDongKhac _DanhMucHoatDongKhac = uow.FindObject<DanhMucHoatDongKhac>(CriteriaOperator.Parse("MaQuanLy = ? or TenLoaiHoatDong=?", txt_LoaiHoatDong, txt_LoaiHoatDong));
                                         if (nhanVien == null)
                                         {
                                             mainLog.AppendLine("- Mã: " + txt_MaGV);
@@ -103,20 +92,17 @@ namespace ERP.Module.Controllers.Win.ExecuteImport.ImportClass.PMS
                                             //
                                             sucessImport = false;
                                         }
-                                        else if (_DonViTinh == null)
+                                        else if (_DanhMucHoatDongKhac == null)
                                         {
-                                            mainLog.AppendLine(string.Format("- Mã hoặc tên đơn vị tính :{0} không tồn tại trong hệ thống.", txt_DonViTinh));
-
+                                            mainLog.AppendLine("- Danh mục hoạt động khác: " + txt_LoaiHoatDong);
+                                            mainLog.AppendLine(string.Format("- Mã hoặc tên danh mục hoạt động khác :{0} không tồn tại trong hệ thống.", txt_LoaiHoatDong));
+                                            
                                             sucessImport = false;
                                         }
                                         else
                                         {
                                             sql += " Union All select N'" + nhanVien.Oid + "' as NhanVien"
-                                                          + ", N'" + txt_MaQuanLy + "' as MaQuanLy"
-                                                          + ", N'" + txt_CongViec + "' as CongViec"
-                                                          + ", N'" + txt_ChiTiet + "' as ChiTiet"
-                                                           + ", N'" + txt_DienGiai + "' as DienGiai"
-                                                          + ", N'" + _DonViTinh.Oid + "' as DonViTinh"
+                                                          + ", N'" + _DanhMucHoatDongKhac.Oid + "' as LoaiHoatDong"
                                                           + ", N'" + txt_GhiChu + "' as GhiChu"
                                                           + ", N'" + txt_GioQuyDoi + "' as GioQuyDoi";
                                             sucessNumber++;
@@ -125,7 +111,7 @@ namespace ERP.Module.Controllers.Win.ExecuteImport.ImportClass.PMS
                                     else
                                     {
                                         mainLog.AppendLine("- Mã: " + txt_MaGV);
-                                        mainLog.AppendLine(string.Format("- Mã quản lý của nhân viên : {0} không được trống.", txt_HoTen));
+                                        mainLog.AppendLine(string.Format("- Dữ liệu của nhân viên : {0} không được để trống.", txt_HoTen));
                                         //
                                         sucessImport = false;
                                     }
@@ -143,7 +129,7 @@ namespace ERP.Module.Controllers.Win.ExecuteImport.ImportClass.PMS
                                     pImport[0] = new SqlParameter("@OidQuanLy", OidQuanLy);
                                     pImport[1] = new SqlParameter("@String", sql.Substring(11));
                                     pImport[2] = new SqlParameter("@User", Common.SecuritySystemUser_GetCurrentUser().UserName);
-                                    DataProvider.ExecuteNonQuery("spd_PMS_Import_TuBoiDuong", CommandType.StoredProcedure, pImport);
+                                    DataProvider.ExecuteNonQuery("spd_PMS_Import_HoatDongKhac", CommandType.StoredProcedure, pImport);
                                     //Lưu
                                     //uow.CommitChanges();
                                     //

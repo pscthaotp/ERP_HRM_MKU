@@ -507,6 +507,7 @@
     <Compile Include="BusinessObjects\6.NghiepVu\3.PMS\CoVanHocTap\QuanLyCVHT.cs" />
     <Compile Include="BusinessObjects\6.NghiepVu\3.PMS\DanhMuc\DinhMucTrongNam.cs" />
     <Compile Include="BusinessObjects\6.NghiepVu\3.PMS\DanhMuc\DonViTinh.cs" />
+    <Compile Include="BusinessObjects\6.NghiepVu\3.PMS\DanhMuc\DanhMucHoatDongKhac.cs" />
     <Compile Include="BusinessObjects\6.NghiepVu\3.PMS\DanhMuc\LoaiTien.cs" />
     <Compile Include="BusinessObjects\6.NghiepVu\3.PMS\DanhMuc\NgonNguGiangDay.cs" />
     <Compile Include="BusinessObjects\6.NghiepVu\3.PMS\DanhMuc\LoaiHocPhan.cs" />
@@ -872,7 +873,7 @@
     <Compile Include="BusinessObjects\6.NghiepVu\1.NhanSu\XuLyNghiepVu\QuyetDinh\TuyenDung\QuyetDinhTuyenDung_HRM.cs" />
     <Compile Include="BusinessObjects\6.NghiepVu\2.TienLuong\ChamCong\CC_ChiTietChamCong.cs" />
     <Compile Include="BusinessObjects\6.NghiepVu\2.TienLuong\ChamCong\CC_QuanLyChamCong.cs" />
-    <Compile Include="BusinessObjects\6.NghiepVu\5.BaoCao\PMS\Report_PMS_DanhSachChuyenKhoan_CoHuu_CaoHoc.cs" />
+    <Compile Include="BusinessObjects\6.NghiepVu\5.BaoCao\PMS\MKU\Report_PMS_TongHopGioQuyDoi_CoHuu.cs" />
     <Compile Include="BusinessObjects\6.NghiepVu\5.BaoCao\PMS\Report_PMS_DanhSachChuyenKhoan_CoHuu_ChinhQuy.cs" />
     <Compile Include="BusinessObjects\6.NghiepVu\5.BaoCao\PMS\Report_PMS_DanhSachChuyenKhoan_CoHuu_TaiChuc.cs" />
     <Compile Include="BusinessObjects\6.NghiepVu\5.BaoCao\PMS\Report_PMS_ThanhToanTienDay_CoHuu_CaoHoc.cs" />

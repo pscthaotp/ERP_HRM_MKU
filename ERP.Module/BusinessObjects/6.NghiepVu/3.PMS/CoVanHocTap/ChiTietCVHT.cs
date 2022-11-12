@@ -12,12 +12,12 @@ namespace ERP.Module.NghiepVu.PMS.NCKH
 {
     [DefaultClassOptions]
     [ImageName("BO_List")]
-    [ModelDefault("Caption", "Chi tiết NCKH")]
+    [ModelDefault("Caption", "Chi tiết CVHT")]
 
     public class ChiTietCVHT : BaseObject
     {
-        private QuanLyCVHT _QuanLyCVHT; //
-        private NhanVien _NhanVien;//  
+        private QuanLyCVHT _QuanLyCVHT; 
+        private NhanVien _NhanVien; 
         private string _TenLopPhuTrach;
         private int _SoLuongSV;    
         private string _GhiChu;
@@ -79,8 +79,7 @@ namespace ERP.Module.NghiepVu.PMS.NCKH
             }
         }
 
-        [ModelDefault("Caption", "Import")]
-        [Browsable(false)]
+        [ModelDefault("Caption", "Import")]       
         public bool Import
         {
             get { return _Import; }
